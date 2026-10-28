@@ -1,0 +1,54 @@
+{
+  "purpose": "contest_test_record",
+  "submission": "/public/home/TEAM/progen2_contest/submission",
+  "torch": "2.4.1",
+  "hip": "6.1.25065",
+  "device": "BW",
+  "all_public_references_exact": false,
+  "loads": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "batch_size": 1,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 10.166278951102868,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "batch_size": 8,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 10.140572065021843,
+      "same": 1416,
+      "total": 2048,
+      "consistency_rate": 0.69140625,
+      "exact_match": false
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "batch_size": 4,
+      "prefix_tokens": 32,
+      "new_tokens": 512,
+      "time_s": 20.384494045982137,
+      "same": 1427,
+      "total": 2048,
+      "consistency_rate": 0.69677734375,
+      "exact_match": false
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "batch_size": 4,
+      "prefix_tokens": 512,
+      "new_tokens": 64,
+      "time_s": 2.599213327979669,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    }
+  ]
+}
