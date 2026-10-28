@@ -8,14 +8,11 @@
 
 | 编号 | 任务 | 负责人 | 复核 | 目标日期 | 依赖 | 验收产出 |
 |---|---|---|---|---|---|---|
-| T01 | 配置 DCU 环境并校验公共资产 | A | C | 10-29 | 无 | 环境检查完整输出、设备与软件版本 |
 | T02 | 讲清 FP32 基准的生成流程 | B | A | 10-29 | 无 | 一页说明，指出加载、前缀计算、循环、KV、输出位置 |
 | T03 | 核对四项负载与评分规则 | C | B | 10-29 | 无 | 解释 time_s、same、total、consistency_rate 和两种 80% 门槛 |
-| T04 | 保存一轮完整 FP32 基准 | A | C | 10-29 | T01 | baseline_public.json 与 baseline.log，四项可核验 |
 | T05 | 完成自己的 Solution 入口 | B | A | 10-31 | T02、T04 | 提交代码与四项输出验证，不把接口骨架当完成 |
 | T06 | 建立首轮结果对照与差异分析 | C | B | 10-31 | T04、T05 | 首轮四项时间、一致率及原始证据链接 |
 | T07 | 验证一个生成流程或缓存优化 | B | A | 11-02 | T06 | 单一变更、前后完整记录、采用或放弃理由 |
-| T08 | 验证一种精度方案 | A | C | 11-02 | T06 | 四项一致率与时间、转换方式，失败也可记录 |
 | T09 | 复核实验并选最终方案 | C | B | 11-03 | T07、T08 | 同规格比较与选择依据，不拼接最好成绩 |
 | T10 | 集成冻结并保存最终完整测试 | A | C | 11-04 | T09 | 最终代码版本、作品 JSON/日志、同规格基准证据 |
 | T11 | 汇总报告与个人贡献 | C | A、B | 11-05 | T10 | 模板各节、四负载两表、来源、真实分工 |
@@ -25,14 +22,11 @@
 
 | 任务编号 | GitHub 记录 |
 |---|---|
-| T01 | [#1 环境与公共资产](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/1) |
 | T02 | [#2 理解生成流程](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/2) |
 | T03 | [#3 负载与评分](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/3) |
-| T04 | [#4 FP32 基准](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/4) |
 | T05 | [#5 生成接口](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/5) |
 | T06 | [#6 首轮结果](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/6) |
 | T07 | [#7 流程或缓存优化](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/7) |
-| T08 | [#8 精度方案](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/8) |
 | T09 | [#9 最终方案选择](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/9) |
 | T10 | [#10 冻结与完整测试](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/10) |
 | T11 | [#11 报告与贡献](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/11) |
@@ -48,7 +42,15 @@
 
 ## 待复核
 
-尚无已交付的开发任务。
+2026-10-28 已有下列运行材料，待另一位队员核验后再确认。A/B/C 未正式分配，原建议负责人不等于实际执行人。
+
+| 任务 | 本次实际执行 | 产出与结论 | 复核 |
+|---|---|---|---|
+| T01 环境与公共资产 | 本次对话用户，归档账号 WYBCOOPER | [完整环境校验与版本](../experiments/EXP-20261028-01.md) | 具体人选待确认，原建议 C |
+| T04 完整 FP32 基准 | 同上 | [四项均完成且100%一致](../experiments/EXP-20261028-01.md) | 具体人选待确认，原建议 C |
+| T08 精度方案探索 | 同上 | [直接FP16未观察到加速，两项一致率不足，当前不采用](../experiments/EXP-20261028-02.md) | 实验已结束，记录待复核；原建议 C |
+
+T08 为提前进行的探索实验，不表示依赖 T06 或自己的 T05 入口已经完成。T02 的学习不替代一页交付说明。归档记录见 [执行人页](../members/WYBCOOPER.md)。
 
 ## 已完成
 

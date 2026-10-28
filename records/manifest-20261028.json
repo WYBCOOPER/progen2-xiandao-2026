@@ -1,0 +1,55 @@
+{
+  "source_archive": "day1-backup-20261028.tar.gz",
+  "source_archive_sha256": "71f04372f14ade0f4b55b00465f0fb17d0ace81c4417971689a9453b882ebe17",
+  "files": [
+    {
+      "source_archive_member": "baseline/solution.py",
+      "shared_path": "records/20261028-01/solution.py",
+      "source_sha256": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+      "shared_sha256": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+      "processing": "Byte-identical copy."
+    },
+    {
+      "source_archive_member": "results/baseline.log",
+      "shared_path": "records/20261028-01/baseline.shared.log",
+      "source_sha256": "15592512a4386155b440f5632e9ea5be61153bd88bea9154d7543dbc9c96cc42",
+      "shared_sha256": "059d94b9e94b2150ec151860ec2bfc507be888d62bef0c171fc253718fa726ea",
+      "processing": "Only replace account home path with /public/home/TEAM; all scores and other content preserved."
+    },
+    {
+      "source_archive_member": "results/baseline_public.json",
+      "shared_path": "records/20261028-01/baseline_public.shared.json",
+      "source_sha256": "3c965c853163358a79f5c4cd37fc81786c2b4743fe933fc08d38f0142b0786c9",
+      "shared_sha256": "f3cc504541c1deeecc3a7715422a8bd6be08d4474882e69d1975acdd4d5ded71",
+      "processing": "Only replace account home path with /public/home/TEAM; all scores and other content preserved."
+    },
+    {
+      "source_archive_member": "results/environment_20261028.log",
+      "shared_path": "records/20261028-01/environment_20261028.log",
+      "source_sha256": "24986a142eb52ad8acae0dda842db2cde1391919403bbf55637a920fe1222bb9",
+      "shared_sha256": "24986a142eb52ad8acae0dda842db2cde1391919403bbf55637a920fe1222bb9",
+      "processing": "Byte-identical copy."
+    },
+    {
+      "source_archive_member": "results/fp16_trial/solution.py",
+      "shared_path": "records/20261028-02/solution.py",
+      "source_sha256": "04b2dfbbd1354b744afc0018d3c26756a45b6b7d727b4f27f2fd46a0af74a04d",
+      "shared_sha256": "04b2dfbbd1354b744afc0018d3c26756a45b6b7d727b4f27f2fd46a0af74a04d",
+      "processing": "Byte-identical copy."
+    },
+    {
+      "source_archive_member": "results/fp16_trial/fp16_trial.log",
+      "shared_path": "records/20261028-02/fp16_trial.shared.log",
+      "source_sha256": "599b0594d80f100e2425f4a88e769a2e5a89a7c8a519c235183c0426894b2ba4",
+      "shared_sha256": "4ce82aad496edbeeac2a83d4c4ec54cd9fbe0416a127dbf74c3b29166efeb659",
+      "processing": "Only replace account home path with /public/home/TEAM; all scores and other content preserved."
+    },
+    {
+      "source_archive_member": "results/fp16_trial/submission_public.json",
+      "shared_path": "records/20261028-02/submission_public.shared.json",
+      "source_sha256": "3492447a2e010fe814065774740b7d70d63f16d576b42e2717819783d500a2b8",
+      "shared_sha256": "5adf78bd8f94372f3072c0b65962880fe1a7e497972c82c3bec7ade10a96e8b8",
+      "processing": "Only replace account home path with /public/home/TEAM; all scores and other content preserved."
+    }
+  ]
+}
