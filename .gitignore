@@ -1,0 +1,15 @@
+# 公共权重和打包文件不进入协作仓库
+*.zip
+*.bin
+*.safetensors
+*.pt
+*.pth
+.cache/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+
+# 原始 JSON 与日志是贡献和实验依据，不全局忽略

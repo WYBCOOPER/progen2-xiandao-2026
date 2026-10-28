@@ -1,0 +1,55 @@
+# 任务进度分区
+
+状态统一使用：待开始 → 进行中 → 待复核 → 已完成；卡住的任务进入受阻，写明原因和下一次检查时间。研究后决定不采用的方案写作已结束，并说明结论，不计作已交付优化。
+
+## 待开始
+
+以下为建议任务，负责人可在三人确认后调整。日期均为 2026 年北京时间的队内目标。
+
+| 编号 | 任务 | 负责人 | 复核 | 目标日期 | 依赖 | 验收产出 |
+|---|---|---|---|---|---|---|
+| T01 | 配置 DCU 环境并校验公共资产 | A | C | 10-29 | 无 | 环境检查完整输出、设备与软件版本 |
+| T02 | 讲清 FP32 基准的生成流程 | B | A | 10-29 | 无 | 一页说明，指出加载、前缀计算、循环、KV、输出位置 |
+| T03 | 核对四项负载与评分规则 | C | B | 10-29 | 无 | 解释 time_s、same、total、consistency_rate 和两种 80% 门槛 |
+| T04 | 保存一轮完整 FP32 基准 | A | C | 10-29 | T01 | baseline_public.json 与 baseline.log，四项可核验 |
+| T05 | 完成自己的 Solution 入口 | B | A | 10-31 | T02、T04 | 提交代码与四项输出验证，不把接口骨架当完成 |
+| T06 | 建立首轮结果对照与差异分析 | C | B | 10-31 | T04、T05 | 首轮四项时间、一致率及原始证据链接 |
+| T07 | 验证一个生成流程或缓存优化 | B | A | 11-02 | T06 | 单一变更、前后完整记录、采用或放弃理由 |
+| T08 | 验证一种精度方案 | A | C | 11-02 | T06 | 四项一致率与时间、转换方式，失败也可记录 |
+| T09 | 复核实验并选最终方案 | C | B | 11-03 | T07、T08 | 同规格比较与选择依据，不拼接最好成绩 |
+| T10 | 集成冻结并保存最终完整测试 | A | C | 11-04 | T09 | 最终代码版本、作品 JSON/日志、同规格基准证据 |
+| T11 | 汇总报告与个人贡献 | C | A、B | 11-05 | T10 | 模板各节、四负载两表、来源、真实分工 |
+| T12 | 交叉检查最终 ZIP | A | B、C | 11-05 20:00 | T11 | 顶层 submission/、文件齐全、命名正确、可解压 |
+
+## GitHub 对应任务
+
+| 任务编号 | GitHub 记录 |
+|---|---|
+| T01 | [#1 环境与公共资产](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/1) |
+| T02 | [#2 理解生成流程](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/2) |
+| T03 | [#3 负载与评分](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/3) |
+| T04 | [#4 FP32 基准](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/4) |
+| T05 | [#5 生成接口](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/5) |
+| T06 | [#6 首轮结果](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/6) |
+| T07 | [#7 流程或缓存优化](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/7) |
+| T08 | [#8 精度方案](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/8) |
+| T09 | [#9 最终方案选择](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/9) |
+| T10 | [#10 冻结与完整测试](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/10) |
+| T11 | [#11 报告与贡献](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/11) |
+| T12 | [#12 提交包检查](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues/12) |
+
+## 进行中任务
+
+尚无已开始的开发任务。领取后将对应行移到这里，保留编号和字段。
+
+## 受阻
+
+尚无已报告的开发卡点。受阻记录需包含：任务编号、报错或缺少条件、已尝试方法、需要谁协助、下次检查时间。
+
+## 待复核
+
+尚无已交付的开发任务。
+
+## 已完成
+
+尚无已验收的开发任务。建立协作说明与开发完成是两回事。
