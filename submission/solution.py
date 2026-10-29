@@ -52,6 +52,12 @@ class Solution:
         )
         self.model.eval().to(self.device)
 
+        try:
+            self.model = torch.compile(self.model, mode="default")
+            print("torch.compile 已开启")
+        except Exception as e:
+            print(f"torch.compile 失败，回退到原始模型: {e}")
+
     def reset(self) -> None:
         pass
 
