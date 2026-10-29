@@ -1,0 +1,40 @@
+Thu Oct 29 19:40:05 2026    results/day2-20261029-PmCfgu/python_calls.prof
+
+         16066157 function calls (14379902 primitive calls) in 103.793 seconds
+
+   Ordered by: internal time
+   List reduced from 13385 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   237184   15.572    0.000   15.572    0.000 {built-in method torch._C._nn.linear}
+    58752    4.675    0.000    6.091    0.000 activations.py:55(forward)
+    58752    4.651    0.000   73.012    0.001 modeling_progen.py:147(forward)
+   117504    4.604    0.000    4.604    0.000 {built-in method torch.matmul}
+   117504    4.582    0.000   20.126    0.000 modeling_progen.py:54(apply_rotary_pos_emb)
+   235008    4.567    0.000    4.567    0.000 {method 'repeat_interleave' of 'torch._C.TensorBase' objects}
+   297478    4.183    0.000    4.183    0.000 {method 'to' of 'torch._C.TensorBase' objects}
+   411264    4.151    0.000    4.151    0.000 {method 'reshape' of 'torch._C.TensorBase' objects}
+   117504    3.963    0.000    3.963    0.000 {built-in method torch.stack}
+   117504    3.789    0.000    8.196    0.000 modeling_progen.py:47(rotate_every_two)
+    58752    3.518    0.000   13.693    0.000 modeling_progen.py:109(_attn)
+   234584    3.063    0.000    3.063    0.000 {built-in method torch.cat}
+   235008    2.781    0.000    7.348    0.000 modeling_progen.py:55(<lambda>)
+776832/2176    2.430    0.000   95.457    0.044 module.py:1555(_call_impl)
+    58752    1.883    0.000   12.048    0.000 modeling_progen.py:38(fixed_pos_embedding)
+    58752    1.835    0.000   93.560    0.002 modeling_progen.py:252(forward)
+    60928    1.623    0.000    1.623    0.000 {built-in method torch.layer_norm}
+   117504    1.527    0.000    1.527    0.000 {built-in method torch.pow}
+  1380057    1.423    0.000    1.423    0.000 module.py:1716(__getattr__)
+    58752    1.390    0.000    1.390    0.000 {built-in method torch.einsum}
+    59027    1.386    0.000    1.386    0.000 {method 'contiguous' of 'torch._C.TensorBase' objects}
+   119680    1.296    0.000    1.296    0.000 {built-in method torch.arange}
+    58752    1.041    0.000    1.041    0.000 {built-in method torch.where}
+   176256    0.988    0.000    4.914    0.000 modeling_progen.py:91(_split_heads)
+  123/106    0.969    0.008    1.055    0.010 {built-in method _imp.create_dynamic}
+   235008    0.955    0.000    0.955    0.000 {method 'permute' of 'torch._C.TensorBase' objects}
+776832/2176    0.951    0.000   95.463    0.044 module.py:1549(_wrapped_call_impl)
+    58752    0.890    0.000    0.890    0.000 {built-in method torch.sin}
+    58752    0.837    0.000    0.837    0.000 {method 'softmax' of 'torch._C.TensorBase' objects}
+    58752    0.835    0.000   15.214    0.000 modeling_progen.py:236(forward)
+
+
