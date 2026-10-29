@@ -6,6 +6,8 @@
 
 ## 从这里开始
 
+- [今天三人的逐步执行单：文件、命令、验收与交接](docs/EXECUTION_20261029_STEPS.md)
+
 - [10 月 29 日具体任务与协作流程](docs/TODAY_20261029.md)
 - [与已有规则的调整对照](docs/WORKFLOW_COMPARISON_20261029.md)
 
