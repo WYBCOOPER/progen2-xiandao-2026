@@ -1,0 +1,4 @@
+PyTorch: 2.4.1
+HIP: 6.1.25065
+Starting compiled calculation...
+COMPILE_SMOKE_PASSED
