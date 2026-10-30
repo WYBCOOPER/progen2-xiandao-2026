@@ -1,0 +1,9 @@
+Usage: cProfile.py [-o output_file_path] [-s sort] [-m module | scriptfile] [arg] ...
+
+Options:
+  -h, --help            show this help message and exit
+  -o OUTFILE, --outfile=OUTFILE
+                        Save stats to <outfile>
+  -s SORT, --sort=SORT  Sort order when printing to stdout, based on
+                        pstats.Stats class
+  -m                    Profile a library module

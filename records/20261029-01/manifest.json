@@ -1,0 +1,111 @@
+{
+  "source_archive": "day2-20261029-PmCfgu.tar.gz",
+  "archive_sha256": "5f04fc5e71b7777de16dd545e8aa5e302891944e40dfea5b3628d82f9f3438e3",
+  "run_dir": "results/day2-20261029-PmCfgu",
+  "originals_retained_locally": true,
+  "files": [
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/solution.py",
+      "source_sha256": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+      "shared_sha256": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+      "bytes": 5782,
+      "shared_path": "records/20261029-01/solution.py",
+      "processing": "Byte-identical copy."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/code_sha256.txt",
+      "source_sha256": "c02aa25063a5b881bd27de638596a417822744cb7f6bb878a9426870b9018aed",
+      "shared_sha256": "c02aa25063a5b881bd27de638596a417822744cb7f6bb878a9426870b9018aed",
+      "bytes": 283,
+      "shared_path": "records/20261029-01/code_sha256.txt",
+      "processing": "Byte-identical copy."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/environment.log",
+      "source_sha256": "24986a142eb52ad8acae0dda842db2cde1391919403bbf55637a920fe1222bb9",
+      "shared_sha256": "24986a142eb52ad8acae0dda842db2cde1391919403bbf55637a920fe1222bb9",
+      "bytes": 334,
+      "shared_path": "records/20261029-01/environment.shared.log",
+      "processing": "Byte-identical copy."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/fp32_retry.log",
+      "source_sha256": "39cffceba24c2c686eb84a55f509f32111768c55181dd947b0125c707bf7952c",
+      "shared_sha256": "2329164b4ae19acdda4c487bb0a12cb92cf7efd8ea12958280534ec897c046d7",
+      "bytes": 1962,
+      "shared_path": "records/20261029-01/fp32_retry.shared.log",
+      "processing": "Account home path replaced by /public/home/TEAM; all numeric results unchanged."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/fp32_retry_public.json",
+      "source_sha256": "327e17db2e6dd607a0cf51bb9d2848106304987a7093a8ca782c48aca0415982",
+      "shared_sha256": "dc1baafa53c72345774ab5491e75e8cbaca99e9598581eb1d43c61ba4e02cfe9",
+      "bytes": 1261,
+      "shared_path": "records/20261029-01/fp32_retry_public.shared.json",
+      "processing": "Account home path replaced by /public/home/TEAM; all numeric results unchanged."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/diagnostic.log",
+      "source_sha256": "1908ed54cc8cd3c6a46413edcd0a442b55849b95d8d78a4de523c9c9484f02b6",
+      "shared_sha256": "44b6f114a2ee34545d6fb2634063c10d6154b04a48abf377715553516e59448c",
+      "bytes": 1649,
+      "shared_path": "records/20261029-01/diagnostic.shared.log",
+      "processing": "Account home path replaced by /public/home/TEAM; all numeric results unchanged."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/diagnostic_only.json",
+      "source_sha256": "d6a87c82a02673ffb9ae221f7f5eb0dc96d6dd2b010e826db23f02e1e346d657",
+      "shared_sha256": "18fc33f012002f4dac73aeaa30dba53d5ec70d6b55b99a92c379303eec0f539a",
+      "bytes": 1262,
+      "shared_path": "records/20261029-01/diagnostic_only.shared.json",
+      "processing": "Account home path replaced by /public/home/TEAM; all numeric results unchanged."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/python_focus.txt",
+      "source_sha256": "74b33558ffe4e3bdcb54da07f96ff29bc51cd75915dc3d08ce2a910075fc4f36",
+      "shared_sha256": "74b33558ffe4e3bdcb54da07f96ff29bc51cd75915dc3d08ce2a910075fc4f36",
+      "bytes": 929,
+      "shared_path": "records/20261029-01/python_focus.shared.txt",
+      "processing": "Byte-identical copy."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/fp32_public.json",
+      "source_sha256": "b06b9a0e28d599a70e012c53bedff3d2c2ab96dff9debe4bf22c1eadf3b7c479",
+      "shared_sha256": "42c876dac6ab484f8a14aaa4ce4254d9f9b77475d54ad30947b053a6ae8c6f22",
+      "bytes": 1260,
+      "shared_path": "records/20261029-01/fp32_public.shared.json",
+      "processing": "Account home path replaced by /public/home/TEAM; all numeric results unchanged."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/diagnostic_support.log",
+      "source_sha256": "0218e2733d22fef2a69bd0f7c70fdfc99a84973115f357076f910f67c252f225",
+      "shared_sha256": "0218e2733d22fef2a69bd0f7c70fdfc99a84973115f357076f910f67c252f225",
+      "bytes": 393,
+      "shared_path": "records/20261029-01/diagnostic_support.shared.log",
+      "processing": "Byte-identical copy."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/python_calls.prof",
+      "source_sha256": "bd0e466838f6598f8301bea319fa744f27d4e764e161541aa8d55bcaa888d5a6",
+      "bytes": 2275165,
+      "shared_path": null,
+      "processing": "Original retained locally; binary includes paths and is not included in public sharing set."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/python_top30.txt",
+      "source_sha256": "6bf41b722b1f76f9fab27ac451b724bce2872448c6695fb9ce6626ffb3bcc822",
+      "shared_sha256": "6bf41b722b1f76f9fab27ac451b724bce2872448c6695fb9ce6626ffb3bcc822",
+      "bytes": 2799,
+      "shared_path": "records/20261029-01/python_top30.shared.txt",
+      "processing": "Byte-identical copy."
+    },
+    {
+      "source_archive_member": "results/day2-20261029-PmCfgu/python_self30.txt",
+      "source_sha256": "d78cde1de8411b8b4c4a28763393e17fc566c071cdb7c7193b36b31fc5d0045c",
+      "shared_sha256": "d78cde1de8411b8b4c4a28763393e17fc566c071cdb7c7193b36b31fc5d0045c",
+      "bytes": 2807,
+      "shared_path": "records/20261029-01/python_self30.shared.txt",
+      "processing": "Byte-identical copy."
+    }
+  ]
+}

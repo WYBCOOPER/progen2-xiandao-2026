@@ -1,0 +1,17 @@
+Thu Oct 29 19:40:05 2026    results/day2-20261029-PmCfgu/python_calls.prof
+
+         16066157 function calls (14379902 primitive calls) in 103.793 seconds
+
+   Ordered by: cumulative time
+   List reduced from 13385 to 7 due to restriction <'fixed_pos_embedding|synchronize|solution.py:90|torch.cat'>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        8    0.156    0.019   95.757   11.970 solution.py:90(generate)
+    58752    1.883    0.000   12.048    0.000 modeling_progen.py:38(fixed_pos_embedding)
+   234584    3.063    0.000    3.063    0.000 {built-in method torch.cat}
+       13    0.000    0.000    0.001    0.000 public_test.py:127(synchronize)
+       13    0.000    0.000    0.001    0.000 __init__.py:885(synchronize)
+       13    0.000    0.000    0.000    0.000 {built-in method torch._C._cuda_synchronize}
+        2    0.000    0.000    0.000    0.000 _cobyla_py.py:31(synchronized)
+
+
