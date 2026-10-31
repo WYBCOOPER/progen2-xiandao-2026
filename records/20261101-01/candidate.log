@@ -1,0 +1,47 @@
+python: 3.10.16
+torch: 2.4.1+das.opt2.dtk2504
+transformers: 4.46.3
+tokenizers: 0.20.3
+accelerate: 1.5.2
+numpy: 1.24.3
+torch HIP: 6.1.25065
+torch.cuda available: True
+device: BW
+model n_positions: 1024
+model file bytes: 3060333315
+model SHA256: skipped (use --full-hash for the 3 GB file)
+ENVIRONMENT_CHECK_PASSED
+Loading submission (model loading is not timed): /public/home/TEAM/progen2_contest/results/pr20-dd70b49-20261101-vZnyOh/source
+ProGenForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+torch.compile 已开启
+Loaded in 20.619s
+
+[load1_b1_l32_g256] warmup: B=1, L=32, G=256
+/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:150: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1101 02:18:49.507000 140461013231424 torch/fx/experimental/symbolic_shapes.py:4449] [0/0] xindex is not in var_ranges, defaulting to unknown range.
+W1101 02:19:35.882000 140461013231424 torch/fx/experimental/symbolic_shapes.py:4449] [0/1] xindex is not in var_ranges, defaulting to unknown range.
+W1101 02:20:40.678000 140461013231424 torch/fx/experimental/symbolic_shapes.py:4449] [0/2] xindex is not in var_ranges, defaulting to unknown range.
+[load1_b1_l32_g256] time=2.5435s, same=256/256, consistency=100.00%
+
+[load2_b8_l32_g256] warmup: B=8, L=32, G=256
+W1101 02:22:10.628000 140461013231424 torch/fx/experimental/symbolic_shapes.py:4449] [0/3] xindex is not in var_ranges, defaulting to unknown range.
+W1101 02:24:16.528000 140461013231424 torch/fx/experimental/symbolic_shapes.py:4449] [0/4] xindex is not in var_ranges, defaulting to unknown range.
+W1101 02:24:17.514000 140461013231424 torch/fx/experimental/symbolic_shapes.py:4449] [0/4] xindex is not in var_ranges, defaulting to unknown range.
+W1101 02:26:35.403000 140461013231424 torch/fx/experimental/symbolic_shapes.py:4449] [0/5] xindex is not in var_ranges, defaulting to unknown range.
+W1101 02:26:36.264000 140461013231424 torch/fx/experimental/symbolic_shapes.py:4449] [0/5] xindex is not in var_ranges, defaulting to unknown range.
+W1101 02:29:20.492000 140461013231424 torch/fx/experimental/symbolic_shapes.py:4449] [0/6] xindex is not in var_ranges, defaulting to unknown range.
+[load2_b8_l32_g256] time=3.2230s, same=2048/2048, consistency=100.00%
+
+[load3_b4_l32_g512] warmup: B=4, L=32, G=512
+[load3_b4_l32_g512] time=6.2589s, same=2048/2048, consistency=100.00%
+
+[load4_b4_l512_g64] warmup: B=4, L=512, G=64
+[load4_b4_l512_g64] time=0.8598s, same=256/256, consistency=100.00%
+
+Saved: /public/home/TEAM/progen2_contest/results/pr20-dd70b49-20261101-vZnyOh/candidate_public.json
+PUBLIC_INTERFACE_TEST_PASSED (100% match with the public FP32 reference)
+四项任务测试完成，结果已保存。
