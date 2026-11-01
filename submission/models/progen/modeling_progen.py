@@ -52,8 +52,7 @@ def rotate_every_two(x):
 
 
 def apply_rotary_pos_emb(x, sincos, offset=0):
-    # 优化③：sin/cos 已在预计算时做完 repeat_interleave，这里直接切片即可
-    sin, cos = map(lambda t: t[None, offset : x.shape[1] + offset, None, :], sincos)
+    sin, cos = map(lambda t: t[None, offset : x.shape[1] + offset, None, :].repeat_interleave(2, 3), sincos)
     # einsum notation for lambda t: repeat(t[offset:x.shape[1]+offset,:], "n d -> () n () (d j)", j=2)
     return (x * cos) + (rotate_every_two(x) * sin)
 
@@ -77,6 +76,7 @@ class ProGenAttention(nn.Module):
         self.embed_dim = config.hidden_size
         self.num_attention_heads = config.num_attention_heads
         self.head_dim = self.embed_dim // self.num_attention_heads
+        self.max_positions = config.max_position_embeddings
         if self.head_dim * self.num_attention_heads != self.embed_dim:
             raise ValueError(
                 f"embed_dim must be divisible by num_attention_heads (got `embed_dim`: {self.embed_dim} and `num_attention_heads`: {self.num_attention_heads})."
@@ -95,9 +95,8 @@ class ProGenAttention(nn.Module):
         inv_freq = 1.0 / (10000 ** (torch.arange(0, rope_dim, 2).float() / rope_dim))
         t = torch.arange(max_pos).float()
         freqs = torch.einsum("i,j->ij", t, inv_freq)
-        # ===== 优化③：预计算时直接做完 repeat_interleave，forward 里不再重复 =====
-        self.register_buffer("rope_sin", torch.sin(freqs).repeat_interleave(2, -1), persistent=False)
-        self.register_buffer("rope_cos", torch.cos(freqs).repeat_interleave(2, -1), persistent=False)
+        self.register_buffer("rope_sin", torch.sin(freqs), persistent=False)
+        self.register_buffer("rope_cos", torch.cos(freqs), persistent=False)
 
     def _split_heads(self, x, n_head, dim_head, mp_num):
         reshaped = x.reshape(x.shape[:-1] + (n_head//mp_num, dim_head))
@@ -183,7 +182,7 @@ class ProGenAttention(nn.Module):
         offset = 0
 
         if layer_past is not None:
-            offset = layer_past[0].shape[-2]
+            offset = layer_past[2]  # cur_len
             seq_len += offset
 
         if self.rotary_dim is not None:
@@ -207,14 +206,34 @@ class ProGenAttention(nn.Module):
         key = key.permute(0, 2, 1, 3)
         query = query.permute(0, 2, 1, 3)
 
-        if layer_past is not None:
-            past_key = layer_past[0]
-            past_value = layer_past[1]
-            key = torch.cat((past_key, key), dim=-2)
-            value = torch.cat((past_value, value), dim=-2)
-
+        # ===== 优化④：KV Cache 预分配，避免每次 cat =====
         if use_cache is True:
-            present = (key, value)
+            if layer_past is None:
+                # prefill 阶段：分配最大长度 buffer
+                batch_size = key.shape[0]
+                k_cache = torch.empty(
+                    batch_size, self.num_attention_heads, self.max_positions, self.head_dim,
+                    dtype=key.dtype, device=key.device,
+                )
+                v_cache = torch.empty(
+                    batch_size, self.num_attention_heads, self.max_positions, self.head_dim,
+                    dtype=value.dtype, device=value.device,
+                )
+                cur_len = key.shape[-2]
+                k_cache[:, :, :cur_len, :] = key
+                v_cache[:, :, :cur_len, :] = value
+            else:
+                # decode 阶段：直接写入新位置
+                k_cache, v_cache, cur_len = layer_past
+                new_len = key.shape[-2]  # 通常是 1
+                k_cache[:, :, cur_len : cur_len + new_len, :] = key
+                v_cache[:, :, cur_len : cur_len + new_len, :] = value
+                cur_len = cur_len + new_len
+
+            # attention 用前 cur_len 个位置
+            key = k_cache[:, :, :cur_len, :]
+            value = v_cache[:, :, :cur_len, :]
+            present = (k_cache, v_cache, cur_len)
         else:
             present = None
 
@@ -422,7 +441,7 @@ class ProGenModel(ProGenPreTrainedModel):
             past_length = 0
             past_key_values = tuple([None] * len(self.h))
         else:
-            past_length = past_key_values[0][0].size(-2)
+            past_length = past_key_values[0][2]  # cur_len
 
         if position_ids is None:
             position_ids = torch.arange(past_length, input_shape[-1] + past_length, dtype=torch.long, device=device)
@@ -435,7 +454,7 @@ class ProGenModel(ProGenPreTrainedModel):
             # We create a 3D attention mask from a 2D tensor mask.
             # Sizes are [batch_size, 1, 1, to_seq_length]
             # So we can broadcast to [batch_size, num_heads, from_seq_length, to_seq_length]
-            # this attention mask is to the triangular masking of causal attention
+            # this attention mask is more simple than the triangular masking of causal attention
             # used in OpenAI GPT, we just need to prepare the broadcast dimension here.
             attention_mask = attention_mask[:, None, None, :]
 
@@ -476,7 +495,8 @@ class ProGenModel(ProGenPreTrainedModel):
                 torch.cuda.set_device(hidden_states.device)
                 # Ensure layer_past is on same device as hidden_states (might not be correct)
                 if layer_past is not None:
-                    layer_past = tuple(past_state.to(hidden_states.device) for past_state in layer_past)
+                    k_c, v_c, c_len = layer_past
+                    layer_past = (k_c.to(hidden_states.device), v_c.to(hidden_states.device), c_len)
                 # Ensure that attention_mask is always on the same device as hidden_states
                 if attention_mask is not None:
                     attention_mask = attention_mask.to(hidden_states.device)
@@ -693,6 +713,10 @@ class ProGenForCausalLM(ProGenPreTrainedModel):
         called. This is required to match :obj:`past_key_values` with the correct beam_idx at every generation step.
         """
         return tuple(
-            tuple(past_state.index_select(0, beam_idx.to(past_state.device)) for past_state in layer_past)
-            for layer_past in past
+            (
+                k_c.index_select(0, beam_idx.to(k_c.device)),
+                v_c.index_select(0, beam_idx.to(v_c.device)),
+                c_len,
+            )
+            for k_c, v_c, c_len in past
         )
