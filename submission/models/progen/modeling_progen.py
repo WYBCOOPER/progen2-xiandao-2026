@@ -129,10 +129,6 @@ class ProGenAttention(nn.Module):
         query_length, key_length = query.size(-2), key.size(-2)
         causal_mask = self.bias[:, :, key_length - query_length : key_length, :key_length]
 
-        # Keep the attention weights computation in fp32 to avoid overflow issues
-        query = query.to(torch.float32)
-        key = key.to(torch.float32)
-
         attn_weights = torch.matmul(query, key.transpose(-1, -2))
 
         attn_weights = attn_weights / self.scale_attn
@@ -143,8 +139,9 @@ class ProGenAttention(nn.Module):
             attn_weights = attn_weights + attention_mask
 
         attn_weights = nn.Softmax(dim=-1)(attn_weights)
-        attn_weights = attn_weights.to(value.dtype)
-        attn_weights = self.attn_dropout(attn_weights)
+        # p=0 时跳过 no-op dropout（数值不变）
+        if self.attn_dropout.p > 0.0:
+            attn_weights = self.attn_dropout(attn_weights)
 
         # Mask heads if we want to
         if head_mask is not None:
