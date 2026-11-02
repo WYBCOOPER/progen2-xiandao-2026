@@ -4,8 +4,45 @@ import sys
 from pathlib import Path
 from typing import Sequence
 
+import torch
+from torch import nn
+from torch.nn import functional as F
+
 
 AMINO_ACIDS = "ACDEFGHIKLMNPQRSTVWY"
+
+# 权重半精度开关：只作用于 4 个大矩阵的权重，其余数值路径保持 fp32。
+# "fp16" 或 "bf16"；"all"=qkv+out+fc_in+fc_out，"mlp"=只 fc_in/fc_out（更保守）
+WEIGHT_DTYPE = "fp16"
+HALF_WEIGHT_SCOPE = "all"
+
+
+class _HalfWeightLinear(nn.Module):
+    """权重为半精度、输入/输出/偏置保持 fp32 的 Linear。
+
+    x(fp32) -> cast 到 weight dtype -> F.linear -> cast 回 fp32 -> + bias(fp32)
+    只有矩阵乘这一步用低精度，后续 LN/attention/softmax/logits 仍为 fp32。
+    """
+
+    def __init__(self, linear: nn.Linear, weight_dtype: torch.dtype):
+        super().__init__()
+        self.in_features = linear.in_features
+        self.out_features = linear.out_features
+        self.weight_dtype = weight_dtype
+        self.weight = nn.Parameter(
+            linear.weight.detach().to(weight_dtype).contiguous(), requires_grad=False
+        )
+        if linear.bias is not None:
+            self.bias = nn.Parameter(linear.bias.detach().float().contiguous(), requires_grad=False)
+        else:
+            self.register_parameter("bias", None)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        out = F.linear(x.to(self.weight_dtype), self.weight)
+        out = out.float()
+        if self.bias is not None:
+            out = out + self.bias
+        return out
 
 
 class Solution:
@@ -52,11 +89,29 @@ class Solution:
         )
         self.model.eval().to(self.device)
 
+        # 权重半精度必须在 torch.compile 之前完成（compile 看到的就是 fp16 权重图）
+        self._install_half_weights()
+
         try:
             self.model = torch.compile(self.model, mode="default")
             print("torch.compile 已开启")
         except Exception as e:
             print(f"torch.compile 失败，回退到原始模型: {e}")
+
+    def _install_half_weights(self) -> None:
+        dtype = torch.float16 if WEIGHT_DTYPE.lower() == "fp16" else torch.bfloat16
+        converted = 0
+        for block in self.model.transformer.h:
+            if HALF_WEIGHT_SCOPE in ("all", "attn"):
+                block.attn.qkv_proj = _HalfWeightLinear(block.attn.qkv_proj, dtype)
+                block.attn.out_proj = _HalfWeightLinear(block.attn.out_proj, dtype)
+                converted += 2
+            if HALF_WEIGHT_SCOPE in ("all", "mlp"):
+                block.mlp.fc_in = _HalfWeightLinear(block.mlp.fc_in, dtype)
+                block.mlp.fc_out = _HalfWeightLinear(block.mlp.fc_out, dtype)
+                converted += 2
+        self._half_linear_count = converted
+        print(f"权重半精度已开启: {dtype}, 替换 {converted} 个 Linear（scope={HALF_WEIGHT_SCOPE}）")
 
     def reset(self) -> None:
         pass
@@ -74,8 +129,9 @@ class Solution:
     def metadata(self) -> dict:
         return {
             "team_name": self.team_name,
-            "precision": "fp32",
-            "description": "Upstream attention with dynamic KV cache",
+            "precision": "fp32 activations + %s weights" % WEIGHT_DTYPE,
+            "description": "compile + static kv + half-precision weights (sensitive ops kept fp32)",
+            "half_linear_count": getattr(self, "_half_linear_count", 0),
         }
 
     def generate(self, prefixes: list[str], max_new_tokens: int) -> list[str]:
