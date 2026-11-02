@@ -1,0 +1,49 @@
+{
+  "archive_sha256": "d835979c011de0237e7163063b8fba52e443c4a5059844016ae9d70d0abeeedb",
+  "redaction": "/public/home/<account>/ replaced with /public/home/TEAM/",
+  "omitted": "none",
+  "files": [
+    {
+      "member": "results/pr22-abbfeb5-20261101-0iE77k/candidate.log",
+      "shared": "candidate.log",
+      "original_sha256": "0df92a70ddfdd65a3fdb42ba9281094da21090296f84f995e2b66563fe992a97",
+      "shared_sha256": "265e33487552c242bd8dfb08fa085fe078222468e01b037c75c54efcfae346e3"
+    },
+    {
+      "member": "results/pr22-abbfeb5-20261101-0iE77k/candidate_public.json",
+      "shared": "candidate_public.json",
+      "original_sha256": "651b17ec0087db560781b115758b751039e70535b8e1e170952c61bf0d70976d",
+      "shared_sha256": "100577803b3fc9aae87e33b5282f86daacb2173fbf2531bf204553177b0cd0dd"
+    },
+    {
+      "member": "results/pr22-abbfeb5-20261101-0iE77k/source/solution.py",
+      "shared": "source/solution.py",
+      "original_sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e",
+      "shared_sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e"
+    },
+    {
+      "member": "results/pr22-abbfeb5-20261101-0iE77k/source/models/progen/modeling_progen.py",
+      "shared": "source/models/progen/modeling_progen.py",
+      "original_sha256": "f5be7c4526464acccbb30a9d3ccd086b3a70b9f23b53aa0da9c9273343a72e01",
+      "shared_sha256": "f5be7c4526464acccbb30a9d3ccd086b3a70b9f23b53aa0da9c9273343a72e01"
+    },
+    {
+      "member": "results/pr22-abbfeb5-20261101-0iE77k/source/models/progen/configuration_progen.py",
+      "shared": "source/models/progen/configuration_progen.py",
+      "original_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "shared_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "member": "results/pr22-abbfeb5-20261101-0iE77k/source/models/progen/__init__.py",
+      "shared": "source/models/progen/__init__.py",
+      "original_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "shared_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "member": "results/pr22-abbfeb5-20261101-0iE77k/source/models/__init__.py",
+      "shared": "source/models/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "shared_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
