@@ -1,0 +1,35 @@
+[
+  {
+    "directory": "v4-half",
+    "archive": "v4-5b30ef2-evidence.tar.gz",
+    "archive_sha256": "ca20cd4eda2619a2c109dc94c5c16c39041bef7980a68548763a05fe07a9e272"
+  },
+  {
+    "directory": "v1-mask",
+    "archive": "fp32-decode-mask-v1-20261102-km5emg.tar.gz",
+    "archive_sha256": "a3c9007f9d7b08d63cd1163d543940e0e608a47eca0914ba5582ce287fbed027"
+  },
+  {
+    "directory": "v2-failure",
+    "archive": "fp32-decode-step-v2-failure.tar.gz",
+    "archive_sha256": "cbc50f5531b049f6f9b343028a090a4dd8d99e4fd17f78ca63dd3f75b947638c"
+  },
+  {
+    "directory": "v3-first",
+    "archive": "fp32-gemm-tune-v3-evidence.tar.gz",
+    "archive_sha256": "c441c78f134e623b2cc53bcc41ac65c9da6ff647c052e9d8d0d40487653f7382"
+  },
+  {
+    "directory": "v2b",
+    "archive": "fp32-decode-step-v2b-evidence.tar.gz",
+    "archive_sha256": "0dc8a49c5429de87a0947e1cbace920259b0b0a75f809ade7069c678d437141d"
+  },
+  {
+    "directories": [
+      "combo",
+      "v3-control"
+    ],
+    "archive": "fp32-v2b-v3-comparison-evidence.tar.gz",
+    "archive_sha256": "4e004feed75060d2abd590de02a73716299acc984b66ae4fc46a93665b670f1c"
+  }
+]

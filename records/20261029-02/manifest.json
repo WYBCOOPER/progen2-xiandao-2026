@@ -1,0 +1,89 @@
+{
+  "archive": {
+    "name": "rope-pr17-20261029-QmbMHH.tar.gz",
+    "sha256": "347171561e6b5802822132d361ec386696f6795f5a6c0ff045861bb678d880b0"
+  },
+  "candidate_commit": "ca291a5c07a6098130cdae17b4eda37e9f3b7247",
+  "experiment_date": "2026-10-29",
+  "timestamps": "Archive entry mtimes as recorded, UTC+08:00; not inferred run start times.",
+  "redaction": "Replace account directory in shared logs/JSON only; numeric results preserved.",
+  "files": [
+    {
+      "original": "source/models/progen/configuration_progen.py",
+      "shared": "records/20261029-02/source/models/progen/configuration_progen.py",
+      "original_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "shared_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "source_mtime_as_recorded": "2026-10-29T22:15:02+08:00"
+    },
+    {
+      "original": "source/models/progen/modeling_progen.py",
+      "shared": "records/20261029-02/source/models/progen/modeling_progen.py",
+      "original_sha256": "7887f44ed116cdce67bdfff5be72086d5d68715d906eeeb65c3d01aa34115f9d",
+      "shared_sha256": "7887f44ed116cdce67bdfff5be72086d5d68715d906eeeb65c3d01aa34115f9d",
+      "source_mtime_as_recorded": "2026-10-29T22:15:02+08:00"
+    },
+    {
+      "original": "source/models/progen/__init__.py",
+      "shared": "records/20261029-02/source/models/progen/__init__.py",
+      "original_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "shared_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "source_mtime_as_recorded": "2026-10-29T22:15:02+08:00"
+    },
+    {
+      "original": "source/models/__init__.py",
+      "shared": "records/20261029-02/source/models/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "shared_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_mtime_as_recorded": "2026-10-29T22:15:02+08:00"
+    },
+    {
+      "original": "source/solution.py",
+      "shared": "records/20261029-02/source/solution.py",
+      "original_sha256": "8b81f3b6e7c65e7a484a827e4857841cbd0ca30b860a76ccd9ebb0498f263ffc",
+      "shared_sha256": "8b81f3b6e7c65e7a484a827e4857841cbd0ca30b860a76ccd9ebb0498f263ffc",
+      "source_mtime_as_recorded": "2026-10-29T22:15:02+08:00"
+    },
+    {
+      "original": "environment.log",
+      "shared": "records/20261029-02/environment.shared.log",
+      "original_sha256": "24986a142eb52ad8acae0dda842db2cde1391919403bbf55637a920fe1222bb9",
+      "shared_sha256": "24986a142eb52ad8acae0dda842db2cde1391919403bbf55637a920fe1222bb9",
+      "source_mtime_as_recorded": "2026-10-29T22:18:17+08:00"
+    },
+    {
+      "original": "candidate.log",
+      "shared": "records/20261029-02/candidate.shared.log",
+      "original_sha256": "4610a86161ca969095a2564fd41b59f3c6ef2e706fe0866aff80fc2d086d44bc",
+      "shared_sha256": "5558ff6229d4a78e1a35b25df91255fb051026ce6fb60d7afa529a90854d15ee",
+      "source_mtime_as_recorded": "2026-10-29T22:22:46+08:00"
+    },
+    {
+      "original": "candidate_public.json",
+      "shared": "records/20261029-02/candidate_public.shared.json",
+      "original_sha256": "e83b56399447c4ff8a2bb44a9bf59b9fd99e6f6db7d078945ec1bfa1064c6050",
+      "shared_sha256": "a78871784b132b97dae9676f0f55d2659a2367b56577a3fff6fc76d47704f0d7",
+      "source_mtime_as_recorded": "2026-10-29T22:22:45+08:00"
+    },
+    {
+      "original": "baseline.log",
+      "shared": "records/20261029-02/baseline.shared.log",
+      "original_sha256": "4cba6cd7cab954b3317a9b511ffaf23498010dcce73bd89fab1c09b0d88575d8",
+      "shared_sha256": "40ee8f8a3806b519a2b13e6385fab2c22c70b5b859ae9d000d80460f267bb168",
+      "source_mtime_as_recorded": "2026-10-29T22:27:17+08:00"
+    },
+    {
+      "original": "baseline_public.json",
+      "shared": "records/20261029-02/baseline_public.shared.json",
+      "original_sha256": "25b02cebd0118043f8ce95b58af15b5cdbab7cf7d504df055e5fe85d5f6120f9",
+      "shared_sha256": "d0bb4bbbee103f493dbc8afe79fdf047fab6c57fe1d072e94d9f7d862f03ccec",
+      "source_mtime_as_recorded": "2026-10-29T22:27:15+08:00"
+    },
+    {
+      "original": "baseline_solution.py",
+      "shared": "records/20261029-02/baseline_solution.py",
+      "original_sha256": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+      "shared_sha256": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+      "source_mtime_as_recorded": "2026-10-29T22:38:33+08:00"
+    }
+  ]
+}

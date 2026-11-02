@@ -1,0 +1,71 @@
+{
+  "archive_sha256": "c441c78f134e623b2cc53bcc41ac65c9da6ff647c052e9d8d0d40487653f7382",
+  "source_checks": [
+    {
+      "path": "models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_local_candidate": true
+    },
+    {
+      "path": "models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "matches_local_candidate": true
+    },
+    {
+      "path": "models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "matches_local_candidate": true
+    },
+    {
+      "path": "models/progen/modeling_progen.py",
+      "sha256": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d",
+      "matches_local_candidate": true
+    },
+    {
+      "path": "solution.py",
+      "sha256": "4c084754c48278f014907f276793ec967250bc26ed6d03d65f40b2e72bf2cfe8",
+      "matches_local_candidate": true
+    }
+  ],
+  "checksum_list_valid": true,
+  "json_log_agree": true,
+  "all_four_exact": true,
+  "environment_check_passed": true,
+  "full_model_hash_checked_in_this_run": false,
+  "comparison": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "parent_v1_time_s": 2.262225284939632,
+      "candidate_v3_time_s": 1.7290433670859784,
+      "observed_time_reduction_percent": 23.568913379371125
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "parent_v1_time_s": 2.5369221430737525,
+      "candidate_v3_time_s": 1.9165556691586971,
+      "observed_time_reduction_percent": 24.45350857962929
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "parent_v1_time_s": 4.971593641908839,
+      "candidate_v3_time_s": 3.738564444007352,
+      "observed_time_reduction_percent": 24.801487947596357
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "parent_v1_time_s": 0.7001160860527307,
+      "candidate_v3_time_s": 0.5600296230986714,
+      "observed_time_reduction_percent": 20.009033608107718
+    }
+  ],
+  "parent_v1_sum_s": 10.470857155974954,
+  "candidate_v3_sum_s": 7.944193103350699,
+  "observed_sum_time_reduction_percent": 24.130441424105122,
+  "comparison_limit": "Single runs from different days; no paired V1 control in this archive.",
+  "autotune_blocks_in_log": 32,
+  "timed_compile_check": "Not recorded. Log sections between warmup and time cover both warmup and timed generate, so they cannot locate all compilation precisely.",
+  "missing_runtime_details": [
+    "Actual Triton version",
+    "Platform image name"
+  ]
+}

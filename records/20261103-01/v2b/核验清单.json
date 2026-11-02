@@ -1,0 +1,83 @@
+{
+  "archive_sha256": "0dc8a49c5429de87a0947e1cbace920259b0b0a75f809ade7069c678d437141d",
+  "source_checks": [
+    {
+      "path": "models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_local_candidate": true
+    },
+    {
+      "path": "models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "matches_local_candidate": true
+    },
+    {
+      "path": "models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "matches_local_candidate": true
+    },
+    {
+      "path": "models/progen/modeling_progen.py",
+      "sha256": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d",
+      "matches_local_candidate": true
+    },
+    {
+      "path": "solution.py",
+      "sha256": "126e5fb5665fe5245ae26d276685c6ff9991c56da3184703368914765763b93e",
+      "matches_local_candidate": true
+    }
+  ],
+  "checksum_list_valid": true,
+  "json_log_agree": true,
+  "all_four_exact": true,
+  "compile_audit_matches_log": true,
+  "formal_dynamo_compile_events": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "runtime_versions": {
+    "python": "3.10.16",
+    "torch": "2.4.1",
+    "hip": "6.1.25065",
+    "triton": "3.0.0",
+    "transformers": "4.46.3",
+    "tokenizers": "0.20.3",
+    "numpy": "1.24.3",
+    "accelerate": "1.5.2"
+  },
+  "comparisons": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "v1_s": 2.262225284939632,
+      "v2b_s": 2.2297008908353746,
+      "v3_s": 1.7290433670859784
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "v1_s": 2.5369221430737525,
+      "v2b_s": 2.4749893450643867,
+      "v3_s": 1.9165556691586971
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "v1_s": 4.971593641908839,
+      "v2b_s": 4.945523608941585,
+      "v3_s": 3.738564444007352
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "v1_s": 0.7001160860527307,
+      "v2b_s": 0.6954230540432036,
+      "v3_s": 0.5600296230986714
+    }
+  ],
+  "sums": {
+    "v1_s": 10.470857155974954,
+    "v2b_s": 10.34563689888455,
+    "v3_s": 7.944193103350699
+  },
+  "v2b_observed_reduction_from_v1_percent": 1.195893089029021,
+  "scope": "First public-test run. No paired V1 control or universal external-JIT audit; no stable-gain claim."
+}

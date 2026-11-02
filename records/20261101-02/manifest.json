@@ -1,0 +1,91 @@
+{
+  "archive_sha256": "1c96fb071eb4032c1d195e58368d10b616c1fe5cc11b134c3c52a32523f0a44a",
+  "redaction": "/public/home/<account>/ replaced with /public/home/TEAM/",
+  "omitted": "duplicate previous_source/pr17_rope_3abe52 subtree; identical to previous_source",
+  "files": [
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/solution.py",
+      "shared": "source/solution.py",
+      "original_sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e",
+      "shared_sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/models/__init__.py",
+      "shared": "source/models/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "shared_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen/modeling_progen.py",
+      "shared": "source/models/progen/modeling_progen.py",
+      "original_sha256": "b143793bea126296755471166d615633eeed992a7dae1ecebbba6e66e74e131f",
+      "shared_sha256": "b143793bea126296755471166d615633eeed992a7dae1ecebbba6e66e74e131f"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen/__init__.py",
+      "shared": "source/models/progen/__init__.py",
+      "original_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "shared_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen/configuration_progen.py",
+      "shared": "source/models/progen/configuration_progen.py",
+      "original_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "shared_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/candidate_public.json",
+      "shared": "candidate_public.json",
+      "original_sha256": "ea2b46e49bbb2c37d19778bf2e344778946b1273f78c36cb6b8bf733400f98b6",
+      "shared_sha256": "299aec650ca133a36702d2e52d7223858fb79d5ee103f61c8a7e33b25cbe3d02"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/models/__init__.py",
+      "shared": "previous_source/models/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "shared_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/models/progen/modeling_progen.py",
+      "shared": "previous_source/models/progen/modeling_progen.py",
+      "original_sha256": "7887f44ed116cdce67bdfff5be72086d5d68715d906eeeb65c3d01aa34115f9d",
+      "shared_sha256": "7887f44ed116cdce67bdfff5be72086d5d68715d906eeeb65c3d01aa34115f9d"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/models/progen/__init__.py",
+      "shared": "previous_source/models/progen/__init__.py",
+      "original_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "shared_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/models/progen/configuration_progen.py",
+      "shared": "previous_source/models/progen/configuration_progen.py",
+      "original_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "shared_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/solution.py",
+      "shared": "previous_source/solution.py",
+      "original_sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e",
+      "shared_sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_public.json",
+      "shared": "previous_public.json",
+      "original_sha256": "e414be95cce173efd8c538270267faf5a28c9100fd4ee72979b7baeb0e5ffee6",
+      "shared_sha256": "5ffff083d701be89cba9e0890cf20d3c7cd8e0e94f6a13a3b7cdc61820a35ce7"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/candidate.log",
+      "shared": "candidate.log",
+      "original_sha256": "d0d04953f0f29ab0684c9d75b682e90bab9f4283692fca9bd99c603fb2aeab87",
+      "shared_sha256": "0f49d9dfc9fa73db93b9689986f6ae2e717a54513ce984f2a0f07ab475aa23b2"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous.log",
+      "shared": "previous.log",
+      "original_sha256": "47078458d39739169ddb6883ca418fedf47f6158fa3ef0dc9a825244a6980c2a",
+      "shared_sha256": "4f68f68d93f31a1adb4bfb585fc3217386f88617faf4dd414c3c8d6155351f8c"
+    }
+  ]
+}

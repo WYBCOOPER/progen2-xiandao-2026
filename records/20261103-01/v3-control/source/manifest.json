@@ -1,0 +1,30 @@
+{
+  "candidate": "fp32_gemm_tune_v3_audit",
+  "parent_candidate": "fp32_gemm_tune_v3",
+  "original_base_commit": "abbfeb5a16ca088bcd90b52e138ed00f8cf1f8f6",
+  "verified_parent_archives": {
+    "V2b": "0dc8a49c5429de87a0947e1cbace920259b0b0a75f809ade7069c678d437141d",
+    "V3": "c441c78f134e623b2cc53bcc41ac65c9da6ff647c052e9d8d0d40487653f7382"
+  },
+  "change": "Only add the same per-generate Dynamo compile monitor to V3; preserve the model-only compilation, FP32 and original greedy computation.",
+  "DCU_tested": false,
+  "performance_claim": null,
+  "local_validation": {
+    "state_model_cases": 24,
+    "compile_monitor_cases": 8,
+    "torch": "2.11.0+cu128",
+    "backend": "eager",
+    "scope": "CPU/NVIDIA mock model only, not actual ProGen or Inductor/DCU"
+  },
+  "files": {
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/modeling_progen.py": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d",
+    "solution.py": "bd7af98c5589b606754a9347c02f2f049f5af30d4a69e083c61622a0ccfa0ca5"
+  },
+  "support_files": {
+    "run_test.sh": "d8eaba2769d33ba30581be6b236c6437be186c3bf4f5143541245805991a262a",
+    "README.md": "f3890d5115dc960cb594027a66279e69efe026e9d5d4af8335bc8dc503a135f8"
+  }
+}
