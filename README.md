@@ -1,68 +1,30 @@
-# 先导杯三人协作空间
+# 先导杯 ProGen2 DCU 优化
 
-目标：在指定海光 DCU 上优化公共 ProGen2-medium 的生成推理，完整完成四项测试，保留一致性和耗时证据，按赛题要求提交源码、报告与记录。
+更新：2026-11-03。公开记录、源码与图表已按实测整理；最终参赛版本尚未冻结。
 
-本目录用于队内协作。最终参赛 ZIP 只打包规定的 submission/，协作材料不必全部放入参赛包。
+- [全部实验可视化](visualizations/20261103/README.md)：20轮有成绩记录，包含诊断和一致性未通过的实验。
+- [本轮结果与复现](experiments/EXP-20261103-01.md)：V1、V2失败、V2b、V3及组合版。
+- [当前分工](docs/TEAM.md) · [任务状态](docs/BOARD.md) · [优化路线](docs/OPTIMIZATION_PLAN.md)
 
-## 从这里开始
+![组合版与V3同轮对照](visualizations/20261103/combo_vs_v3.png)
 
-- [今天三人的逐步执行单：文件、命令、验收与交接](docs/EXECUTION_20261029_STEPS.md)
+组合版与V3监测对照的四项公开输出均100%一致；合计耗时7.6804秒与7.8636秒，本轮减少2.33%。两版各一轮，尚不能认定稳定收益；合计不是官方评分。编译监测范围内，正式调用均无Dynamo新编译事件。
 
-- [10 月 29 日具体任务与协作流程](docs/TODAY_20261029.md)
-- [与已有规则的调整对照](docs/WORKFLOW_COMPARISON_20261029.md)
+## 代码入口
 
-- [优化路线与验证计划](docs/OPTIMIZATION_PLAN.md)
-- [逐日执行计划：每日 22:00 交付、23:00 审查](docs/SCHEDULE.md)
-- [三人分工与每日协作](docs/TEAM.md)
-- [任务进度分区](docs/BOARD.md)
-- [实验记录规范](docs/EXPERIMENTS.md)
-- [贡献确认规则](docs/CONTRIBUTIONS.md)
-- [提交检查](docs/RELEASE.md)
-- [A 的进度与贡献](members/A.md) · [B 的进度与贡献](members/B.md) · [C 的进度与贡献](members/C.md)
+在已有官方模型资产和测试工具的DCU比赛目录中，分别运行：
+```bash
+bash candidates/fp32_step_gemm_v23/run_test.sh
+bash candidates/fp32_gemm_tune_v3_audit/run_test.sh
+```
+这两个目录保存实测组合版和对照版。每次脚本建立独立结果目录；不覆盖官方基准、测试器或既有成绩。源码沿用官方模型及队友前期优化，来源与AI协助见[贡献说明](docs/CONTRIBUTIONS.md)。
 
-目前三位成员暂用 A、B、C，真实姓名、队长与 GitHub 账号待队内填写。A/B/C 仍为建议角色，尚未绑定真人。2026-10-28 已归档实际运行材料，T01、T04、T08 待复核；其余技术任务尚未开始。用户已授权首日归档与计划先合入；合并不等于队友复核或贡献确认。当前没有验证出的有效加速方案。
+`submission/`保持此前合入的入口，本轮未将候选替换为最终作品。根目录`solution.py`是V4实验副本，不代表已通过一致性验证的默认方案；该配置的结果见本轮记录。
 
-## 首日实际记录
+## 协作与交付
 
-- [执行与贡献记录（角色待确认）](members/WYBCOOPER.md)
-- [FP32 基准](experiments/EXP-20261028-01.md) · [直接 FP16 实验](experiments/EXP-20261028-02.md)
-- [实验依据、共享处理和文件指纹](records/README.md)
+WYBCOOPER负责DCU测试、测量、归档，并参与优化；loveviolet2、JIYIA718-ai主要负责优化。历史A/B/C为早期建议标记，当前以账号分工为准。合并归档不代表队友已独立复核或最终验收。
 
-## 使用方式
+[实验依据](records/README.md) · [实验规范](docs/EXPERIMENTS.md) · [个人记录](members/WYBCOOPER.md) · [提交检查](docs/RELEASE.md)
 
-1. 从任务表领取一个小任务，每个任务只设一位主负责人，另一位复核。
-2. 开始前写清要交什么、何时完成、如何验证，再改为进行中。
-3. 工作结束后附代码、文档或实验记录链接，状态改为待复核。
-4. 复核人检查证据并留下结论后，任务才改为已完成。
-5. 每人每天用五分钟更新个人页：今天交付、证据、卡点、下一步。卡住也照实记录。
-
-## GitHub 任务入口
-
-仓库：[WYBCOOPER/progen2-xiandao-2026](https://github.com/WYBCOOPER/progen2-xiandao-2026)，按队内要求公开。以下入口按任务标题中的 A、B、C 分组，不代表已绑定真实 GitHub 账号。
-
-- [全部任务](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues)
-- [A 的任务](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues?q=is%3Aissue%20%22%5BA%5D%22%20in%3Atitle)
-- [B 的任务](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues?q=is%3Aissue%20%22%5BB%5D%22%20in%3Atitle)
-- [C 的任务](https://github.com/WYBCOOPER/progen2-xiandao-2026/issues?q=is%3Aissue%20%22%5BC%5D%22%20in%3Atitle)
-
-Issue 管理当前状态，任务表保存导航。尚未设置 GitHub Projects；本页与任务表提供文档分区。Issues 中的 A、B、C 是建议负责人，确认成员账号后再设置实际指派。Public 允许所有人查看，队员直接写入仍需仓库协作者权限；添加协作者由仓库管理员执行。
-
-公开空间只放可公开的技术记录；不上传 DCU 密码、令牌、完整学号、未经确认可公开的原始题包或个人信息。最终报告中的完整报名资料在正式提交材料中填写，不必公开。
-
-## 时间目标
-
-全部采用北京时间，每天 22:00 前提交当天成果，23:00 前结束审查。按[逐日计划](docs/SCHEDULE.md)推进：
-
-| 日期 | 交付重点 |
-|---|---|
-| 10-28 | 首日归档、优化路线、逐日计划与授权合并 |
-| 10-29 | DCU 恢复与初步诊断；本地基准、流程定位和 CUDA 验证适配准备 |
-| 10-30 | 补齐可运行程序与分层对照，依据测量选定共同的首项改动 |
-| 10-31 | 经诊断选定的首项改动及本地/DCU 对照；位置表为候选 |
-| 11-01 | 候选方案的稳定性验证和取舍 |
-| 11-02 | 有依据时研究 KV；否则补验证与修复 |
-| 11-03 | 选定方案，报告初稿 |
-| 11-04 | 代码冻结、最终完整测试和报告主体 |
-| 11-05 | 20:00 报告定稿，21:00 检查 ZIP，22:00 前人工发送比赛邮件，23:00 前核查发送与附件 |
-
-官方截止：2026 年 11 月 5 日 24:00，即 11 月 6 日 00:00。最后一小时用于异常处理。技术效果以实际测试为准，不承诺加速比例；延期时优先保留正确可运行版本与真实证据。仓库更新不代表作品邮件已发送。
+保留既有北京时间22:00交付、23:00审查节点，按[逐日计划](docs/SCHEDULE.md)执行；实际延期照实记录。GitHub更新不代表比赛作品已发送。
