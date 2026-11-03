@@ -21,7 +21,7 @@ HALF_WEIGHT_SCOPE = "all"
 #      PyTorch 默认 True；在 hipBLAS 上可能退化为 fp16 累加，误差足以让 argmax 全错。
 #   2) COMPILE_MODEL=False：关闭 torch.compile，用于判断误差是否与编译/融合有关。
 ALLOW_FP16_REDUCED_PRECISION = False
-COMPILE_MODEL = True
+COMPILE_MODEL = False  # T2 诊断：关闭 compile，判断误差是否来自编译/融合
 
 
 class _HalfWeightLinear(nn.Module):
