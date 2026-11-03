@@ -16,6 +16,13 @@ AMINO_ACIDS = "ACDEFGHIKLMNPQRSTVWY"
 WEIGHT_DTYPE = "fp16"
 HALF_WEIGHT_SCOPE = "all"
 
+# 诊断开关（v4 首轮 DCU 一致率崩坏后加入）：
+#   1) ALLOW_FP16_REDUCED_PRECISION=False：禁止 fp16/bf16 矩阵乘使用低精度累加。
+#      PyTorch 默认 True；在 hipBLAS 上可能退化为 fp16 累加，误差足以让 argmax 全错。
+#   2) COMPILE_MODEL=False：关闭 torch.compile，用于判断误差是否与编译/融合有关。
+ALLOW_FP16_REDUCED_PRECISION = False
+COMPILE_MODEL = True
+
 
 class _HalfWeightLinear(nn.Module):
     """权重为半精度、输入/输出/偏置保持 fp32 的 Linear。
@@ -57,6 +64,14 @@ class Solution:
         self.tokenizer_path = Path(tokenizer_path).resolve()
         self.model_dir = Path(model_dir).resolve()
 
+        # 关闭半精度矩阵乘的低精度累加（默认 True 时 hipBLAS 可能用 fp16 累加）
+        try:
+            torch.backends.cuda.matmul.allow_fp16_reduced_precision_reduction = ALLOW_FP16_REDUCED_PRECISION
+            torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction = ALLOW_FP16_REDUCED_PRECISION
+            print(f"reduced-precision reduction: fp16/bf16 = {ALLOW_FP16_REDUCED_PRECISION}")
+        except Exception as e:
+            print(f"设置 reduced-precision reduction 失败: {e}")
+
         if self.device.type == "cuda" and not torch.cuda.is_available():
             raise RuntimeError("DCU/HIP is not visible through torch.cuda")
 
@@ -92,11 +107,14 @@ class Solution:
         # 权重半精度必须在 torch.compile 之前完成（compile 看到的就是 fp16 权重图）
         self._install_half_weights()
 
-        try:
-            self.model = torch.compile(self.model, mode="default")
-            print("torch.compile 已开启")
-        except Exception as e:
-            print(f"torch.compile 失败，回退到原始模型: {e}")
+        if COMPILE_MODEL:
+            try:
+                self.model = torch.compile(self.model, mode="default")
+                print("torch.compile 已开启")
+            except Exception as e:
+                print(f"torch.compile 失败，回退到原始模型: {e}")
+        else:
+            print("torch.compile 已关闭（COMPILE_MODEL=False）")
 
     def _install_half_weights(self) -> None:
         dtype = torch.float16 if WEIGHT_DTYPE.lower() == "fp16" else torch.bfloat16
