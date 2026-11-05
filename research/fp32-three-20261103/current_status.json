@@ -1,0 +1,10 @@
+{
+  "active_candidate": "fp32_step_gemm_v23",
+  "input_fusion_v4": "未证明整体收益",
+  "fp32_chunk2_v5": "本轮较慢，暂不采纳",
+  "fp32_k_transpose_v6": "收益未证实，保留待复测",
+  "fp32_sdpa_v7": "本轮较慢，暂不采纳",
+  "public_correctness": "全部四项改动均通过本次四负载",
+  "new_speedup_claim": null,
+  "evidence_report": "C:\\Users\\TEAM\\Desktop\\progen2_contest.zip\\deliverables\\fp32-three-20261103\\dcu-review\\fp32-three-batch-20261103-LZx66B\\测试结论.md"
+}

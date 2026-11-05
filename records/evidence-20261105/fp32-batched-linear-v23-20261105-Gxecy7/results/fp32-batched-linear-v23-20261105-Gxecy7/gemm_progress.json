@@ -1,0 +1,831 @@
+{
+  "complete": false,
+  "shape_plan": {
+    "1,4608,1536,0": null,
+    "1,1536,1536,0": {
+      "bn": 4,
+      "bk": 512
+    },
+    "1,6144,1536,1": null,
+    "1,1536,6144,1": {
+      "bn": 4,
+      "bk": 256
+    },
+    "4,4608,1536,0": null,
+    "4,1536,1536,0": null,
+    "4,6144,1536,1": null,
+    "4,1536,6144,1": {
+      "kind": "direct",
+      "bn": 8,
+      "bk": 256,
+      "bm": 4
+    },
+    "8,4608,1536,0": null,
+    "8,1536,1536,0": null,
+    "8,6144,1536,1": null,
+    "8,1536,6144,1": {
+      "kind": "direct",
+      "bn": 4,
+      "bk": 256,
+      "bm": 8
+    }
+  },
+  "records": [
+    {
+      "batch": 1,
+      "n": 4608,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.05268796920776367,
+        0.05261598110198975
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 4.909504385253172e-07,
+          "correct": true,
+          "times_ms": [
+            0.052049570083618164,
+            0.05228797912597656
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 4.909504385253172e-07,
+          "correct": true,
+          "times_ms": [
+            0.05363038063049316,
+            0.0548911714553833
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 4.909504385253172e-07,
+          "correct": true,
+          "times_ms": [
+            0.06766236782073974,
+            0.06749114990234376
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 4.95632832109294e-07,
+          "correct": true,
+          "times_ms": [
+            0.08675355911254883,
+            0.08706396102905273
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 1,
+      "n": 1536,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.0412703800201416,
+        0.04100478172302246
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 4.2012647671896275e-07,
+          "correct": true,
+          "times_ms": [
+            0.03625919103622437,
+            0.03618557929992676
+          ],
+          "selected_eligible": true
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 4.2012647671896275e-07,
+          "correct": true,
+          "times_ms": [
+            0.03392957925796509,
+            0.03362237930297852
+          ],
+          "selected_eligible": true
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 4.2012647671896275e-07,
+          "correct": true,
+          "times_ms": [
+            0.041113581657409665,
+            0.03955518007278443
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 4.110687528147139e-07,
+          "correct": true,
+          "times_ms": [
+            0.03812479019165039,
+            0.03909758090972901
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": {
+        "bn": 4,
+        "bk": 512
+      }
+    },
+    {
+      "batch": 1,
+      "n": 6144,
+      "k": 1536,
+      "bias": true,
+      "baseline_ms": [
+        0.05694237232208252,
+        0.05701918125152588
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 5.289246480799648e-07,
+          "correct": true,
+          "times_ms": [
+            0.06030557155609131,
+            0.060335969924926756
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 5.289246480799648e-07,
+          "correct": true,
+          "times_ms": [
+            0.05914078235626221,
+            0.05785117149353027
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 5.289246480799648e-07,
+          "correct": true,
+          "times_ms": [
+            0.07619676113128662,
+            0.07683356761932374
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 5.497494335315878e-07,
+          "correct": true,
+          "times_ms": [
+            0.0779663610458374,
+            0.07596155166625977
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 1,
+      "n": 1536,
+      "k": 6144,
+      "bias": true,
+      "baseline_ms": [
+        0.0729935598373413,
+        0.07326076984405518
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 9.869404578033425e-07,
+          "correct": true,
+          "times_ms": [
+            0.06029437065124512,
+            0.06044957160949707
+          ],
+          "selected_eligible": true
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 9.815278136926509e-07,
+          "correct": true,
+          "times_ms": [
+            0.06399995803833008,
+            0.06550395965576172
+          ],
+          "selected_eligible": true
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 9.815278136926509e-07,
+          "correct": true,
+          "times_ms": [
+            0.0790207576751709,
+            0.07761756896972656
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 9.815278136926509e-07,
+          "correct": true,
+          "times_ms": [
+            0.08967194557189942,
+            0.08941596031188964
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": {
+        "bn": 4,
+        "bk": 256
+      }
+    },
+    {
+      "batch": 4,
+      "n": 4608,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.04928799152374268,
+        0.04927838802337647
+      ],
+      "configs": [
+        {
+          "kind": "direct",
+          "bn": 8,
+          "bk": 256,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.06205918788909912,
+            0.062108788490295413
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.601602086624524e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 4,
+          "bk": 256,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.08243517875671387,
+            0.08344798088073731
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.601602086624524e-07
+        },
+        {
+          "kind": "vector",
+          "bn": 4,
+          "bk": 512,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.1377247714996338,
+            0.13836636543273925
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 4.4218476702440057e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 2,
+          "bk": 1024,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.07925758838653564,
+            0.0791215705871582
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 4.907551178767733e-07
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 4,
+      "n": 1536,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.040263991355896,
+        0.040345587730407716
+      ],
+      "configs": [
+        {
+          "kind": "direct",
+          "bn": 8,
+          "bk": 256,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.03750559091567993,
+            0.03758079051971436
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 4.781601889991549e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 4,
+          "bk": 256,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.04224799156188965,
+            0.042287988662719725
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 4.781601889991549e-07
+        },
+        {
+          "kind": "vector",
+          "bn": 4,
+          "bk": 512,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.06970717906951904,
+            0.06905436992645264
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 4.574356644582167e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 2,
+          "bk": 1024,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.045374369621276854,
+            0.04642078876495361
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 4.500690184983114e-07
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 4,
+      "n": 6144,
+      "k": 1536,
+      "bias": true,
+      "baseline_ms": [
+        0.05389118194580078,
+        0.0538831901550293
+      ],
+      "configs": [
+        {
+          "kind": "direct",
+          "bn": 8,
+          "bk": 256,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.09123677253723145,
+            0.0912319564819336
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 6.434551540479561e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 4,
+          "bk": 256,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.09623517990112304,
+            0.09490398406982421
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 6.434551540479561e-07
+        },
+        {
+          "kind": "vector",
+          "bn": 4,
+          "bk": 512,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.19128156661987306,
+            0.1928079605102539
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 6.06012015680335e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 2,
+          "bk": 1024,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.08076157569885253,
+            0.0781855821609497
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.871626829190291e-07
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 4,
+      "n": 1536,
+      "k": 6144,
+      "bias": true,
+      "baseline_ms": [
+        0.07647677898406982,
+        0.07664319038391114
+      ],
+      "configs": [
+        {
+          "kind": "direct",
+          "bn": 8,
+          "bk": 256,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.061015992164611815,
+            0.0611231803894043
+          ],
+          "selected_eligible": true,
+          "max_abs_error": 1.2091549166370896e-06
+        },
+        {
+          "kind": "direct",
+          "bn": 4,
+          "bk": 256,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.0694847822189331,
+            0.06935678958892823
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 1.2091549166370896e-06
+        },
+        {
+          "kind": "vector",
+          "bn": 4,
+          "bk": 512,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.19187675476074217,
+            0.19117116928100586
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 1.0872877878043141e-06
+        },
+        {
+          "kind": "direct",
+          "bn": 2,
+          "bk": 1024,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.07662878036499024,
+            0.07465598106384277
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 1.3531732818705677e-06
+        }
+      ],
+      "mode": {
+        "kind": "direct",
+        "bn": 8,
+        "bk": 256,
+        "bm": 4
+      }
+    },
+    {
+      "batch": 8,
+      "n": 4608,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.0514271879196167,
+        0.05155999183654785
+      ],
+      "configs": [
+        {
+          "kind": "direct",
+          "bn": 8,
+          "bk": 256,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.10320796966552734,
+            0.10384798049926758
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.458626493037855e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 4,
+          "bk": 256,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.08313278198242187,
+            0.08391838073730469
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.458626493037855e-07
+        },
+        {
+          "kind": "vector",
+          "bn": 4,
+          "bk": 512,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.13841277122497558,
+            0.1391151714324951
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.190748449956928e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 2,
+          "bk": 1024,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.12467996597290039,
+            0.1257935619354248
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.048777083072054e-07
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 8,
+      "n": 1536,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.04145439147949219,
+        0.04159519195556641
+      ],
+      "configs": [
+        {
+          "kind": "direct",
+          "bn": 8,
+          "bk": 256,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.0431951904296875,
+            0.04346560001373291
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.424804556675156e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 4,
+          "bk": 256,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.04135519027709961,
+            0.04139198780059814
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.424804556675156e-07
+        },
+        {
+          "kind": "vector",
+          "bn": 4,
+          "bk": 512,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.06928318977355957,
+            0.06998878002166747
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 4.868488934217652e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 2,
+          "bk": 1024,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.0551103687286377,
+            0.054987192153930664
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 5.399658293825382e-07
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 8,
+      "n": 6144,
+      "k": 1536,
+      "bias": true,
+      "baseline_ms": [
+        0.053137588500976565,
+        0.053207988739013674
+      ],
+      "configs": [
+        {
+          "kind": "direct",
+          "bn": 8,
+          "bk": 256,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.12133437156677246,
+            0.12115357398986816
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 6.920052424419509e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 4,
+          "bk": 256,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.09404476165771485,
+            0.09409598350524902
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 6.920052424419509e-07
+        },
+        {
+          "kind": "vector",
+          "bn": 4,
+          "bk": 512,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.18833755493164062,
+            0.18925756454467774
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 6.335626858700039e-07
+        },
+        {
+          "kind": "direct",
+          "bn": 2,
+          "bk": 1024,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.14695676803588867,
+            0.14462236404418946
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 6.467630786488598e-07
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 8,
+      "n": 1536,
+      "k": 6144,
+      "bias": true,
+      "baseline_ms": [
+        0.0825103759765625,
+        0.08263518333435059
+      ],
+      "configs": [
+        {
+          "kind": "direct",
+          "bn": 8,
+          "bk": 256,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.07307518005371094,
+            0.07270237922668457
+          ],
+          "selected_eligible": true,
+          "max_abs_error": 1.3553808777544418e-06
+        },
+        {
+          "kind": "direct",
+          "bn": 4,
+          "bk": 256,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.0710175895690918,
+            0.07115996837615966
+          ],
+          "selected_eligible": true,
+          "max_abs_error": 1.3553808777544418e-06
+        },
+        {
+          "kind": "vector",
+          "bn": 4,
+          "bk": 512,
+          "bm": 8,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.1925727653503418,
+            0.1914335632324219
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 1.0768396432325744e-06
+        },
+        {
+          "kind": "direct",
+          "bn": 2,
+          "bk": 1024,
+          "bm": 4,
+          "correct": true,
+          "finite": true,
+          "times_ms": [
+            0.11211037635803223,
+            0.11289277076721191
+          ],
+          "selected_eligible": false,
+          "max_abs_error": 1.2960203035206064e-06
+        }
+      ],
+      "mode": {
+        "kind": "direct",
+        "bn": 4,
+        "bk": 256,
+        "bm": 8
+      }
+    }
+  ]
+}

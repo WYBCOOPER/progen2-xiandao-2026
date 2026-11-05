@@ -1,0 +1,48 @@
+{
+  "candidate": "fp32_combo_v89",
+  "parents": [
+    "fp32_decode_attn_v8c",
+    "fp32_rope_kv_v9c"
+  ],
+  "DCU_tested": false,
+  "speed_claim": null,
+  "kernel_bodies_changed": false,
+  "official_tools_modified": false,
+  "parent_source_sha256": {
+    "v8c": {
+      "audit_result.py": "156524b110f1280493de8f67af9214b73409348fb90b234f54209338d462f818",
+      "compile_check.py": "de4c5be6db16f9eb74e0f9ad39258b335d6ead097131a24492ddc4fa2d14f220",
+      "kernel_check.py": "80587ce4c8cf2224aa49d7d9800617b1d8c5ee751ea0a9c216ba75aff1ac7143",
+      "solution.py": "39a680c17b53b1f5a3c9888edcb2a35f0e63ed2030759321a3e4bf889624e014",
+      "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "models/progen/kernels.py": "00c29c001d2b7bb15c4c823862d07188d3bd424e410346f09ba3c4bffbf18f75",
+      "models/progen/modeling_progen.py": "8ca36576e93dcd7903ed2ad352deb54733c8e74793f590299dbb91a011b562c6",
+      "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    "v9c": {
+      "audit_result.py": "4de7bbbb3db665fe7df21045d7c8e04a28d5ae504868b0a67e3f27de41fddfde",
+      "compile_check.py": "9af830efce8a625f0173105586802caa273378cc27e6d36f07fbf5a7cc6a1956",
+      "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+      "solution.py": "53695e49017dbd95beb0307f5e20a883bc61ec0f1c94db19fc8f3c96f81a8229",
+      "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "models/progen/kernels.py": "efc49236d907f4ccc20f3237dec690589c074b3d50f67922d028ce6d999fc7bb",
+      "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+      "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    }
+  },
+  "source_sha256": {
+    "audit_result.py": "d4f68e2676c2dd464505876c9cf21623d1b48b523788aabb42a070bb2cbddf78",
+    "check_attention.py": "80587ce4c8cf2224aa49d7d9800617b1d8c5ee751ea0a9c216ba75aff1ac7143",
+    "check_rope.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "compile_check.py": "43e24bc804a7f8f72e83eb9661c0521a46eb2bfca03b90de1aeaab61b45d3f1f",
+    "kernel_check.py": "73240803af7b892f7974a6f8e644e441cf5052b80f2db85f2cc07ad0cbeed4d9",
+    "solution.py": "d69af6cc293b25767b78e1e447c9aa301c8063fb074e0cc8a0d692c18fb1743e",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "70a0b3da35e560c8f9b2d06dd36ea950c66c470c93d55817fb9421fabb1eb25e",
+    "models/progen/modeling_progen.py": "a17903194f95b87550b2a46051e8c931706db68dd15b6646e725fa716cf0f011",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+  }
+}

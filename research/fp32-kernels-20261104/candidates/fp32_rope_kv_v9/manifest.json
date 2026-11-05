@@ -1,0 +1,29 @@
+{
+  "candidate": "fp32_rope_kv_v9",
+  "parent": "fp32_step_gemm_v23",
+  "change": "方向2：FP32 单字母 decode 融合 Q/K RoPE 与 KV 原位写入；保留原注意力和预填充路径。",
+  "DCU_tested": false,
+  "speed_claim": null,
+  "parent_sha256": {
+    "solution.py": "129e8b80c8fc8f7c8ea83672f200931271d5f9ba3baa8d8910b56403d26d47f6",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/modeling_progen.py": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d"
+  },
+  "source_sha256": {
+    "audit_result.py": "b91ba8ecb739a03afe9f3262b513c13a3ac9d1f9fc285697a74f9161c80340ad",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "8ade652da5cc58713d2c96dd5f678e0d3af0b3f83e1349b28da5f486f3507487",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "253b53288d04f6bc5670a36b5331402fdeabc8cd9ca43db24eddb0b18525e81c"
+  },
+  "local_validation": "local_validation.json in ZIP root: CPU reference math and syntax only; no actual Triton execution",
+  "sources": [
+    "https://github.com/triton-lang/triton/blob/v3.0.0/python/triton/runtime/jit.py",
+    "https://github.com/pytorch/pytorch/blob/v2.4.1/test/inductor/test_triton_kernels.py"
+  ]
+}

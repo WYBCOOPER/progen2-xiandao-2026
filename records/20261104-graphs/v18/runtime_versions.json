@@ -1,0 +1,19 @@
+{
+  "python": "3.10.16",
+  "torch": "2.4.1",
+  "hip": "6.1.25065",
+  "triton": "3.0.0+das.opt4.dtk2504",
+  "transformers": "4.46.3",
+  "tokenizers": "0.20.3",
+  "numpy": "1.24.3",
+  "accelerate": "1.5.2",
+  "device": "BW",
+  "device_total_memory_bytes": 68702699520,
+  "official_tools_sha256": {
+    "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+    "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+    "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+    "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+    "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+  }
+}

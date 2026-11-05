@@ -1,0 +1,709 @@
+{
+  "note": "原始成绩保留；诊断独立，跨实例不作加速结论。归档重复副本只计一次。",
+  "runs": [
+    {
+      "label": "baseline",
+      "date": "2026-10-28",
+      "purpose_group": "normal",
+      "archive": "day1-backup-20261028.tar.gz",
+      "archive_sha256": "71f04372f14ade0f4b55b00465f0fb17d0ace81c4417971689a9453b882ebe17",
+      "member": "results/baseline_public.json",
+      "log_member": "results/baseline.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/baseline",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 9.690762410871685,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 9.63550824788399,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 19.404935146914795,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 2.551227177027613,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "FP16",
+      "date": "2026-10-28",
+      "purpose_group": "normal",
+      "archive": "day1-backup-20261028.tar.gz",
+      "archive_sha256": "71f04372f14ade0f4b55b00465f0fb17d0ace81c4417971689a9453b882ebe17",
+      "member": "results/submission_public.json",
+      "log_member": "results/fp16_trial.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/submission",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": false,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 10.166278951102868,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 10.140572065021843,
+            "same": 1416,
+            "total": 2048,
+            "consistency_rate": 0.69140625,
+            "exact_match": false
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 20.384494045982137,
+            "same": 1427,
+            "total": 2048,
+            "consistency_rate": 0.69677734375,
+            "exact_match": false
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 2.599213327979669,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "FP32 first",
+      "date": "2026-10-29",
+      "purpose_group": "normal",
+      "archive": "day2-20261029-PmCfgu.tar.gz",
+      "archive_sha256": "5f04fc5e71b7777de16dd545e8aa5e302891944e40dfea5b3628d82f9f3438e3",
+      "member": "results/day2-20261029-PmCfgu/fp32_public.json",
+      "log_member": null,
+      "log_match": "no paired log",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/submission",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 9.619876443175599,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 9.545441296882927,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 19.22044992703013,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 2.524991343030706,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "FP32 retry",
+      "date": "2026-10-29",
+      "purpose_group": "normal",
+      "archive": "day2-20261029-PmCfgu.tar.gz",
+      "archive_sha256": "5f04fc5e71b7777de16dd545e8aa5e302891944e40dfea5b3628d82f9f3438e3",
+      "member": "results/day2-20261029-PmCfgu/fp32_retry_public.json",
+      "log_member": "results/day2-20261029-PmCfgu/fp32_retry.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/submission",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 9.586844615172595,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 9.710715328110382,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 19.619253498036414,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 2.545350091997534,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "cProfile",
+      "date": "2026-10-29",
+      "purpose_group": "diagnostic",
+      "archive": "day2-20261029-PmCfgu.tar.gz",
+      "archive_sha256": "5f04fc5e71b7777de16dd545e8aa5e302891944e40dfea5b3628d82f9f3438e3",
+      "member": "results/day2-20261029-PmCfgu/diagnostic_only.json",
+      "log_member": "results/day2-20261029-PmCfgu/diagnostic.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/submission",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 10.59502044110559,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 10.551440614974126,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 21.221882867161185,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 2.779585188953206,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "RoPE",
+      "date": "2026-10-29",
+      "purpose_group": "normal",
+      "archive": "rope-pr17-20261029-QmbMHH.tar.gz",
+      "archive_sha256": "347171561e6b5802822132d361ec386696f6795f5a6c0ff045861bb678d880b0",
+      "member": "results/rope-pr17-20261029-QmbMHH/candidate_public.json",
+      "log_member": "results/rope-pr17-20261029-QmbMHH/candidate.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/results/rope-pr17-20261029-QmbMHH/source",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 8.954236773075536,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 8.723536293953657,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 17.51287211710587,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 2.2604528290685266,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "same session baseline",
+      "date": "2026-10-29",
+      "purpose_group": "normal",
+      "archive": "rope-pr17-20261029-QmbMHH.tar.gz",
+      "archive_sha256": "347171561e6b5802822132d361ec386696f6795f5a6c0ff045861bb678d880b0",
+      "member": "results/rope-pr17-20261029-QmbMHH/baseline_public.json",
+      "log_member": "results/rope-pr17-20261029-QmbMHH/baseline.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/baseline",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 9.580371842952445,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 9.493469448992983,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 19.224485903978348,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 2.5248000628780574,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "RoPE compile 1",
+      "date": "2026-10-29",
+      "purpose_group": "normal",
+      "archive": "rope-compile-rp17-20261029-3RJKlD.tar.gz",
+      "archive_sha256": "7db01549c61a24b5f8ede9d7df5f59b6cb5cc182ac053b347110ca9eb9700375",
+      "member": "results/rope-compile-rp17-20261029-3RJKlD/candidate_public.json",
+      "log_member": "results/rope-compile-rp17-20261029-3RJKlD/candidate.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/source",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 2.612602553097531,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 3.168718233006075,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 6.141966896131635,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 0.8466486309189349,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "RoPE compile 2",
+      "date": "2026-10-29",
+      "purpose_group": "normal",
+      "archive": "rope-compile-rp17-20261029-3RJKlD.tar.gz",
+      "archive_sha256": "7db01549c61a24b5f8ede9d7df5f59b6cb5cc182ac053b347110ca9eb9700375",
+      "member": "results/rope-compile-rp17-20261029-3RJKlD/candidate_r2_public.json",
+      "log_member": "results/rope-compile-rp17-20261029-3RJKlD/candidate_r2.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/source",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 2.593030027113855,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 3.1891110341530293,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 6.195326191838831,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 0.8484203640837222,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "PR20",
+      "date": "2026-11-01",
+      "purpose_group": "normal",
+      "archive": "pr20-dd70b49-20261101-vZnyOh.tar.gz",
+      "archive_sha256": "8f8b78c1023a687113538a86d02445a91ce718fad58926a6e4070cf9257beee0",
+      "member": "results/pr20-dd70b49-20261101-vZnyOh/candidate_public.json",
+      "log_member": "results/pr20-dd70b49-20261101-vZnyOh/candidate.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/results/pr20-dd70b49-20261101-vZnyOh/source",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 2.5434995470568538,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 3.2230022540315986,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 6.258945626905188,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 0.8597549221012741,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    },
+    {
+      "label": "previous",
+      "date": "2026-11-01",
+      "purpose_group": "normal",
+      "archive": "pr20-dd70b49-20261101-vZnyOh.tar.gz",
+      "archive_sha256": "8f8b78c1023a687113538a86d02445a91ce718fad58926a6e4070cf9257beee0",
+      "member": "results/pr20-dd70b49-20261101-vZnyOh/previous_public.json",
+      "log_member": "results/pr20-dd70b49-20261101-vZnyOh/previous.log",
+      "log_match": "4/4 matched",
+      "result": {
+        "purpose": "contest_test_record",
+        "submission": "/public/home/TEAM/progen2_contest/results/pr20-dd70b49-20261101-vZnyOh/previous_source",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "device": "BW",
+        "all_public_references_exact": true,
+        "loads": [
+          {
+            "load_id": "load1_b1_l32_g256",
+            "batch_size": 1,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 2.5367226900998503,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load2_b8_l32_g256",
+            "batch_size": 8,
+            "prefix_tokens": 32,
+            "new_tokens": 256,
+            "time_s": 3.2151723210699856,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load3_b4_l32_g512",
+            "batch_size": 4,
+            "prefix_tokens": 32,
+            "new_tokens": 512,
+            "time_s": 6.242357133887708,
+            "same": 2048,
+            "total": 2048,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          },
+          {
+            "load_id": "load4_b4_l512_g64",
+            "batch_size": 4,
+            "prefix_tokens": 512,
+            "new_tokens": 64,
+            "time_s": 0.8577182188164443,
+            "same": 256,
+            "total": 256,
+            "consistency_rate": 1.0,
+            "exact_match": true
+          }
+        ]
+      }
+    }
+  ]
+}

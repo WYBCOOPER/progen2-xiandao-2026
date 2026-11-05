@@ -1,0 +1,3 @@
+candidate	exit_status
+fp32_decode_attn_v8b	1
+fp32_rope_kv_v9b	1

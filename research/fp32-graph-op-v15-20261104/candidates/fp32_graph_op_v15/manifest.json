@@ -1,0 +1,34 @@
+{
+  "candidate": "fp32_graph_op_v15",
+  "parent": "fp32_compiled_graph_v14",
+  "DCU_tested": false,
+  "speed_claim": null,
+  "official_tools_modified": false,
+  "changes": [
+    "Declare only KV mutations at a custom-op boundary enclosing unchanged RoPE and attention; retain compiled graph replay"
+  ],
+  "source_sha256": {
+    "audit_result.py": "e11f5a808fa0496899d3212a274c83589748934931a296a5c6637719707304ef",
+    "compile_check.py": "67385d7c8825ba2496e1b673e33a39259fed9c8025a65d61e4ffafb38127e2df",
+    "graph_runtime.py": "ce5947128d245728a02e59ed4c03cdd0cc312e5da4f6eb9c493f27e5590a8ca8",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "f6cfa24f299d1a458077128093c528221274f8f03bc165126bdd5c4ada8ddeb8",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "8f5d760cbbb84007d4647fa853a7a99b5b151eb92d38a572cffb21263ca39ff1"
+  },
+  "parent_source_sha256": {
+    "audit_result.py": "3c109fd0cc7ca72ea1078f670d1cb7dd3b2f3ad65ac4f267408406eedd59159c",
+    "compile_check.py": "7efcdc41c06dc3da95aebacf8d2b527406235c77572fb33af4d6758aec7ac063",
+    "graph_runtime.py": "7c5262b983dc63b54cc8945ca335364da03890e5db10723a2b990a021201a411",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "b3bac5fb24c5c48eff98dd8ed789cbc78adcb914b827384aa224405c4c495263",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "44165c4f3892ece44c757bfb0562901b33a593db233e7c33c6fc96eae73810da"
+  }
+}

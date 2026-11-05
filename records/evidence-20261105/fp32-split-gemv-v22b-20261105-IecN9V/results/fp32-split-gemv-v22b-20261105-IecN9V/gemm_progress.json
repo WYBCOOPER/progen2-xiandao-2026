@@ -1,0 +1,716 @@
+{
+  "complete": false,
+  "completed_shapes": 12,
+  "shape_plan": {
+    "1,4608,1536,0": null,
+    "1,1536,1536,0": {
+      "bn": 4,
+      "bk": 512
+    },
+    "1,6144,1536,1": null,
+    "1,1536,6144,1": {
+      "bn": 4,
+      "bk": 256
+    },
+    "4,4608,1536,0": null,
+    "4,1536,1536,0": null,
+    "4,6144,1536,1": null,
+    "4,1536,6144,1": null,
+    "8,4608,1536,0": null,
+    "8,1536,1536,0": null,
+    "8,6144,1536,1": null,
+    "8,1536,6144,1": null
+  },
+  "records": [
+    {
+      "batch": 1,
+      "n": 4608,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.05268796920776367,
+        0.05261598110198975
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 4.909504385253172e-07,
+          "correct": true,
+          "times_ms": [
+            0.052049570083618164,
+            0.05228797912597656
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 4.909504385253172e-07,
+          "correct": true,
+          "times_ms": [
+            0.05363038063049316,
+            0.0548911714553833
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 4.909504385253172e-07,
+          "correct": true,
+          "times_ms": [
+            0.06766236782073974,
+            0.06749114990234376
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 4.95632832109294e-07,
+          "correct": true,
+          "times_ms": [
+            0.08675355911254883,
+            0.08706396102905273
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 1,
+      "n": 1536,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.0412703800201416,
+        0.04100478172302246
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 4.2012647671896275e-07,
+          "correct": true,
+          "times_ms": [
+            0.03625919103622437,
+            0.03618557929992676
+          ],
+          "selected_eligible": true
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 4.2012647671896275e-07,
+          "correct": true,
+          "times_ms": [
+            0.03392957925796509,
+            0.03362237930297852
+          ],
+          "selected_eligible": true
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 4.2012647671896275e-07,
+          "correct": true,
+          "times_ms": [
+            0.041113581657409665,
+            0.03955518007278443
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 4.110687528147139e-07,
+          "correct": true,
+          "times_ms": [
+            0.03812479019165039,
+            0.03909758090972901
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": {
+        "bn": 4,
+        "bk": 512
+      }
+    },
+    {
+      "batch": 1,
+      "n": 6144,
+      "k": 1536,
+      "bias": true,
+      "baseline_ms": [
+        0.05694237232208252,
+        0.05701918125152588
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 5.289246480799648e-07,
+          "correct": true,
+          "times_ms": [
+            0.06030557155609131,
+            0.060335969924926756
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 5.289246480799648e-07,
+          "correct": true,
+          "times_ms": [
+            0.05914078235626221,
+            0.05785117149353027
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 5.289246480799648e-07,
+          "correct": true,
+          "times_ms": [
+            0.07619676113128662,
+            0.07683356761932374
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 5.497494335315878e-07,
+          "correct": true,
+          "times_ms": [
+            0.0779663610458374,
+            0.07596155166625977
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 1,
+      "n": 1536,
+      "k": 6144,
+      "bias": true,
+      "baseline_ms": [
+        0.0729935598373413,
+        0.07326076984405518
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 9.869404578033425e-07,
+          "correct": true,
+          "times_ms": [
+            0.06029437065124512,
+            0.06044957160949707
+          ],
+          "selected_eligible": true
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 9.815278136926509e-07,
+          "correct": true,
+          "times_ms": [
+            0.06399995803833008,
+            0.06550395965576172
+          ],
+          "selected_eligible": true
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 9.815278136926509e-07,
+          "correct": true,
+          "times_ms": [
+            0.0790207576751709,
+            0.07761756896972656
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 9.815278136926509e-07,
+          "correct": true,
+          "times_ms": [
+            0.08967194557189942,
+            0.08941596031188964
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": {
+        "bn": 4,
+        "bk": 256
+      }
+    },
+    {
+      "batch": 4,
+      "n": 4608,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.053131179809570314,
+        0.05303836822509766
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 5.349341938298835e-07,
+          "correct": true,
+          "times_ms": [
+            0.08147677421569824,
+            0.08039356231689453
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 5.349341938298835e-07,
+          "correct": true,
+          "times_ms": [
+            0.08719518661499023,
+            0.08462555885314942
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 5.349341938298835e-07,
+          "correct": true,
+          "times_ms": [
+            0.10105754852294922,
+            0.09803195953369141
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 5.144515231592095e-07,
+          "correct": true,
+          "times_ms": [
+            0.08942716598510742,
+            0.08869595527648926
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 4,
+      "n": 1536,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.04265277862548828,
+        0.0425151777267456
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 4.5610334797885344e-07,
+          "correct": true,
+          "times_ms": [
+            0.04926076889038086,
+            0.04947197914123535
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 4.5610334797885344e-07,
+          "correct": true,
+          "times_ms": [
+            0.05639517784118652,
+            0.056393580436706545
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 4.5610334797885344e-07,
+          "correct": true,
+          "times_ms": [
+            0.048903980255126954,
+            0.048855981826782226
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 4.868144385383744e-07,
+          "correct": true,
+          "times_ms": [
+            0.047739171981811525,
+            0.047831978797912594
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 4,
+      "n": 6144,
+      "k": 1536,
+      "bias": true,
+      "baseline_ms": [
+        0.057782368659973146,
+        0.057707171440124515
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 7.299928643789144e-07,
+          "correct": true,
+          "times_ms": [
+            0.09381755828857422,
+            0.09084795951843262
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 7.299928643789144e-07,
+          "correct": true,
+          "times_ms": [
+            0.09762076377868652,
+            0.09933115959167481
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 7.299928643789144e-07,
+          "correct": true,
+          "times_ms": [
+            0.1020351505279541,
+            0.10160155296325683
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 6.711018407656866e-07,
+          "correct": true,
+          "times_ms": [
+            0.08824636459350586,
+            0.08719355583190919
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 4,
+      "n": 1536,
+      "k": 6144,
+      "bias": true,
+      "baseline_ms": [
+        0.07984156131744385,
+        0.07957436084747314
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 1.3126929543361143e-06,
+          "correct": true,
+          "times_ms": [
+            0.09299835205078125,
+            0.09236636161804199
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 9.847170012733386e-07,
+          "correct": true,
+          "times_ms": [
+            0.09974074363708496,
+            0.09749755859375
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 9.847170012733386e-07,
+          "correct": true,
+          "times_ms": [
+            0.10765915870666504,
+            0.10668475151062012
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 1.244415689605205e-06,
+          "correct": true,
+          "times_ms": [
+            0.07394717216491699,
+            0.07408957004547119
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 8,
+      "n": 4608,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.0497551679611206,
+        0.04989758014678955
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 5.069689310022163e-07,
+          "correct": true,
+          "times_ms": [
+            0.13624954223632812,
+            0.1386031436920166
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 5.069689310022163e-07,
+          "correct": true,
+          "times_ms": [
+            0.14380152702331542,
+            0.1433055305480957
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 5.069689310022163e-07,
+          "correct": true,
+          "times_ms": [
+            0.12314233779907227,
+            0.12320474624633788
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 5.297893013178623e-07,
+          "correct": true,
+          "times_ms": [
+            0.10930875778198242,
+            0.10932954788208007
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 8,
+      "n": 1536,
+      "k": 1536,
+      "bias": false,
+      "baseline_ms": [
+        0.047369580268859866,
+        0.047273569107055664
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 6.05454708590969e-07,
+          "correct": true,
+          "times_ms": [
+            0.07507676124572754,
+            0.07795676231384277
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 6.05454708590969e-07,
+          "correct": true,
+          "times_ms": [
+            0.08553115844726562,
+            0.08410556793212891
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 6.05454708590969e-07,
+          "correct": true,
+          "times_ms": [
+            0.06349437236785889,
+            0.06361116886138916
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 6.05454708590969e-07,
+          "correct": true,
+          "times_ms": [
+            0.061743969917297366,
+            0.06176637172698975
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 8,
+      "n": 6144,
+      "k": 1536,
+      "bias": true,
+      "baseline_ms": [
+        0.059468770027160646,
+        0.05902876853942871
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 6.970986827781189e-07,
+          "correct": true,
+          "times_ms": [
+            0.16634071350097657,
+            0.16230712890625
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 6.970986827781189e-07,
+          "correct": true,
+          "times_ms": [
+            0.15901272773742675,
+            0.15940632820129394
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 6.970986827781189e-07,
+          "correct": true,
+          "times_ms": [
+            0.14945433616638185,
+            0.14925752639770506
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 6.970986827781189e-07,
+          "correct": true,
+          "times_ms": [
+            0.12946873664855957,
+            0.1293503475189209
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    },
+    {
+      "batch": 8,
+      "n": 1536,
+      "k": 6144,
+      "bias": true,
+      "baseline_ms": [
+        0.07942875862121582,
+        0.07936956882476806
+      ],
+      "configs": [
+        {
+          "bn": 4,
+          "bk": 256,
+          "max_abs_error": 1.2040148362757463e-06,
+          "correct": true,
+          "times_ms": [
+            0.16455032348632812,
+            0.163414306640625
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 4,
+          "bk": 512,
+          "max_abs_error": 1.0887747095011946e-06,
+          "correct": true,
+          "times_ms": [
+            0.1607551383972168,
+            0.16172632217407226
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 512,
+          "max_abs_error": 1.0887747095011946e-06,
+          "correct": true,
+          "times_ms": [
+            0.15291513442993165,
+            0.1530495262145996
+          ],
+          "selected_eligible": false
+        },
+        {
+          "bn": 8,
+          "bk": 1024,
+          "max_abs_error": 1.1650062168300224e-06,
+          "correct": true,
+          "times_ms": [
+            0.11439834594726563,
+            0.11430074691772461
+          ],
+          "selected_eligible": false
+        }
+      ],
+      "mode": null
+    }
+  ]
+}

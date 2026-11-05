@@ -1,0 +1,30 @@
+{
+  "candidate": "fp32_chunk2_v5",
+  "generate_compile_events": [
+    3,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "expected_generate_calls": 8,
+  "warmup_events": [
+    3,
+    3,
+    0,
+    0
+  ],
+  "measured_events": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "compile_activity_check_passed": true,
+  "all_public_references_exact": true,
+  "candidate_identity_logged": true,
+  "experiment_checks_passed": true
+}

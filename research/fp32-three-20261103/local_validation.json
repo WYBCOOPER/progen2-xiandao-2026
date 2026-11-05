@@ -1,0 +1,158 @@
+{
+  "scope": "Official 27-layer checkpoint, shortened generation, eager NVIDIA with loading/output shims; tiny actual-model fullgraph capture uses backend=eager, not Inductor/DCU. No speed claim.",
+  "torch": "2.11.0+cu128",
+  "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "cases": [
+    {
+      "variant": "parent",
+      "load": "load1_b1_l32_g256",
+      "G": 16,
+      "matches": 16,
+      "total": 16,
+      "equals_parent": true
+    },
+    {
+      "variant": "parent",
+      "load": "load2_b8_l32_g256",
+      "G": 8,
+      "matches": 64,
+      "total": 64,
+      "equals_parent": true
+    },
+    {
+      "variant": "parent",
+      "load": "load3_b4_l32_g512",
+      "G": 16,
+      "matches": 64,
+      "total": 64,
+      "equals_parent": true
+    },
+    {
+      "variant": "parent",
+      "load": "load4_b4_l512_g64",
+      "G": 2,
+      "matches": 8,
+      "total": 8,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_chunk2_v5",
+      "load": "load1_b1_l32_g256",
+      "G": 16,
+      "matches": 16,
+      "total": 16,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_chunk2_v5",
+      "load": "load2_b8_l32_g256",
+      "G": 8,
+      "matches": 64,
+      "total": 64,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_chunk2_v5",
+      "load": "load3_b4_l32_g512",
+      "G": 16,
+      "matches": 64,
+      "total": 64,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_chunk2_v5",
+      "load": "load4_b4_l512_g64",
+      "G": 2,
+      "matches": 8,
+      "total": 8,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_k_transpose_v6",
+      "load": "load1_b1_l32_g256",
+      "G": 16,
+      "matches": 16,
+      "total": 16,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_k_transpose_v6",
+      "load": "load2_b8_l32_g256",
+      "G": 8,
+      "matches": 64,
+      "total": 64,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_k_transpose_v6",
+      "load": "load3_b4_l32_g512",
+      "G": 16,
+      "matches": 64,
+      "total": 64,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_k_transpose_v6",
+      "load": "load4_b4_l512_g64",
+      "G": 2,
+      "matches": 8,
+      "total": 8,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_sdpa_v7",
+      "load": "load1_b1_l32_g256",
+      "G": 16,
+      "matches": 16,
+      "total": 16,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_sdpa_v7",
+      "load": "load2_b8_l32_g256",
+      "G": 8,
+      "matches": 64,
+      "total": 64,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_sdpa_v7",
+      "load": "load3_b4_l32_g512",
+      "G": 16,
+      "matches": 64,
+      "total": 64,
+      "equals_parent": true
+    },
+    {
+      "variant": "fp32_sdpa_v7",
+      "load": "load4_b4_l512_g64",
+      "G": 2,
+      "matches": 8,
+      "total": 8,
+      "equals_parent": true
+    }
+  ],
+  "source_sha256": {
+    "parent": {
+      "solution.py": "129e8b80c8fc8f7c8ea83672f200931271d5f9ba3baa8d8910b56403d26d47f6",
+      "models/progen/modeling_progen.py": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d"
+    },
+    "fp32_chunk2_v5": {
+      "solution.py": "1b265a061e1f0aa6c898d25ee63bb2041f776826ed13369cf5b8636d2b7f4f5e",
+      "models/progen/modeling_progen.py": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d"
+    },
+    "fp32_k_transpose_v6": {
+      "solution.py": "96bc969ca2d22ab256448fbd700956ec506a6223d24a631a3e39f9c475dd65e7",
+      "models/progen/modeling_progen.py": "37eab1f711028c965ce366933d71945db81833a81ecf02241b29848be83180ef"
+    },
+    "fp32_sdpa_v7": {
+      "solution.py": "965db712af832b4f426380b7d7dec16533947c9fd2099113c7fc5a09789ffec3",
+      "models/progen/modeling_progen.py": "654305bac13fddd1bac6ed64b6c127547704023504acd3a7fc1f24dc732ee58a"
+    }
+  },
+  "fullgraph_eager_capture": {
+    "fp32_chunk2_v5": true,
+    "fp32_k_transpose_v6": true,
+    "fp32_sdpa_v7": true
+  }
+}

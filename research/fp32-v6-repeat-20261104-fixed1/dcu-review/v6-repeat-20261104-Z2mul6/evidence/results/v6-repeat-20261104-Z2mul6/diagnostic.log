@@ -1,0 +1,81 @@
+ProGenForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+单步编译包装已建立
+LOADED=v23
+FP32_CANDIDATE=fp32_k_transpose_v6
+LOADED=v6
+/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:150: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1104 00:49:17.461000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [0/0] xindex is not in var_ranges, defaulting to unknown range.
+W1104 00:50:24.225000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [0/1] xindex is not in var_ranges, defaulting to unknown range.
+W1104 00:51:41.291000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [0/2] xindex is not in var_ranges, defaulting to unknown range.
+COMPILE_EVENTS_DURING_GENERATE=3
+W1104 00:52:43.833000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [1/0] yindex is not in var_ranges, defaulting to unknown range.
+W1104 00:52:43.945000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [1/0] xindex is not in var_ranges, defaulting to unknown range.
+W1104 00:53:45.345000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [1/1] xindex is not in var_ranges, defaulting to unknown range.
+W1104 00:55:01.677000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [1/2] xindex is not in var_ranges, defaulting to unknown range.
+COMPILE_EVENTS_DURING_GENERATE=3
+COMPILE_EVENTS_DURING_GENERATE=0
+[load1_b1_l32_g256] round=1 v23 time=1.633709s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load1_b1_l32_g256] round=1 v6 time=1.634231s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load1_b1_l32_g256] round=2 v6 time=1.628501s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load1_b1_l32_g256] round=2 v23 time=1.630371s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load1_b1_l32_g256] round=3 v23 time=1.634016s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load1_b1_l32_g256] round=3 v6 time=1.629696s exact=True compile=0
+W1104 00:57:17.248000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [0/3] xindex is not in var_ranges, defaulting to unknown range.
+W1104 00:59:44.752000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [0/4] xindex is not in var_ranges, defaulting to unknown range.
+W1104 01:02:43.609000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [0/5] xindex is not in var_ranges, defaulting to unknown range.
+COMPILE_EVENTS_DURING_GENERATE=3
+W1104 01:04:43.714000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [1/3] yindex is not in var_ranges, defaulting to unknown range.
+W1104 01:04:43.895000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [1/3] xindex is not in var_ranges, defaulting to unknown range.
+W1104 01:07:14.275000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [1/4] xindex is not in var_ranges, defaulting to unknown range.
+W1104 01:10:10.998000 140626517886784 torch/fx/experimental/symbolic_shapes.py:4449] [1/5] xindex is not in var_ranges, defaulting to unknown range.
+COMPILE_EVENTS_DURING_GENERATE=3
+COMPILE_EVENTS_DURING_GENERATE=0
+[load2_b8_l32_g256] round=1 v23 time=1.825054s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load2_b8_l32_g256] round=1 v6 time=1.810820s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load2_b8_l32_g256] round=2 v6 time=1.808476s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load2_b8_l32_g256] round=2 v23 time=1.793873s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load2_b8_l32_g256] round=3 v23 time=1.792607s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load2_b8_l32_g256] round=3 v6 time=1.806213s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+COMPILE_EVENTS_DURING_GENERATE=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load3_b4_l32_g512] round=1 v23 time=3.544130s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load3_b4_l32_g512] round=1 v6 time=3.572789s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load3_b4_l32_g512] round=2 v6 time=3.568209s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load3_b4_l32_g512] round=2 v23 time=3.552017s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load3_b4_l32_g512] round=3 v23 time=3.550763s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load3_b4_l32_g512] round=3 v6 time=3.562379s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+COMPILE_EVENTS_DURING_GENERATE=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load4_b4_l512_g64] round=1 v23 time=0.544865s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load4_b4_l512_g64] round=1 v6 time=0.562623s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load4_b4_l512_g64] round=2 v6 time=0.563274s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load4_b4_l512_g64] round=2 v23 time=0.543668s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load4_b4_l512_g64] round=3 v23 time=0.544115s exact=True compile=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load4_b4_l512_g64] round=3 v6 time=0.562618s exact=True compile=0
+REPEAT_DIAGNOSTIC=PASS

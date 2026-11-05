@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "bash",
+    "/public/home/TEAM/progen2_contest/run_public_test.sh",
+    "/public/home/TEAM/progen2_contest/results/v22b-compare-20261105-DRmjDX/01_v20/source"
+  ],
+  "RESULT_FILE": "/public/home/TEAM/progen2_contest/results/v22b-compare-20261105-DRmjDX/01_v20/candidate_public.json",
+  "SPLIT_GEMV_PLAN": null
+}

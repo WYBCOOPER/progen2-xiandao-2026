@@ -1,0 +1,452 @@
+{
+  "requested_file_path_available": false,
+  "actual_inputs": [
+    {
+      "file": "fp32-kernels-fixed1-batch-20261104-UrWuDI.tar.gz",
+      "sha256": "a3ea25a7eb3295a1c515ba17011434016c52225b69068e7961b0e4c31532fff3"
+    },
+    {
+      "file": "fp32-rope-kv-v9c-20261104-A681jn.tar.gz",
+      "sha256": "83432bb830f32615c9c7e7975312db7dbe192ba8626c53c800279ac12b474894"
+    },
+    {
+      "file": "fp32-step-gemm-v23-20261103-DnDLwm.tar.gz",
+      "sha256": "44aca6ed244ccf3fbcec368a01eea3149f42fb5ae79046b796c79763edc73a8a"
+    },
+    {
+      "file": "fp32-decode-attn-v8c-20261104-6kdCzH.tar.gz",
+      "sha256": "8c764183db4234881e8dc38f7206c1203620e659da24280e3448cf653859852b"
+    },
+    {
+      "file": "fp32-combo-v89-20261104-Wri0Ic.tar.gz",
+      "sha256": "f9917845f5a76e42fe68d4067fc911fda8c71427890bc33e66a8b64e79b3014f"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate": "fp32_decode_attn_v8b",
+      "source_verified_against_upload_zip": [
+        "README.md",
+        "audit_result.py",
+        "compile_check.py",
+        "kernel_check.py",
+        "manifest.json",
+        "models/__init__.py",
+        "models/progen/__init__.py",
+        "models/progen/configuration_progen.py",
+        "models/progen/kernels.py",
+        "models/progen/modeling_progen.py",
+        "run_test.sh",
+        "solution.py"
+      ],
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520,
+        "official_tools_sha256": {
+          "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+          "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+          "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+          "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+          "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+        }
+      },
+      "exit_status": 1,
+      "status": "failed compiled small-tensor probe; no full-model score",
+      "failure": "undefined s1 in constexpr metadata"
+    },
+    {
+      "candidate": "fp32_rope_kv_v9b",
+      "source_verified_against_upload_zip": [
+        "README.md",
+        "audit_result.py",
+        "compile_check.py",
+        "kernel_check.py",
+        "manifest.json",
+        "models/__init__.py",
+        "models/progen/__init__.py",
+        "models/progen/configuration_progen.py",
+        "models/progen/kernels.py",
+        "models/progen/modeling_progen.py",
+        "run_test.sh",
+        "solution.py"
+      ],
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520,
+        "official_tools_sha256": {
+          "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+          "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+          "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+          "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+          "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+        }
+      },
+      "exit_status": 1,
+      "status": "failed compiled small-tensor probe; no full-model score",
+      "failure": "undefined s2 in constexpr metadata"
+    },
+    {
+      "candidate": "fp32_rope_kv_v9c",
+      "source_verified_against_upload_zip": [
+        "audit_result.py",
+        "compile_check.py",
+        "kernel_check.py",
+        "manifest.json",
+        "models/__init__.py",
+        "models/progen/__init__.py",
+        "models/progen/configuration_progen.py",
+        "models/progen/kernels.py",
+        "models/progen/modeling_progen.py",
+        "README.md",
+        "run_test.sh",
+        "solution.py"
+      ],
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520,
+        "official_tools_sha256": {
+          "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+          "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+          "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+          "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+          "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+        }
+      },
+      "exit_status": 0,
+      "status": "public correctness and recorded compile gates passed; single measurement",
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.5338259630370885,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.6781445150263608,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 3.311458772048354,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.5194565739948303,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ],
+      "sum_time_s": 7.042885824106634,
+      "formal_dynamo_events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "formal_triton_cache_misses": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "warmup_dynamo_events": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "inline_asm_mutation_analysis_warning": true,
+      "warning_interpretation": "Compiler conservatively treats inputs as mutated; warning was nonfatal in this run. No suppress_errors fallback configured.",
+      "compile_audit_limit": "Two recorded hooks, not a hardware trace of all native compiler activity"
+    },
+    {
+      "candidate": "fp32_decode_attn_v8c",
+      "source_verified_against_upload_zip": [
+        "audit_result.py",
+        "compile_check.py",
+        "kernel_check.py",
+        "manifest.json",
+        "models/__init__.py",
+        "models/progen/__init__.py",
+        "models/progen/configuration_progen.py",
+        "models/progen/kernels.py",
+        "models/progen/modeling_progen.py",
+        "README.md",
+        "run_test.sh",
+        "solution.py"
+      ],
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520,
+        "official_tools_sha256": {
+          "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+          "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+          "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+          "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+          "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+        }
+      },
+      "exit_status": 0,
+      "status": "public correctness and recorded compile gates passed; single measurement",
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.5071897408924997,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.9032918219454587,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 3.363485970068723,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.5406654940452427,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ],
+      "sum_time_s": 7.314633026951924,
+      "formal_dynamo_events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "formal_triton_cache_misses": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "warmup_dynamo_events": [
+        3,
+        2,
+        0,
+        0
+      ],
+      "inline_asm_mutation_analysis_warning": false,
+      "warning_interpretation": "Compiler conservatively treats inputs as mutated; warning was nonfatal in this run. No suppress_errors fallback configured.",
+      "compile_audit_limit": "Two recorded hooks, not a hardware trace of all native compiler activity",
+      "direct_kernel_cases_passed": 108,
+      "direct_kernel_max_abs_error": 1.1086463928222656e-05,
+      "archive_sha256": "8c764183db4234881e8dc38f7206c1203620e659da24280e3448cf653859852b"
+    },
+    {
+      "candidate": "fp32_combo_v89",
+      "source_verified_against_upload_zip": [
+        "audit_result.py",
+        "check_attention.py",
+        "check_rope.py",
+        "compile_check.py",
+        "kernel_check.py",
+        "manifest.json",
+        "models/__init__.py",
+        "models/progen/__init__.py",
+        "models/progen/configuration_progen.py",
+        "models/progen/kernels.py",
+        "models/progen/modeling_progen.py",
+        "README.md",
+        "run_test.sh",
+        "solution.py"
+      ],
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520,
+        "official_tools_sha256": {
+          "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+          "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+          "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+          "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+          "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+        }
+      },
+      "exit_status": 0,
+      "status": "public correctness and recorded compile gates passed; single measurement",
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.3878907579928637,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.8890572651289403,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 3.3601006900426,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.5429251049645245,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ],
+      "sum_time_s": 7.1799738181289285,
+      "formal_dynamo_events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "formal_triton_cache_misses": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "warmup_dynamo_events": [
+        3,
+        2,
+        0,
+        0
+      ],
+      "inline_asm_mutation_analysis_warning": true,
+      "warning_interpretation": "Compiler conservatively treats inputs as mutated; warning was nonfatal in this run. No suppress_errors fallback configured.",
+      "compile_audit_limit": "Two recorded hooks, not a hardware trace of all native compiler activity",
+      "direct_attention_kernel_cases_passed": 108,
+      "direct_rope_kernel_cases_passed": 24,
+      "archive_sha256": "f9917845f5a76e42fe68d4067fc911fda8c71427890bc33e66a8b64e79b3014f"
+    }
+  ],
+  "historical_comparison": {
+    "v23_sum_s": 7.777090281946585,
+    "v9c_sum_s": 7.042885824106634,
+    "elapsed_reduction_pct": 9.440606077883684,
+    "speedup_ratio": 1.1042476729250517,
+    "limitation": "Different dates/sessions; no same-session paired control. Observed reduction is provisional, not isolated optimization benefit.",
+    "v8c_sum_s": 7.314633026951924,
+    "v8c_elapsed_reduction_pct": 5.946404609294431,
+    "combo_v89_sum_s": 7.1799738181289285,
+    "combo_elapsed_reduction_pct": 7.677890344204663
+  },
+  "current_conclusion": {
+    "both_directions_public_checks_passed": true,
+    "faster_total_in_available_records": "fp32_rope_kv_v9c",
+    "comparison_limit": "Single runs; historical v23 and candidates are not paired same-session controls. Isolated gains and combined gains are not established.",
+    "combined_candidate_tested": true,
+    "combo_v89_sum_s": 7.1799738181289285,
+    "combo_elapsed_increase_vs_v9c_pct": 1.9464747469434274,
+    "selection": "retain v9c as provisional comparison candidate; do not replace it solely on this single combined run",
+    "tonight": "correctness and recorded compile gates complete; no further runs requested for tonight"
+  }
+}

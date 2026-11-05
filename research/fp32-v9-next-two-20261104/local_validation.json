@@ -1,0 +1,29 @@
+{
+  "scope": "Actual Triton bodies evaluated with CPU pointer substitutes; actual torch.library schema/fake/AOT-eager checked using those substitutes. No real Triton, Inductor codegen, HIP or full-model execution.",
+  "torch_version": "2.11.0+cu128",
+  "DCU_tested": false,
+  "candidates": {
+    "fp32_rope_op_v10": {
+      "original_model_unchanged": true,
+      "v9c_rope_kernel_AST_unchanged": true,
+      "python_syntax": "passed",
+      "mutation_schema": "progen_v10::rope_kv(Tensor qkv, Tensor(a1!) k_cache, Tensor(a2!) v_cache, Tensor sin, Tensor cos, SymInt cur_len) -> Tensor",
+      "exact_rope_cache_cases": 32,
+      "opcheck": {
+        "test_schema": "SUCCESS",
+        "test_faketensor": "SUCCESS"
+      },
+      "AOT_eager_mutation_consumer_cases": 12
+    },
+    "fp32_greedy_v11": {
+      "original_model_unchanged": true,
+      "v9c_rope_kernel_AST_unchanged": true,
+      "python_syntax": "passed",
+      "exact_greedy_edge_and_stride_cases": 112,
+      "actual_Solution_generation_step_stub_model_cases": 112,
+      "allowed_only_each_winner_cases": 20
+    }
+  },
+  "bash_syntax": "Git Bash -n passed for both child runners and the batch runner; model not executed locally",
+  "batch_failure_preservation": "Executed real batch runner with two stub child runners: first exit 7, second exit 0; both child archives and statuses retained, overall exit 1."
+}

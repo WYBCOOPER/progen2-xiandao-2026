@@ -1,0 +1,33 @@
+{
+  "candidate": "fp32_greedy_v11",
+  "parent": "fp32_rope_kv_v9c",
+  "parent_source_sha256": {
+    "audit_result.py": "4de7bbbb3db665fe7df21045d7c8e04a28d5ae504868b0a67e3f27de41fddfde",
+    "compile_check.py": "9af830efce8a625f0173105586802caa273378cc27e6d36f07fbf5a7cc6a1956",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "efc49236d907f4ccc20f3237dec690589c074b3d50f67922d028ce6d999fc7bb",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "53695e49017dbd95beb0307f5e20a883bc61ec0f1c94db19fc8f3c96f81a8229"
+  },
+  "source_sha256": {
+    "audit_result.py": "9d89b99c2790bd0bf5189679bda8ed4dab29d2e79a793729297a096f101a1e83",
+    "check_compiled_rope.py": "9af830efce8a625f0173105586802caa273378cc27e6d36f07fbf5a7cc6a1956",
+    "check_greedy.py": "7934bd47e9f3d751408df6a84353d2843b4779231c591c32b420827882e75ee8",
+    "check_rope.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "compile_check.py": "66f5b76622bf4156e247f81c2580e9ecd2bfa256505837ae6bc74bdaf1c5d06f",
+    "kernel_check.py": "e3440e9f93b179a9e30c90c53e21972d188311c7bc9a446bf57d3379c779d3a4",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "f1fe00c17f62173a4efa503431331001c855cea57f5dbb00792fad36596d8cba",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "1edd49efa3b8f4cbc6ea8fecd31244288296439ab46a7cd6c3d0febb4096886c"
+  },
+  "DCU_tested": false,
+  "speed_claim": null,
+  "official_tools_modified": false,
+  "independent_of_other_candidate": true
+}

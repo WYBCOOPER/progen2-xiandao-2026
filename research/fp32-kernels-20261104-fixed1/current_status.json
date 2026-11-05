@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-04",
+  "parent": "fp32_step_gemm_v23",
+  "revision": "fixed1",
+  "DCU_retest_pending": true,
+  "previous_failure_review": "../fp32-kernels-20261104/dcu-review/fp32-kernels-batch-20261104-WCzvcM/verification.json",
+  "previous_small_kernel_cases_passed": {
+    "v8": 108,
+    "v9": 24
+  },
+  "previous_full_model_result": "failed in warmup; no formal measurements",
+  "changes": [
+    "Remove unsupported enable_fp_fusion launch keyword",
+    "RoPE explicit AMD FP32 multiplication preserves separate product rounding",
+    "Tiny compiled-kernel invocation gate before full model"
+  ],
+  "official_tools_modified": false,
+  "speed_claim": null,
+  "package": "fp32-kernels-20261104-fixed1-upload.zip",
+  "package_sha256": "b01f2e70e45b16c0c8b5d4e1dcb213843861afba9fb292c3c9822a0ac7f0ae8a",
+  "package_files": 28,
+  "screenshot_followup": {
+    "v9b": "undefined symbolic B constant (s2) in generated module",
+    "v8b": "outcome not visible in screenshot",
+    "repair_package": "fp32-rope-kv-v9c-20261104-upload.zip",
+    "retest_pending": true
+  },
+  "archive_review": "../fp32-kernel-results-20261104/verification.json",
+  "verified_fixed1_outcomes": {
+    "v8b": "failed compiled probe: undefined s1 in stride constants",
+    "v9b": "failed compiled probe: undefined s2 in batch constant"
+  }
+}

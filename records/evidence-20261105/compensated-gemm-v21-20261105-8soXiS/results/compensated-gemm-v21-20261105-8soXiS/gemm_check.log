@@ -1,0 +1,13 @@
+GEMM_PROBE={"B": 1, "N": 4608, "K": 1536, "max_abs_error": 6.198883056640625e-06, "torch_linear_ms": 0.05022379755973816, "compensated_ms": 0.10476789474487305}
+GEMM_PROBE={"B": 4, "N": 4608, "K": 1536, "max_abs_error": 7.152557373046875e-06, "torch_linear_ms": 0.051551800966262815, "compensated_ms": 0.09287989735603333}
+GEMM_PROBE={"B": 8, "N": 4608, "K": 1536, "max_abs_error": 7.62939453125e-06, "torch_linear_ms": 0.04945589900016785, "compensated_ms": 0.09163190126419067}
+GEMM_PROBE={"B": 1, "N": 1536, "K": 1536, "max_abs_error": 2.1457672119140625e-06, "torch_linear_ms": 0.038495799899101256, "compensated_ms": 0.09419190287590026}
+GEMM_PROBE={"B": 4, "N": 1536, "K": 1536, "max_abs_error": 2.6226043701171875e-06, "torch_linear_ms": 0.04095979928970337, "compensated_ms": 0.09627190232276917}
+GEMM_PROBE={"B": 8, "N": 1536, "K": 1536, "max_abs_error": 7.62939453125e-06, "torch_linear_ms": 0.03585599958896637, "compensated_ms": 0.09475200176239014}
+GEMM_PROBE={"B": 1, "N": 6144, "K": 1536, "max_abs_error": 5.7220458984375e-06, "torch_linear_ms": 0.0642877995967865, "compensated_ms": 0.09545590281486512}
+GEMM_PROBE={"B": 4, "N": 6144, "K": 1536, "max_abs_error": 6.9141387939453125e-06, "torch_linear_ms": 0.07388780117034913, "compensated_ms": 0.09683200120925903}
+GEMM_PROBE={"B": 8, "N": 6144, "K": 1536, "max_abs_error": 7.3909759521484375e-06, "torch_linear_ms": 0.06300789713859559, "compensated_ms": 0.09363189935684205}
+GEMM_PROBE={"B": 1, "N": 1536, "K": 6144, "max_abs_error": 7.62939453125e-06, "torch_linear_ms": 0.05665580034255981, "compensated_ms": 0.2419517993927002}
+GEMM_PROBE={"B": 4, "N": 1536, "K": 6144, "max_abs_error": 8.58306884765625e-06, "torch_linear_ms": 0.06055979728698731, "compensated_ms": 0.23742380142211914}
+GEMM_PROBE={"B": 8, "N": 1536, "K": 6144, "max_abs_error": 9.5367431640625e-06, "torch_linear_ms": 0.057631999254226685, "compensated_ms": 0.23030378818511962}
+COMPENSATED_GEMM_CHECK=PASS

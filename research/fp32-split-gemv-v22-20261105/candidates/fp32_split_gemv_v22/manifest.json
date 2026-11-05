@@ -1,0 +1,40 @@
+{
+  "candidate": "fp32_split_gemv_v22",
+  "parent": "fp32_batch_hybrid_v20",
+  "DCU_tested": false,
+  "speed_claim": null,
+  "arithmetic": "FP32 products and deterministic two-stage reduction; summation order differs",
+  "official_tools_modified": false,
+  "selection": "Input-independent synthetic microbenchmark before model initialization; two rounds >=10% win against graph-replayed compiled FP32 F.linear, otherwise original path",
+  "references": [
+    "https://github.com/dropbox/gemlite/blob/master/gemlite/triton_kernels/gemv_kernels.py",
+    "https://github.com/uulong950/qingming-gfx1100-gemv/blob/main/gemv.cpp"
+  ],
+  "source_sha256": {
+    "audit_result.py": "22ce2d378e55e7767916b592a96d85bb2533822e9b0e0dfecc904db2510e6758",
+    "compile_check.py": "c902bc6595c6525ff76f7066eadb633eb4672f2f59c8edb31e9ffb1fc6b598b5",
+    "gemm_check.py": "717877a19cfc8f870ad1787ba7c628f74b5bd05eaba61421142e92a53083e6ea",
+    "graph_runtime.py": "5da80ac67834d2c9f24cc950090312cdb3e3cf99d7f6adcce816b973687a2cc9",
+    "kernel_check.py": "8c0ce4aede6512c699000566859fb8f5dd1d67465aa1e9c2d1ea27ed01120ce2",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "75017d468686352cb57c2884a6078be82ff4cd7f8764f4ee5d3de4a0c6e8d7f1",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "plan_utils.py": "144aac34dab8cee6e766dde1f08ca2353c629f2a714039f53cb2ad7193531355",
+    "solution.py": "401268ba52d51111e630bee67052b34a356110ab9a779da8708f77e9cd54e16b",
+    "split_linear.py": "96c540f7d10f4ef8a5ea218a5cbd963081ddb5f26e114da18320447dc506fb9b"
+  },
+  "parent_source_sha256": {
+    "audit_result.py": "a01cc238f5b03dbee77587c9e05acd56f99ffbc2eaed634d59056d55afe1aebc",
+    "compile_check.py": "c902bc6595c6525ff76f7066eadb633eb4672f2f59c8edb31e9ffb1fc6b598b5",
+    "graph_runtime.py": "ce5947128d245728a02e59ed4c03cdd0cc312e5da4f6eb9c493f27e5590a8ca8",
+    "kernel_check.py": "8c0ce4aede6512c699000566859fb8f5dd1d67465aa1e9c2d1ea27ed01120ce2",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "75017d468686352cb57c2884a6078be82ff4cd7f8764f4ee5d3de4a0c6e8d7f1",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "d57a0f4e9e99c9405a3abf026138d6d1dc3d22b6969160e6e311107ab1ed2224"
+  }
+}

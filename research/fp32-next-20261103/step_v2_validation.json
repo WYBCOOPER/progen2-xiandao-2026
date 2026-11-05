@@ -1,0 +1,226 @@
+{
+  "torch": "2.11.0+cu128",
+  "hip": null,
+  "cases": [
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 2,
+      "prefix_length": 4,
+      "steps": 5,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 8,
+      "prefix_length": 32,
+      "steps": 4,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 4,
+      "prefix_length": 512,
+      "steps": 3,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 7,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 2,
+      "prefix_length": 4,
+      "steps": 5,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 8,
+      "prefix_length": 32,
+      "steps": 4,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 4,
+      "prefix_length": 512,
+      "steps": 3,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 7,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 2,
+      "prefix_length": 4,
+      "steps": 5,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 8,
+      "prefix_length": 32,
+      "steps": 4,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 4,
+      "prefix_length": 512,
+      "steps": 3,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 7,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 2,
+      "prefix_length": 4,
+      "steps": 5,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 8,
+      "prefix_length": 32,
+      "steps": 4,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 4,
+      "prefix_length": 512,
+      "steps": 3,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 7,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    }
+  ],
+  "fullgraph_backend": "eager",
+  "fixture_isolation": "Dynamo reset between independent device/tie fixtures, never between requests. Initial mixed-fixture run exceeded global per-code cache limit.",
+  "source_validation": "Stateful test model with tensor cache; same generate methods as real candidates; not full ProGen/Inductor/DCU.",
+  "single_cpu_transfer_outside_generation_loop": true
+}

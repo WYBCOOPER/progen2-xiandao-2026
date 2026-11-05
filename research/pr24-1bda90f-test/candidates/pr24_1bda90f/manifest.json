@@ -1,0 +1,47 @@
+{
+  "upstream_pr": 24,
+  "upstream_commit": "1bda90f824b34bfe4a522bef14f6d446661839ad",
+  "upstream_url": "https://github.com/WYBCOOPER/progen2-xiandao-2026/pull/24",
+  "purpose": "T1 precision diagnosis; not combined with FP32 v2b/v3",
+  "source_checks": [
+    {
+      "path": "solution.py",
+      "upstream_git_blob_sha": "6c8da19121f4775e567ad9e48ff9c1cee4cd57ed",
+      "sha256": "ae0443b788bdfa88821ba69bfe75c91d4cc4d637aeb86221afaa6134b0819db3",
+      "matches_upstream": true
+    },
+    {
+      "path": "models/progen/__init__.py",
+      "upstream_git_blob_sha": "0ba41c92664cb12bfc9561e0f9113a09d7411bd4",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "matches_upstream": true
+    },
+    {
+      "path": "models/progen/configuration_progen.py",
+      "upstream_git_blob_sha": "d6d16eb63a0c3723506f391e04fcc97d73995a0d",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "matches_upstream": true
+    },
+    {
+      "path": "models/progen/modeling_progen.py",
+      "upstream_git_blob_sha": "250d3dfb5c651b94af98b998fb9bdf6055d5bea4",
+      "sha256": "f5be7c4526464acccbb30a9d3ccd086b3a70b9f23b53aa0da9c9273343a72e01",
+      "matches_upstream": true
+    }
+  ],
+  "packaging_changes": [
+    {
+      "path": "models/__init__.py",
+      "change": "Add empty package marker; no numerical changes"
+    }
+  ],
+  "configuration": {
+    "WEIGHT_DTYPE": "fp16",
+    "HALF_WEIGHT_SCOPE": "all",
+    "ALLOW_FP16_REDUCED_PRECISION": false,
+    "COMPILE_MODEL": true
+  },
+  "dcu_tested": false,
+  "official_test_tools_modified": false,
+  "weights_included": false
+}

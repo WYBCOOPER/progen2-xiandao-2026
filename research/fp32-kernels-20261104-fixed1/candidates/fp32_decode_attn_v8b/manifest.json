@@ -1,0 +1,30 @@
+{
+  "candidate": "fp32_decode_attn_v8b",
+  "parent": "fp32_step_gemm_v23",
+  "change": "方向1：FP32 单字母 decode 注意力，自编 Triton 分块 softmax 与加权求和；不使用低精度或 tl.dot。",
+  "DCU_tested": false,
+  "speed_claim": null,
+  "parent_sha256": {
+    "solution.py": "129e8b80c8fc8f7c8ea83672f200931271d5f9ba3baa8d8910b56403d26d47f6",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/modeling_progen.py": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d"
+  },
+  "source_sha256": {
+    "audit_result.py": "df14b96dfe8873cbc4f4037eed60a439bacdf6637b49f89056849d442f0dceab",
+    "compile_check.py": "b0868ea21696c22e76d2ff1c97f53361696f6b98834840c9f6f2ccf27b5bab06",
+    "kernel_check.py": "80587ce4c8cf2224aa49d7d9800617b1d8c5ee751ea0a9c216ba75aff1ac7143",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "edafd97b7df2d1e60ed107b2da326ac0b87b2853e7170c9447ddf8cccef140ad",
+    "models/progen/modeling_progen.py": "8ca36576e93dcd7903ed2ad352deb54733c8e74793f590299dbb91a011b562c6",
+    "solution.py": "44fbb942d68168059f8f06469fbd78ac75bd2f0a7e1a0beddfa6d23a193d5a81"
+  },
+  "local_validation": "local_validation.json in ZIP root: CPU reference math and syntax only; no actual Triton execution",
+  "sources": [
+    "https://github.com/triton-lang/triton/blob/v3.0.0/python/triton/runtime/jit.py",
+    "https://github.com/pytorch/pytorch/blob/v2.4.1/test/inductor/test_triton_kernels.py"
+  ]
+}

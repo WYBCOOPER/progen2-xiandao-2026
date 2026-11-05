@@ -1,0 +1,283 @@
+{
+  "archive_sha256": "4e004feed75060d2abd590de02a73716299acc984b66ae4fc46a93665b670f1c",
+  "original_archive_unchanged": true,
+  "runs": {
+    "fp32_step_gemm_v23": {
+      "label": "V2b＋V3组合版",
+      "archive_directory": "results/fp32-step-gemm-v23-20261103-mP5cp4/",
+      "source_checks": [
+        {
+          "path": "models/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "models/progen/__init__.py",
+          "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "models/progen/configuration_progen.py",
+          "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "models/progen/modeling_progen.py",
+          "sha256": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "solution.py",
+          "sha256": "129e8b80c8fc8f7c8ea83672f200931271d5f9ba3baa8d8910b56403d26d47f6",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "run_test.sh",
+          "sha256": "2721996384dddcb1ccf2615e01d7a9420ada6ecff121675ddf37f95d52b0bad8",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "README.md",
+          "sha256": "ebacd27827521e38a70590315dd28f1b8da84a46bf528bb2af37df89ccffdd5a",
+          "matches_delivered_candidate": true
+        }
+      ],
+      "checksum_list_valid": true,
+      "full_source_snapshot_matches_delivered": true,
+      "json_log_agree": true,
+      "all_four_public_references_exact": true,
+      "compile_audit_matches_log": true,
+      "generate_compile_events": [
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "formal_dynamo_compile_events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "runtime_versions": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2"
+      },
+      "device": "BW",
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.7063617690000683,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.8220857509877533,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 3.605089824879542,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.546864558942616,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ],
+      "autotune_log_blocks": 1,
+      "full_model_hash_checked_in_this_run": false
+    },
+    "fp32_gemm_tune_v3_audit": {
+      "label": "V3监测对照",
+      "archive_directory": "results/fp32-gemm-v3-audit-20261103-Ofpz6h/",
+      "source_checks": [
+        {
+          "path": "models/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "models/progen/__init__.py",
+          "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "models/progen/configuration_progen.py",
+          "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "models/progen/modeling_progen.py",
+          "sha256": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "solution.py",
+          "sha256": "bd7af98c5589b606754a9347c02f2f049f5af30d4a69e083c61622a0ccfa0ca5",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "run_test.sh",
+          "sha256": "d8eaba2769d33ba30581be6b236c6437be186c3bf4f5143541245805991a262a",
+          "matches_delivered_candidate": true
+        },
+        {
+          "path": "README.md",
+          "sha256": "f3890d5115dc960cb594027a66279e69efe026e9d5d4af8335bc8dc503a135f8",
+          "matches_delivered_candidate": true
+        }
+      ],
+      "checksum_list_valid": true,
+      "full_source_snapshot_matches_delivered": true,
+      "json_log_agree": true,
+      "all_four_public_references_exact": true,
+      "compile_audit_matches_log": true,
+      "generate_compile_events": [
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "formal_dynamo_compile_events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "runtime_versions": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2"
+      },
+      "device": "BW",
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.7456502988934517,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.8755893951747566,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 3.6906652520410717,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.5517282788641751,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ],
+      "autotune_log_blocks": 0,
+      "full_model_hash_checked_in_this_run": false
+    }
+  },
+  "same_recorded_environment": true,
+  "shared_model_source_identical": true,
+  "comparison": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "control_v3_s": 1.7456502988934517,
+      "combo_s": 1.7063617690000683,
+      "observed_time_reduction_percent": 2.250652946829501
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "control_v3_s": 1.8755893951747566,
+      "combo_s": 1.8220857509877533,
+      "observed_time_reduction_percent": 2.8526309822741513
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "control_v3_s": 3.6906652520410717,
+      "combo_s": 3.605089824879542,
+      "observed_time_reduction_percent": 2.31869924031185
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "control_v3_s": 0.5517282788641751,
+      "combo_s": 0.546864558942616,
+      "observed_time_reduction_percent": 0.8815426194161868
+    }
+  ],
+  "control_sum_s": 7.863633224973455,
+  "combo_sum_s": 7.68040190380998,
+  "observed_sum_time_reduction_percent": 2.330110216503567,
+  "claim_scope": "One sequential public-test run per candidate. Observed warm inference difference only; no stable or statistically significant gain claim.",
+  "compile_check_scope": "TorchDynamo compilation-start callbacks in each generate; not universal external-JIT certification.",
+  "cache_control": "Launcher does not isolate or clear compilation/autotuning caches. Cold-start cost was not compared.",
+  "pending_reproduction_detail": "Platform image name not present in this archive."
+}

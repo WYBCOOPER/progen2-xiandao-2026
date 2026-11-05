@@ -1,0 +1,63 @@
+{
+  "archive_sha256": "d835979c011de0237e7163063b8fba52e443c4a5059844016ae9d70d0abeeedb",
+  "comparison_archive_sha256": "1c96fb071eb4032c1d195e58368d10b616c1fe5cc11b134c3c52a32523f0a44a",
+  "source_match": "5/5",
+  "json_log_match": "4/4",
+  "members": [
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k",
+      "size": 0,
+      "type": "directory"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/candidate.log",
+      "size": 3198,
+      "type": "file"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/candidate_public.json",
+      "size": 1296,
+      "type": "file"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/source",
+      "size": 0,
+      "type": "directory"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/source/solution.py",
+      "size": 4423,
+      "type": "file"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/source/models",
+      "size": 0,
+      "type": "directory"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/source/models/progen",
+      "size": 0,
+      "type": "directory"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/source/models/progen/modeling_progen.py",
+      "size": 28982,
+      "type": "file"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/source/models/progen/configuration_progen.py",
+      "size": 2724,
+      "type": "file"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/source/models/progen/__init__.py",
+      "size": 63,
+      "type": "file"
+    },
+    {
+      "name": "results/pr22-abbfeb5-20261101-0iE77k/source/models/__init__.py",
+      "size": 0,
+      "type": "file"
+    }
+  ]
+}

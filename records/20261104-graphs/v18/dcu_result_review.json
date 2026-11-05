@@ -1,0 +1,141 @@
+{
+  "candidate": "fp32_tile_graph_v18",
+  "exit_status": "0",
+  "source_hash_matches_local": {
+    "audit_result.py": true,
+    "compile_check.py": true,
+    "graph_runtime.py": true,
+    "kernel_check.py": true,
+    "models/__init__.py": true,
+    "models/progen/__init__.py": true,
+    "models/progen/configuration_progen.py": true,
+    "models/progen/kernels.py": true,
+    "models/progen/modeling_progen.py": true,
+    "solution.py": true
+  },
+  "archive_missing_local_validation": true,
+  "scores": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "batch_size": 1,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 1.1909261101391166,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "batch_size": 8,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 1.9100941980723292,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "batch_size": 4,
+      "prefix_tokens": 32,
+      "new_tokens": 512,
+      "time_s": 3.5636114350054413,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "batch_size": 4,
+      "prefix_tokens": 512,
+      "new_tokens": 64,
+      "time_s": 0.6452026448678225,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    }
+  ],
+  "total_tokens": 4608,
+  "sum_s": 7.30983438808471,
+  "v17_sum_s": 5.942649657139555,
+  "change_pct": 23.006315529683064,
+  "per_load_change_pct": [
+    0.7293959488710922,
+    28.158362034341323,
+    27.674510518424846,
+    34.76507719929025
+  ],
+  "audit": {
+    "graph_captures": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "graph_replays": [
+      255,
+      255,
+      255,
+      255,
+      511,
+      511,
+      63,
+      63
+    ],
+    "formal_graph_capture_zero": true,
+    "compiled_kernel_check_passed": true,
+    "candidate": "fp32_tile_graph_v18",
+    "all_public_references_exact": true,
+    "dynamo_events": [
+      2,
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "triton_cache_misses": [
+      3,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "formal_dynamo_zero": true,
+    "formal_triton_cache_misses_zero": true,
+    "identity": true,
+    "kernel_check_passed": true,
+    "measurement_scope": "Four official workload calls after official warmup; no edits to official tester",
+    "compile_audit_scope": "Dynamo on_compile_start and Triton 3.0 JIT cache-miss hook; not a hardware trace of every native compiler call",
+    "experiment_checks_passed": true
+  },
+  "official_tools_sha256": {
+    "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+    "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+    "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+    "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+    "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+  },
+  "official_hash_matches_reference_manifest": {
+    "public_test.py": true,
+    "run_public_test.sh": true,
+    "baseline/solution.py": true,
+    "check_environment.py": true,
+    "public_test_data/public_cases.json": true
+  },
+  "limitation": "Single historical runs, not repeated paired measurements; compile audit covers Dynamo and Triton hooks, not every native compiler call."
+}

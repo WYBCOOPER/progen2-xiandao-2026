@@ -1,0 +1,80 @@
+python: 3.10.16
+torch: 2.4.1+das.opt2.dtk2504
+transformers: 4.46.3
+tokenizers: 0.20.3
+accelerate: 1.5.2
+numpy: 1.24.3
+torch HIP: 6.1.25065
+torch.cuda available: True
+device: BW
+model n_positions: 1024
+model file bytes: 3060333315
+model SHA256: skipped (use --full-hash for the 3 GB file)
+ENVIRONMENT_CHECK_PASSED
+Loading submission (model loading is not timed): /public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/source
+ProGenForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+torch.compile 已开启
+Loaded in 5.874s
+
+[load1_b1_l32_g256] warmup: B=1, L=32, G=256
+/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:150: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1029 23:20:46.522000 139719743301440 torch/fx/experimental/symbolic_shapes.py:4449] [0/0] xindex is not in var_ranges, defaulting to unknown range.
+V1029 23:20:58.038000 139719743301440 torch/_dynamo/guards.py:2611] [0/1] [__recompiles] Recompiling function forward in /public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/source/models/progen/modeling_progen.py:337
+V1029 23:20:58.038000 139719743301440 torch/_dynamo/guards.py:2611] [0/1] [__recompiles]     triggered by the following guard failure(s):
+V1029 23:20:58.038000 139719743301440 torch/_dynamo/guards.py:2611] [0/1] [__recompiles]     - tensor 'L['input_ids']' dispatch key set mismatch. expected DispatchKeySet(CUDA, BackendSelect, ADInplaceOrView), actual DispatchKeySet(CUDA, BackendSelect)
+W1029 23:21:34.549000 139719743301440 torch/fx/experimental/symbolic_shapes.py:4449] [0/1] xindex is not in var_ranges, defaulting to unknown range.
+V1029 23:21:40.286000 139719743301440 torch/_dynamo/guards.py:2611] [0/2] [__recompiles] Recompiling function forward in /public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/source/models/progen/modeling_progen.py:337
+V1029 23:21:40.286000 139719743301440 torch/_dynamo/guards.py:2611] [0/2] [__recompiles]     triggered by the following guard failure(s):
+V1029 23:21:40.286000 139719743301440 torch/_dynamo/guards.py:2611] [0/2] [__recompiles]     - tensor 'L['past_key_values'][0][0]' stride mismatch at index 0. expected 49152, actual 50688
+V1029 23:21:40.286000 139719743301440 torch/_dynamo/guards.py:2611] [0/2] [__recompiles]     - tensor 'L['input_ids']' dispatch key set mismatch. expected DispatchKeySet(CUDA, BackendSelect, ADInplaceOrView), actual DispatchKeySet(CUDA, BackendSelect)
+W1029 23:22:41.688000 139719743301440 torch/fx/experimental/symbolic_shapes.py:4449] [0/2] xindex is not in var_ranges, defaulting to unknown range.
+[load1_b1_l32_g256] time=2.5930s, same=256/256, consistency=100.00%
+
+[load2_b8_l32_g256] warmup: B=8, L=32, G=256
+V1029 23:22:58.119000 139719743301440 torch/_dynamo/guards.py:2611] [0/3] [__recompiles] Recompiling function forward in /public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/source/models/progen/modeling_progen.py:337
+V1029 23:22:58.119000 139719743301440 torch/_dynamo/guards.py:2611] [0/3] [__recompiles]     triggered by the following guard failure(s):
+V1029 23:22:58.119000 139719743301440 torch/_dynamo/guards.py:2611] [0/3] [__recompiles]     - tensor 'L['input_ids']' dispatch key set mismatch. expected DispatchKeySet(CUDA, BackendSelect), actual DispatchKeySet(CUDA, BackendSelect, ADInplaceOrView)
+V1029 23:22:58.119000 139719743301440 torch/_dynamo/guards.py:2611] [0/3] [__recompiles]     - ___check_type_id(L['past_key_values'], 7617760)             
+V1029 23:22:58.119000 139719743301440 torch/_dynamo/guards.py:2611] [0/3] [__recompiles]     - tensor 'L['input_ids']' size mismatch at index 0. expected 1, actual 8
+W1029 23:24:17.222000 139719743301440 torch/fx/experimental/symbolic_shapes.py:4449] [0/3] xindex is not in var_ranges, defaulting to unknown range.
+V1029 23:24:25.141000 139719743301440 torch/_dynamo/guards.py:2611] [0/4] [__recompiles] Recompiling function forward in /public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/source/models/progen/modeling_progen.py:337
+V1029 23:24:25.141000 139719743301440 torch/_dynamo/guards.py:2611] [0/4] [__recompiles]     triggered by the following guard failure(s):
+V1029 23:24:25.141000 139719743301440 torch/_dynamo/guards.py:2611] [0/4] [__recompiles]     - tensor 'L['input_ids']' dispatch key set mismatch. expected DispatchKeySet(CUDA, BackendSelect, ADInplaceOrView), actual DispatchKeySet(CUDA, BackendSelect)
+V1029 23:24:25.141000 139719743301440 torch/_dynamo/guards.py:2611] [0/4] [__recompiles]     - tensor 'L['input_ids']' size mismatch at index 0. expected 1, actual 8
+V1029 23:24:25.141000 139719743301440 torch/_dynamo/guards.py:2611] [0/4] [__recompiles]     - tensor 'L['past_key_values'][0][0]' size mismatch at index 0. expected 1, actual 8
+V1029 23:24:25.141000 139719743301440 torch/_dynamo/guards.py:2611] [0/4] [__recompiles]     - tensor 'L['input_ids']' dispatch key set mismatch. expected DispatchKeySet(CUDA, BackendSelect, ADInplaceOrView), actual DispatchKeySet(CUDA, BackendSelect)
+W1029 23:26:26.611000 139719743301440 torch/fx/experimental/symbolic_shapes.py:4449] [0/4] xindex is not in var_ranges, defaulting to unknown range.
+W1029 23:26:27.561000 139719743301440 torch/fx/experimental/symbolic_shapes.py:4449] [0/4] xindex is not in var_ranges, defaulting to unknown range.
+V1029 23:26:47.486000 139719743301440 torch/_dynamo/guards.py:2611] [0/5] [__recompiles] Recompiling function forward in /public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/source/models/progen/modeling_progen.py:337
+V1029 23:26:47.486000 139719743301440 torch/_dynamo/guards.py:2611] [0/5] [__recompiles]     triggered by the following guard failure(s):
+V1029 23:26:47.486000 139719743301440 torch/_dynamo/guards.py:2611] [0/5] [__recompiles]     - tensor 'L['past_key_values'][0][0]' stride mismatch at index 1. expected 96, actual 3168
+V1029 23:26:47.486000 139719743301440 torch/_dynamo/guards.py:2611] [0/5] [__recompiles]     - tensor 'L['input_ids']' dispatch key set mismatch. expected DispatchKeySet(CUDA, BackendSelect, ADInplaceOrView), actual DispatchKeySet(CUDA, BackendSelect)
+V1029 23:26:47.486000 139719743301440 torch/_dynamo/guards.py:2611] [0/5] [__recompiles]     - tensor 'L['input_ids']' size mismatch at index 0. expected 1, actual 8
+V1029 23:26:47.486000 139719743301440 torch/_dynamo/guards.py:2611] [0/5] [__recompiles]     - tensor 'L['past_key_values'][0][0]' size mismatch at index 0. expected 1, actual 8
+V1029 23:26:47.486000 139719743301440 torch/_dynamo/guards.py:2611] [0/5] [__recompiles]     - tensor 'L['input_ids']' dispatch key set mismatch. expected DispatchKeySet(CUDA, BackendSelect, ADInplaceOrView), actual DispatchKeySet(CUDA, BackendSelect)
+W1029 23:28:51.863000 139719743301440 torch/fx/experimental/symbolic_shapes.py:4449] [0/5] xindex is not in var_ranges, defaulting to unknown range.
+W1029 23:28:52.812000 139719743301440 torch/fx/experimental/symbolic_shapes.py:4449] [0/5] xindex is not in var_ranges, defaulting to unknown range.
+V1029 23:29:14.174000 139719743301440 torch/_dynamo/guards.py:2611] [0/6] [__recompiles] Recompiling function forward in /public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/source/models/progen/modeling_progen.py:337
+V1029 23:29:14.174000 139719743301440 torch/_dynamo/guards.py:2611] [0/6] [__recompiles]     triggered by the following guard failure(s):
+V1029 23:29:14.174000 139719743301440 torch/_dynamo/guards.py:2611] [0/6] [__recompiles]     - Ne(L['past_key_values'][26][0].size()[2] + 1, 16*L['input_ids'].size()[0])  # _dynamo/output_graph.py:453 in init_ambient_guards
+V1029 23:29:14.174000 139719743301440 torch/_dynamo/guards.py:2611] [0/6] [__recompiles]     - tensor 'L['past_key_values'][0][0]' stride mismatch at index 1. expected 96, actual 12192
+V1029 23:29:14.174000 139719743301440 torch/_dynamo/guards.py:2611] [0/6] [__recompiles]     - tensor 'L['input_ids']' dispatch key set mismatch. expected DispatchKeySet(CUDA, BackendSelect, ADInplaceOrView), actual DispatchKeySet(CUDA, BackendSelect)
+V1029 23:29:14.174000 139719743301440 torch/_dynamo/guards.py:2611] [0/6] [__recompiles]     - tensor 'L['input_ids']' size mismatch at index 0. expected 1, actual 8
+V1029 23:29:14.174000 139719743301440 torch/_dynamo/guards.py:2611] [0/6] [__recompiles]     - tensor 'L['past_key_values'][0][0]' size mismatch at index 0. expected 1, actual 8
+V1029 23:29:14.174000 139719743301440 torch/_dynamo/guards.py:2611] [0/6] [__recompiles]     - tensor 'L['input_ids']' dispatch key set mismatch. expected DispatchKeySet(CUDA, BackendSelect, ADInplaceOrView), actual DispatchKeySet(CUDA, BackendSelect)
+W1029 23:31:43.005000 139719743301440 torch/fx/experimental/symbolic_shapes.py:4449] [0/6] xindex is not in var_ranges, defaulting to unknown range.
+[load2_b8_l32_g256] time=3.1891s, same=2048/2048, consistency=100.00%
+
+[load3_b4_l32_g512] warmup: B=4, L=32, G=512
+[load3_b4_l32_g512] time=6.1953s, same=2048/2048, consistency=100.00%
+
+[load4_b4_l512_g64] warmup: B=4, L=512, G=64
+[load4_b4_l512_g64] time=0.8484s, same=256/256, consistency=100.00%
+
+Saved: /public/home/TEAM/progen2_contest/results/rope-compile-rp17-20261029-3RJKlD/candidate_r2_public.json
+PUBLIC_INTERFACE_TEST_PASSED (100% match with the public FP32 reference)
+四项任务测试完成，结果已保存。

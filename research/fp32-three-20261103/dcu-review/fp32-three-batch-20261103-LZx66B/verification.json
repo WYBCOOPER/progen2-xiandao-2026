@@ -1,0 +1,379 @@
+{
+  "batch_archive_sha256": "16ae4484d91a8b36de359810227b46f06c792bbbe7e9079837d6e71eaf10efcd",
+  "batch_exit_statuses": [
+    {
+      "candidate": "fp32_chunk2_v5",
+      "exit_status": "0"
+    },
+    {
+      "candidate": "fp32_k_transpose_v6",
+      "exit_status": "0"
+    },
+    {
+      "candidate": "fp32_sdpa_v7",
+      "exit_status": "0"
+    }
+  ],
+  "baseline_run": "fp32-step-gemm-v23-20261103-DnDLwm",
+  "baseline_source_verified": true,
+  "summary": [
+    {
+      "candidate": "fp32_chunk2_v5",
+      "label": "两步生成 v5",
+      "run": "fp32-chunk2-v5-20261103-iT1F8F",
+      "total_s": 10.173943570349365,
+      "v23_control_total_s": 7.777090281946585,
+      "elapsed_change_pct": 30.81940933573495,
+      "all_outputs_exact": true,
+      "source_checks": [
+        {
+          "path": "README.md",
+          "sha256": "6fe08e7f2ab0118e01a6c85046de1e278671bdd41797881d9e11e9dd000ebf20"
+        },
+        {
+          "path": "manifest.json",
+          "sha256": "375a0e2b6d5e151bc7fe8784f352b23292626f69111277850f3c44402b25a188"
+        },
+        {
+          "path": "models/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "models/progen/__init__.py",
+          "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+        },
+        {
+          "path": "models/progen/configuration_progen.py",
+          "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+        },
+        {
+          "path": "models/progen/modeling_progen.py",
+          "sha256": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d"
+        },
+        {
+          "path": "run_test.sh",
+          "sha256": "7cbdc95ebbf81327d7e1605bd0211a9df57b93ce78f2450ed4f287be1cab9ad2"
+        },
+        {
+          "path": "solution.py",
+          "sha256": "1b265a061e1f0aa6c898d25ee63bb2041f776826ed13369cf5b8636d2b7f4f5e"
+        }
+      ],
+      "all_nine_files_match_sent_package": true,
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520
+      },
+      "generate_compile_events": [
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "exit_status": 0,
+      "ignored_autotune_choices_by_generate_index_0_based": {},
+      "passmanager_error_lines_by_generate_index_0_based": {},
+      "decision": "本轮较慢，暂不采纳"
+    },
+    {
+      "candidate": "fp32_k_transpose_v6",
+      "label": "K 缓存布局 v6",
+      "run": "fp32-k-transpose-v6-20261103-zW6mGd",
+      "total_s": 7.74572778865695,
+      "v23_control_total_s": 7.777090281946585,
+      "elapsed_change_pct": -0.4032677023492748,
+      "all_outputs_exact": true,
+      "source_checks": [
+        {
+          "path": "README.md",
+          "sha256": "bb54cc2ee7d89a643c4a58ff477fede96399bb147d171afd513f5dc940eb5699"
+        },
+        {
+          "path": "manifest.json",
+          "sha256": "131d37ef40a6f10650f8fdd036e610394e394109923bf7463618968a57734715"
+        },
+        {
+          "path": "models/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "models/progen/__init__.py",
+          "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+        },
+        {
+          "path": "models/progen/configuration_progen.py",
+          "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+        },
+        {
+          "path": "models/progen/modeling_progen.py",
+          "sha256": "37eab1f711028c965ce366933d71945db81833a81ecf02241b29848be83180ef"
+        },
+        {
+          "path": "run_test.sh",
+          "sha256": "98b7bf8ce6d4d1380a1c00ea8d0fd745f84f9d21f2c65578a7daa76345a0f7e7"
+        },
+        {
+          "path": "solution.py",
+          "sha256": "96bc969ca2d22ab256448fbd700956ec506a6223d24a631a3e39f9c475dd65e7"
+        }
+      ],
+      "all_nine_files_match_sent_package": true,
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520
+      },
+      "generate_compile_events": [
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "exit_status": 0,
+      "ignored_autotune_choices_by_generate_index_0_based": {
+        "0": 4,
+        "2": 12
+      },
+      "passmanager_error_lines_by_generate_index_0_based": {
+        "0": 4,
+        "2": 12
+      },
+      "decision": "收益未证实，保留待复测"
+    },
+    {
+      "candidate": "fp32_sdpa_v7",
+      "label": "SDPA v7",
+      "run": "fp32-sdpa-v7-20261103-epLdRR",
+      "total_s": 8.534820405999199,
+      "v23_control_total_s": 7.777090281946585,
+      "elapsed_change_pct": 9.743105667830253,
+      "all_outputs_exact": true,
+      "source_checks": [
+        {
+          "path": "README.md",
+          "sha256": "2aef03f540ade0bb3da9702d6b5dc4bb3977b24c05551af66e3d4a87eefc8dad"
+        },
+        {
+          "path": "manifest.json",
+          "sha256": "190024e06ac300e6d8fc4979c799e750838f689bbc02042fe1aa4daabd5b85fb"
+        },
+        {
+          "path": "models/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "models/progen/__init__.py",
+          "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+        },
+        {
+          "path": "models/progen/configuration_progen.py",
+          "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+        },
+        {
+          "path": "models/progen/modeling_progen.py",
+          "sha256": "654305bac13fddd1bac6ed64b6c127547704023504acd3a7fc1f24dc732ee58a"
+        },
+        {
+          "path": "run_test.sh",
+          "sha256": "ffc919403d81eecca4dfcd60311551047cb921cb89eadb2b2be5a047ea8197db"
+        },
+        {
+          "path": "solution.py",
+          "sha256": "965db712af832b4f426380b7d7dec16533947c9fd2099113c7fc5a09789ffec3"
+        }
+      ],
+      "all_nine_files_match_sent_package": true,
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520
+      },
+      "generate_compile_events": [
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "exit_status": 0,
+      "ignored_autotune_choices_by_generate_index_0_based": {},
+      "passmanager_error_lines_by_generate_index_0_based": {},
+      "decision": "本轮较慢，暂不采纳"
+    }
+  ],
+  "measurements": [
+    {
+      "candidate": "fp32_chunk2_v5",
+      "label": "两步生成 v5",
+      "load_id": "load1_b1_l32_g256",
+      "v23_control_time_s": 1.6897377199493349,
+      "candidate_time_s": 1.8315821690484881,
+      "elapsed_change_pct": 8.394465450141354,
+      "same": 256,
+      "total": 256,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_chunk2_v5",
+      "label": "两步生成 v5",
+      "load_id": "load2_b8_l32_g256",
+      "v23_control_time_s": 1.8733396399766207,
+      "candidate_time_s": 3.0666154141072184,
+      "elapsed_change_pct": 63.69778061950848,
+      "same": 2048,
+      "total": 2048,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_chunk2_v5",
+      "label": "两步生成 v5",
+      "load_id": "load3_b4_l32_g512",
+      "v23_control_time_s": 3.660318728070706,
+      "candidate_time_s": 4.563625711016357,
+      "elapsed_change_pct": 24.67836956432943,
+      "same": 2048,
+      "total": 2048,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_chunk2_v5",
+      "label": "两步生成 v5",
+      "load_id": "load4_b4_l512_g64",
+      "v23_control_time_s": 0.5536941939499229,
+      "candidate_time_s": 0.712120276177302,
+      "elapsed_change_pct": 28.61255977730326,
+      "same": 256,
+      "total": 256,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_k_transpose_v6",
+      "label": "K 缓存布局 v6",
+      "load_id": "load1_b1_l32_g256",
+      "v23_control_time_s": 1.6897377199493349,
+      "candidate_time_s": 1.6791382408700883,
+      "elapsed_change_pct": -0.627285462951277,
+      "same": 256,
+      "total": 256,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_k_transpose_v6",
+      "label": "K 缓存布局 v6",
+      "load_id": "load2_b8_l32_g256",
+      "v23_control_time_s": 1.8733396399766207,
+      "candidate_time_s": 1.8584830090403557,
+      "elapsed_change_pct": -0.7930559210528654,
+      "same": 2048,
+      "total": 2048,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_k_transpose_v6",
+      "label": "K 缓存布局 v6",
+      "load_id": "load3_b4_l32_g512",
+      "v23_control_time_s": 3.660318728070706,
+      "candidate_time_s": 3.6447146248538047,
+      "elapsed_change_pct": -0.4263044935741478,
+      "same": 2048,
+      "total": 2048,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_k_transpose_v6",
+      "label": "K 缓存布局 v6",
+      "load_id": "load4_b4_l512_g64",
+      "v23_control_time_s": 0.5536941939499229,
+      "candidate_time_s": 0.5633919138927013,
+      "elapsed_change_pct": 1.751457762920916,
+      "same": 256,
+      "total": 256,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_sdpa_v7",
+      "label": "SDPA v7",
+      "load_id": "load1_b1_l32_g256",
+      "v23_control_time_s": 1.6897377199493349,
+      "candidate_time_s": 1.896143551915884,
+      "elapsed_change_pct": 12.215258588932842,
+      "same": 256,
+      "total": 256,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_sdpa_v7",
+      "label": "SDPA v7",
+      "load_id": "load2_b8_l32_g256",
+      "v23_control_time_s": 1.8733396399766207,
+      "candidate_time_s": 2.041548433015123,
+      "elapsed_change_pct": 8.979086837697059,
+      "same": 2048,
+      "total": 2048,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_sdpa_v7",
+      "label": "SDPA v7",
+      "load_id": "load3_b4_l32_g512",
+      "v23_control_time_s": 3.660318728070706,
+      "candidate_time_s": 3.993215304100886,
+      "elapsed_change_pct": 9.094742856058446,
+      "same": 2048,
+      "total": 2048,
+      "formal_dynamo_compile_events": 0
+    },
+    {
+      "candidate": "fp32_sdpa_v7",
+      "label": "SDPA v7",
+      "load_id": "load4_b4_l512_g64",
+      "v23_control_time_s": 0.5536941939499229,
+      "candidate_time_s": 0.6039131169673055,
+      "elapsed_change_pct": 9.069794042652447,
+      "same": 256,
+      "total": 256,
+      "formal_dynamo_compile_events": 0
+    }
+  ],
+  "limitations": [
+    "one sequential run per variant; baseline measured earlier in the same testing session",
+    "elapsed sum is descriptive, not an official competition score",
+    "Triton __version__ and distribution metadata have different collection methods in parent vs new runners",
+    "Dynamo compile count is not an independent low-level kernel compilation trace"
+  ],
+  "selected_candidate": "fp32_step_gemm_v23",
+  "four_modification_tests_completed_including_input_fusion": true
+}

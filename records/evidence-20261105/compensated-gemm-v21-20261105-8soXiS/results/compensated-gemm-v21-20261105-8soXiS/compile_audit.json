@@ -1,0 +1,55 @@
+{
+  "graph_captures": [
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "graph_replays": [
+    255,
+    255,
+    255,
+    255,
+    511,
+    511,
+    63,
+    63
+  ],
+  "formal_graph_capture_zero": true,
+  "compiled_kernel_check_passed": true,
+  "candidate": "compensated_gemm_v21",
+  "all_public_references_exact": true,
+  "dynamo_events": [
+    2,
+    0,
+    2,
+    0,
+    1,
+    0,
+    1,
+    0
+  ],
+  "triton_cache_misses": [
+    6,
+    0,
+    5,
+    0,
+    2,
+    0,
+    0,
+    0
+  ],
+  "formal_dynamo_zero": true,
+  "formal_triton_cache_misses_zero": true,
+  "identity": true,
+  "kernel_check_passed": true,
+  "measurement_scope": "Four official workload calls after official warmup; no edits to official tester",
+  "compile_audit_scope": "Dynamo on_compile_start and Triton 3.0 JIT cache-miss hook; not a hardware trace of every native compiler call",
+  "compensated_gemm_check_passed": true,
+  "arithmetic": "FP16 high/low products with FP32 accumulators and output, not FP32-equivalent",
+  "experiment_checks_passed": true
+}

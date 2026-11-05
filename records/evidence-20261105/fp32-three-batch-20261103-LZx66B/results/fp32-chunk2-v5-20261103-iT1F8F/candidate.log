@@ -1,0 +1,244 @@
+python: 3.10.16
+torch: 2.4.1+das.opt2.dtk2504
+transformers: 4.46.3
+tokenizers: 0.20.3
+accelerate: 1.5.2
+numpy: 1.24.3
+torch HIP: 6.1.25065
+torch.cuda available: True
+device: BW
+model n_positions: 1024
+model file bytes: 3060333315
+model SHA256: skipped (use --full-hash for the 3 GB file)
+ENVIRONMENT_CHECK_PASSED
+Loading submission (model loading is not timed): /public/home/TEAM/progen2_contest/results/fp32-chunk2-v5-20261103-iT1F8F/source
+ProGenForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+FP32_CANDIDATE=fp32_chunk2_v5
+Loaded in 7.629s
+
+[load1_b1_l32_g256] warmup: B=1, L=32, G=256
+/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:150: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+AUTOTUNE bmm(16x32x96, 16x96x32)
+  triton_bmm_30 0.0080 ms 100.0%
+  triton_bmm_31 0.0080 ms 100.0%
+  triton_bmm_28 0.0085 ms 94.3%
+  triton_bmm_29 0.0085 ms 94.3%
+  triton_bmm_34 0.0086 ms 92.6%
+  triton_bmm_35 0.0086 ms 92.6%
+  bmm 0.0090 ms 89.3%
+  triton_bmm_32 0.0102 ms 78.1%
+  triton_bmm_33 0.0102 ms 78.1%
+  triton_bmm_26 0.0106 ms 75.8%
+SingleProcess AUTOTUNE benchmarking takes 10.5632 seconds and 0.0000 seconds precompiling
+W1103 23:07:23.920000 140047460677440 torch/fx/experimental/symbolic_shapes.py:4449] [0/0] xindex is not in var_ranges, defaulting to unknown range.
+AUTOTUNE bmm(16x1x96, 16x96x34)
+  triton_bmm_7014 0.0078 ms 100.0%
+  triton_bmm_7015 0.0078 ms 100.0%
+  triton_bmm_7020 0.0080 ms 98.0%
+  triton_bmm_7021 0.0080 ms 98.0%
+  triton_bmm_7012 0.0083 ms 94.2%
+  triton_bmm_7013 0.0083 ms 94.2%
+  triton_bmm_7018 0.0086 ms 90.7%
+  triton_bmm_7019 0.0086 ms 90.7%
+  triton_bmm_7010 0.0090 ms 87.5%
+  triton_bmm_7011 0.0090 ms 87.5%
+SingleProcess AUTOTUNE benchmarking takes 7.1293 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(16x1x34, 16x34x96)
+  triton_bmm_7028 0.0077 ms 100.0%
+  triton_bmm_7040 0.0077 ms 100.0%
+  triton_bmm_7024 0.0078 ms 98.0%
+  triton_bmm_7025 0.0078 ms 98.0%
+  triton_bmm_7026 0.0078 ms 98.0%
+  triton_bmm_7027 0.0078 ms 98.0%
+  triton_bmm_7029 0.0078 ms 98.0%
+  triton_bmm_7032 0.0078 ms 98.0%
+  triton_bmm_7033 0.0078 ms 98.0%
+  triton_bmm_7038 0.0078 ms 98.0%
+SingleProcess AUTOTUNE benchmarking takes 9.7405 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(16x1x96, 16x96x35)
+  triton_bmm_10532 0.0078 ms 100.0%
+  triton_bmm_10533 0.0078 ms 100.0%
+  triton_bmm_10538 0.0080 ms 98.0%
+  triton_bmm_10539 0.0080 ms 98.0%
+  triton_bmm_10530 0.0083 ms 94.2%
+  triton_bmm_10531 0.0083 ms 94.2%
+  triton_bmm_10536 0.0088 ms 89.1%
+  triton_bmm_10537 0.0088 ms 89.1%
+  triton_bmm_10528 0.0090 ms 87.5%
+  triton_bmm_10529 0.0090 ms 87.5%
+SingleProcess AUTOTUNE benchmarking takes 7.1248 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(16x1x35, 16x35x96)
+  triton_bmm_10547 0.0077 ms 100.0%
+  triton_bmm_10542 0.0078 ms 98.0%
+  triton_bmm_10543 0.0078 ms 98.0%
+  triton_bmm_10544 0.0078 ms 98.0%
+  triton_bmm_10545 0.0078 ms 98.0%
+  triton_bmm_10546 0.0078 ms 98.0%
+  triton_bmm_10550 0.0078 ms 98.0%
+  triton_bmm_10551 0.0078 ms 98.0%
+  triton_bmm_10556 0.0078 ms 98.0%
+  triton_bmm_10557 0.0078 ms 98.0%
+SingleProcess AUTOTUNE benchmarking takes 9.7414 seconds and 0.0000 seconds precompiling
+W1103 23:10:03.555000 140047460677440 torch/fx/experimental/symbolic_shapes.py:4449] [0/1] xindex is not in var_ranges, defaulting to unknown range.
+AUTOTUNE bmm(16x1x96, 16x96x36)
+  triton_bmm_14050 0.0082 ms 100.0%
+  triton_bmm_14051 0.0082 ms 100.0%
+  triton_bmm_14056 0.0083 ms 98.1%
+  triton_bmm_14057 0.0083 ms 98.1%
+  triton_bmm_14048 0.0085 ms 96.2%
+  triton_bmm_14049 0.0085 ms 96.2%
+  triton_bmm_14046 0.0090 ms 91.1%
+  triton_bmm_14047 0.0090 ms 91.1%
+  triton_bmm_14054 0.0091 ms 89.5%
+  triton_bmm_14055 0.0091 ms 89.5%
+SingleProcess AUTOTUNE benchmarking takes 2.1687 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(16x1x36, 16x36x96)
+  triton_bmm_14065 0.0077 ms 100.0%
+  triton_bmm_14068 0.0077 ms 100.0%
+  triton_bmm_14069 0.0077 ms 100.0%
+  triton_bmm_14062 0.0078 ms 98.0%
+  triton_bmm_14063 0.0078 ms 98.0%
+  triton_bmm_14064 0.0078 ms 98.0%
+  triton_bmm_14060 0.0080 ms 96.0%
+  triton_bmm_14061 0.0080 ms 96.0%
+  triton_bmm_14074 0.0080 ms 96.0%
+  triton_bmm_14075 0.0080 ms 96.0%
+SingleProcess AUTOTUNE benchmarking takes 3.0214 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(16x1x96, 16x96x37)
+  triton_bmm_17568 0.0082 ms 100.0%
+  triton_bmm_17569 0.0082 ms 100.0%
+  triton_bmm_17574 0.0083 ms 98.1%
+  triton_bmm_17575 0.0083 ms 98.1%
+  triton_bmm_17566 0.0085 ms 96.2%
+  triton_bmm_17567 0.0085 ms 96.2%
+  triton_bmm_17564 0.0090 ms 91.1%
+  triton_bmm_17565 0.0090 ms 91.1%
+  triton_bmm_17572 0.0091 ms 89.5%
+  triton_bmm_17573 0.0091 ms 89.5%
+SingleProcess AUTOTUNE benchmarking takes 7.3203 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(16x1x37, 16x37x96)
+  triton_bmm_17583 0.0077 ms 100.0%
+  triton_bmm_17586 0.0077 ms 100.0%
+  triton_bmm_17580 0.0078 ms 98.0%
+  triton_bmm_17581 0.0078 ms 98.0%
+  triton_bmm_17582 0.0078 ms 98.0%
+  triton_bmm_17587 0.0078 ms 98.0%
+  triton_bmm_17578 0.0080 ms 96.0%
+  triton_bmm_17579 0.0080 ms 96.0%
+  triton_bmm_17592 0.0082 ms 94.1%
+  triton_bmm_17593 0.0082 ms 94.1%
+SingleProcess AUTOTUNE benchmarking takes 10.1662 seconds and 0.0000 seconds precompiling
+W1103 23:13:05.733000 140047460677440 torch/fx/experimental/symbolic_shapes.py:4449] [0/2] xindex is not in var_ranges, defaulting to unknown range.
+COMPILE_EVENTS_DURING_GENERATE=3
+COMPILE_EVENTS_DURING_GENERATE=0
+[load1_b1_l32_g256] time=1.8316s, same=256/256, consistency=100.00%
+
+[load2_b8_l32_g256] warmup: B=8, L=32, G=256
+AUTOTUNE bmm(128x32x96, 128x96x32)
+  triton_bmm_21094 0.0107 ms 100.0%
+  triton_bmm_21095 0.0107 ms 100.0%
+  triton_bmm_21096 0.0110 ms 97.1%
+  triton_bmm_21097 0.0110 ms 97.1%
+  triton_bmm_21100 0.0115 ms 93.1%
+  triton_bmm_21101 0.0115 ms 93.1%
+  triton_bmm_21098 0.0123 ms 87.0%
+  triton_bmm_21099 0.0123 ms 87.0%
+  bmm 0.0126 ms 84.8%
+  triton_bmm_21092 0.0134 ms 79.8%
+SingleProcess AUTOTUNE benchmarking takes 5.0859 seconds and 0.0000 seconds precompiling
+W1103 23:17:06.052000 140047460677440 torch/fx/experimental/symbolic_shapes.py:4449] [0/3] xindex is not in var_ranges, defaulting to unknown range.
+AUTOTUNE bmm(128x1x96, 128x96x34)
+  triton_bmm_29163 0.0098 ms 100.0%
+  triton_bmm_29162 0.0099 ms 98.4%
+  triton_bmm_29160 0.0101 ms 96.8%
+  triton_bmm_29161 0.0101 ms 96.8%
+  triton_bmm_29170 0.0101 ms 96.8%
+  triton_bmm_29171 0.0101 ms 96.8%
+  triton_bmm_29164 0.0104 ms 93.8%
+  triton_bmm_29165 0.0104 ms 93.8%
+  triton_bmm_29168 0.0106 ms 92.4%
+  triton_bmm_29169 0.0106 ms 92.4%
+SingleProcess AUTOTUNE benchmarking takes 1.6340 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(128x1x34, 128x34x96)
+  triton_bmm_29180 0.0093 ms 100.0%
+  triton_bmm_29181 0.0093 ms 100.0%
+  triton_bmm_29182 0.0093 ms 100.0%
+  triton_bmm_29183 0.0093 ms 100.0%
+  triton_bmm_29178 0.0094 ms 98.3%
+  triton_bmm_29179 0.0094 ms 98.3%
+  triton_bmm_29172 0.0096 ms 96.7%
+  triton_bmm_29173 0.0096 ms 96.7%
+  triton_bmm_29174 0.0096 ms 96.7%
+  triton_bmm_29176 0.0096 ms 96.7%
+SingleProcess AUTOTUNE benchmarking takes 2.2743 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(128x1x96, 128x96x35)
+  triton_bmm_32680 0.0099 ms 100.0%
+  triton_bmm_32678 0.0101 ms 98.4%
+  triton_bmm_32679 0.0101 ms 98.4%
+  triton_bmm_32688 0.0101 ms 98.4%
+  triton_bmm_32689 0.0101 ms 98.4%
+  triton_bmm_32686 0.0106 ms 93.9%
+  triton_bmm_32687 0.0106 ms 93.9%
+  triton_bmm_32681 0.0109 ms 91.2%
+  triton_bmm_32676 0.0112 ms 88.6%
+  triton_bmm_32677 0.0112 ms 88.6%
+SingleProcess AUTOTUNE benchmarking takes 1.6200 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(128x1x35, 128x35x96)
+  triton_bmm_32700 0.0093 ms 100.0%
+  triton_bmm_32701 0.0093 ms 100.0%
+  triton_bmm_32698 0.0094 ms 98.3%
+  triton_bmm_32699 0.0094 ms 98.3%
+  triton_bmm_32690 0.0096 ms 96.7%
+  triton_bmm_32691 0.0096 ms 96.7%
+  triton_bmm_32694 0.0096 ms 96.7%
+  triton_bmm_32695 0.0096 ms 96.7%
+  triton_bmm_32696 0.0096 ms 96.7%
+  triton_bmm_32697 0.0096 ms 96.7%
+SingleProcess AUTOTUNE benchmarking takes 2.2595 seconds and 0.0000 seconds precompiling
+W1103 23:22:01.193000 140047460677440 torch/fx/experimental/symbolic_shapes.py:4449] [0/4] xindex is not in var_ranges, defaulting to unknown range.
+AUTOTUNE bmm(128x1x96, 128x96x129)
+  triton_bmm_40094 0.0125 ms 100.0%
+  triton_bmm_40095 0.0125 ms 100.0%
+  triton_bmm_40092 0.0131 ms 95.1%
+  triton_bmm_40093 0.0131 ms 95.1%
+  triton_bmm_40098 0.0133 ms 94.0%
+  triton_bmm_40099 0.0133 ms 94.0%
+  triton_bmm_40090 0.0136 ms 91.8%
+  triton_bmm_40091 0.0136 ms 91.8%
+  triton_bmm_40104 0.0138 ms 90.7%
+  triton_bmm_40105 0.0138 ms 90.7%
+SingleProcess AUTOTUNE benchmarking takes 12.3853 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(128x1x129, 128x129x96)
+  triton_bmm_40117 0.0139 ms 100.0%
+  triton_bmm_40116 0.0141 ms 98.9%
+  triton_bmm_40118 0.0146 ms 95.6%
+  triton_bmm_40119 0.0146 ms 95.6%
+  triton_bmm_40122 0.0150 ms 92.6%
+  triton_bmm_40123 0.0150 ms 92.6%
+  triton_bmm_40130 0.0150 ms 92.6%
+  triton_bmm_40131 0.0150 ms 92.6%
+  triton_bmm_40124 0.0154 ms 90.6%
+  triton_bmm_40125 0.0154 ms 90.6%
+SingleProcess AUTOTUNE benchmarking takes 12.4626 seconds and 0.0000 seconds precompiling
+W1103 23:27:50.731000 140047460677440 torch/fx/experimental/symbolic_shapes.py:4449] [0/5] xindex is not in var_ranges, defaulting to unknown range.
+COMPILE_EVENTS_DURING_GENERATE=3
+COMPILE_EVENTS_DURING_GENERATE=0
+[load2_b8_l32_g256] time=3.0666s, same=2048/2048, consistency=100.00%
+
+[load3_b4_l32_g512] warmup: B=4, L=32, G=512
+COMPILE_EVENTS_DURING_GENERATE=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load3_b4_l32_g512] time=4.5636s, same=2048/2048, consistency=100.00%
+
+[load4_b4_l512_g64] warmup: B=4, L=512, G=64
+COMPILE_EVENTS_DURING_GENERATE=0
+COMPILE_EVENTS_DURING_GENERATE=0
+[load4_b4_l512_g64] time=0.7121s, same=256/256, consistency=100.00%
+
+Saved: /public/home/TEAM/progen2_contest/results/fp32-chunk2-v5-20261103-iT1F8F/candidate_public.json
+PUBLIC_INTERFACE_TEST_PASSED (100% match with the public FP32 reference)
+四项任务测试完成，结果已保存。

@@ -1,0 +1,207 @@
+{
+  "candidate": "fp32_split_gemv_v22b",
+  "archive": "fp32-split-gemv-v22b-20261105-IecN9V.tar.gz",
+  "archive_sha256": "ed784b5c65c49b88d0ed1a413c99fce5f4c3627f2299e7e2a0d9bbec4fc11740",
+  "exit_status": 0,
+  "source_matches_upload": true,
+  "source_files_verified": 17,
+  "checksums_verified": 16,
+  "omitted_support_files": [
+    "local_validation.json"
+  ],
+  "official_tools_hashes_match_v20": true,
+  "scores": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "batch_size": 1,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 1.0647495698649436,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "batch_size": 8,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 1.4709154500160366,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "batch_size": 4,
+      "prefix_tokens": 32,
+      "new_tokens": 512,
+      "time_s": 2.6564253480173647,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "batch_size": 4,
+      "prefix_tokens": 512,
+      "new_tokens": 64,
+      "time_s": 0.4531044950708747,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    }
+  ],
+  "sum_s": 5.64519486296922,
+  "total_matching_tokens": 4608,
+  "audit": {
+    "graph_captures": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "graph_replays": [
+      255,
+      255,
+      255,
+      255,
+      511,
+      511,
+      63,
+      63
+    ],
+    "formal_graph_capture_zero": true,
+    "compiled_kernel_check_passed": true,
+    "candidate": "fp32_split_gemv_v22b",
+    "all_public_references_exact": true,
+    "dynamo_events": [
+      2,
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "triton_cache_misses": [
+      6,
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "formal_dynamo_zero": true,
+    "formal_triton_cache_misses_zero": true,
+    "identity": true,
+    "kernel_check_passed": true,
+    "measurement_scope": "Four official workload calls after official warmup; no edits to official tester",
+    "compile_audit_scope": "Dynamo on_compile_start and Triton 3.0 JIT cache-miss hook; not a hardware trace of every native compiler call",
+    "split_gemv_plan_verified": true,
+    "shape_plan": {
+      "1,4608,1536,0": null,
+      "1,1536,1536,0": {
+        "bn": 4,
+        "bk": 512
+      },
+      "1,6144,1536,1": null,
+      "1,1536,6144,1": {
+        "bn": 4,
+        "bk": 256
+      },
+      "4,4608,1536,0": null,
+      "4,1536,1536,0": null,
+      "4,6144,1536,1": null,
+      "4,1536,6144,1": null,
+      "8,4608,1536,0": null,
+      "8,1536,1536,0": null,
+      "8,6144,1536,1": null,
+      "8,1536,6144,1": null
+    },
+    "experiment_checks_passed": true
+  },
+  "selected_matrix_probes": [
+    {
+      "batch": 1,
+      "N": 1536,
+      "K": 1536,
+      "mode": {
+        "bn": 4,
+        "bk": 512
+      },
+      "baseline_ms": [
+        0.0412703800201416,
+        0.04100478172302246
+      ],
+      "split_ms": [
+        0.03392957925796509,
+        0.03362237930297852
+      ],
+      "max_abs_error": 4.2012647671896275e-07
+    },
+    {
+      "batch": 1,
+      "N": 1536,
+      "K": 6144,
+      "mode": {
+        "bn": 4,
+        "bk": 256
+      },
+      "baseline_ms": [
+        0.0729935598373413,
+        0.07326076984405518
+      ],
+      "split_ms": [
+        0.06029437065124512,
+        0.06044957160949707
+      ],
+      "max_abs_error": 9.869404578033425e-07
+    }
+  ],
+  "comparison_v20": [
+    {
+      "load": "load1_b1_l32_g256",
+      "v20_seconds": 1.1743023169692606,
+      "v22b_seconds": 1.0647495698649436,
+      "time_reduction_percent": 9.329177463181715,
+      "new_split_linear_enabled": true
+    },
+    {
+      "load": "load2_b8_l32_g256",
+      "v20_seconds": 1.4867579429410398,
+      "v22b_seconds": 1.4709154500160366,
+      "time_reduction_percent": 1.0655731149930348,
+      "new_split_linear_enabled": false
+    },
+    {
+      "load": "load3_b4_l32_g512",
+      "v20_seconds": 2.6981596869882196,
+      "v22b_seconds": 2.6564253480173647,
+      "time_reduction_percent": 1.5467705329716863,
+      "new_split_linear_enabled": false
+    },
+    {
+      "load": "load4_b4_l512_g64",
+      "v20_seconds": 0.4484857621137053,
+      "v22b_seconds": 0.4531044950708747,
+      "time_reduction_percent": -1.0298505208730324,
+      "new_split_linear_enabled": false
+    }
+  ],
+  "v20_sum_s": 5.807705709012225,
+  "total_elapsed_reduction_percent": 2.7981935412262016,
+  "decision": "Candidate passed public correctness and formal-call audits. Only B=1 out_proj and fc_out enabled new split-GEMV. B=4/8 use original v20 linears; their time changes cannot be attributed to split-GEMV. B=1 improvement is promising but needs same-session v20 control before a stable speed claim.",
+  "limits": "One run compared to historical v20; per-shape microbenchmark uses hot isolated synthetic weights, not the full-model cache pattern. Hook audit is not a native compiler hardware trace."
+}

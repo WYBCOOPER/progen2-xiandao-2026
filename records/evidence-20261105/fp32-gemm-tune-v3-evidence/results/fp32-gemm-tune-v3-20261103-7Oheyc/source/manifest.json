@@ -1,0 +1,25 @@
+{
+  "candidate": "fp32_gemm_tune_v3",
+  "base_candidate": "fp32_decode_mask_v1",
+  "base_evidence_archive": "fp32-decode-mask-v1-20261102-km5emg.tar.gz",
+  "base_evidence_sha256": "a3c9007f9d7b08d63cd1163d543940e0e608a47eca0914ba5582ce287fbed027",
+  "original_base_commit": "abbfeb5a16ca088bcd90b52e138ed00f8cf1f8f6",
+  "change": "仅将模型compile模式改为max-autotune-no-cudagraphs；FP32保持，未叠加v2。",
+  "local_validation": "Syntax and source-diff checks only; actual DTK backend availability, numerical behavior and performance pending DCU test.",
+  "DCU_tested": false,
+  "speedup_claim": null,
+  "files": {
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/modeling_progen.py": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d",
+    "solution.py": "4c084754c48278f014907f276793ec967250bc26ed6d03d65f40b2e72bf2cfe8"
+  },
+  "base_source_sha256": {
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/modeling_progen.py": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d",
+    "solution.py": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e"
+  }
+}

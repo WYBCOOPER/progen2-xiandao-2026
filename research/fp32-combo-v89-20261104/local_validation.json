@@ -1,0 +1,31 @@
+{
+  "DCU_tested": false,
+  "status": "local integration and syntax passed; DCU combination test pending",
+  "attention_class_integration": {
+    "scope": "CPU real class methods, is_cuda guard bypassed in harness; custom kernels replaced by Torch references, not actual Triton verification",
+    "cases": [
+      {
+        "candidate": "fp32_combo_v89",
+        "B": 1,
+        "prefill_then_decode_cache_and_outputs": true
+      },
+      {
+        "candidate": "fp32_combo_v89",
+        "B": 4,
+        "prefill_then_decode_cache_and_outputs": true
+      },
+      {
+        "candidate": "fp32_combo_v89",
+        "B": 8,
+        "prefill_then_decode_cache_and_outputs": true
+      }
+    ],
+    "reference_kernel_calls": {
+      "attention": 6,
+      "rope": 9
+    }
+  },
+  "triton_monitor_fake_hook_test": "passed; actual DTK hook availability remains DCU-dependent",
+  "bash_syntax": "Git Bash -n passed",
+  "actual_Triton_Inductor_or_full_model_execution_locally": false
+}

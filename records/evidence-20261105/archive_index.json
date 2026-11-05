@@ -1,0 +1,222 @@
+[
+  {
+    "name": "compensated-gemm-v21-20261105-8soXiS.tar.gz",
+    "sha256": "ff507409a3c5ad5dcdf79dbc39f455b8be8a6ec150b02c4f96767725430e58b5",
+    "public_directory": "records/evidence-20261105/compensated-gemm-v21-20261105-8soXiS"
+  },
+  {
+    "name": "fp32-batch-hybrid-v20-20261105-BV4qVu.tar.gz",
+    "sha256": "c092fa5d68055c33f6c7aedee01f083734de4a3e866e7732a45ce3450a3a26ae",
+    "public_directory": "records/evidence-20261105/fp32-batch-hybrid-v20-20261105-BV4qVu"
+  },
+  {
+    "name": "fp32-batched-linear-v23-20261105-Gxecy7.tar.gz",
+    "sha256": "1885e9e0fe2c445ab40e07d7eb2f7e38de4c85eca325020d661ecddf5aba7ece",
+    "public_directory": "records/evidence-20261105/fp32-batched-linear-v23-20261105-Gxecy7"
+  },
+  {
+    "name": "fp32-compact-graph-v16-20261104-He9cwj.tar.gz",
+    "sha256": "539da7f4d6ff4da5a481c286831402ce2ba9ca241f37a3e017291cd36a60cf2a",
+    "public_directory": "records/evidence-20261105/fp32-compact-graph-v16-20261104-He9cwj"
+  },
+  {
+    "name": "fp32-compiled-graph-v14-20261104-TWITqy.tar.gz",
+    "sha256": "20bc280034615dd9a882a43ff2947266faef00d7a35eba796534c7557cbef68e",
+    "public_directory": "records/evidence-20261105/fp32-compiled-graph-v14-20261104-TWITqy"
+  },
+  {
+    "name": "fp32-decode-attn-v8c-20261104-6kdCzH.tar.gz",
+    "sha256": "8c764183db4234881e8dc38f7206c1203620e659da24280e3448cf653859852b",
+    "public_directory": "records/evidence-20261105/fp32-decode-attn-v8c-20261104-6kdCzH"
+  },
+  {
+    "name": "fp32-decode-mask-v1-20261102-km5emg.tar.gz",
+    "sha256": "a3c9007f9d7b08d63cd1163d543940e0e608a47eca0914ba5582ce287fbed027",
+    "public_directory": "records/evidence-20261105/fp32-decode-mask-v1-20261102-km5emg"
+  },
+  {
+    "name": "fp32-decode-step-v2-failure.tar.gz",
+    "sha256": "cbc50f5531b049f6f9b343028a090a4dd8d99e4fd17f78ca63dd3f75b947638c",
+    "public_directory": "records/evidence-20261105/fp32-decode-step-v2-failure"
+  },
+  {
+    "name": "fp32-decode-step-v2b-evidence.tar.gz",
+    "sha256": "0dc8a49c5429de87a0947e1cbace920259b0b0a75f809ade7069c678d437141d",
+    "public_directory": "records/evidence-20261105/fp32-decode-step-v2b-evidence"
+  },
+  {
+    "name": "fp32-gemm-tune-v3-evidence.tar.gz",
+    "sha256": "c441c78f134e623b2cc53bcc41ac65c9da6ff647c052e9d8d0d40487653f7382",
+    "public_directory": "records/evidence-20261105/fp32-gemm-tune-v3-evidence"
+  },
+  {
+    "name": "fp32-graph-op-v15-20261104-Q6kCFs.tar.gz",
+    "sha256": "9d6fc1653f7b897c70e71e643711cb1d50cca0eb2a8845f4d253eb85c2c668aa",
+    "public_directory": "records/evidence-20261105/fp32-graph-op-v15-20261104-Q6kCFs"
+  },
+  {
+    "name": "fp32-graph-v13-20261104-0vfPLq.tar.gz",
+    "sha256": "47bd662c94dd82da6efd958a8bd9f1ac1b0ca3c36a4a47ff408033ac19fb569e",
+    "public_directory": "records/evidence-20261105/fp32-graph-v13-20261104-0vfPLq"
+  },
+  {
+    "name": "fp32-input-fuse-v4-20261103-pp7obt.tar.gz",
+    "sha256": "e1fa489fd01726e32673b16f4a6d46bf826121de9ca629ae3aa9774dab2d989d",
+    "public_directory": "records/evidence-20261105/fp32-input-fuse-v4-20261103-pp7obt"
+  },
+  {
+    "name": "fp32-kernels-batch-20261104-WCzvcM.tar.gz",
+    "sha256": "c6eb8f89118cb1a0a7f8ea2858ec9cb10c915ffd1d3700bfce3bee5cc4ace65f",
+    "public_directory": "records/evidence-20261105/fp32-kernels-batch-20261104-WCzvcM"
+  },
+  {
+    "name": "results/fp32-kernels-batch-20261104-WCzvcM/fp32-rope-kv-v9-20261104-2Jnvur.tar.gz",
+    "sha256": "ee06e2c404555966dc4052b0eea82b10929227d49a174f48ebc5ed14ba4164ab",
+    "public_directory": "records/evidence-20261105/fp32-kernels-batch-20261104-WCzvcM/nested/fp32-rope-kv-v9-20261104-2Jnvur"
+  },
+  {
+    "name": "results/fp32-kernels-batch-20261104-WCzvcM/fp32-decode-attn-v8-20261104-sXUDUH.tar.gz",
+    "sha256": "bd3e450c1603d67dd0b4b4bf15c8580b12a30daae028e5e7abd59a80095fd236",
+    "public_directory": "records/evidence-20261105/fp32-kernels-batch-20261104-WCzvcM/nested/fp32-decode-attn-v8-20261104-sXUDUH"
+  },
+  {
+    "name": "fp32-kernels-fixed1-batch-20261104-UrWuDI.tar.gz",
+    "sha256": "a3ea25a7eb3295a1c515ba17011434016c52225b69068e7961b0e4c31532fff3",
+    "public_directory": "records/evidence-20261105/fp32-kernels-fixed1-batch-20261104-UrWuDI"
+  },
+  {
+    "name": "results/fp32-kernels-fixed1-batch-20261104-UrWuDI/fp32-decode-attn-v8b-20261104-Yo1SXs.tar.gz",
+    "sha256": "4d87ae407fcdbe983b407ef16a51d6adb864ead951d2109038e562aa085deed9",
+    "public_directory": "records/evidence-20261105/fp32-kernels-fixed1-batch-20261104-UrWuDI/nested/fp32-decode-attn-v8b-20261104-Yo1SXs"
+  },
+  {
+    "name": "results/fp32-kernels-fixed1-batch-20261104-UrWuDI/fp32-rope-kv-v9b-20261104-2r0fUB.tar.gz",
+    "sha256": "16a2a7dbabd90b0ce6e0af6f76d6ddef879ef1aede6b7280eef502b04b63b64f",
+    "public_directory": "records/evidence-20261105/fp32-kernels-fixed1-batch-20261104-UrWuDI/nested/fp32-rope-kv-v9b-20261104-2r0fUB"
+  },
+  {
+    "name": "fp32-rope-kv-v9c-20261104-A681jn.tar.gz",
+    "sha256": "83432bb830f32615c9c7e7975312db7dbe192ba8626c53c800279ac12b474894",
+    "public_directory": "records/evidence-20261105/fp32-rope-kv-v9c-20261104-A681jn"
+  },
+  {
+    "name": "fp32-short-attn-v12-20261104-pT57BT.tar.gz",
+    "sha256": "23a5118dc22fb11a67740beb707a7a40c93f2fd55ea8cf08f0421231bd36da6f",
+    "public_directory": "records/evidence-20261105/fp32-short-attn-v12-20261104-pT57BT"
+  },
+  {
+    "name": "fp32-split-gemv-v22-20261105-gQhZBg.tar.gz",
+    "sha256": "36cecd16ed35b448dbf5b249b34d569528d8373c19d479797be9243ae5acb2d8",
+    "public_directory": "records/evidence-20261105/fp32-split-gemv-v22-20261105-gQhZBg"
+  },
+  {
+    "name": "fp32-split-gemv-v22b-20261105-IecN9V.tar.gz",
+    "sha256": "ed784b5c65c49b88d0ed1a413c99fce5f4c3627f2299e7e2a0d9bbec4fc11740",
+    "public_directory": "records/evidence-20261105/fp32-split-gemv-v22b-20261105-IecN9V"
+  },
+  {
+    "name": "fp32-split-stream-v19-20261105-kmejc4.tar.gz",
+    "sha256": "bb64283c58e796ffd08eb993b9a3bf76ef2cfa32972392530d91cf70aaca4436",
+    "public_directory": "records/evidence-20261105/fp32-split-stream-v19-20261105-kmejc4"
+  },
+  {
+    "name": "fp32-step-gemm-v23-20261103-DnDLwm.tar.gz",
+    "sha256": "44aca6ed244ccf3fbcec368a01eea3149f42fb5ae79046b796c79763edc73a8a",
+    "public_directory": "records/evidence-20261105/fp32-step-gemm-v23-20261103-DnDLwm"
+  },
+  {
+    "name": "fp32-stream-graph-v17-20261104-32jqky.tar.gz",
+    "sha256": "242051162903dbe9c2232e671f605f461d4bb3e10ccad57a3c781d320a42ab54",
+    "public_directory": "records/evidence-20261105/fp32-stream-graph-v17-20261104-32jqky"
+  },
+  {
+    "name": "fp32-three-batch-20261103-LZx66B.tar.gz",
+    "sha256": "16ae4484d91a8b36de359810227b46f06c792bbbe7e9079837d6e71eaf10efcd",
+    "public_directory": "records/evidence-20261105/fp32-three-batch-20261103-LZx66B"
+  },
+  {
+    "name": "fp32-tile-graph-v18-20261104-c0rF2n.tar.gz",
+    "sha256": "e4e87888d5bd7ee0ff9948e46c0f015660e7780459c9dc11fa0f7ce799ce7be9",
+    "public_directory": "records/evidence-20261105/fp32-tile-graph-v18-20261104-c0rF2n"
+  },
+  {
+    "name": "fp32-v2b-v3-comparison-evidence.tar.gz",
+    "sha256": "4e004feed75060d2abd590de02a73716299acc984b66ae4fc46a93665b670f1c",
+    "public_directory": "records/evidence-20261105/fp32-v2b-v3-comparison-evidence"
+  },
+  {
+    "name": "pr22-abbfeb5-20261101-0iE77k.tar.gz",
+    "sha256": "d835979c011de0237e7163063b8fba52e443c4a5059844016ae9d70d0abeeedb",
+    "public_directory": "records/evidence-20261105/pr22-abbfeb5-20261101-0iE77k"
+  },
+  {
+    "name": "pr22-ef2b051-20261101-Olwchs-with-comparison.tar.gz",
+    "sha256": "1c96fb071eb4032c1d195e58368d10b616c1fe5cc11b134c3c52a32523f0a44a",
+    "public_directory": "records/evidence-20261105/pr22-ef2b051-20261101-Olwchs-with-comparison"
+  },
+  {
+    "name": "pr22-ef2b051-20261101-Olwchs.tar.gz",
+    "sha256": "befda6337d7ab514790647ee1354fbd612e8e7f6464754bf64f5eb8a78632110",
+    "public_directory": "records/evidence-20261105/pr22-ef2b051-20261101-Olwchs"
+  },
+  {
+    "name": "v22b-compare-20261105-DRmjDX.tar.gz",
+    "sha256": "7cc3be35cc5c2a75c1e7aa113d41b376c0a0af40341942312e03ff7dc3634ce0",
+    "public_directory": "records/evidence-20261105/v22b-compare-20261105-DRmjDX"
+  },
+  {
+    "name": "v4-5b30ef2-evidence.tar.gz",
+    "sha256": "ca20cd4eda2619a2c109dc94c5c16c39041bef7980a68548763a05fe07a9e272",
+    "public_directory": "records/evidence-20261105/v4-5b30ef2-evidence"
+  },
+  {
+    "name": "v6-repeat-20261104-Z2mul6.tar.gz",
+    "sha256": "08f716aac164533194793d4785b8aa5cef75d00e96b33b243711eb84c58a3789",
+    "public_directory": "records/evidence-20261105/v6-repeat-20261104-Z2mul6"
+  },
+  {
+    "name": "v9-next-two-20261104-sKkFQT.tar.gz",
+    "sha256": "2462519764013eb144149ce8625072e333d188376bc04f3c474cf97a55b178f0",
+    "public_directory": "records/evidence-20261105/v9-next-two-20261104-sKkFQT"
+  },
+  {
+    "name": "results/v9-next-two-20261104-sKkFQT/fp32-rope-op-v10-20261104-yF8lDW.tar.gz",
+    "sha256": "16480b703ce3090815be02a5cd9069692974626ce63b695936b6ba2c41354866",
+    "public_directory": "records/evidence-20261105/v9-next-two-20261104-sKkFQT/nested/fp32-rope-op-v10-20261104-yF8lDW"
+  },
+  {
+    "name": "results/v9-next-two-20261104-sKkFQT/fp32-greedy-v11-20261104-JguAcA.tar.gz",
+    "sha256": "d55a5c376ee4c772dcae88964133b94e8455686f47742063b24cd9f01d72f58c",
+    "public_directory": "records/evidence-20261105/v9-next-two-20261104-sKkFQT/nested/fp32-greedy-v11-20261104-JguAcA"
+  },
+  {
+    "name": "day1-backup-20261028.tar.gz",
+    "sha256": "71f04372f14ade0f4b55b00465f0fb17d0ace81c4417971689a9453b882ebe17",
+    "public_directory": "records/evidence-20261105/day1-backup-20261028"
+  },
+  {
+    "name": "day2-20261029-PmCfgu.tar.gz",
+    "sha256": "5f04fc5e71b7777de16dd545e8aa5e302891944e40dfea5b3628d82f9f3438e3",
+    "public_directory": "records/evidence-20261105/day2-20261029-PmCfgu"
+  },
+  {
+    "name": "rope-pr17-20261029-QmbMHH.tar.gz",
+    "sha256": "347171561e6b5802822132d361ec386696f6795f5a6c0ff045861bb678d880b0",
+    "public_directory": "records/evidence-20261105/rope-pr17-20261029-QmbMHH"
+  },
+  {
+    "name": "rope-compile-rp17-20261029-3RJKlD.tar.gz",
+    "sha256": "7db01549c61a24b5f8ede9d7df5f59b6cb5cc182ac053b347110ca9eb9700375",
+    "public_directory": "records/evidence-20261105/rope-compile-rp17-20261029-3RJKlD"
+  },
+  {
+    "name": "pr20-dd70b49-20261101-vZnyOh.tar.gz",
+    "sha256": "8f8b78c1023a687113538a86d02445a91ce718fad58926a6e4070cf9257beee0",
+    "public_directory": "records/evidence-20261105/pr20-dd70b49-20261101-vZnyOh"
+  },
+  {
+    "name": "fp32-combo-v89-20261104-Wri0Ic.tar.gz",
+    "sha256": "f9917845f5a76e42fe68d4067fc911fda8c71427890bc33e66a8b64e79b3014f",
+    "public_directory": "records/evidence-20261105/fp32-combo-v89-20261104-Wri0Ic"
+  }
+]

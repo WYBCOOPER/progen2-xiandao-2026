@@ -1,0 +1,291 @@
+{
+  "batch_file": "v9-next-two-20261104-sKkFQT.tar.gz",
+  "batch_sha256": "2462519764013eb144149ce8625072e333d188376bc04f3c474cf97a55b178f0",
+  "candidates": [
+    {
+      "candidate": "fp32_rope_op_v10",
+      "source_verified_against_upload_zip": [
+        "audit_result.py",
+        "compile_check.py",
+        "kernel_check.py",
+        "manifest.json",
+        "models/__init__.py",
+        "models/progen/__init__.py",
+        "models/progen/configuration_progen.py",
+        "models/progen/kernels.py",
+        "models/progen/modeling_progen.py",
+        "README.md",
+        "run_test.sh",
+        "solution.py"
+      ],
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520,
+        "official_tools_sha256": {
+          "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+          "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+          "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+          "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+          "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+        }
+      },
+      "exit_status": 0,
+      "status": "public correctness and recorded compile gates passed; single measurement",
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 2.8351669020485133,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 2.8929417179897428,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 5.752544407965615,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.7649720830377191,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ],
+      "sum_time_s": 12.24562511104159,
+      "formal_dynamo_events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "formal_triton_cache_misses": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "warmup_dynamo_events": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "inline_asm_mutation_analysis_warning": false,
+      "warning_interpretation": "No inline-asm mutation-analysis warning in this model log.",
+      "compile_audit_limit": "Two recorded hooks, not a hardware trace of all native compiler activity",
+      "archive_sha256": "16480b703ce3090815be02a5cd9069692974626ce63b695936b6ba2c41354866",
+      "archive_file": "fp32-rope-op-v10-20261104-yF8lDW.tar.gz",
+      "independently_verified_experiment_checks_passed": true,
+      "elapsed_increase_vs_historical_v9c_pct": 73.87226510369997,
+      "direct_rope_cases": 24
+    },
+    {
+      "candidate": "fp32_greedy_v11",
+      "source_verified_against_upload_zip": [
+        "audit_result.py",
+        "check_compiled_rope.py",
+        "check_greedy.py",
+        "check_rope.py",
+        "compile_check.py",
+        "kernel_check.py",
+        "manifest.json",
+        "models/__init__.py",
+        "models/progen/__init__.py",
+        "models/progen/configuration_progen.py",
+        "models/progen/kernels.py",
+        "models/progen/modeling_progen.py",
+        "README.md",
+        "run_test.sh",
+        "solution.py"
+      ],
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520,
+        "official_tools_sha256": {
+          "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+          "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+          "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+          "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+          "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+        }
+      },
+      "exit_status": 0,
+      "status": "public correctness and recorded compile gates passed; single measurement",
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.5799892751965672,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.679873886052519,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 3.313094395911321,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.5229490110650659,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ],
+      "sum_time_s": 7.095906568225473,
+      "formal_dynamo_events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "formal_triton_cache_misses": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "warmup_dynamo_events": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "inline_asm_mutation_analysis_warning": true,
+      "warning_interpretation": "Inherited v9c inline-asm mutation-analysis warning remains; it was nonfatal in this run.",
+      "compile_audit_limit": "Two recorded hooks, not a hardware trace of all native compiler activity",
+      "archive_sha256": "d55a5c376ee4c772dcae88964133b94e8455686f47742063b24cd9f01d72f58c",
+      "archive_file": "fp32-greedy-v11-20261104-JguAcA.tar.gz",
+      "independently_verified_experiment_checks_passed": true,
+      "elapsed_increase_vs_historical_v9c_pct": 0.7528269723947378,
+      "direct_rope_cases": 24,
+      "direct_greedy_cases": 112,
+      "compiled_greedy_cases": 224
+    }
+  ],
+  "historical_reference": {
+    "candidate": "fp32_rope_kv_v9c",
+    "sum_time_s": 7.042885824106634,
+    "loads": [
+      {
+        "load_id": "load1_b1_l32_g256",
+        "batch_size": 1,
+        "prefix_tokens": 32,
+        "new_tokens": 256,
+        "time_s": 1.5338259630370885,
+        "same": 256,
+        "total": 256,
+        "consistency_rate": 1.0,
+        "exact_match": true
+      },
+      {
+        "load_id": "load2_b8_l32_g256",
+        "batch_size": 8,
+        "prefix_tokens": 32,
+        "new_tokens": 256,
+        "time_s": 1.6781445150263608,
+        "same": 2048,
+        "total": 2048,
+        "consistency_rate": 1.0,
+        "exact_match": true
+      },
+      {
+        "load_id": "load3_b4_l32_g512",
+        "batch_size": 4,
+        "prefix_tokens": 32,
+        "new_tokens": 512,
+        "time_s": 3.311458772048354,
+        "same": 2048,
+        "total": 2048,
+        "consistency_rate": 1.0,
+        "exact_match": true
+      },
+      {
+        "load_id": "load4_b4_l512_g64",
+        "batch_size": 4,
+        "prefix_tokens": 512,
+        "new_tokens": 64,
+        "time_s": 0.5194565739948303,
+        "same": 256,
+        "total": 256,
+        "consistency_rate": 1.0,
+        "exact_match": true
+      }
+    ],
+    "comparison_limit": "Different runs/sessions; no same-session v9c control or repetitions in this batch. Percent changes describe records, not isolated causal benefits."
+  },
+  "conclusion": {
+    "selected_parent": "fp32_rope_kv_v9c",
+    "v10": "do not promote: no performance benefit observed; total markedly higher than historical parent",
+    "v11": "no demonstrated performance benefit: close to historical parent; paired repeats required before claiming either gain or regression",
+    "compile_audit_limit": "Two recorded hooks only, not a hardware trace of all native compiler activity",
+    "github_updated": false
+  }
+}

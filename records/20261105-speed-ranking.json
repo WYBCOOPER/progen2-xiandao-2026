@@ -1,0 +1,952 @@
+[
+  {
+    "archive": "fp32-batched-linear-v23-20261105-Gxecy7.tar.gz",
+    "path": "results/fp32-batched-linear-v23-20261105-Gxecy7/candidate_public.json",
+    "sha256": "20191766543dcc4f66185aebdb9db9e7065e063065e1946b097ebf5b45face86",
+    "times": [
+      1.0466106629464775,
+      1.4927387880161405,
+      2.557698338991031,
+      0.4358687261119485
+    ],
+    "sum_s": 5.5329165160655975,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "v22b-compare-20261105-DRmjDX.tar.gz",
+    "path": "results/v22b-compare-20261105-DRmjDX/03_v22b/candidate_public.json",
+    "sha256": "6e5fad56c9285ce0a2c5a2b2b1b166dcace3fdb3d14f5f8bcdfb9537705ed786",
+    "times": [
+      1.0198276401497424,
+      1.4835128621198237,
+      2.680164757883176,
+      0.45633713412098587
+    ],
+    "sum_s": 5.639842394273728,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-split-gemv-v22b-20261105-IecN9V.tar.gz",
+    "path": "results/fp32-split-gemv-v22b-20261105-IecN9V/candidate_public.json",
+    "sha256": "6db077b8b11571fc3fc59bf044bcd581fe649bb2e6bbffa71ab79bd7d55ebeb9",
+    "times": [
+      1.0647495698649436,
+      1.4709154500160366,
+      2.6564253480173647,
+      0.4531044950708747
+    ],
+    "sum_s": 5.64519486296922,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-batched-linear-v23-20261105-Gxecy7.tar.gz",
+    "path": "results/fp32-batched-linear-v23-20261105-Gxecy7/previous_public.json",
+    "sha256": "b75d14f847de6982f8486b0b27b2ed16d0b252c6851a6a4ab793471ee7658c5d",
+    "times": [
+      1.021699070930481,
+      1.4729849540162832,
+      2.7364706420339644,
+      0.4525843858718872
+    ],
+    "sum_s": 5.683739052852616,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "v22b-compare-20261105-DRmjDX.tar.gz",
+    "path": "results/v22b-compare-20261105-DRmjDX/02_v22b/candidate_public.json",
+    "sha256": "0b40add02ad2dc31b75eb4623c0ff889f600c36108f6abdef50f4d0346a3150c",
+    "times": [
+      1.0416369820013642,
+      1.4946225190069526,
+      2.741148750996217,
+      0.46047506807371974
+    ],
+    "sum_s": 5.737883320078254,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "v22b-compare-20261105-DRmjDX.tar.gz",
+    "path": "results/v22b-compare-20261105-DRmjDX/04_v20/candidate_public.json",
+    "sha256": "a14ab8c168043d5a122ee3f1a79ddd49a9d3307d53db10129970a1167bf35a3f",
+    "times": [
+      1.1740001130383462,
+      1.486878835130483,
+      2.6635693050920963,
+      0.4538712250068784
+    ],
+    "sum_s": 5.778319478267804,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-batch-hybrid-v20-20261105-BV4qVu.tar.gz",
+    "path": "results/fp32-batch-hybrid-v20-20261105-BV4qVu/candidate_public.json",
+    "sha256": "3856babf496ee23e5c9c61b97d47bed03ed690552ce7649c76c59c415db3ca76",
+    "times": [
+      1.1743023169692606,
+      1.4867579429410398,
+      2.6981596869882196,
+      0.4484857621137053
+    ],
+    "sum_s": 5.807705709012225,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-split-stream-v19-20261105-kmejc4.tar.gz",
+    "path": "results/fp32-split-stream-v19-20261105-kmejc4/candidate_public.json",
+    "sha256": "7eb1dae89d286b9efa54a2eec2d47120aa40605f0b659fb37cc17e04b1715f3e",
+    "times": [
+      1.1679175191093236,
+      1.524613661924377,
+      2.682712092064321,
+      0.4526880979537964
+    ],
+    "sum_s": 5.827931371051818,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "v22b-compare-20261105-DRmjDX.tar.gz",
+    "path": "results/v22b-compare-20261105-DRmjDX/01_v20/candidate_public.json",
+    "sha256": "2b423353f7b933da3bea12e7e8ddce53d1583aab3b53521c393355d36de9140e",
+    "times": [
+      1.132735777180642,
+      1.519823765847832,
+      2.726176558062434,
+      0.46501954505220056
+    ],
+    "sum_s": 5.843755646143109,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-stream-graph-v17-20261104-32jqky.tar.gz",
+    "path": "results/fp32-stream-graph-v17-20261104-32jqky/candidate_public.json",
+    "sha256": "81f16807c1cda1cb652781f5adac6da327e6a82648fab5801a6acd48d8aa2134",
+    "times": [
+      1.1823024440091103,
+      1.4904171430971473,
+      2.7911690599285066,
+      0.47876101010479033
+    ],
+    "sum_s": 5.942649657139555,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-graph-op-v15-20261104-Q6kCFs.tar.gz",
+    "path": "results/fp32-graph-op-v15-20261104-Q6kCFs/candidate_public.json",
+    "sha256": "35a6ca8b4415dcde2e14d98c9d713860623a01d4903d5809ac7285c63ded6858",
+    "times": [
+      1.1985619449988008,
+      1.8348650138359517,
+      3.2111085278447717,
+      0.5041376471053809
+    ],
+    "sum_s": 6.748673133784905,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-compact-graph-v16-20261104-He9cwj.tar.gz",
+    "path": "results/fp32-compact-graph-v16-20261104-He9cwj/candidate_public.json",
+    "sha256": "3519c5e01de5351ac80a502e56cf7aecdddfe41d2c63e5fe5a70da4cce38f383",
+    "times": [
+      1.1989475667942315,
+      1.8471676651388407,
+      3.226897398941219,
+      0.5144417090341449
+    ],
+    "sum_s": 6.787454339908436,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-compiled-graph-v14-20261104-TWITqy.tar.gz",
+    "path": "results/fp32-compiled-graph-v14-20261104-TWITqy/candidate_public.json",
+    "sha256": "e2315c812721c45abe4a9e57c3b84679422fd7fd37b3b50a9c7cbe564df5f246",
+    "times": [
+      1.2149186311289668,
+      1.8888950690161437,
+      3.3292895341292024,
+      0.5244960461277515
+    ],
+    "sum_s": 6.957599280402064,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-short-attn-v12-20261104-pT57BT.tar.gz",
+    "path": "results/fp32-short-attn-v12-20261104-pT57BT/candidate_public.json",
+    "sha256": "0fecd21ca7f27fc0e325d94107ae2c80044d67d190ea2d5a6aeadfcf9921e6b1",
+    "times": [
+      1.502015600912273,
+      1.6492681519594043,
+      3.3147839659359306,
+      0.5289105570409447
+    ],
+    "sum_s": 6.994978275848553,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-rope-kv-v9c-20261104-A681jn.tar.gz",
+    "path": "results/fp32-rope-kv-v9c-20261104-A681jn/candidate_public.json",
+    "sha256": "8b736acc60f5ab5fef0b4e1e14705933e9688139ba2a3961f78964c8320cca57",
+    "times": [
+      1.5338259630370885,
+      1.6781445150263608,
+      3.311458772048354,
+      0.5194565739948303
+    ],
+    "sum_s": 7.042885824106634,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "v9-next-two-20261104-sKkFQT.tar.gz!results/v9-next-two-20261104-sKkFQT/fp32-greedy-v11-20261104-JguAcA.tar.gz",
+    "path": "results/fp32-greedy-v11-20261104-JguAcA/candidate_public.json",
+    "sha256": "ea5adcac6044154d96ca542e54177ac68511f54bd376ff9c386443c0cc1fc7b3",
+    "times": [
+      1.5799892751965672,
+      1.679873886052519,
+      3.313094395911321,
+      0.5229490110650659
+    ],
+    "sum_s": 7.095906568225473,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-combo-v89-20261104-Wri0Ic.tar.gz",
+    "path": "results/fp32-combo-v89-20261104-Wri0Ic/candidate_public.json",
+    "sha256": "5d0e7ea1332d2a01de6e0972f1219439b72d0039ae257f9fc9c768a4ae347fee",
+    "times": [
+      1.3878907579928637,
+      1.8890572651289403,
+      3.3601006900426,
+      0.5429251049645245
+    ],
+    "sum_s": 7.1799738181289285,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-tile-graph-v18-20261104-c0rF2n.tar.gz",
+    "path": "results/fp32-tile-graph-v18-20261104-c0rF2n/candidate_public.json",
+    "sha256": "35e79d2f68daf5a6360f021cbdcf955ca782f9e2a539b86f02e72f0a41191c61",
+    "times": [
+      1.1909261101391166,
+      1.9100941980723292,
+      3.5636114350054413,
+      0.6452026448678225
+    ],
+    "sum_s": 7.30983438808471,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-decode-attn-v8c-20261104-6kdCzH.tar.gz",
+    "path": "results/fp32-decode-attn-v8c-20261104-6kdCzH/candidate_public.json",
+    "sha256": "d870f693d7ed8e00824614314c544a45e528a4c1f2c8a33af9ce3927722627c7",
+    "times": [
+      1.5071897408924997,
+      1.9032918219454587,
+      3.363485970068723,
+      0.5406654940452427
+    ],
+    "sum_s": 7.314633026951924,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-v2b-v3-comparison-evidence.tar.gz",
+    "path": "results/fp32-step-gemm-v23-20261103-mP5cp4/candidate_public.json",
+    "sha256": "81037f908f17980513a34feb013be4fcca0d246f1727d79441c4bc7df5156b3a",
+    "times": [
+      1.7063617690000683,
+      1.8220857509877533,
+      3.605089824879542,
+      0.546864558942616
+    ],
+    "sum_s": 7.68040190380998,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-three-batch-20261103-LZx66B.tar.gz",
+    "path": "results/fp32-k-transpose-v6-20261103-zW6mGd/candidate_public.json",
+    "sha256": "92adb5a7b8c71e42fdc81c4c872e221b13d58d1c7943b9e1fc7bb285f41da48a",
+    "times": [
+      1.6791382408700883,
+      1.8584830090403557,
+      3.6447146248538047,
+      0.5633919138927013
+    ],
+    "sum_s": 7.74572778865695,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-step-gemm-v23-20261103-DnDLwm.tar.gz",
+    "path": "results/fp32-step-gemm-v23-20261103-DnDLwm/candidate_public.json",
+    "sha256": "746aaa62fe6fa7d48218f538d69c51cee15eda230153ed4c5cb6e66e58c5eab8",
+    "times": [
+      1.6897377199493349,
+      1.8733396399766207,
+      3.660318728070706,
+      0.5536941939499229
+    ],
+    "sum_s": 7.777090281946585,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-input-fuse-v4-20261103-pp7obt.tar.gz",
+    "path": "results/fp32-input-fuse-v4-20261103-pp7obt/candidate_public.json",
+    "sha256": "6c33d7e8204acae6e6fcffaa262989f9da9b5f6a93029e0f19e64293ea8fb73f",
+    "times": [
+      1.7563191899098456,
+      1.8743410489987582,
+      3.676673216978088,
+      0.5344096610788256
+    ],
+    "sum_s": 7.841743116965517,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-v2b-v3-comparison-evidence.tar.gz",
+    "path": "results/fp32-gemm-v3-audit-20261103-Ofpz6h/candidate_public.json",
+    "sha256": "4e27992a164bd900040cd5816008b3616999e217d9b567cb044d2c09e1a259a2",
+    "times": [
+      1.7456502988934517,
+      1.8755893951747566,
+      3.6906652520410717,
+      0.5517282788641751
+    ],
+    "sum_s": 7.863633224973455,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-gemm-tune-v3-evidence.tar.gz",
+    "path": "results/fp32-gemm-tune-v3-20261103-7Oheyc/candidate_public.json",
+    "sha256": "a574bf35a36cc72dc96df058f634dd7bfe188989bc207dca451c44b40ac11e96",
+    "times": [
+      1.7290433670859784,
+      1.9165556691586971,
+      3.738564444007352,
+      0.5600296230986714
+    ],
+    "sum_s": 7.944193103350699,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-three-batch-20261103-LZx66B.tar.gz",
+    "path": "results/fp32-sdpa-v7-20261103-epLdRR/candidate_public.json",
+    "sha256": "18bcd2217ed1b1f942754794ce4e6da2a0e4c30c316028665175abf9ec444f2a",
+    "times": [
+      1.896143551915884,
+      2.041548433015123,
+      3.993215304100886,
+      0.6039131169673055
+    ],
+    "sum_s": 8.534820405999199,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-graph-v13-20261104-0vfPLq.tar.gz",
+    "path": "results/fp32-graph-v13-20261104-0vfPLq/candidate_public.json",
+    "sha256": "a36b5d455fbd57460d036be5f88b86dee3ddd5865746fceaf098fa4ec88773dd",
+    "times": [
+      1.9688575961627066,
+      2.4913377040065825,
+      4.736048804130405,
+      0.6945117660798132
+    ],
+    "sum_s": 9.890755870379508,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "fp32-three-batch-20261103-LZx66B.tar.gz",
+    "path": "results/fp32-chunk2-v5-20261103-iT1F8F/candidate_public.json",
+    "sha256": "dfaf9a120a574714308fe4999c18057763ff2206f2e3c55c5e07410079155fb9",
+    "times": [
+      1.8315821690484881,
+      3.0666154141072184,
+      4.563625711016357,
+      0.712120276177302
+    ],
+    "sum_s": 10.173943570349365,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-decode-step-v2b-evidence.tar.gz",
+    "path": "results/fp32-decode-step-v2b-20261103-rH6tmp/candidate_public.json",
+    "sha256": "89c534bf01dca5b27a73106e001d589e012321c977fa0c0242189e3e25c2f6a5",
+    "times": [
+      2.2297008908353746,
+      2.4749893450643867,
+      4.945523608941585,
+      0.6954230540432036
+    ],
+    "sum_s": 10.34563689888455,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "fp32-decode-mask-v1-20261102-km5emg.tar.gz",
+    "path": "results/fp32-decode-mask-v1-20261102-km5emg/candidate_public.json",
+    "sha256": "d34fa3d55a416e517a29822d672461f0bef40332d261087e4c117c6de4dec7d5",
+    "times": [
+      2.262225284939632,
+      2.5369221430737525,
+      4.971593641908839,
+      0.7001160860527307
+    ],
+    "sum_s": 10.470857155974954,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "pr22-abbfeb5-20261101-0iE77k.tar.gz",
+    "path": "results/pr22-abbfeb5-20261101-0iE77k/candidate_public.json",
+    "sha256": "651b17ec0087db560781b115758b751039e70535b8e1e170952c61bf0d70976d",
+    "times": [
+      2.2079780518542975,
+      2.7288666861131787,
+      5.391918940003961,
+      0.7466899149585515
+    ],
+    "sum_s": 11.075453592929989,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "pr22-ef2b051-20261101-Olwchs-with-comparison.tar.gz",
+    "path": "results/pr22-ef2b051-20261101-Olwchs/candidate_public.json",
+    "sha256": "ea2b46e49bbb2c37d19778bf2e344778946b1273f78c36cb6b8bf733400f98b6",
+    "times": [
+      2.2535837728064507,
+      2.7969233670737594,
+      5.505734155885875,
+      0.7585073271766305
+    ],
+    "sum_s": 11.314748622942716,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "pr22-ef2b051-20261101-Olwchs.tar.gz",
+    "path": "results/pr22-ef2b051-20261101-Olwchs/candidate_public.json",
+    "sha256": "ea2b46e49bbb2c37d19778bf2e344778946b1273f78c36cb6b8bf733400f98b6",
+    "times": [
+      2.2535837728064507,
+      2.7969233670737594,
+      5.505734155885875,
+      0.7585073271766305
+    ],
+    "sum_s": 11.314748622942716,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "v4-5b30ef2-evidence.tar.gz",
+    "path": "results/v4-5b30ef2-20261102-UzXO55/candidate_public.json",
+    "sha256": "43b28311e8b6ed0813d40620f356d1faa80a652320b69151f38d9ee000535d69",
+    "times": [
+      2.3886893468443304,
+      2.944835666101426,
+      5.859821764053777,
+      0.7524601540062577
+    ],
+    "sum_s": 11.94580693100579,
+    "exact": false,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "v9-next-two-20261104-sKkFQT.tar.gz!results/v9-next-two-20261104-sKkFQT/fp32-rope-op-v10-20261104-yF8lDW.tar.gz",
+    "path": "results/fp32-rope-op-v10-20261104-yF8lDW/candidate_public.json",
+    "sha256": "8e8af9be50e155ec45a206f044162e3b6f1f0232b590d8b94ef49b8670e226ce",
+    "times": [
+      2.8351669020485133,
+      2.8929417179897428,
+      5.752544407965615,
+      0.7649720830377191
+    ],
+    "sum_s": 12.24562511104159,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "pr22-ef2b051-20261101-Olwchs-with-comparison.tar.gz",
+    "path": "results/pr22-ef2b051-20261101-Olwchs/previous_public.json",
+    "sha256": "e414be95cce173efd8c538270267faf5a28c9100fd4ee72979b7baeb0e5ffee6",
+    "times": [
+      2.541590612847358,
+      3.1659098139498383,
+      6.142158329952508,
+      0.8478716430254281
+    ],
+    "sum_s": 12.697530399775133,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "rope-compile-rp17-20261029-3RJKlD.tar.gz",
+    "path": "results/rope-compile-rp17-20261029-3RJKlD/candidate_public.json",
+    "sha256": "fad72ac333e044f1037b257f52fa4dc928426141282d8ea211717fba81f13a2c",
+    "times": [
+      2.612602553097531,
+      3.168718233006075,
+      6.141966896131635,
+      0.8466486309189349
+    ],
+    "sum_s": 12.769936313154176,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "rope-compile-rp17-20261029-3RJKlD.tar.gz",
+    "path": "results/rope-compile-rp17-20261029-3RJKlD/candidate_r2_public.json",
+    "sha256": "4b1e5defa3da61f821abb22839e4431160efc6e09e425ec7dab25e906aa8f8c1",
+    "times": [
+      2.593030027113855,
+      3.1891110341530293,
+      6.195326191838831,
+      0.8484203640837222
+    ],
+    "sum_s": 12.825887617189437,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "pr20-dd70b49-20261101-vZnyOh.tar.gz",
+    "path": "results/pr20-dd70b49-20261101-vZnyOh/previous_public.json",
+    "sha256": "e8a8dd2132c642b613f78638e5e18e64d6c9c07f0dc6d843efb8df561ee7ca4a",
+    "times": [
+      2.5367226900998503,
+      3.2151723210699856,
+      6.242357133887708,
+      0.8577182188164443
+    ],
+    "sum_s": 12.851970363873988,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "pr20-dd70b49-20261101-vZnyOh.tar.gz",
+    "path": "results/pr20-dd70b49-20261101-vZnyOh/candidate_public.json",
+    "sha256": "a709ea33644a61c493e49125308817d75044a789b55fcb350de874272cf08f5d",
+    "times": [
+      2.5434995470568538,
+      3.2230022540315986,
+      6.258945626905188,
+      0.8597549221012741
+    ],
+    "sum_s": 12.885202350094914,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "compensated-gemm-v21-20261105-8soXiS.tar.gz",
+    "path": "results/compensated-gemm-v21-20261105-8soXiS/candidate_public.json",
+    "sha256": "ec29e26ad9692f07852975ab77a946d151886dca462748adaeb25fb3307116f5",
+    "times": [
+      3.0916804510634392,
+      3.1430091289803386,
+      6.296897521940991,
+      0.8993920050561428
+    ],
+    "sum_s": 13.430979107040912,
+    "exact": true,
+    "formal_zero": true,
+    "formal": {
+      "COMPILE_EVENTS": true,
+      "TRITON_CACHE_MISSES": true,
+      "GRAPH_CAPTURES": true
+    }
+  },
+  {
+    "archive": "rope-pr17-20261029-QmbMHH.tar.gz",
+    "path": "results/rope-pr17-20261029-QmbMHH/candidate_public.json",
+    "sha256": "e83b56399447c4ff8a2bb44a9bf59b9fd99e6f6db7d078945ec1bfa1064c6050",
+    "times": [
+      8.954236773075536,
+      8.723536293953657,
+      17.51287211710587,
+      2.2604528290685266
+    ],
+    "sum_s": 37.45109801320359,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "rope-pr17-20261029-QmbMHH.tar.gz",
+    "path": "results/rope-pr17-20261029-QmbMHH/baseline_public.json",
+    "sha256": "25b02cebd0118043f8ce95b58af15b5cdbab7cf7d504df055e5fe85d5f6120f9",
+    "times": [
+      9.580371842952445,
+      9.493469448992983,
+      19.224485903978348,
+      2.5248000628780574
+    ],
+    "sum_s": 40.82312725880183,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "day2-20261029-PmCfgu.tar.gz",
+    "path": "results/day2-20261029-PmCfgu/fp32_public.json",
+    "sha256": "b06b9a0e28d599a70e012c53bedff3d2c2ab96dff9debe4bf22c1eadf3b7c479",
+    "times": [
+      9.619876443175599,
+      9.545441296882927,
+      19.22044992703013,
+      2.524991343030706
+    ],
+    "sum_s": 40.910759010119364,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "day1-backup-20261028.tar.gz",
+    "path": "submission/evidence/baseline_public.json",
+    "sha256": "3c965c853163358a79f5c4cd37fc81786c2b4743fe933fc08d38f0142b0786c9",
+    "times": [
+      9.690762410871685,
+      9.63550824788399,
+      19.404935146914795,
+      2.551227177027613
+    ],
+    "sum_s": 41.28243298269808,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "day1-backup-20261028.tar.gz",
+    "path": "results/baseline_public.json",
+    "sha256": "3c965c853163358a79f5c4cd37fc81786c2b4743fe933fc08d38f0142b0786c9",
+    "times": [
+      9.690762410871685,
+      9.63550824788399,
+      19.404935146914795,
+      2.551227177027613
+    ],
+    "sum_s": 41.28243298269808,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "day2-20261029-PmCfgu.tar.gz",
+    "path": "results/day2-20261029-PmCfgu/fp32_retry_public.json",
+    "sha256": "327e17db2e6dd607a0cf51bb9d2848106304987a7093a8ca782c48aca0415982",
+    "times": [
+      9.586844615172595,
+      9.710715328110382,
+      19.619253498036414,
+      2.545350091997534
+    ],
+    "sum_s": 41.462163533316925,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "day1-backup-20261028.tar.gz",
+    "path": "results/submission_public.json",
+    "sha256": "3492447a2e010fe814065774740b7d70d63f16d576b42e2717819783d500a2b8",
+    "times": [
+      10.166278951102868,
+      10.140572065021843,
+      20.384494045982137,
+      2.599213327979669
+    ],
+    "sum_s": 43.29055839008652,
+    "exact": false,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "day1-backup-20261028.tar.gz",
+    "path": "results/fp16_trial/submission_public.json",
+    "sha256": "3492447a2e010fe814065774740b7d70d63f16d576b42e2717819783d500a2b8",
+    "times": [
+      10.166278951102868,
+      10.140572065021843,
+      20.384494045982137,
+      2.599213327979669
+    ],
+    "sum_s": 43.29055839008652,
+    "exact": false,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  },
+  {
+    "archive": "day2-20261029-PmCfgu.tar.gz",
+    "path": "results/day2-20261029-PmCfgu/diagnostic_only.json",
+    "sha256": "d6a87c82a02673ffb9ae221f7f5eb0dc96d6dd2b010e826db23f02e1e346d657",
+    "times": [
+      10.59502044110559,
+      10.551440614974126,
+      21.221882867161185,
+      2.779585188953206
+    ],
+    "sum_s": 45.147929112194106,
+    "exact": true,
+    "formal_zero": false,
+    "formal": {
+      "COMPILE_EVENTS": false,
+      "TRITON_CACHE_MISSES": false,
+      "GRAPH_CAPTURES": false
+    }
+  }
+]

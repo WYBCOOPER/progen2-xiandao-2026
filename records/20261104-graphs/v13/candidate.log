@@ -1,0 +1,241 @@
+python: 3.10.16
+torch: 2.4.1+das.opt2.dtk2504
+transformers: 4.46.3
+tokenizers: 0.20.3
+accelerate: 1.5.2
+numpy: 1.24.3
+torch HIP: 6.1.25065
+torch.cuda available: True
+device: BW
+model n_positions: 1024
+model file bytes: 3060333315
+model SHA256: skipped (use --full-hash for the 3 GB file)
+ENVIRONMENT_CHECK_PASSED
+Loading submission (model loading is not timed): /public[REDACTED_PATH]
+ProGenForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+FP32_CANDIDATE=fp32_graph_v13
+Loaded in 18.796s
+
+[load1_b1_l32_g256] warmup: B=1, L=32, G=256
+/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:150: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1104 16:18:54.513000 140340483725120 torch/fx/experimental/symbolic_shapes.py:4449] [0/0] xindex is not in var_ranges, defaulting to unknown range.
+COMPILE_EVENTS_DURING_GENERATE=1
+TRITON_CACHE_MISSES_DURING_GENERATE=4
+GRAPH_CAPTURES_DURING_GENERATE=1
+GRAPH_REPLAYS_DURING_GENERATE=255
+COMPILE_EVENTS_DURING_GENERATE=0
+TRITON_CACHE_MISSES_DURING_GENERATE=0
+GRAPH_CAPTURES_DURING_GENERATE=0
+GRAPH_REPLAYS_DURING_GENERATE=255
+[load1_b1_l32_g256] time=1.9689s, same=256/256, consistency=100.00%
+
+[load2_b8_l32_g256] warmup: B=8, L=32, G=256
+AUTOTUNE mm(256x1536, 1536x6144)
+  triton_mm_3572 0.1341 ms 100.0%
+  triton_mm_3573 0.1344 ms 99.8%
+  triton_mm_3570 0.1434 ms 93.5%
+  triton_mm_3571 0.1445 ms 92.8%
+  triton_mm_3581 0.1576 ms 85.1%
+  triton_mm_3580 0.1578 ms 85.0%
+  mm 0.1600 ms 83.8%
+  triton_mm_3589 0.1621 ms 82.7%
+  triton_mm_3588 0.1622 ms 82.6%
+  triton_mm_3574 0.1693 ms 79.2%
+SingleProcess AUTOTUNE benchmarking takes 22.3272 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(256x1536, 1536x4608)
+  mm 0.1024 ms 100.0%
+  triton_mm_3477 0.1114 ms 92.0%
+  triton_mm_3476 0.1115 ms 91.8%
+  triton_mm_3484 0.1165 ms 87.9%
+  triton_mm_3485 0.1168 ms 87.7%
+  triton_mm_3493 0.1192 ms 85.9%
+  triton_mm_3492 0.1194 ms 85.8%
+  triton_mm_3479 0.1216 ms 84.2%
+  triton_mm_3478 0.1219 ms 84.0%
+  triton_mm_3474 0.1253 ms 81.7%
+SingleProcess AUTOTUNE benchmarking takes 22.3214 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(128x32x96, 128x96x32)
+  triton_bmm_3504 0.0106 ms 100.0%
+  triton_bmm_3505 0.0106 ms 100.0%
+  triton_bmm_3510 0.0110 ms 95.7%
+  triton_bmm_3511 0.0110 ms 95.7%
+  triton_bmm_3507 0.0114 ms 93.0%
+  bmm 0.0120 ms 88.0%
+  triton_bmm_3506 0.0120 ms 88.0%
+  triton_bmm_3508 0.0123 ms 85.7%
+  triton_bmm_3503 0.0125 ms 84.6%
+  triton_bmm_3509 0.0125 ms 84.6%
+SingleProcess AUTOTUNE benchmarking takes 4.6839 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(128x32x32, 128x32x96)
+  triton_bmm_3516 0.0096 ms 100.0%
+  triton_bmm_3517 0.0096 ms 100.0%
+  triton_bmm_3512 0.0099 ms 96.8%
+  triton_bmm_3513 0.0101 ms 95.2%
+  triton_bmm_3519 0.0101 ms 95.2%
+  triton_bmm_3514 0.0102 ms 93.8%
+  triton_bmm_3515 0.0102 ms 93.8%
+  triton_bmm_3518 0.0102 ms 93.8%
+  triton_bmm_3520 0.0104 ms 92.3%
+  triton_bmm_3521 0.0104 ms 92.3%
+SingleProcess AUTOTUNE benchmarking takes 2.1005 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(256x1536, 1536x1536)
+  triton_mm_3538 0.0670 ms 100.0%
+  triton_mm_3539 0.0672 ms 99.8%
+  triton_mm_3528 0.0691 ms 97.0%
+  triton_mm_3530 0.0691 ms 97.0%
+  triton_mm_3529 0.0698 ms 96.1%
+  triton_mm_3531 0.0698 ms 96.1%
+  triton_mm_3540 0.0736 ms 91.1%
+  triton_mm_3541 0.0744 ms 90.1%
+  triton_mm_3537 0.0757 ms 88.6%
+  triton_mm_3536 0.0758 ms 88.5%
+SingleProcess AUTOTUNE benchmarking takes 22.5123 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(256x6144, 6144x1536)
+  mm 0.2136 ms 100.0%
+  triton_mm_3610 0.2379 ms 89.8%
+  triton_mm_3611 0.2379 ms 89.8%
+  triton_mm_3602 0.2440 ms 87.5%
+  triton_mm_3600 0.2448 ms 87.3%
+  triton_mm_3603 0.2448 ms 87.3%
+  triton_mm_3601 0.2454 ms 87.1%
+  triton_mm_3612 0.2659 ms 80.3%
+  triton_mm_3613 0.2659 ms 80.3%
+  triton_mm_3609 0.2768 ms 77.2%
+SingleProcess AUTOTUNE benchmarking takes 22.9410 seconds and 0.0000 seconds precompiling
+AUTOTUNE addmm(256x32, 256x1536, 1536x32)
+  bias_addmm 0.0246 ms 100.0%
+  addmm 0.0248 ms 99.4%
+  triton_mm_8008 0.0422 ms 58.3%
+  triton_mm_8009 0.0424 ms 58.1%
+  triton_mm_8014 0.0448 ms 55.0%
+  triton_mm_8015 0.0459 ms 53.7%
+  triton_mm_8005 0.0469 ms 52.6%
+  triton_mm_8017 0.0469 ms 52.6%
+  triton_mm_8004 0.0470 ms 52.4%
+  triton_mm_8016 0.0470 ms 52.4%
+SingleProcess AUTOTUNE benchmarking takes 12.3332 seconds and 0.0000 seconds precompiling
+W1104 16:22:35.053000 140340483725120 torch/fx/experimental/symbolic_shapes.py:4449] [0/1] xindex is not in var_ranges, defaulting to unknown range.
+COMPILE_EVENTS_DURING_GENERATE=1
+TRITON_CACHE_MISSES_DURING_GENERATE=0
+GRAPH_CAPTURES_DURING_GENERATE=1
+GRAPH_REPLAYS_DURING_GENERATE=255
+COMPILE_EVENTS_DURING_GENERATE=0
+TRITON_CACHE_MISSES_DURING_GENERATE=0
+GRAPH_CAPTURES_DURING_GENERATE=0
+GRAPH_REPLAYS_DURING_GENERATE=255
+[load2_b8_l32_g256] time=2.4913s, same=2048/2048, consistency=100.00%
+
+[load3_b4_l32_g512] warmup: B=4, L=32, G=512
+COMPILE_EVENTS_DURING_GENERATE=0
+TRITON_CACHE_MISSES_DURING_GENERATE=0
+GRAPH_CAPTURES_DURING_GENERATE=1
+GRAPH_REPLAYS_DURING_GENERATE=511
+COMPILE_EVENTS_DURING_GENERATE=0
+TRITON_CACHE_MISSES_DURING_GENERATE=0
+GRAPH_CAPTURES_DURING_GENERATE=0
+GRAPH_REPLAYS_DURING_GENERATE=511
+[load3_b4_l32_g512] time=4.7360s, same=2048/2048, consistency=100.00%
+
+[load4_b4_l512_g64] warmup: B=4, L=512, G=64
+AUTOTUNE mm(2048x1536, 1536x6144)
+  mm 0.7680 ms 100.0%
+  triton_mm_8181 0.8298 ms 92.5%
+  triton_mm_8180 0.8300 ms 92.5%
+  triton_mm_8188 0.9238 ms 83.1%
+  triton_mm_8189 0.9240 ms 83.1%
+  triton_mm_8197 0.9288 ms 82.7%
+  triton_mm_8196 0.9294 ms 82.6%
+  triton_mm_8194 0.9918 ms 77.4%
+  triton_mm_8195 0.9920 ms 77.4%
+  triton_mm_8186 1.0054 ms 76.4%
+SingleProcess AUTOTUNE benchmarking takes 6.1308 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(2048x1536, 1536x4608)
+  mm 0.6178 ms 100.0%
+  triton_mm_8037 0.6406 ms 96.4%
+  triton_mm_8036 0.6409 ms 96.4%
+  triton_mm_8045 0.6989 ms 88.4%
+  triton_mm_8044 0.6990 ms 88.4%
+  triton_mm_8053 0.7049 ms 87.6%
+  triton_mm_8052 0.7053 ms 87.6%
+  triton_mm_8057 0.7893 ms 78.3%
+  triton_mm_8056 0.7893 ms 78.3%
+  triton_mm_8051 0.7938 ms 77.8%
+SingleProcess AUTOTUNE benchmarking takes 5.9920 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(64x512x96, 64x96x512)
+  triton_bmm_8072 0.1120 ms 100.0%
+  bmm 0.1122 ms 99.9%
+  triton_bmm_8073 0.1123 ms 99.7%
+  triton_bmm_8070 0.1214 ms 92.2%
+  triton_bmm_8071 0.1216 ms 92.1%
+  triton_bmm_8086 0.1237 ms 90.6%
+  triton_bmm_8087 0.1240 ms 90.3%
+  triton_bmm_8078 0.1256 ms 89.2%
+  triton_bmm_8079 0.1258 ms 89.1%
+  triton_bmm_8088 0.1262 ms 88.7%
+SingleProcess AUTOTUNE benchmarking takes 22.5568 seconds and 0.0000 seconds precompiling
+AUTOTUNE bmm(64x512x512, 64x512x96)
+  triton_bmm_8108 0.1408 ms 100.0%
+  triton_bmm_8109 0.1411 ms 99.8%
+  triton_bmm_8107 0.1458 ms 96.6%
+  triton_bmm_8106 0.1459 ms 96.5%
+  triton_bmm_8102 0.1565 ms 90.0%
+  triton_bmm_8103 0.1566 ms 89.9%
+  triton_bmm_8116 0.1595 ms 88.3%
+  triton_bmm_8117 0.1597 ms 88.2%
+  triton_bmm_8123 0.1602 ms 87.9%
+  triton_bmm_8122 0.1603 ms 87.8%
+SingleProcess AUTOTUNE benchmarking takes 23.6195 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(2048x1536, 1536x1536)
+  mm 0.2454 ms 100.0%
+  triton_mm_8152 0.2499 ms 98.2%
+  triton_mm_8153 0.2506 ms 97.9%
+  triton_mm_8160 0.2547 ms 96.4%
+  triton_mm_8161 0.2549 ms 96.3%
+  triton_mm_8145 0.2792 ms 87.9%
+  triton_mm_8144 0.2794 ms 87.9%
+  triton_mm_8146 0.2822 ms 87.0%
+  triton_mm_8147 0.2826 ms 86.9%
+  triton_mm_8165 0.2859 ms 85.8%
+SingleProcess AUTOTUNE benchmarking takes 5.7257 seconds and 0.0000 seconds precompiling
+AUTOTUNE mm(2048x6144, 6144x1536)
+  triton_mm_8225 0.9920 ms 100.0%
+  triton_mm_8224 0.9973 ms 99.5%
+  triton_mm_8233 0.9976 ms 99.4%
+  triton_mm_8232 0.9998 ms 99.2%
+  triton_mm_8219 1.1056 ms 89.7%
+  triton_mm_8218 1.1062 ms 89.7%
+  mm 1.1187 ms 88.7%
+  triton_mm_8237 1.1264 ms 88.1%
+  triton_mm_8236 1.1266 ms 88.1%
+  triton_mm_8235 1.1330 ms 87.6%
+SingleProcess AUTOTUNE benchmarking takes 6.2173 seconds and 0.0000 seconds precompiling
+AUTOTUNE addmm(2048x32, 2048x1536, 1536x32)
+  addmm 0.0403 ms 100.0%
+  bias_addmm 0.0422 ms 95.5%
+  triton_mm_13865 0.0461 ms 87.5%
+  triton_mm_13864 0.0462 ms 87.2%
+  triton_mm_13871 0.0466 ms 86.6%
+  triton_mm_13870 0.0474 ms 85.1%
+  triton_mm_13872 0.0490 ms 82.4%
+  triton_mm_13873 0.0491 ms 82.1%
+  triton_mm_13861 0.0502 ms 80.3%
+  triton_mm_13860 0.0504 ms 80.0%
+SingleProcess AUTOTUNE benchmarking takes 3.6903 seconds and 0.0000 seconds precompiling
+W1104 16:26:19.644000 140340483725120 torch/fx/experimental/symbolic_shapes.py:4449] [0/2] xindex is not in var_ranges, defaulting to unknown range.
+COMPILE_EVENTS_DURING_GENERATE=1
+TRITON_CACHE_MISSES_DURING_GENERATE=0
+GRAPH_CAPTURES_DURING_GENERATE=0
+GRAPH_REPLAYS_DURING_GENERATE=63
+COMPILE_EVENTS_DURING_GENERATE=0
+TRITON_CACHE_MISSES_DURING_GENERATE=0
+GRAPH_CAPTURES_DURING_GENERATE=0
+GRAPH_REPLAYS_DURING_GENERATE=63
+[load4_b4_l512_g64] time=0.6945s, same=256/256, consistency=100.00%
+
+Saved: /public[REDACTED_PATH]
+PUBLIC_INTERFACE_TEST_PASSED (100% match with the public FP32 reference)
+四项任务测试完成，结果已保存。

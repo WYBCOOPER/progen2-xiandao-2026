@@ -1,0 +1,4 @@
+candidate	exit_status
+fp32_chunk2_v5	0
+fp32_k_transpose_v6	0
+fp32_sdpa_v7	0

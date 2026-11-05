@@ -1,0 +1,34 @@
+{
+  "candidate": "fp32_tile_graph_v18",
+  "parent": "fp32_stream_graph_v17",
+  "DCU_tested": false,
+  "speed_claim": null,
+  "official_tools_modified": false,
+  "changes": [
+    "Fused B>=4 attention tiles 128 to 256 positions and warps 4 to 8; kernel body and graph runtime unchanged"
+  ],
+  "source_sha256": {
+    "audit_result.py": "e6d76a2199be9a92eb664f818713b1c901d969e03ba8d317deb5ba5db4fa6190",
+    "compile_check.py": "0d56565190eb8294b88c195b7c1d6df4e179f20bbb91245f1914a2eedf1e0bdb",
+    "graph_runtime.py": "ce5947128d245728a02e59ed4c03cdd0cc312e5da4f6eb9c493f27e5590a8ca8",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "1434170a072742ae58c77749f79388278dda85fe7d7d2e92ff058541013c6582",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "deb6d2cfb99343e45934850596a2078cbe82194fdb919376aaabec541fcddcbf"
+  },
+  "parent_source_sha256": {
+    "audit_result.py": "42118babc8c64133bada434944aaac4771d948f4a6c8b20b78cfef276a85009c",
+    "compile_check.py": "887fb08f56546767bafc9354acf5e81b225da294ace24b9265bf8932e256af64",
+    "graph_runtime.py": "ce5947128d245728a02e59ed4c03cdd0cc312e5da4f6eb9c493f27e5590a8ca8",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "00316eac3ac222a0993b9893174bacf142f2b96778f6889f3d784dc6eb764d11",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "44ce6d933a2dac580c00dc7344b664a2e262a757c9fc6e4484302c7236e86d73"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-04",
+  "candidate": "fp32_rope_kv_v9c",
+  "package": "C:\\Users\\TEAM\\Desktop\\progen2_contest.zip\\deliverables\\fp32-rope-kv-v9c-20261104-upload.zip",
+  "sha256": "fef33ece49573b2751ce58d877eca65f875791a10d28869b0a04af32be22aac5",
+  "files": 14,
+  "diagnosis": "Screenshot shows B=s2 in Triton constexpr metadata; generated module NameError",
+  "status": "public correctness and recorded compile gates passed; single measurement",
+  "original_batch_archive_needed": "fp32-kernels-fixed1-batch-20261104-UrWuDI.tar.gz; screenshot does not show direction1 outcome",
+  "DCU_tested": true,
+  "speed_claim": "historical comparison only; paired gain not established",
+  "official_tools_modified": false,
+  "run": "fp32-rope-kv-v9c-20261104-A681jn",
+  "sum_time_s": 7.042885824106634,
+  "public_tokens_exact": "4608/4608",
+  "formal_dynamo_events": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "formal_triton_cache_misses": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

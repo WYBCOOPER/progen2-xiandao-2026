@@ -1,0 +1,68 @@
+{
+  "archive_sha256": "1c96fb071eb4032c1d195e58368d10b616c1fe5cc11b134c3c52a32523f0a44a",
+  "original_archive_sha256": "befda6337d7ab514790647ee1354fbd612e8e7f6464754bf64f5eb8a78632110",
+  "original_members_identical": true,
+  "sources": [
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/solution.py",
+      "sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen/modeling_progen.py",
+      "sha256": "b143793bea126296755471166d615633eeed992a7dae1ecebbba6e66e74e131f"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/models/progen/modeling_progen.py",
+      "sha256": "7887f44ed116cdce67bdfff5be72086d5d68715d906eeeb65c3d01aa34115f9d"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/solution.py",
+      "sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/pr17_rope_3abe52/solution.py",
+      "sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/pr17_rope_3abe52/models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/pr17_rope_3abe52/models/progen/modeling_progen.py",
+      "sha256": "7887f44ed116cdce67bdfff5be72086d5d68715d906eeeb65c3d01aa34115f9d"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/pr17_rope_3abe52/models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "member": "results/pr22-ef2b051-20261101-Olwchs/previous_source/pr17_rope_3abe52/models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    }
+  ],
+  "log_json": "both 4/4 matched"
+}

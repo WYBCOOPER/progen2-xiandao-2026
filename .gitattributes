@@ -1,0 +1,5 @@
+candidates/** -text
+research/** -text
+records/** -text
+*.sh -text
+*.png binary

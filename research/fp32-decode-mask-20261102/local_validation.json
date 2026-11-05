@@ -1,0 +1,264 @@
+{
+  "torch": "2.11.0+cu128",
+  "hip": null,
+  "small_cpu_cases": 20,
+  "attention_cases": [
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 1,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 1,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 32,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 32,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 8,
+      "query_length": 1,
+      "key_length": 288,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 8,
+      "query_length": 1,
+      "key_length": 288,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 544,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 544,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 1024,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 1024,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 32,
+      "key_length": 32,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 32,
+      "key_length": 32,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 4,
+      "key_length": 36,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 4,
+      "key_length": 36,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 512,
+      "key_length": 512,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cpu",
+      "batch": 1,
+      "query_length": 512,
+      "key_length": 512,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 1,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 1,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 32,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 32,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 8,
+      "query_length": 1,
+      "key_length": 288,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 8,
+      "query_length": 1,
+      "key_length": 288,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 544,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 544,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 1024,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 1024,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 32,
+      "key_length": 32,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 32,
+      "key_length": 32,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 4,
+      "key_length": 36,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 4,
+      "key_length": 36,
+      "additional_masks": true,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 512,
+      "key_length": 512,
+      "additional_masks": false,
+      "bitwise_equal": true
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "query_length": 512,
+      "key_length": 512,
+      "additional_masks": true,
+      "bitwise_equal": true
+    }
+  ],
+  "scope": "Real original/new _attn functions extracted with AST; not whole model, compiled graph, or DCU."
+}

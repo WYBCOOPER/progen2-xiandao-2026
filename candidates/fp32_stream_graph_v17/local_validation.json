@@ -1,0 +1,265 @@
+{
+  "DCU_tested": false,
+  "actual_Triton_tested": false,
+  "cpu_actual_kernel_body_cases": [],
+  "local_CUDA_graph_runtime_cases": [
+    {
+      "B": 1,
+      "L": 32,
+      "G": 8,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1
+    },
+    {
+      "B": 1,
+      "L": 40,
+      "G": 6,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0
+    },
+    {
+      "B": 1,
+      "L": 32,
+      "G": 8,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0
+    },
+    {
+      "B": 2,
+      "L": 127,
+      "G": 5,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1
+    },
+    {
+      "B": 2,
+      "L": 511,
+      "G": 4,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0
+    },
+    {
+      "B": 1,
+      "L": 33,
+      "G": 1,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0
+    },
+    {
+      "B": 8,
+      "L": 32,
+      "G": 3,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1
+    }
+  ],
+  "local_graph_scope": "Actual v17 batch dispatch and custom-op registration, mutation schema, fake implementation, Solution and DecodeGraph; fullgraph Dynamo/AOT-eager and real CUDA Graph with one parent ProGenBlock. Triton kernel launches substituted by Torch references; new fused kernel math separately CPU-emulated; actual HIP/Inductor/full-model testing required.",
+  "local_torch": "2.11.0+cu128",
+  "local_device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "actual_graph_captures": 3,
+  "python_syntax": "passed",
+  "local_compile_backend": "aot_eager",
+  "local_Inductor_tested": false,
+  "fused_kernel_validation": {
+    "actual_Triton_tested": false,
+    "scope": "CPU emulation of new fused Triton body; exact RoPE/KV and online-softmax comparison; poisoned current and future slots",
+    "cases": [
+      {
+        "B": 1,
+        "capacity": 1024,
+        "POS": 0,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 0.0,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 1,
+        "capacity": 1024,
+        "POS": 31,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 3.8743019104003906e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 1,
+        "capacity": 1024,
+        "POS": 32,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 7.748603820800781e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 1,
+        "capacity": 1024,
+        "POS": 127,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 3.5762786865234375e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 1,
+        "capacity": 1024,
+        "POS": 128,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 5.960464477539062e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 1,
+        "capacity": 1024,
+        "POS": 255,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 2.682209014892578e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 1,
+        "capacity": 1024,
+        "POS": 511,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 2.384185791015625e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 1,
+        "capacity": 1024,
+        "POS": 1023,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 3.129243850708008e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 4,
+        "capacity": 1024,
+        "POS": 0,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 0.0,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 4,
+        "capacity": 1024,
+        "POS": 31,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 4.76837158203125e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 4,
+        "capacity": 1024,
+        "POS": 32,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 7.152557373046875e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 4,
+        "capacity": 1024,
+        "POS": 127,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 5.364418029785156e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 4,
+        "capacity": 1024,
+        "POS": 128,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 3.5762786865234375e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 4,
+        "capacity": 1024,
+        "POS": 255,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 3.2782554626464844e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 4,
+        "capacity": 1024,
+        "POS": 511,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 2.980232238769531e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 4,
+        "capacity": 1024,
+        "POS": 1023,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 2.5331974029541016e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 8,
+        "capacity": 1024,
+        "POS": 0,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 0.0,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 8,
+        "capacity": 1024,
+        "POS": 31,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 6.556510925292969e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 8,
+        "capacity": 1024,
+        "POS": 32,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 8.344650268554688e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 8,
+        "capacity": 1024,
+        "POS": 127,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 3.427267074584961e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 8,
+        "capacity": 1024,
+        "POS": 128,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 8.344650268554688e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 8,
+        "capacity": 1024,
+        "POS": 255,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 3.5762786865234375e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 8,
+        "capacity": 1024,
+        "POS": 511,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 3.8743019104003906e-07,
+        "invalid_nan_kv_masked": true
+      },
+      {
+        "B": 8,
+        "capacity": 1024,
+        "POS": 1023,
+        "rope_cache_exact": true,
+        "attention_max_abs_error": 5.066394805908203e-07,
+        "invalid_nan_kv_masked": true
+      }
+    ]
+  },
+  "bash_syntax": "passed",
+  "audit_gate_positive_and_negative": "passed",
+  "existing_v15_kernels_preserved": true,
+  "new_fused_kernel_actual_Triton_tested": false
+}

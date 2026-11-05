@@ -1,0 +1,10 @@
+{
+  "files": 2582,
+  "bytes": 23345506,
+  "python": 1226,
+  "json": 532,
+  "sha_entries": 1342,
+  "privacy_redaction_passed": true,
+  "python_json_and_public_checksums_passed": true,
+  "scope": "Local export format and checksum verification; historical experimental outcomes remain as recorded"
+}

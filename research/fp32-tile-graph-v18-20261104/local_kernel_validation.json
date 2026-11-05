@@ -1,0 +1,246 @@
+{
+  "actual_Triton_tested": false,
+  "scope": "CPU emulation of unchanged fused Triton body with new 256-position/8-warp launch configuration; exact RoPE/KV and online-softmax comparison; poisoned current and future slots",
+  "cases": [
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 0,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 0.0,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 31,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.8743019104003906e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 32,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 7.748603820800781e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 127,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.5762786865234375e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 128,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 5.364418029785156e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 255,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 2.682209014892578e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 256,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 5.364418029785156e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 511,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 1.9371509552001953e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 512,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 2.2351741790771484e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "capacity": 1024,
+      "POS": 1023,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 1.862645149230957e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 0,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 0.0,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 31,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 1.3113021850585938e-06,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 32,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.5762786865234375e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 127,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 4.76837158203125e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 128,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.5762786865234375e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 255,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 7.748603820800781e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 256,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 5.960464477539062e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 511,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 1.1920928955078125e-06,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 512,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.2782554626464844e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "capacity": 1024,
+      "POS": 1023,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 2.682209014892578e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 0,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 0.0,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 31,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 7.152557373046875e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 32,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 5.960464477539062e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 127,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 4.172325134277344e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 128,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 5.960464477539062e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 255,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 4.172325134277344e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 256,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.5762786865234375e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 511,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.2782554626464844e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 512,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 7.152557373046875e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "capacity": 1024,
+      "POS": 1023,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 2.682209014892578e-07,
+      "invalid_nan_kv_masked": true
+    }
+  ]
+}

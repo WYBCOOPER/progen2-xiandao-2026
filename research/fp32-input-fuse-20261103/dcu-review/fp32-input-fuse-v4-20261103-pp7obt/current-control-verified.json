@@ -1,0 +1,159 @@
+{
+  "control_run": "fp32-step-gemm-v23-20261103-DnDLwm",
+  "control_archive_sha256": "44aca6ed244ccf3fbcec368a01eea3149f42fb5ae79046b796c79763edc73a8a",
+  "candidate_run": "fp32-input-fuse-v4-20261103-pp7obt",
+  "candidate_archive_sha256": "e1fa489fd01726e32673b16f4a6d46bf826121de9ca629ae3aa9774dab2d989d",
+  "control_source_fingerprint_checks": [
+    {
+      "path": "models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verified": true
+    },
+    {
+      "path": "models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "verified": true
+    },
+    {
+      "path": "models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "verified": true
+    },
+    {
+      "path": "models/progen/modeling_progen.py",
+      "sha256": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d",
+      "verified": true
+    },
+    {
+      "path": "solution.py",
+      "sha256": "129e8b80c8fc8f7c8ea83672f200931271d5f9ba3baa8d8910b56403d26d47f6",
+      "verified": true
+    },
+    {
+      "path": "run_test.sh",
+      "sha256": "2721996384dddcb1ccf2615e01d7a9420ada6ecff121675ddf37f95d52b0bad8",
+      "verified": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "ebacd27827521e38a70590315dd28f1b8da84a46bf528bb2af37df89ccffdd5a",
+      "verified": true
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "006e67deba4f5c50915d68e5fad85721cb42e48a1e9289773fc9a3dd7f9dedcf",
+      "verified": true
+    }
+  ],
+  "control_all_9_files_equal_delivered_v23": true,
+  "five_control_model_source_files_match_fusion_parent_manifest": true,
+  "both_public_outputs_exact": true,
+  "matched_tokens_each": 4608,
+  "control_generate_compile_events": [
+    3,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "control_formal_compile_events": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "candidate_formal_compile_events": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "control_exit_status_file_recorded": false,
+  "control_runtime": {
+    "python": "3.10.16",
+    "torch": "2.4.1",
+    "hip": "6.1.25065",
+    "triton": "3.0.0",
+    "transformers": "4.46.3",
+    "tokenizers": "0.20.3",
+    "numpy": "1.24.3",
+    "accelerate": "1.5.2"
+  },
+  "candidate_runtime": {
+    "python": "3.10.16",
+    "torch": "2.4.1",
+    "hip": "6.1.25065",
+    "triton": "3.0.0+das.opt4.dtk2504",
+    "transformers": "4.46.3",
+    "tokenizers": "0.20.3",
+    "numpy": "1.24.3",
+    "accelerate": "1.5.2",
+    "device": "BW",
+    "device_total_memory_bytes": 68702699520
+  },
+  "triton_reporting_difference": {
+    "control": "3.0.0",
+    "candidate": "3.0.0+das.opt4.dtk2504",
+    "control_collection_method": "import triton; triton.__version__",
+    "candidate_collection_method": "importlib.metadata.version('triton')",
+    "conclusion": "Different collection methods; this does not establish different installed packages. Exact distribution-level equality not independently checked."
+  },
+  "comparison_design": "candidate then control on the user-reported same container, one run each; not a randomized repeated comparison",
+  "rows": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "control_time_s": 1.6897377199493349,
+      "candidate_time_s": 1.7563191899098456,
+      "elapsed_change_pct": 3.9403434730987286,
+      "control_over_candidate_speedup": 0.9620903362310079,
+      "control_same": 256,
+      "candidate_same": 256,
+      "total": 256
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "control_time_s": 1.8733396399766207,
+      "candidate_time_s": 1.8743410489987582,
+      "elapsed_change_pct": 0.05345581766209584,
+      "control_over_candidate_speedup": 0.9994657274231536,
+      "control_same": 2048,
+      "candidate_same": 2048,
+      "total": 2048
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "control_time_s": 3.660318728070706,
+      "candidate_time_s": 3.676673216978088,
+      "elapsed_change_pct": 0.44680504957015366,
+      "control_over_candidate_speedup": 0.9955518241784828,
+      "control_same": 2048,
+      "candidate_same": 2048,
+      "total": 2048
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "control_time_s": 0.5536941939499229,
+      "candidate_time_s": 0.5344096610788256,
+      "elapsed_change_pct": -3.482885152456816,
+      "control_over_candidate_speedup": 1.0360856741103206,
+      "control_same": 256,
+      "candidate_same": 256,
+      "total": 256
+    }
+  ],
+  "sum_control_time_s": 7.777090281946585,
+  "sum_candidate_time_s": 7.841743116965517,
+  "sum_elapsed_change_pct": 0.8313242186350323,
+  "historical_parent_sum_s": 7.68040190380998,
+  "parent_sum_change_between_two_runs_pct": 1.2588973773448142,
+  "decision": "keep_fp32_step_gemm_v23; input_fusion_not_selected; overall_speed_gain_not_demonstrated",
+  "limitations": [
+    "single sequential run per candidate",
+    "sum is descriptive, not an official score",
+    "public output exactness does not establish hidden-case equivalence",
+    "Dynamo events are not a separate low-level compiler trace"
+  ]
+}

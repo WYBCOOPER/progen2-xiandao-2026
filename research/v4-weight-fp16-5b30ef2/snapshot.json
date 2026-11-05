@@ -1,0 +1,30 @@
+{
+  "commit": "5b30ef255984c72d2d2c6e87485b0fb8958a7d03",
+  "files": [
+    {
+      "path": "experiments/EXP-20261102-01.md",
+      "sha": "37ce2707ca74ebbcc6ecb85711b83db91bbd57d6",
+      "sha256": "abef060d1ffaff7a70e3e37e26f8f8eb4dea549bf53cc6e2cd2f488415b5219f"
+    },
+    {
+      "path": "submission/models/progen/__init__.py",
+      "sha": "0ba41c92664cb12bfc9561e0f9113a09d7411bd4",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "path": "submission/models/progen/configuration_progen.py",
+      "sha": "d6d16eb63a0c3723506f391e04fcc97d73995a0d",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "path": "submission/models/progen/modeling_progen.py",
+      "sha": "250d3dfb5c651b94af98b998fb9bdf6055d5bea4",
+      "sha256": "f5be7c4526464acccbb30a9d3ccd086b3a70b9f23b53aa0da9c9273343a72e01"
+    },
+    {
+      "path": "submission/solution.py",
+      "sha": "bc4dd70f08b2c00ef2bce548b3ecd440ae8732d3",
+      "sha256": "0e364630ef301cb709925ef023a365e8e9d8d2a3ec261aecfe8569500630e1c6"
+    }
+  ]
+}

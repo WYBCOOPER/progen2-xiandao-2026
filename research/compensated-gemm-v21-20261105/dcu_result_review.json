@@ -1,0 +1,274 @@
+{
+  "candidate": "compensated_gemm_v21",
+  "archive_name": "compensated-gemm-v21-20261105-8soXiS.tar.gz",
+  "archive_sha256": "ff507409a3c5ad5dcdf79dbc39f455b8be8a6ec150b02c4f96767725430e58b5",
+  "exit_status": 0,
+  "source_matches_upload": true,
+  "source_files_checked": 16,
+  "archive_checksum_entries_verified": 15,
+  "archive_omitted_support_files": [
+    "local_validation.json"
+  ],
+  "official_tool_hashes_match_v17": true,
+  "scores": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "batch_size": 1,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 3.0916804510634392,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "batch_size": 8,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 3.1430091289803386,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "batch_size": 4,
+      "prefix_tokens": 32,
+      "new_tokens": 512,
+      "time_s": 6.296897521940991,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "batch_size": 4,
+      "prefix_tokens": 512,
+      "new_tokens": 64,
+      "time_s": 0.8993920050561428,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    }
+  ],
+  "sum_s": 13.430979107040912,
+  "total_matching_tokens": 4608,
+  "comparisons": {
+    "v17": {
+      "times_s": [
+        1.1823024440091103,
+        1.4904171430971473,
+        2.7911690599285066,
+        0.47876101010479033
+      ],
+      "sum_s": 5.942649657139555,
+      "elapsed_change_pct": 126.00994307151873,
+      "per_load_elapsed_change_pct": [
+        161.4965795536845,
+        110.88117132422659,
+        125.60072094315493,
+        87.85823951271337
+      ]
+    },
+    "v18": {
+      "times_s": [
+        1.1909261101391166,
+        1.9100941980723292,
+        3.5636114350054413,
+        0.6452026448678225
+      ],
+      "sum_s": 7.30983438808471,
+      "elapsed_change_pct": 83.73848700230317,
+      "per_load_elapsed_change_pct": [
+        159.60304545697534,
+        64.54733657388572,
+        76.69989101747778,
+        39.39682551059504
+      ]
+    },
+    "v20": {
+      "times_s": [
+        1.1743023169692606,
+        1.4867579429410398,
+        2.6981596869882196,
+        0.4484857621137053
+      ],
+      "sum_s": 5.807705709012225,
+      "elapsed_change_pct": 131.26135827094538,
+      "per_load_elapsed_change_pct": [
+        163.27806786949986,
+        111.40019085843758,
+        133.37749623595516,
+        100.53970070695767
+      ]
+    }
+  },
+  "audit": {
+    "graph_captures": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "graph_replays": [
+      255,
+      255,
+      255,
+      255,
+      511,
+      511,
+      63,
+      63
+    ],
+    "formal_graph_capture_zero": true,
+    "compiled_kernel_check_passed": true,
+    "candidate": "compensated_gemm_v21",
+    "all_public_references_exact": true,
+    "dynamo_events": [
+      2,
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "triton_cache_misses": [
+      6,
+      0,
+      5,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "formal_dynamo_zero": true,
+    "formal_triton_cache_misses_zero": true,
+    "identity": true,
+    "kernel_check_passed": true,
+    "measurement_scope": "Four official workload calls after official warmup; no edits to official tester",
+    "compile_audit_scope": "Dynamo on_compile_start and Triton 3.0 JIT cache-miss hook; not a hardware trace of every native compiler call",
+    "compensated_gemm_check_passed": true,
+    "arithmetic": "FP16 high/low products with FP32 accumulators and output, not FP32-equivalent",
+    "experiment_checks_passed": true
+  },
+  "limits": "One run per version on different sessions/dates; comparison does not establish stable performance or official contest score. Audit hooks do not trace every native compiler call. Archive omits local_validation.json, but executable source and recorded manifest/checksums match the uploaded candidate.",
+  "isolated_gemm_probe": {
+    "all_12_slower": true,
+    "slowdown_ratio_range": [
+      1.31052757932276,
+      4.2705565525467675
+    ],
+    "probes": [
+      {
+        "B": 1,
+        "N": 4608,
+        "K": 1536,
+        "max_abs_error": 6.198883056640625e-06,
+        "torch_linear_ms": 0.05022379755973816,
+        "compensated_ms": 0.10476789474487305
+      },
+      {
+        "B": 4,
+        "N": 4608,
+        "K": 1536,
+        "max_abs_error": 7.152557373046875e-06,
+        "torch_linear_ms": 0.051551800966262815,
+        "compensated_ms": 0.09287989735603333
+      },
+      {
+        "B": 8,
+        "N": 4608,
+        "K": 1536,
+        "max_abs_error": 7.62939453125e-06,
+        "torch_linear_ms": 0.04945589900016785,
+        "compensated_ms": 0.09163190126419067
+      },
+      {
+        "B": 1,
+        "N": 1536,
+        "K": 1536,
+        "max_abs_error": 2.1457672119140625e-06,
+        "torch_linear_ms": 0.038495799899101256,
+        "compensated_ms": 0.09419190287590026
+      },
+      {
+        "B": 4,
+        "N": 1536,
+        "K": 1536,
+        "max_abs_error": 2.6226043701171875e-06,
+        "torch_linear_ms": 0.04095979928970337,
+        "compensated_ms": 0.09627190232276917
+      },
+      {
+        "B": 8,
+        "N": 1536,
+        "K": 1536,
+        "max_abs_error": 7.62939453125e-06,
+        "torch_linear_ms": 0.03585599958896637,
+        "compensated_ms": 0.09475200176239014
+      },
+      {
+        "B": 1,
+        "N": 6144,
+        "K": 1536,
+        "max_abs_error": 5.7220458984375e-06,
+        "torch_linear_ms": 0.0642877995967865,
+        "compensated_ms": 0.09545590281486512
+      },
+      {
+        "B": 4,
+        "N": 6144,
+        "K": 1536,
+        "max_abs_error": 6.9141387939453125e-06,
+        "torch_linear_ms": 0.07388780117034913,
+        "compensated_ms": 0.09683200120925903
+      },
+      {
+        "B": 8,
+        "N": 6144,
+        "K": 1536,
+        "max_abs_error": 7.3909759521484375e-06,
+        "torch_linear_ms": 0.06300789713859559,
+        "compensated_ms": 0.09363189935684205
+      },
+      {
+        "B": 1,
+        "N": 1536,
+        "K": 6144,
+        "max_abs_error": 7.62939453125e-06,
+        "torch_linear_ms": 0.05665580034255981,
+        "compensated_ms": 0.2419517993927002
+      },
+      {
+        "B": 4,
+        "N": 1536,
+        "K": 6144,
+        "max_abs_error": 8.58306884765625e-06,
+        "torch_linear_ms": 0.06055979728698731,
+        "compensated_ms": 0.23742380142211914
+      },
+      {
+        "B": 8,
+        "N": 1536,
+        "K": 6144,
+        "max_abs_error": 9.5367431640625e-06,
+        "torch_linear_ms": 0.057631999254226685,
+        "compensated_ms": 0.23030378818511962
+      }
+    ],
+    "scope": "Synthetic isolated CUDA-event measurement against eager FP32 Linear; not a comparison against the v20 compiled full model."
+  },
+  "decision": "Do not replace v20: public output is exact, but all four model workloads and all twelve isolated probes were slower in this run."
+}

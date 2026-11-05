@@ -1,0 +1,94 @@
+{
+  "DCU_tested": false,
+  "actual_Triton_tested": false,
+  "cpu_actual_kernel_body_cases": [],
+  "local_CUDA_graph_runtime_cases": [
+    {
+      "B": 1,
+      "L": 32,
+      "G": 8,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1,
+      "graph_capacity": 128
+    },
+    {
+      "B": 1,
+      "L": 40,
+      "G": 6,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0,
+      "graph_capacity": 128
+    },
+    {
+      "B": 1,
+      "L": 32,
+      "G": 8,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0,
+      "graph_capacity": 128
+    },
+    {
+      "B": 2,
+      "L": 127,
+      "G": 5,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1,
+      "graph_capacity": 256
+    },
+    {
+      "B": 2,
+      "L": 511,
+      "G": 4,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1,
+      "graph_capacity": 640
+    },
+    {
+      "B": 1,
+      "L": 33,
+      "G": 1,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0,
+      "graph_capacity": 128
+    },
+    {
+      "B": 1,
+      "L": 127,
+      "G": 2,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0,
+      "graph_capacity": 128
+    },
+    {
+      "B": 1,
+      "L": 1023,
+      "G": 2,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1,
+      "graph_capacity": 1024
+    },
+    {
+      "B": 8,
+      "L": 32,
+      "G": 3,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1,
+      "graph_capacity": 128
+    },
+    {
+      "B": 1,
+      "L": 32,
+      "G": 8,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0,
+      "graph_capacity": 128
+    }
+  ],
+  "local_graph_scope": "Actual v16 compact graph plus v15 custom-op registration, mutation schema, fake implementation, Solution and DecodeGraph; fullgraph Dynamo/AOT-eager and real CUDA Graph with one parent ProGenBlock. Unchanged Triton kernel launches substituted by Torch references; actual HIP/Inductor/full-model testing required.",
+  "local_torch": "2.11.0+cu128",
+  "local_device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "actual_graph_captures": 5,
+  "python_syntax": "passed",
+  "local_compile_backend": "aot_eager",
+  "local_Inductor_tested": false
+}

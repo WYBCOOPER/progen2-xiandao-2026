@@ -1,0 +1,506 @@
+{
+  "order": [
+    "v20",
+    "v22b",
+    "v22b",
+    "v20"
+  ],
+  "runs": [
+    {
+      "name": "01_v20",
+      "label": "v20",
+      "passed": true,
+      "exit_code": 0,
+      "audit": {
+        "label": "v20",
+        "accuracy_exact": true,
+        "formal_compile_miss_capture_zero": true,
+        "replays_valid": true,
+        "identity": true,
+        "plan_verified": true,
+        "counters": {
+          "COMPILE_EVENTS": [
+            2,
+            0,
+            2,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "TRITON_CACHE_MISSES": [
+            2,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "GRAPH_CAPTURES": [
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "GRAPH_REPLAYS": [
+            255,
+            255,
+            255,
+            255,
+            511,
+            511,
+            63,
+            63
+          ]
+        },
+        "passed": true
+      },
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.132735777180642,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.519823765847832,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 2.726176558062434,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.46501954505220056,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ]
+    },
+    {
+      "name": "02_v22b",
+      "label": "v22b",
+      "passed": true,
+      "exit_code": 0,
+      "audit": {
+        "label": "v22b",
+        "accuracy_exact": true,
+        "formal_compile_miss_capture_zero": true,
+        "replays_valid": true,
+        "identity": true,
+        "plan_verified": true,
+        "counters": {
+          "COMPILE_EVENTS": [
+            2,
+            0,
+            2,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "TRITON_CACHE_MISSES": [
+            6,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "GRAPH_CAPTURES": [
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "GRAPH_REPLAYS": [
+            255,
+            255,
+            255,
+            255,
+            511,
+            511,
+            63,
+            63
+          ]
+        },
+        "passed": true
+      },
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.0416369820013642,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.4946225190069526,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 2.741148750996217,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.46047506807371974,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ]
+    },
+    {
+      "name": "03_v22b",
+      "label": "v22b",
+      "passed": true,
+      "exit_code": 0,
+      "audit": {
+        "label": "v22b",
+        "accuracy_exact": true,
+        "formal_compile_miss_capture_zero": true,
+        "replays_valid": true,
+        "identity": true,
+        "plan_verified": true,
+        "counters": {
+          "COMPILE_EVENTS": [
+            2,
+            0,
+            2,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "TRITON_CACHE_MISSES": [
+            6,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "GRAPH_CAPTURES": [
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "GRAPH_REPLAYS": [
+            255,
+            255,
+            255,
+            255,
+            511,
+            511,
+            63,
+            63
+          ]
+        },
+        "passed": true
+      },
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.0198276401497424,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.4835128621198237,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 2.680164757883176,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.45633713412098587,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ]
+    },
+    {
+      "name": "04_v20",
+      "label": "v20",
+      "passed": true,
+      "exit_code": 0,
+      "audit": {
+        "label": "v20",
+        "accuracy_exact": true,
+        "formal_compile_miss_capture_zero": true,
+        "replays_valid": true,
+        "identity": true,
+        "plan_verified": true,
+        "counters": {
+          "COMPILE_EVENTS": [
+            2,
+            0,
+            2,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "TRITON_CACHE_MISSES": [
+            2,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "GRAPH_CAPTURES": [
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "GRAPH_REPLAYS": [
+            255,
+            255,
+            255,
+            255,
+            511,
+            511,
+            63,
+            63
+          ]
+        },
+        "passed": true
+      },
+      "loads": [
+        {
+          "load_id": "load1_b1_l32_g256",
+          "batch_size": 1,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.1740001130383462,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load2_b8_l32_g256",
+          "batch_size": 8,
+          "prefix_tokens": 32,
+          "new_tokens": 256,
+          "time_s": 1.486878835130483,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load3_b4_l32_g512",
+          "batch_size": 4,
+          "prefix_tokens": 32,
+          "new_tokens": 512,
+          "time_s": 2.6635693050920963,
+          "same": 2048,
+          "total": 2048,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        },
+        {
+          "load_id": "load4_b4_l512_g64",
+          "batch_size": 4,
+          "prefix_tokens": 512,
+          "new_tokens": 64,
+          "time_s": 0.4538712250068784,
+          "same": 256,
+          "total": 256,
+          "consistency_rate": 1.0,
+          "exact_match": true
+        }
+      ]
+    }
+  ],
+  "all_four_runs_passed": true,
+  "decision": "REPEATABLE_B1_GAIN",
+  "scope": "Same-session two runs per version; descriptive comparison, not a confidence interval or official contest score",
+  "workloads": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "v20_seconds": [
+        1.132735777180642,
+        1.1740001130383462
+      ],
+      "v22b_seconds": [
+        1.0416369820013642,
+        1.0198276401497424
+      ],
+      "v20_median_s": 1.153367945109494,
+      "v22b_median_s": 1.0307323110755533,
+      "median_time_reduction_percent": 10.632828366172287,
+      "paired_time_reduction_percent": [
+        8.042369369317603,
+        13.132236630676374
+      ],
+      "new_split_gemv_enabled": true
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "v20_seconds": [
+        1.519823765847832,
+        1.486878835130483
+      ],
+      "v22b_seconds": [
+        1.4946225190069526,
+        1.4835128621198237
+      ],
+      "v20_median_s": 1.5033513004891574,
+      "v22b_median_s": 1.4890676905633882,
+      "median_time_reduction_percent": 0.9501179079781097,
+      "paired_time_reduction_percent": [
+        1.6581690198021581,
+        0.22637843320729711
+      ],
+      "new_split_gemv_enabled": false
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "v20_seconds": [
+        2.726176558062434,
+        2.6635693050920963
+      ],
+      "v22b_seconds": [
+        2.741148750996217,
+        2.680164757883176
+      ],
+      "v20_median_s": 2.6948729315772653,
+      "v22b_median_s": 2.7106567544396967,
+      "median_time_reduction_percent": -0.5856982226317253,
+      "paired_time_reduction_percent": [
+        -0.5492011472809422,
+        -0.623053162512166
+      ],
+      "new_split_gemv_enabled": false
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "v20_seconds": [
+        0.46501954505220056,
+        0.4538712250068784
+      ],
+      "v22b_seconds": [
+        0.46047506807371974,
+        0.45633713412098587
+      ],
+      "v20_median_s": 0.45944538502953947,
+      "v22b_median_s": 0.4584061010973528,
+      "median_time_reduction_percent": 0.22620402033635134,
+      "paired_time_reduction_percent": [
+        0.9772658002946244,
+        -0.5433058934436907
+      ],
+      "new_split_gemv_enabled": false
+    }
+  ],
+  "b1_repeat_signal": true,
+  "other_workload_regression_over_5pct": false,
+  "attribution": "Only B1 uses new split-GEMV. B4/B8 retain original linears; differences there are not split-GEMV gains."
+}

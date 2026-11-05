@@ -1,0 +1,88 @@
+W1104 18:44:41.473000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 18:44:41.473000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0] Traceback (most recent call last):
+W1104 18:44:41.473000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 487, in identify_mutated_tensors
+W1104 18:44:41.473000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]     mutations = analyze_kernel_mutations(
+W1104 18:44:41.473000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 396, in __call__
+W1104 18:44:41.473000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]     self.cache[key] = self.fn(functions, fn_name, num_args)
+W1104 18:44:41.473000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 427, in analyze_kernel_mutations
+W1104 18:44:41.473000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]     raise RuntimeError(
+W1104 18:44:41.473000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0] RuntimeError: ttir analysis hit an op we do not know how to analyze: tt.elementwise_inline_asm
+W1104 18:44:41.587000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 18:44:41.587000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0] Traceback (most recent call last):
+W1104 18:44:41.587000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 487, in identify_mutated_tensors
+W1104 18:44:41.587000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]     mutations = analyze_kernel_mutations(
+W1104 18:44:41.587000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 396, in __call__
+W1104 18:44:41.587000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]     self.cache[key] = self.fn(functions, fn_name, num_args)
+W1104 18:44:41.587000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 427, in analyze_kernel_mutations
+W1104 18:44:41.587000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]     raise RuntimeError(
+W1104 18:44:41.587000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0] RuntimeError: ttir analysis hit an op we do not know how to analyze: tt.elementwise_inline_asm
+W1104 18:44:41.964000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 18:44:41.964000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0] Traceback (most recent call last):
+W1104 18:44:41.964000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 487, in identify_mutated_tensors
+W1104 18:44:41.964000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]     mutations = analyze_kernel_mutations(
+W1104 18:44:41.964000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 396, in __call__
+W1104 18:44:41.964000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]     self.cache[key] = self.fn(functions, fn_name, num_args)
+W1104 18:44:41.964000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 427, in analyze_kernel_mutations
+W1104 18:44:41.964000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0]     raise RuntimeError(
+W1104 18:44:41.964000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/0] RuntimeError: ttir analysis hit an op we do not know how to analyze: tt.elementwise_inline_asm
+GRAPH_PROBE_PASS B=1 POS=32
+GRAPH_PROBE_PASS B=1 POS=511
+W1104 18:44:50.659000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 18:44:50.659000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 18:44:50.659000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 487, in identify_mutated_tensors
+W1104 18:44:50.659000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     mutations = analyze_kernel_mutations(
+W1104 18:44:50.659000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 396, in __call__
+W1104 18:44:50.659000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     self.cache[key] = self.fn(functions, fn_name, num_args)
+W1104 18:44:50.659000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 427, in analyze_kernel_mutations
+W1104 18:44:50.659000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise RuntimeError(
+W1104 18:44:50.659000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] RuntimeError: ttir analysis hit an op we do not know how to analyze: tt.elementwise_inline_asm
+W1104 18:44:50.766000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 18:44:50.766000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 18:44:50.766000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 487, in identify_mutated_tensors
+W1104 18:44:50.766000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     mutations = analyze_kernel_mutations(
+W1104 18:44:50.766000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 396, in __call__
+W1104 18:44:50.766000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     self.cache[key] = self.fn(functions, fn_name, num_args)
+W1104 18:44:50.766000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 427, in analyze_kernel_mutations
+W1104 18:44:50.766000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise RuntimeError(
+W1104 18:44:50.766000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] RuntimeError: ttir analysis hit an op we do not know how to analyze: tt.elementwise_inline_asm
+W1104 18:44:50.917000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 18:44:50.917000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 18:44:50.917000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 487, in identify_mutated_tensors
+W1104 18:44:50.917000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     mutations = analyze_kernel_mutations(
+W1104 18:44:50.917000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 396, in __call__
+W1104 18:44:50.917000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     self.cache[key] = self.fn(functions, fn_name, num_args)
+W1104 18:44:50.917000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 427, in analyze_kernel_mutations
+W1104 18:44:50.917000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise RuntimeError(
+W1104 18:44:50.917000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] RuntimeError: ttir analysis hit an op we do not know how to analyze: tt.elementwise_inline_asm
+GRAPH_PROBE_PASS B=2 POS=32
+GRAPH_PROBE_PASS B=2 POS=511
+W1104 18:44:51.732000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 18:44:51.732000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2] Traceback (most recent call last):
+W1104 18:44:51.732000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 487, in identify_mutated_tensors
+W1104 18:44:51.732000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]     mutations = analyze_kernel_mutations(
+W1104 18:44:51.732000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 396, in __call__
+W1104 18:44:51.732000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]     self.cache[key] = self.fn(functions, fn_name, num_args)
+W1104 18:44:51.732000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 427, in analyze_kernel_mutations
+W1104 18:44:51.732000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]     raise RuntimeError(
+W1104 18:44:51.732000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2] RuntimeError: ttir analysis hit an op we do not know how to analyze: tt.elementwise_inline_asm
+W1104 18:44:51.839000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 18:44:51.839000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2] Traceback (most recent call last):
+W1104 18:44:51.839000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 487, in identify_mutated_tensors
+W1104 18:44:51.839000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]     mutations = analyze_kernel_mutations(
+W1104 18:44:51.839000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 396, in __call__
+W1104 18:44:51.839000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]     self.cache[key] = self.fn(functions, fn_name, num_args)
+W1104 18:44:51.839000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 427, in analyze_kernel_mutations
+W1104 18:44:51.839000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]     raise RuntimeError(
+W1104 18:44:51.839000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2] RuntimeError: ttir analysis hit an op we do not know how to analyze: tt.elementwise_inline_asm
+W1104 18:44:51.977000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 18:44:51.977000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2] Traceback (most recent call last):
+W1104 18:44:51.977000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 487, in identify_mutated_tensors
+W1104 18:44:51.977000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]     mutations = analyze_kernel_mutations(
+W1104 18:44:51.977000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 396, in __call__
+W1104 18:44:51.977000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]     self.cache[key] = self.fn(functions, fn_name, num_args)
+W1104 18:44:51.977000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 427, in analyze_kernel_mutations
+W1104 18:44:51.977000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2]     raise RuntimeError(
+W1104 18:44:51.977000 139865654933312 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/2] RuntimeError: ttir analysis hit an op we do not know how to analyze: tt.elementwise_inline_asm
+GRAPH_PROBE_PASS B=8 POS=32
+GRAPH_PROBE_PASS B=8 POS=511
+COMPILED_KERNEL_CHECK=PASS

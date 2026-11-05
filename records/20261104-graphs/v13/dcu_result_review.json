@@ -1,0 +1,51 @@
+{
+  "candidate": "fp32_graph_v13",
+  "source_matches_upload": true,
+  "public_exact": "4608/4608",
+  "formal_dynamo_events": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "formal_triton_misses": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "formal_graph_captures": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "v13_times_s": [
+    1.9688575961627066,
+    2.4913377040065825,
+    4.736048804130405,
+    0.6945117660798132
+  ],
+  "v13_sum_s": 9.890755870379508,
+  "v9c": {
+    "times_s": [
+      1.5338259630370885,
+      1.6781445150263608,
+      3.311458772048354,
+      0.5194565739948303
+    ],
+    "sum_s": 7.042885824106634,
+    "v13_time_increase_pct": 40.43612401787185
+  },
+  "v12": {
+    "times_s": [
+      1.502015600912273,
+      1.6492681519594043,
+      3.3147839659359306,
+      0.5289105570409447
+    ],
+    "sum_s": 6.994978275848553,
+    "v13_time_increase_pct": 41.397949791054515
+  },
+  "conclusion": "Correct on public cases and measured-call audit passed; slower than historical v9c/v12. Cross-run comparison, no paired control; do not promote as speed optimization."
+}

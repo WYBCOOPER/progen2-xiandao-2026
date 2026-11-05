@@ -1,0 +1,54 @@
+{
+  "purpose": "contest_test_record",
+  "submission": "results/v4-5b30ef2-20261102-UzXO55/source",
+  "torch": "2.4.1",
+  "hip": "6.1.25065",
+  "device": "BW",
+  "all_public_references_exact": false,
+  "loads": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "batch_size": 1,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 2.3886893468443304,
+      "same": 1,
+      "total": 256,
+      "consistency_rate": 0.00390625,
+      "exact_match": false
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "batch_size": 8,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 2.944835666101426,
+      "same": 328,
+      "total": 2048,
+      "consistency_rate": 0.16015625,
+      "exact_match": false
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "batch_size": 4,
+      "prefix_tokens": 32,
+      "new_tokens": 512,
+      "time_s": 5.859821764053777,
+      "same": 28,
+      "total": 2048,
+      "consistency_rate": 0.013671875,
+      "exact_match": false
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "batch_size": 4,
+      "prefix_tokens": 512,
+      "new_tokens": 64,
+      "time_s": 0.7524601540062577,
+      "same": 19,
+      "total": 256,
+      "consistency_rate": 0.07421875,
+      "exact_match": false
+    }
+  ]
+}

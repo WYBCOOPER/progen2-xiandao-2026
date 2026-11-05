@@ -1,0 +1,622 @@
+python: 3.10.16
+torch: 2.4.1+das.opt2.dtk2504
+transformers: 4.46.3
+tokenizers: 0.20.3
+accelerate: 1.5.2
+numpy: 1.24.3
+torch HIP: 6.1.25065
+torch.cuda available: True
+device: BW
+model n_positions: 1024
+model file bytes: 3060333315
+model SHA256: skipped (use --full-hash for the 3 GB file)
+ENVIRONMENT_CHECK_PASSED
+Loading submission (model loading is not timed): /public/home/TEAM/progen2_contest/results/fp32-rope-kv-v9-20261104-2Jnvur/source
+ProGenForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+FP32_CANDIDATE=fp32_rope_kv_v9
+Loaded in 5.636s
+
+[load1_b1_l32_g256] warmup: B=1, L=32, G=256
+/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:150: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1104 01:18:36.846000 140435248600896 torch/fx/experimental/symbolic_shapes.py:4449] [0/0] xindex is not in var_ranges, defaulting to unknown range.
+W1104 01:18:52.269000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.269000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.269000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.269000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.269000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.269000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.269000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.341000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.341000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.341000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.341000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.341000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.341000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.341000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.403000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.403000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.403000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.403000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.403000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.403000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.403000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.466000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.466000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.466000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.466000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.466000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.466000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.466000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.528000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.528000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.528000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.528000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.528000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.528000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.528000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.591000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.591000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.591000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.591000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.591000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.591000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.591000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.715000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.715000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.715000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.715000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.715000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.715000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.715000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.778000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.778000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.778000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.778000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.778000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.778000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.778000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.840000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.840000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.840000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.840000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.840000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.840000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.840000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.903000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.903000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.903000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.903000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.903000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.903000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.903000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:52.965000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:52.965000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:52.965000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:52.965000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:52.965000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:52.965000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:52.965000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.027000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.027000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.027000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.027000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.027000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.027000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.027000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.089000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.089000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.089000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.089000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.089000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.089000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.089000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.152000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.152000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.152000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.152000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.152000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.152000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.152000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.276000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.276000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.276000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.276000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.276000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.276000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.276000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.339000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.339000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.339000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.339000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.339000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.339000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.339000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.401000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.401000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.401000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.401000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.401000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.401000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.401000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.463000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.463000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.463000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.463000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.463000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.463000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.463000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.526000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.526000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.526000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.526000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.526000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.526000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.526000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.589000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.589000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.589000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.589000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.589000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.589000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.589000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.651000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.651000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.651000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.651000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.651000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.651000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.651000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.714000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.714000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.714000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.714000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.714000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.714000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.714000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.776000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.776000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.776000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.776000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.776000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.776000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.776000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.839000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.839000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.839000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.839000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.839000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.839000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.839000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:53.901000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:53.901000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:53.901000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:53.901000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:53.901000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:53.901000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:53.901000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:55.395000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:55.395000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:55.395000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:55.395000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:55.395000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:55.395000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:55.395000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:55.522000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:55.522000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:55.522000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:55.522000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:55.522000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:55.522000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:55.522000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:55.644000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:55.644000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:55.644000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:55.644000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:55.644000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:55.644000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:55.644000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:55.766000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:55.766000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:55.766000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:55.766000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:55.766000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:55.766000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:55.766000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:55.887000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:55.887000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:55.887000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:55.887000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:55.887000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:55.887000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:55.887000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:56.009000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:56.009000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:56.009000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:56.009000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:56.009000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:56.009000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:56.009000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:56.131000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:56.131000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:56.131000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:56.131000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:56.131000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:56.131000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:56.131000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:56.253000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:56.253000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:56.253000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:56.253000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:56.253000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:56.253000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:56.253000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:56.375000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:56.375000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:56.375000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:56.375000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:56.375000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:56.375000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:56.375000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:56.497000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:56.497000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:56.497000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:56.497000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:56.497000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:56.497000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:56.497000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:56.620000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:56.620000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:56.620000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:56.620000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:56.620000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:56.620000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:56.620000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:56.742000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:56.742000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:56.742000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:56.742000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:56.742000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:56.742000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:56.742000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:56.865000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:56.865000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:56.865000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:56.865000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:56.865000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:56.865000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:56.865000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:56.987000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:56.987000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:56.987000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:56.987000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:56.987000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:56.987000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:56.987000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:57.109000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:57.109000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:57.109000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:57.109000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:57.109000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:57.109000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:57.109000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:57.232000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:57.232000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:57.232000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:57.232000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:57.232000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:57.232000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:57.232000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:57.353000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:57.353000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:57.353000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:57.353000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:57.353000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:57.353000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:57.353000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:57.476000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:57.476000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:57.476000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:57.476000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:57.476000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:57.476000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:57.476000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:57.600000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:57.600000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:57.600000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:57.600000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:57.600000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:57.600000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:57.600000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:57.722000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:57.722000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:57.722000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:57.722000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:57.722000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:57.722000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:57.722000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:57.845000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:57.845000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:57.845000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:57.845000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:57.845000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:57.845000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:57.845000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:57.969000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:57.969000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:57.969000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:57.969000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:57.969000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:57.969000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:57.969000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:58.091000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:58.091000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:58.091000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:58.091000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:58.091000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:58.091000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:58.091000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:58.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:58.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:58.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:58.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:58.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:58.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:58.214000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:58.337000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:58.337000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:58.337000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:58.337000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:58.337000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:58.337000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:58.337000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:58.460000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:58.460000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:58.460000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:58.460000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:58.460000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:58.460000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:58.460000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:18:58.583000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:18:58.583000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:18:58.583000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:18:58.583000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:18:58.583000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:18:58.583000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:18:58.583000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:03.336000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:03.336000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:03.336000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:03.336000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:03.336000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:03.336000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:03.336000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:04.897000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:04.897000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:04.897000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:04.897000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:04.897000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:04.897000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:04.897000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:05.428000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:05.428000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:05.428000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:05.428000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:05.428000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:05.428000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:05.428000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:05.957000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:05.957000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:05.957000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:05.957000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:05.957000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:05.957000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:05.957000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:07.118000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:07.118000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:07.118000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:07.118000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:07.118000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:07.118000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:07.118000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:07.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:07.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:07.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:07.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:07.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:07.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:07.653000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:08.188000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:08.188000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:08.188000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:08.188000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:08.188000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:08.188000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:08.188000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:08.720000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:08.720000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:08.720000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:08.720000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:08.720000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:08.720000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:08.720000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:09.252000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:09.252000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:09.252000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:09.252000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:09.252000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:09.252000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:09.252000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:09.785000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:09.785000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:09.785000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:09.785000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:09.785000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:09.785000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:09.785000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:10.317000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:10.317000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:10.317000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:10.317000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:10.317000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:10.317000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:10.317000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:10.849000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:10.849000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:10.849000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:10.849000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:10.849000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:10.849000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:10.849000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:11.376000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:11.376000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:11.376000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:11.376000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:11.376000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:11.376000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:11.376000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:11.906000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:11.906000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:11.906000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:11.906000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:11.906000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:11.906000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:11.906000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:12.436000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:12.436000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:12.436000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:12.436000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:12.436000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:12.436000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:12.436000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:12.962000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:12.962000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:12.962000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:12.962000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:12.962000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:12.962000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:12.962000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:13.485000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:13.485000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:13.485000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:13.485000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:13.485000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:13.485000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:13.485000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:14.005000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:14.005000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:14.005000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:14.005000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:14.005000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:14.005000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:14.005000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:14.531000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:14.531000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:14.531000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:14.531000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:14.531000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:14.531000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:14.531000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:15.051000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:15.051000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:15.051000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:15.051000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:15.051000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:15.051000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:15.051000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:15.577000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:15.577000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:15.577000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:15.577000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:15.577000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:15.577000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:15.577000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:16.098000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:16.098000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:16.098000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:16.098000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:16.098000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:16.098000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:16.098000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:16.625000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:16.625000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:16.625000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:16.625000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:16.625000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:16.625000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:16.625000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:17.148000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:17.148000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:17.148000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:17.148000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:17.148000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:17.148000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:17.148000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:17.680000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:17.680000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:17.680000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:17.680000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:17.680000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:17.680000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:17.680000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:18.209000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:18.209000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:18.209000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:18.209000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:18.209000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:18.209000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:18.209000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+W1104 01:19:18.741000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Encountered an exception in identify_mutated_tensors, assuming every input is mutated
+W1104 01:19:18.741000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] Traceback (most recent call last):
+W1104 01:19:18.741000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 474, in identify_mutated_tensors
+W1104 01:19:18.741000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     ttir_module, ordered_tensor_names = generate_ttir(kernel, kwargs)
+W1104 01:19:18.741000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]   File "/opt/conda/lib/python3.10/site-packages/torch/_higher_order_ops/triton_kernel_wrap.py", line 135, in generate_ttir
+W1104 01:19:18.741000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1]     raise ValueError("Incorrect number of arguments passed to kernel")
+W1104 01:19:18.741000 140435248600896 torch/_higher_order_ops/triton_kernel_wrap.py:495] [0/1] ValueError: Incorrect number of arguments passed to kernel
+Traceback (most recent call last):
+  File "/public/home/TEAM/progen2_contest/public_test.py", line 225, in <module>
+    raise SystemExit(main())
+  File "/public/home/TEAM/progen2_contest/public_test.py", line 175, in main
+    warmup = solution.generate(warmup_prefixes, new_tokens)
+  File "/public/home/TEAM/progen2_contest/results/fp32-rope-kv-v9-20261104-2Jnvur/source/solution.py", line 157, in generate
+    next_token, past_key_values = self.compiled_step(next_input, past_key_values)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 433, in _fn
+    return fn(*args, **kwargs)
+  File "/public/home/TEAM/progen2_contest/results/fp32-rope-kv-v9-20261104-2Jnvur/source/solution.py", line 102, in _generation_step
+    def _generation_step(self, input_ids, past_key_values):
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 600, in _fn
+    return fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 987, in forward
+    return compiled_fn(full_args)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 217, in runtime_wrapper
+    all_outs = call_func_at_runtime_with_args(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/utils.py", line 120, in call_func_at_runtime_with_args
+    out = normalize_as_list(f(args))
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 451, in wrapper
+    return compiled_fn(runtime_args)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 1131, in __call__
+    return self.current_callable(inputs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 944, in run
+    return model(new_inputs)
+  File "/public/home/TEAM/progen2_contest/.cache/tmp/torchinductor_root/vj/cvjyzot2pc2zl5vvij2qqapjdoajwua7htlos7ndfcn5su3jly2g.py", line 1772, in call
+    _rope_kv_0.run(QKV=reinterpret_tensor(buf4, (1, 1, 4608), (4608, 4608, 1), 0), KC=arg303_1, VC=arg304_1, SIN=arg221_1, COS=arg222_1, OUT=buf5, B=1, S=1024, POS=32, BLOCK=256, enable_fp_fusion=False, grid=grid_wrapper_for__rope_kv_0, stream=stream0)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 868, in run
+    return launcher(
+TypeError: launcher() got an unexpected keyword argument 'enable_fp_fusion'

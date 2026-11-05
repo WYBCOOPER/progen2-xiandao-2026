@@ -1,0 +1,280 @@
+{
+  "purpose": "independent_repeated_diagnostic_not_official_score",
+  "design": "two resident models, sequential calls; no simultaneous inference; startup excluded; AB/BA/AB for each load",
+  "versions": {
+    "torch": "2.4.1",
+    "hip": "6.1.25065",
+    "device": "BW",
+    "triton": "3.0.0+das.opt4.dtk2504",
+    "transformers": "4.46.3",
+    "tokenizers": "0.20.3",
+    "numpy": "1.24.3",
+    "accelerate": "1.5.2"
+  },
+  "source_hashes": {
+    "v23": {
+      "solution.py": "129e8b80c8fc8f7c8ea83672f200931271d5f9ba3baa8d8910b56403d26d47f6",
+      "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "models/progen/modeling_progen.py": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d"
+    },
+    "v6": {
+      "solution.py": "96bc969ca2d22ab256448fbd700956ec506a6223d24a631a3e39f9c475dd65e7",
+      "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "models/progen/modeling_progen.py": "37eab1f711028c965ce366933d71945db81833a81ecf02241b29848be83180ef"
+    }
+  },
+  "loaded_module_paths": {
+    "v23": {
+      "models": "/public/home/TEAM/progen2_contest/results/v6-repeat-20261104-Z2mul6/diagnostic/candidates/repeat_v23/models/__init__.py",
+      "models.progen": "/public/home/TEAM/progen2_contest/results/v6-repeat-20261104-Z2mul6/diagnostic/candidates/repeat_v23/models/progen/__init__.py",
+      "models.progen.configuration_progen": "/public/home/TEAM/progen2_contest/results/v6-repeat-20261104-Z2mul6/diagnostic/candidates/repeat_v23/models/progen/configuration_progen.py",
+      "models.progen.modeling_progen": "/public/home/TEAM/progen2_contest/results/v6-repeat-20261104-Z2mul6/diagnostic/candidates/repeat_v23/models/progen/modeling_progen.py"
+    },
+    "v6": {
+      "models": "/public/home/TEAM/progen2_contest/results/v6-repeat-20261104-Z2mul6/diagnostic/candidates/repeat_v6/models/__init__.py",
+      "models.progen": "/public/home/TEAM/progen2_contest/results/v6-repeat-20261104-Z2mul6/diagnostic/candidates/repeat_v6/models/progen/__init__.py",
+      "models.progen.configuration_progen": "/public/home/TEAM/progen2_contest/results/v6-repeat-20261104-Z2mul6/diagnostic/candidates/repeat_v6/models/progen/configuration_progen.py",
+      "models.progen.modeling_progen": "/public/home/TEAM/progen2_contest/results/v6-repeat-20261104-Z2mul6/diagnostic/candidates/repeat_v6/models/progen/modeling_progen.py"
+    }
+  },
+  "warmups": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "variant": "v23",
+      "compile_events": 3
+    },
+    {
+      "load_id": "load1_b1_l32_g256",
+      "variant": "v6",
+      "compile_events": 3
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "variant": "v23",
+      "compile_events": 3
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "variant": "v6",
+      "compile_events": 3
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "variant": "v23",
+      "compile_events": 0
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "variant": "v6",
+      "compile_events": 0
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "variant": "v23",
+      "compile_events": 0
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "variant": "v6",
+      "compile_events": 0
+    }
+  ],
+  "records": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "variant": "v23",
+      "round": 1,
+      "time_s": 1.63370850100182,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load1_b1_l32_g256",
+      "variant": "v6",
+      "round": 1,
+      "time_s": 1.6342307599261403,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load1_b1_l32_g256",
+      "variant": "v6",
+      "round": 2,
+      "time_s": 1.6285011030267924,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load1_b1_l32_g256",
+      "variant": "v23",
+      "round": 2,
+      "time_s": 1.6303711149375886,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load1_b1_l32_g256",
+      "variant": "v23",
+      "round": 3,
+      "time_s": 1.6340163371060044,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load1_b1_l32_g256",
+      "variant": "v6",
+      "round": 3,
+      "time_s": 1.6296962138731033,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "variant": "v23",
+      "round": 1,
+      "time_s": 1.8250544879119843,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "variant": "v6",
+      "round": 1,
+      "time_s": 1.8108199171256274,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "variant": "v6",
+      "round": 2,
+      "time_s": 1.8084760578349233,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "variant": "v23",
+      "round": 2,
+      "time_s": 1.793873020913452,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "variant": "v23",
+      "round": 3,
+      "time_s": 1.7926070091780275,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "variant": "v6",
+      "round": 3,
+      "time_s": 1.8062125789001584,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "variant": "v23",
+      "round": 1,
+      "time_s": 3.544129829853773,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "variant": "v6",
+      "round": 1,
+      "time_s": 3.5727892259601504,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "variant": "v6",
+      "round": 2,
+      "time_s": 3.568208563141525,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "variant": "v23",
+      "round": 2,
+      "time_s": 3.552016609115526,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "variant": "v23",
+      "round": 3,
+      "time_s": 3.550763027044013,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "variant": "v6",
+      "round": 3,
+      "time_s": 3.562378545058891,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "variant": "v23",
+      "round": 1,
+      "time_s": 0.5448645730502903,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "variant": "v6",
+      "round": 1,
+      "time_s": 0.5626227229367942,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "variant": "v6",
+      "round": 2,
+      "time_s": 0.5632741749286652,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "variant": "v23",
+      "round": 2,
+      "time_s": 0.5436683539301157,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "variant": "v23",
+      "round": 3,
+      "time_s": 0.5441149109974504,
+      "exact_match": true,
+      "compile_events": 0
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "variant": "v6",
+      "round": 3,
+      "time_s": 0.5626176928635687,
+      "exact_match": true,
+      "compile_events": 0
+    }
+  ]
+}
