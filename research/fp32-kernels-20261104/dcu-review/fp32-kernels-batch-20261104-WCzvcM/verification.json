@@ -1,0 +1,91 @@
+{
+  "archive": "C:\\Users\\TEAM\\Desktop\\先导杯测试结果\\fp32-kernels-batch-20261104-WCzvcM.tar.gz",
+  "archive_sha256": "c6eb8f89118cb1a0a7f8ea2858ec9cb10c915ffd1d3700bfce3bee5cc4ace65f",
+  "candidates": [
+    {
+      "candidate": "fp32_decode_attn_v8",
+      "exit_status": 2,
+      "source_files_verified": [
+        "README.md",
+        "audit_result.py",
+        "kernel_check.py",
+        "manifest.json",
+        "models/__init__.py",
+        "models/progen/__init__.py",
+        "models/progen/configuration_progen.py",
+        "models/progen/kernels.py",
+        "models/progen/modeling_progen.py",
+        "run_test.sh",
+        "solution.py"
+      ],
+      "direct_kernel_cases_passed": 108,
+      "max_absolute_error": 1.0311603546142578e-05,
+      "formal_result_available": false,
+      "failure": "Inductor-generated launcher rejects enable_fp_fusion keyword during first workload warmup",
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520,
+        "official_tools_sha256": {
+          "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+          "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+          "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+          "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+          "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+        }
+      },
+      "nested_archive_sha256": "bd3e450c1603d67dd0b4b4bf15c8580b12a30daae028e5e7abd59a80095fd236",
+      "speed_claim": null
+    },
+    {
+      "candidate": "fp32_rope_kv_v9",
+      "exit_status": 2,
+      "source_files_verified": [
+        "README.md",
+        "audit_result.py",
+        "kernel_check.py",
+        "manifest.json",
+        "models/__init__.py",
+        "models/progen/__init__.py",
+        "models/progen/configuration_progen.py",
+        "models/progen/kernels.py",
+        "models/progen/modeling_progen.py",
+        "run_test.sh",
+        "solution.py"
+      ],
+      "direct_kernel_cases_passed": 24,
+      "max_absolute_error": 0,
+      "formal_result_available": false,
+      "failure": "Inductor-generated launcher rejects enable_fp_fusion keyword during first workload warmup",
+      "runtime": {
+        "python": "3.10.16",
+        "torch": "2.4.1",
+        "hip": "6.1.25065",
+        "triton": "3.0.0+das.opt4.dtk2504",
+        "transformers": "4.46.3",
+        "tokenizers": "0.20.3",
+        "numpy": "1.24.3",
+        "accelerate": "1.5.2",
+        "device": "BW",
+        "device_total_memory_bytes": 68702699520,
+        "official_tools_sha256": {
+          "public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+          "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+          "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+          "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c",
+          "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"
+        }
+      },
+      "nested_archive_sha256": "ee06e2c404555966dc4052b0eea82b10929227d49a174f48ebc5ed14ba4164ab",
+      "speed_claim": null
+    }
+  ],
+  "verdict": "Direct Triton execution passed; torch.compile integration failed; no inference-speed or sequence-correctness conclusion."
+}

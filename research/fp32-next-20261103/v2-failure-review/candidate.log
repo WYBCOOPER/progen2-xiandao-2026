@@ -1,0 +1,182 @@
+python: 3.10.16
+torch: 2.4.1+das.opt2.dtk2504
+transformers: 4.46.3
+tokenizers: 0.20.3
+accelerate: 1.5.2
+numpy: 1.24.3
+torch HIP: 6.1.25065
+torch.cuda available: True
+device: BW
+model n_positions: 1024
+model file bytes: 3060333315
+model SHA256: skipped (use --full-hash for the 3 GB file)
+ENVIRONMENT_CHECK_PASSED
+Loading submission (model loading is not timed): <PROJECT>/results/fp32-decode-step-v2-20261103-Znax7l/source
+ProGenForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+单步编译包装已建立
+Loaded in 6.879s
+
+[load1_b1_l32_g256] warmup: B=1, L=32, G=256
+/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:150: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+W1103 00:21:23.006000 139849035335488 torch/fx/experimental/symbolic_shapes.py:4449] [0/0] xindex is not in var_ranges, defaulting to unknown range.
+loc(callsite(callsite("/opt/conda/lib/python3.10/site-packages/torch/_inductor/runtime/triton_helpers.py":107:32 at "/opt/conda/lib/python3.10/site-packages/torch/_inductor/runtime/triton_helpers.py":123:42) at "<PROJECT>/.cache/tmp/torchinductor_root/xz/cxzcjfcqi3lloqkaenc5yq2fuq436ggf5mrjho5vb3gzcncgdkmd.py":39:61)): error: operand #1 does not dominate this use
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] Error in subprocess
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] concurrent.futures.process._RemoteTraceback: 
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] """
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] Traceback (most recent call last):
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/concurrent/futures/process.py", line 246, in _process_worker
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     r = call_item.fn(*call_item.args, **call_item.kwargs)
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 209, in do_job
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     result = job()
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/runtime/compile_tasks.py", line 69, in _worker_compile_triton
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     load_kernel().precompile(warm_cache_only=True)
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 232, in precompile
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     compiled_binary, launcher = self._precompile_config(
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/runtime/triton_heuristics.py", line 416, in _precompile_config
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     triton.compile(*compile_args, **compile_kwargs),
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/site-packages/triton/compiler/compiler.py", line 311, in compile
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     next_module = compile_ir(module, metadata)
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/site-packages/triton/backends/amd/compiler.py", line 325, in <lambda>
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     stages["ttgir"] = lambda src, metadata: self.make_ttgir(src, metadata, options)
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/site-packages/triton/backends/amd/compiler.py", line 208, in make_ttgir
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     pm.run(mod)
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] RuntimeError: PassManager::run failed
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] """
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] 
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] The above exception was the direct cause of the following exception:
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] 
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] Traceback (most recent call last):
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_worker/subproc_pool.py", line 194, in callback
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     result = future.result()
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     return self.__get_result()
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]   File "/opt/conda/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196]     raise self._exception
+E1103 00:21:28.241000 140142964631104 torch/_inductor/compile_worker/subproc_pool.py:196] RuntimeError: PassManager::run failed
+Traceback (most recent call last):
+  File "<PROJECT>/public_test.py", line 225, in <module>
+    raise SystemExit(main())
+  File "<PROJECT>/public_test.py", line 175, in main
+    warmup = solution.generate(warmup_prefixes, new_tokens)
+  File "<PROJECT>/results/fp32-decode-step-v2-20261103-Znax7l/source/solution.py", line 111, in generate
+    next_token, past_key_values = self.compiled_step(next_input, past_key_values)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 433, in _fn
+    return fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 1116, in __call__
+    return self._torchdynamo_orig_callable(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 472, in __call__
+    return _compile(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_utils_internal.py", line 84, in wrapper_function
+    return StrobelightCompileTimeProfiler.profile_compile_time(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_strobelight/compile_time_profiler.py", line 129, in profile_compile_time
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 817, in _compile
+    guarded_code = compile_inner(code, one_graph, hooks, transform)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 636, in compile_inner
+    out_code = transform_code_object(code, transform)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/bytecode_transformation.py", line 1185, in transform_code_object
+    transformations(instructions, code_options)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 178, in _fn
+    return fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 582, in transform
+    tracer.run()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 2451, in run
+    super().run()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 893, in run
+    while self.step():
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 805, in step
+    self.dispatch_table[inst.opcode](self, inst)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 2642, in RETURN_VALUE
+    self._return(inst)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 2627, in _return
+    self.output.compile_subgraph(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1124, in compile_subgraph
+    self.compile_and_call_fx_graph(tx, pass2.graph_output_vars(), root)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1319, in compile_and_call_fx_graph
+    compiled_fn = self.call_user_compiler(gm)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1410, in call_user_compiler
+    raise BackendCompilerFailed(self.compiler_fn, e).with_traceback(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1391, in call_user_compiler
+    compiled_fn = compiler_fn(gm, self.example_inputs())
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/repro/after_dynamo.py", line 129, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/repro/after_dynamo.py", line 129, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/__init__.py", line 1956, in __call__
+    return compile_fx(model_, inputs_, config_patches=self.config)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1505, in compile_fx
+    return aot_autograd(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/backends/common.py", line 69, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 954, in aot_module_simplified
+    compiled_fn, _ = create_aot_dispatcher_function(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 687, in create_aot_dispatcher_function
+    compiled_fn, fw_metadata = compiler_fn(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/jit_compile_runtime_wrappers.py", line 168, in aot_dispatch_base
+    compiled_fw = compiler(fw_module, updated_flat_args)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1410, in fw_compiler_base
+    return inner_compile(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/repro/after_aot.py", line 84, in debug_wrapper
+    inner_compiled_fn = compiler_fn(gm, example_inputs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/debug.py", line 304, in inner
+    return fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 527, in compile_fx_inner
+    compiled_graph = fx_codegen_and_compile(
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 831, in fx_codegen_and_compile
+    compiled_fn = graph.compile_to_fn()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/graph.py", line 1751, in compile_to_fn
+    return self.compile_to_module().call
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/graph.py", line 1701, in compile_to_module
+    mod = PyCodeCache.load_by_key_path(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 3073, in load_by_key_path
+    mod = _reload_python_module(key, path)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/runtime/compile_tasks.py", line 45, in _reload_python_module
+    exec(code, mod.__dict__, mod.__dict__)
+  File "<PROJECT>/.cache/tmp/torchinductor_root/je/cjesjh72nldkz52fcfsmzdkb7g7nf75laa53mlohhuuowyei6fio.py", line 759, in <module>
+    async_compile.wait(globals())
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/async_compile.py", line 247, in wait
+    scope[key] = result.result()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 3432, in result
+    result = self.future.result()
+  File "/opt/conda/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/opt/conda/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+torch._dynamo.exc.BackendCompilerFailed: backend='inductor' raised:
+RuntimeError: PassManager::run failed
+
+Set TORCH_LOGS="+dynamo" and TORCHDYNAMO_VERBOSE=1 for more information
+
+
+You can suppress this exception and fall back to eager by setting:
+    import torch._dynamo
+    torch._dynamo.config.suppress_errors = True
+

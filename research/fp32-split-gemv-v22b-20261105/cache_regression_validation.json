@@ -1,0 +1,79 @@
+{
+  "submitted_baseline_scope_12_variants": "passed",
+  "backend": "local CPU AOT-eager",
+  "actual_HIP_Triton_Inductor": false,
+  "checks": [
+    {
+      "index": 1,
+      "n": 5,
+      "k": 3,
+      "passed": true
+    },
+    {
+      "index": 2,
+      "n": 6,
+      "k": 4,
+      "passed": true
+    },
+    {
+      "index": 3,
+      "n": 7,
+      "k": 5,
+      "passed": true
+    },
+    {
+      "index": 4,
+      "n": 8,
+      "k": 6,
+      "passed": true
+    },
+    {
+      "index": 5,
+      "n": 9,
+      "k": 7,
+      "passed": true
+    },
+    {
+      "index": 6,
+      "n": 10,
+      "k": 8,
+      "passed": true
+    },
+    {
+      "index": 7,
+      "n": 11,
+      "k": 9,
+      "passed": true
+    },
+    {
+      "index": 8,
+      "n": 12,
+      "k": 10,
+      "passed": true
+    },
+    {
+      "index": 9,
+      "n": 13,
+      "k": 11,
+      "passed": true
+    },
+    {
+      "index": 10,
+      "n": 14,
+      "k": 12,
+      "passed": true
+    },
+    {
+      "index": 11,
+      "n": 15,
+      "k": 13,
+      "passed": true
+    },
+    {
+      "index": 12,
+      "n": 16,
+      "k": 14,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "torch": "2.11.0+cu128",
+  "scope": "Actual block classes; eager equivalence and fullgraph capture, not Inductor/DCU.",
+  "cases": [
+    {
+      "device": "cpu",
+      "mlp_bias": true,
+      "qkv_bias": true,
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "mlp_bias": true,
+      "qkv_bias": false,
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "mlp_bias": false,
+      "qkv_bias": true,
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "mlp_bias": false,
+      "qkv_bias": false,
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "fullgraph_capture_backend": "eager",
+      "passed": true
+    },
+    {
+      "device": "cuda",
+      "mlp_bias": true,
+      "qkv_bias": true,
+      "passed": true
+    },
+    {
+      "device": "cuda",
+      "mlp_bias": true,
+      "qkv_bias": false,
+      "passed": true
+    },
+    {
+      "device": "cuda",
+      "mlp_bias": false,
+      "qkv_bias": true,
+      "passed": true
+    },
+    {
+      "device": "cuda",
+      "mlp_bias": false,
+      "qkv_bias": false,
+      "passed": true
+    },
+    {
+      "device": "cuda",
+      "fullgraph_capture_backend": "eager",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "control_run": "fp32-step-gemm-v23-20261103-DnDLwm",
+  "source": "User screenshot codex-clipboard-9056f4d4-cc8e-4ebb-82b7-7c3d3b74bae0.png; rounded displayed timings only; control archive not yet received",
+  "control_all_public_references_exact_visible": true,
+  "control_compile_audit_pass_visible": true,
+  "control_formal_compile_events_visible": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "control_source_hashes_not_yet_verified": true,
+  "rows": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "control_time_s_screenshot_rounded": 1.6897,
+      "fused_time_s_json": 1.7563191899098456,
+      "elapsed_change_pct": 3.942663781135436
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "control_time_s_screenshot_rounded": 1.8733,
+      "fused_time_s_json": 1.8743410489987582,
+      "elapsed_change_pct": 0.055572999453268324
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "control_time_s_screenshot_rounded": 3.6603,
+      "fused_time_s_json": 3.676673216978088,
+      "elapsed_change_pct": 0.44731898964807115
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "control_time_s_screenshot_rounded": 0.5537,
+      "fused_time_s_json": 0.5344096610788256,
+      "elapsed_change_pct": -3.4838972225346487
+    }
+  ],
+  "control_total_s_rounded": 7.777,
+  "fused_total_s": 7.841743116965517,
+  "elapsed_change_pct": 0.832494753317703,
+  "decision": "Keep v23; fusion has not shown an overall gain in this single sequential comparison; stable regression not established."
+}

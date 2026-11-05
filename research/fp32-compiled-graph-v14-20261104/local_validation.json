@@ -1,0 +1,56 @@
+{
+  "DCU_tested": false,
+  "actual_Triton_tested": false,
+  "cpu_actual_kernel_body_cases": [],
+  "local_CUDA_graph_runtime_cases": [
+    {
+      "B": 1,
+      "L": 32,
+      "G": 8,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1
+    },
+    {
+      "B": 1,
+      "L": 40,
+      "G": 6,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0
+    },
+    {
+      "B": 1,
+      "L": 32,
+      "G": 8,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0
+    },
+    {
+      "B": 2,
+      "L": 127,
+      "G": 5,
+      "tokens_exact": true,
+      "dynamo_compile_events": 1
+    },
+    {
+      "B": 2,
+      "L": 511,
+      "G": 4,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0
+    },
+    {
+      "B": 1,
+      "L": 33,
+      "G": 1,
+      "tokens_exact": true,
+      "dynamo_compile_events": 0
+    }
+  ],
+  "local_graph_scope": "Actual v14 Solution.generate and DecodeGraph, fullgraph Dynamo/AOT-eager compile with fixed shapes and real NVIDIA CUDA Graph replay, one parent ProGenBlock with random weights; Torch substitutes for unchanged Triton kernels. Local Inductor unavailable; not vendor HIP or 27-layer model.",
+  "local_torch": "2.11.0+cu128",
+  "local_device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "actual_graph_captures": 2,
+  "python_syntax": "passed",
+  "local_compile_backend": "aot_eager",
+  "local_Inductor_tested": false
+}

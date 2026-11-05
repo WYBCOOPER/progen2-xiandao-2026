@@ -1,0 +1,1 @@
+PR20 dd70b497be000e436cf72413af87fd7d68cacd34; candidate adds only an empty models/__init__.py for package resolution. Original snapshot retained locally. RoPE repeat_interleave is precomputed; other model-parallel, training, input handling and hidden-state branches also changed. No device test. See manifest.json.

@@ -1,0 +1,85 @@
+{
+  "archive_path": "C:\\Users\\TEAM\\Desktop\\\u5148\u5bfc\u676f\u6d4b\u8bd5\u7ed3\u679c\\v6-repeat-20261104-Z2mul6.tar.gz",
+  "archive_sha256": "08f716aac164533194793d4785b8aa5cef75d00e96b33b243711eb84c58a3789",
+  "exit_status": 0,
+  "snapshot_files_match_fixed1_package": [
+    {
+      "file": "benchmark.py",
+      "sha256": "fd8892ff0e80eb8eb581f52f1480d6dce8e6e7d8269a7e097f9c805a82985a43"
+    },
+    {
+      "file": "candidates/repeat_v23/models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "candidates/repeat_v23/models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "file": "candidates/repeat_v23/models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "file": "candidates/repeat_v23/models/progen/modeling_progen.py",
+      "sha256": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d"
+    },
+    {
+      "file": "candidates/repeat_v23/solution.py",
+      "sha256": "129e8b80c8fc8f7c8ea83672f200931271d5f9ba3baa8d8910b56403d26d47f6"
+    },
+    {
+      "file": "candidates/repeat_v6/models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "candidates/repeat_v6/models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "file": "candidates/repeat_v6/models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "file": "candidates/repeat_v6/models/progen/modeling_progen.py",
+      "sha256": "37eab1f711028c965ce366933d71945db81833a81ecf02241b29848be83180ef"
+    },
+    {
+      "file": "candidates/repeat_v6/solution.py",
+      "sha256": "96bc969ca2d22ab256448fbd700956ec506a6223d24a631a3e39f9c475dd65e7"
+    },
+    {
+      "file": "README.md",
+      "sha256": "f85d49bf1c4e0b48305a3cc0838847a991b9832b3344d722b60f1c80df2cf2ad"
+    },
+    {
+      "file": "run_test.sh",
+      "sha256": "51d9f8e0cc080b020bebf3f89508dfad1c2814023431856c9011820990e8bb5d"
+    },
+    {
+      "file": "SHA256SUMS",
+      "sha256": "5379576385d64c668654815bec150e2e265ae71b7394157939a3bae4121d7098"
+    },
+    {
+      "file": "source_hashes.json",
+      "sha256": "c90b15380ef0734064ecf0f8ba89100f7069f8577c7d7c98047af3bc96182896"
+    }
+  ],
+  "source_hashes_verified": true,
+  "module_paths_isolated": true,
+  "official_calls": 24,
+  "all_calls_recorded_exact": true,
+  "formal_dynamo_events_all_zero": true,
+  "log_matches_raw_times": true,
+  "recomputed_summary_matches": true,
+  "sum_of_load_medians_s": {
+    "v23": 7.522459459956735,
+    "v6": 7.5690035577863455
+  },
+  "v6_elapsed_change_pct": 0.6187351102039385,
+  "decision": "retain v23; v6 has no demonstrated gain in this three-round diagnostic",
+  "limitations": [
+    "two models reside on device; diagnostic is not the official single-candidate score",
+    "three repeats do not establish a general performance bound; no confidence interval inferred",
+    "compile monitor covers Dynamo events, not all native compiler activities"
+  ]
+}

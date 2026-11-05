@@ -1,0 +1,285 @@
+{
+  "candidate_source_sha256": "126e5fb5665fe5245ae26d276685c6ff9991c56da3184703368914765763b93e",
+  "torch": "2.11.0+cu128",
+  "hip": null,
+  "cases": [
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 2,
+      "prefix_length": 4,
+      "steps": 5,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 8,
+      "prefix_length": 32,
+      "steps": 4,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 4,
+      "prefix_length": 512,
+      "steps": 3,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 7,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 2,
+      "prefix_length": 4,
+      "steps": 5,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 8,
+      "prefix_length": 32,
+      "steps": 4,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 4,
+      "prefix_length": 512,
+      "steps": 3,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 7,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cpu",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 2,
+      "prefix_length": 4,
+      "steps": 5,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 8,
+      "prefix_length": 32,
+      "steps": 4,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 4,
+      "prefix_length": 512,
+      "steps": 3,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 7,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": false,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 2,
+      "prefix_length": 4,
+      "steps": 5,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 8,
+      "prefix_length": 32,
+      "steps": 4,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 4,
+      "prefix_length": 512,
+      "steps": 3,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 7,
+      "equal": true,
+      "cache_starts_empty": true
+    },
+    {
+      "device": "cuda",
+      "tie": true,
+      "batch": 1,
+      "prefix_length": 4,
+      "steps": 12,
+      "equal": true,
+      "cache_starts_empty": true
+    }
+  ],
+  "compile_monitor_cases": [
+    {
+      "device": "cpu",
+      "batch": 1,
+      "length": 32,
+      "warmup_events": 2,
+      "measured_events": 0
+    },
+    {
+      "device": "cpu",
+      "batch": 8,
+      "length": 32,
+      "warmup_events": 2,
+      "measured_events": 0
+    },
+    {
+      "device": "cpu",
+      "batch": 4,
+      "length": 32,
+      "warmup_events": 0,
+      "measured_events": 0
+    },
+    {
+      "device": "cpu",
+      "batch": 4,
+      "length": 512,
+      "warmup_events": 0,
+      "measured_events": 0
+    },
+    {
+      "device": "cuda",
+      "batch": 1,
+      "length": 32,
+      "warmup_events": 2,
+      "measured_events": 0
+    },
+    {
+      "device": "cuda",
+      "batch": 8,
+      "length": 32,
+      "warmup_events": 2,
+      "measured_events": 0
+    },
+    {
+      "device": "cuda",
+      "batch": 4,
+      "length": 32,
+      "warmup_events": 0,
+      "measured_events": 0
+    },
+    {
+      "device": "cuda",
+      "batch": 4,
+      "length": 512,
+      "warmup_events": 0,
+      "measured_events": 0
+    }
+  ],
+  "fullgraph_backend": "eager",
+  "fixture_isolation": "Dynamo reset between independent device/tie fixtures, never between requests.",
+  "source_validation": "Stateful test model with tensor cache; same generate methods as real candidates; not full ProGen/Inductor/DCU.",
+  "single_cpu_transfer_outside_generation_loop": true
+}

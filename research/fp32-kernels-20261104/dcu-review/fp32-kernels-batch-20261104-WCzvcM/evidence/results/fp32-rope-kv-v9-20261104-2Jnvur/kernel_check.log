@@ -1,0 +1,25 @@
+PASS batch=1 pos=0
+PASS batch=1 pos=1
+PASS batch=1 pos=31
+PASS batch=1 pos=32
+PASS batch=1 pos=63
+PASS batch=1 pos=64
+PASS batch=1 pos=511
+PASS batch=1 pos=1023
+PASS batch=4 pos=0
+PASS batch=4 pos=1
+PASS batch=4 pos=31
+PASS batch=4 pos=32
+PASS batch=4 pos=63
+PASS batch=4 pos=64
+PASS batch=4 pos=511
+PASS batch=4 pos=1023
+PASS batch=8 pos=0
+PASS batch=8 pos=1
+PASS batch=8 pos=31
+PASS batch=8 pos=32
+PASS batch=8 pos=63
+PASS batch=8 pos=64
+PASS batch=8 pos=511
+PASS batch=8 pos=1023
+KERNEL_CHECK=PASS

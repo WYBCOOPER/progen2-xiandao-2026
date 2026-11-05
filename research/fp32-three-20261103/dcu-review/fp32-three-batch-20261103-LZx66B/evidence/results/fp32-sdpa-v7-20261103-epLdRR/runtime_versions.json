@@ -1,0 +1,12 @@
+{
+  "python": "3.10.16",
+  "torch": "2.4.1",
+  "hip": "6.1.25065",
+  "triton": "3.0.0+das.opt4.dtk2504",
+  "transformers": "4.46.3",
+  "tokenizers": "0.20.3",
+  "numpy": "1.24.3",
+  "accelerate": "1.5.2",
+  "device": "BW",
+  "device_total_memory_bytes": 68702699520
+}

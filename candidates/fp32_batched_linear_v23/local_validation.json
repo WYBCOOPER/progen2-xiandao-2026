@@ -1,0 +1,577 @@
+{
+  "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "triton": "3.6.0",
+  "numeric_cases": [
+    {
+      "m": 4,
+      "n": 1536,
+      "k": 1536,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 5.647343908066205e-07
+    },
+    {
+      "m": 4,
+      "n": 1536,
+      "k": 1536,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 5.647343908066205e-07
+    },
+    {
+      "m": 4,
+      "n": 1536,
+      "k": 1536,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 5.440736083883735e-07
+    },
+    {
+      "m": 4,
+      "n": 1536,
+      "k": 1536,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 4.491080125568203e-07
+    },
+    {
+      "m": 4,
+      "n": 4608,
+      "k": 1536,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 4.997161084929758e-07
+    },
+    {
+      "m": 4,
+      "n": 4608,
+      "k": 1536,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 4.997161084929758e-07
+    },
+    {
+      "m": 4,
+      "n": 4608,
+      "k": 1536,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 5.52058350145046e-07
+    },
+    {
+      "m": 4,
+      "n": 4608,
+      "k": 1536,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 4.858891360370876e-07
+    },
+    {
+      "m": 4,
+      "n": 6144,
+      "k": 1536,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 5.66484221309338e-07
+    },
+    {
+      "m": 4,
+      "n": 6144,
+      "k": 1536,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 5.66484221309338e-07
+    },
+    {
+      "m": 4,
+      "n": 6144,
+      "k": 1536,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 6.638764569188993e-07
+    },
+    {
+      "m": 4,
+      "n": 6144,
+      "k": 1536,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 5.981419421985379e-07
+    },
+    {
+      "m": 4,
+      "n": 1536,
+      "k": 6144,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 1.125954050884559e-06
+    },
+    {
+      "m": 4,
+      "n": 1536,
+      "k": 6144,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 1.125954050884559e-06
+    },
+    {
+      "m": 4,
+      "n": 1536,
+      "k": 6144,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 1.0245658303986716e-06
+    },
+    {
+      "m": 4,
+      "n": 1536,
+      "k": 6144,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 1.3067266868560523e-06
+    },
+    {
+      "m": 4,
+      "n": 37,
+      "k": 515,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 2.7695160564888965e-07
+    },
+    {
+      "m": 4,
+      "n": 37,
+      "k": 515,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 2.7695160564888965e-07
+    },
+    {
+      "m": 4,
+      "n": 37,
+      "k": 515,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 2.4719275071305447e-07
+    },
+    {
+      "m": 4,
+      "n": 37,
+      "k": 515,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 2.58237982553311e-07
+    },
+    {
+      "m": 8,
+      "n": 1536,
+      "k": 1536,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 4.6689535482258293e-07
+    },
+    {
+      "m": 8,
+      "n": 1536,
+      "k": 1536,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 4.6689535482258293e-07
+    },
+    {
+      "m": 8,
+      "n": 1536,
+      "k": 1536,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 5.298324201596927e-07
+    },
+    {
+      "m": 8,
+      "n": 1536,
+      "k": 1536,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 4.979558765327852e-07
+    },
+    {
+      "m": 8,
+      "n": 4608,
+      "k": 1536,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 5.230425328406341e-07
+    },
+    {
+      "m": 8,
+      "n": 4608,
+      "k": 1536,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 5.230425328406341e-07
+    },
+    {
+      "m": 8,
+      "n": 4608,
+      "k": 1536,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 5.526619686335721e-07
+    },
+    {
+      "m": 8,
+      "n": 4608,
+      "k": 1536,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 5.533953486569487e-07
+    },
+    {
+      "m": 8,
+      "n": 6144,
+      "k": 1536,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 7.037360472139653e-07
+    },
+    {
+      "m": 8,
+      "n": 6144,
+      "k": 1536,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 7.037360472139653e-07
+    },
+    {
+      "m": 8,
+      "n": 6144,
+      "k": 1536,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 6.259009461828668e-07
+    },
+    {
+      "m": 8,
+      "n": 6144,
+      "k": 1536,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 6.103301268822747e-07
+    },
+    {
+      "m": 8,
+      "n": 1536,
+      "k": 6144,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 1.5755971212172426e-06
+    },
+    {
+      "m": 8,
+      "n": 1536,
+      "k": 6144,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 1.5755971212172426e-06
+    },
+    {
+      "m": 8,
+      "n": 1536,
+      "k": 6144,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 9.737771460294198e-07
+    },
+    {
+      "m": 8,
+      "n": 1536,
+      "k": 6144,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 1.0774414409553401e-06
+    },
+    {
+      "m": 8,
+      "n": 37,
+      "k": 515,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "max_abs_error": 1.9592633249132518e-07
+    },
+    {
+      "m": 8,
+      "n": 37,
+      "k": 515,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "max_abs_error": 1.9592633249132518e-07
+    },
+    {
+      "m": 8,
+      "n": 37,
+      "k": 515,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "max_abs_error": 2.2243612718408912e-07
+    },
+    {
+      "m": 8,
+      "n": 37,
+      "k": 515,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "max_abs_error": 2.2525714005183772e-07
+    }
+  ],
+  "compiled_graphs": [
+    {
+      "m": 4,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "replays": 3
+    },
+    {
+      "m": 4,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "replays": 3
+    },
+    {
+      "m": 4,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "replays": 3
+    },
+    {
+      "m": 4,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "replays": 3
+    },
+    {
+      "m": 8,
+      "config": [
+        "direct",
+        8,
+        256,
+        4
+      ],
+      "replays": 3
+    },
+    {
+      "m": 8,
+      "config": [
+        "direct",
+        4,
+        256,
+        8
+      ],
+      "replays": 3
+    },
+    {
+      "m": 8,
+      "config": [
+        "vector",
+        4,
+        512,
+        8
+      ],
+      "replays": 3
+    },
+    {
+      "m": 8,
+      "config": [
+        "direct",
+        2,
+        1024,
+        4
+      ],
+      "replays": 3
+    }
+  ],
+  "HIP_tested": false,
+  "full_model_tested": false,
+  "limitations": "Actual NVIDIA native kernels and compiled graph replay tested; DCU Triton 3.0/gfx936 and all model tokens still require DCU validation.",
+  "audit_positive_negative": "passed",
+  "plan_frozen_and_gate_negative_tests": "passed",
+  "comparison_positive_negative": "passed",
+  "bash_syntax": "passed",
+  "python_syntax": "passed"
+}

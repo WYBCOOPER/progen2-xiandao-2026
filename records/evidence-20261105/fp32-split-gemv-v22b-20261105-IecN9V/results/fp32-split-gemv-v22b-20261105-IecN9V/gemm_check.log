@@ -1,0 +1,76 @@
+/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:150: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+  warnings.warn(
+GEMV_SHAPE B=1 N=4608 K=1536 BASE_MS=[0.05268796920776367, 0.05261598110198975]
+GEMV_CHOICE B=1 N=4608 K=1536 MODE=None
+GEMV_SHAPE B=1 N=1536 K=1536 BASE_MS=[0.0412703800201416, 0.04100478172302246]
+GEMV_CHOICE B=1 N=1536 K=1536 MODE={'bn': 4, 'bk': 512}
+GEMV_SHAPE B=1 N=6144 K=1536 BASE_MS=[0.05694237232208252, 0.05701918125152588]
+GEMV_CHOICE B=1 N=6144 K=1536 MODE=None
+GEMV_SHAPE B=1 N=1536 K=6144 BASE_MS=[0.0729935598373413, 0.07326076984405518]
+GEMV_CHOICE B=1 N=1536 K=6144 MODE={'bn': 4, 'bk': 256}
+GEMV_SHAPE B=4 N=4608 K=1536 BASE_MS=[0.053131179809570314, 0.05303836822509766]
+GEMV_CHOICE B=4 N=4608 K=1536 MODE=None
+GEMV_SHAPE B=4 N=1536 K=1536 BASE_MS=[0.04265277862548828, 0.0425151777267456]
+GEMV_CHOICE B=4 N=1536 K=1536 MODE=None
+GEMV_SHAPE B=4 N=6144 K=1536 BASE_MS=[0.057782368659973146, 0.057707171440124515]
+GEMV_CHOICE B=4 N=6144 K=1536 MODE=None
+GEMV_SHAPE B=4 N=1536 K=6144 BASE_MS=[0.07984156131744385, 0.07957436084747314]
+GEMV_CHOICE B=4 N=1536 K=6144 MODE=None
+AUTOTUNE mm(8x1536, 1536x4608)
+  triton_mm_198 0.0350 ms 100.0%
+  triton_mm_199 0.0350 ms 100.0%
+  triton_mm_204 0.0362 ms 96.9%
+  triton_mm_205 0.0362 ms 96.9%
+  triton_mm_203 0.0406 ms 86.2%
+  triton_mm_202 0.0422 ms 83.0%
+  mm 0.0459 ms 76.3%
+  triton_mm_197 0.0502 ms 69.7%
+  triton_mm_196 0.0504 ms 69.5%
+  triton_mm_213 0.0509 ms 68.9%
+SingleProcess AUTOTUNE benchmarking takes 7.9199 seconds and 0.0000 seconds precompiling
+GEMV_SHAPE B=8 N=4608 K=1536 BASE_MS=[0.0497551679611206, 0.04989758014678955]
+GEMV_CHOICE B=8 N=4608 K=1536 MODE=None
+AUTOTUNE mm(8x1536, 1536x1536)
+  triton_mm_222 0.0272 ms 100.0%
+  triton_mm_223 0.0272 ms 100.0%
+  mm 0.0306 ms 89.0%
+  triton_mm_228 0.0325 ms 83.7%
+  triton_mm_229 0.0325 ms 83.7%
+  triton_mm_227 0.0376 ms 72.3%
+  triton_mm_226 0.0378 ms 72.0%
+  triton_mm_221 0.0446 ms 60.9%
+  triton_mm_220 0.0448 ms 60.7%
+  triton_mm_236 0.0456 ms 59.6%
+SingleProcess AUTOTUNE benchmarking takes 7.9762 seconds and 0.0000 seconds precompiling
+GEMV_SHAPE B=8 N=1536 K=1536 BASE_MS=[0.047369580268859866, 0.047273569107055664]
+GEMV_CHOICE B=8 N=1536 K=1536 MODE=None
+AUTOTUNE addmm(8x6144, 8x1536, 1536x6144)
+  triton_mm_246 0.0374 ms 100.0%
+  triton_mm_247 0.0374 ms 100.0%
+  triton_mm_252 0.0408 ms 91.8%
+  triton_mm_253 0.0408 ms 91.8%
+  triton_mm_251 0.0429 ms 87.3%
+  triton_mm_250 0.0430 ms 87.0%
+  triton_mm_260 0.0531 ms 70.5%
+  triton_mm_261 0.0534 ms 70.1%
+  triton_mm_258 0.0547 ms 68.4%
+  triton_mm_259 0.0547 ms 68.4%
+SingleProcess AUTOTUNE benchmarking takes 8.3787 seconds and 0.0000 seconds precompiling
+GEMV_SHAPE B=8 N=6144 K=1536 BASE_MS=[0.059468770027160646, 0.05902876853942871]
+GEMV_CHOICE B=8 N=6144 K=1536 MODE=None
+AUTOTUNE addmm(8x1536, 8x6144, 6144x1536)
+  bias_addmm 0.0651 ms 100.0%
+  addmm 0.0653 ms 99.8%
+  triton_mm_270 0.0866 ms 75.2%
+  triton_mm_271 0.0875 ms 74.4%
+  triton_mm_276 0.1070 ms 60.8%
+  triton_mm_277 0.1070 ms 60.8%
+  triton_mm_275 0.1314 ms 49.6%
+  triton_mm_274 0.1325 ms 49.2%
+  triton_mm_268 0.1562 ms 41.7%
+  triton_mm_269 0.1563 ms 41.7%
+SingleProcess AUTOTUNE benchmarking takes 8.6267 seconds and 0.0000 seconds precompiling
+GEMV_SHAPE B=8 N=1536 K=6144 BASE_MS=[0.07942875862121582, 0.07936956882476806]
+GEMV_CHOICE B=8 N=1536 K=6144 MODE=None
+SPLIT_GEMV_CHECK=PASS
+SPLIT_GEMV_SELECTED 2

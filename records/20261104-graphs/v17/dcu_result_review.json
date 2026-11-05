@@ -1,0 +1,139 @@
+{
+  "candidate": "fp32_stream_graph_v17",
+  "source_matches_upload": true,
+  "scores": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "batch_size": 1,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 1.1823024440091103,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "batch_size": 8,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 1.4904171430971473,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "batch_size": 4,
+      "prefix_tokens": 32,
+      "new_tokens": 512,
+      "time_s": 2.7911690599285066,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "batch_size": 4,
+      "prefix_tokens": 512,
+      "new_tokens": 64,
+      "time_s": 0.47876101010479033,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    }
+  ],
+  "sum_s": 5.942649657139555,
+  "comparisons": {
+    "v15": {
+      "times_s": [
+        1.1985619449988008,
+        1.8348650138359517,
+        3.2111085278447717,
+        0.5041376471053809
+      ],
+      "sum_s": 6.748673133784905,
+      "v17_elapsed_change_pct": -11.943436297281485,
+      "per_load_change_pct": [
+        -1.3565841179536742,
+        -18.772382063065496,
+        -13.077710213616466,
+        -5.03367228103202
+      ]
+    },
+    "v9c": {
+      "times_s": [
+        1.5338259630370885,
+        1.6781445150263608,
+        3.311458772048354,
+        0.5194565739948303
+      ],
+      "sum_s": 7.042885824106634,
+      "v17_elapsed_change_pct": -15.621950922463522,
+      "per_load_change_pct": [
+        -22.91808376564025,
+        -11.18660343303417,
+        -15.711797969872176,
+        -7.834257169386582
+      ]
+    }
+  },
+  "audit": {
+    "graph_captures": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "graph_replays": [
+      255,
+      255,
+      255,
+      255,
+      511,
+      511,
+      63,
+      63
+    ],
+    "formal_graph_capture_zero": true,
+    "compiled_kernel_check_passed": true,
+    "candidate": "fp32_stream_graph_v17",
+    "all_public_references_exact": true,
+    "dynamo_events": [
+      2,
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "triton_cache_misses": [
+      3,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "formal_dynamo_zero": true,
+    "formal_triton_cache_misses_zero": true,
+    "identity": true,
+    "kernel_check_passed": true,
+    "measurement_scope": "Four official workload calls after official warmup; no edits to official tester",
+    "compile_audit_scope": "Dynamo on_compile_start and Triton 3.0 JIT cache-miss hook; not a hardware trace of every native compiler call",
+    "experiment_checks_passed": true
+  },
+  "limitation": "Separate historical runs, not repeated paired measurements."
+}

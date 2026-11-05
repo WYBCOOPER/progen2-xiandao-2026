@@ -1,30 +1,31 @@
 # 先导杯 ProGen2 DCU 优化
 
-更新：2026-11-03。公开记录、源码与图表已按实测整理；最终参赛版本尚未冻结。
+更新：2026-11-05。按四项公开任务同一轮总耗时选择，**当前已记录最快完整版本为 V23：5.532917 秒**，4608/4608 输出一致，正式调用的编译、Triton 缓存未命中和图捕获计数均为零。
 
-- [全部实验可视化](visualizations/20261103/README.md)：20轮有成绩记录，包含诊断和一致性未通过的实验。
-- [本轮结果与复现](experiments/EXP-20261103-01.md)：V1、V2失败、V2b、V3及组合版。
-- [当前分工](docs/TEAM.md) · [任务状态](docs/BOARD.md) · [优化路线](docs/OPTIMIZATION_PLAN.md)
+| 版本/轮次 | 四项合计 | 证据状态 |
+|---|---:|---|
+| V23 batch-shared Linear | **5.532917 s** | 当前最低有效合计；一轮新旧对照 |
+| V22b 同轮对照 | 5.683739 s | V23 合计减少 2.6536% |
+| V22b 历史最低整轮 | 5.639842 s | 另有 ABBA 对照确认 B1 收益 |
+| V20 历史最低整轮 | 5.778319 s | 历史回顾，非同轮收益依据 |
 
-![组合版与V3同轮对照](visualizations/20261103/combo_vs_v3.png)
+总时间是四项规定预热后 time_s 的算术和，不是官方总评分。没有拼接不同轮次的最快项。V23 的 B4 两项本轮减少 6.53%/3.69%，B8 慢 1.34%，B1 慢 2.44%；B1 实现未改。这一轮支持按合计选 V23，不代表稳定提升或隐藏测试已通过。
 
-组合版与V3监测对照的四项公开输出均100%一致；合计耗时7.6804秒与7.8636秒，本轮减少2.33%。两版各一轮，尚不能认定稳定收益；合计不是官方评分。编译监测范围内，正式调用均无Dynamo新编译事件。
+- [最新完整结论](experiments/EXP-20261105-all-results.md)
+- [50 组整轮成绩排名](records/20261105-speed-ranking.json)
+- [V23 同轮原始数据的脱敏副本](records/v23-verified-20261105/comparison.md)
+- [最快候选源码](candidates/fp32_batched_linear_v23/README.md) · [V22b 保底版本](candidates/fp32_split_gemv_v22b/README.md)
+- [所有本地实验成果](research/) · [各归档的成绩、日志和源码](records/evidence-20261105/archive_index.json)
+- [历史可视化](visualizations/20261103/README.md) · [分工](docs/TEAM.md) · [状态](docs/BOARD.md)
 
-## 代码入口
+## 运行
 
-在已有官方模型资产和测试工具的DCU比赛目录中，分别运行：
+在已有官方模型权重、Tokenizer 和测试工具的 progen2_contest 目录放入候选目录，再运行：
 ```bash
-bash candidates/fp32_step_gemm_v23/run_test.sh
-bash candidates/fp32_gemm_tune_v3_audit/run_test.sh
+bash candidates/fp32_batched_linear_v23/run_test.sh
 ```
-这两个目录保存实测组合版和对照版。每次脚本建立独立结果目录；不覆盖官方基准、测试器或既有成绩。源码沿用官方模型及队友前期优化，来源与AI协助见[贡献说明](docs/CONTRIBUTIONS.md)。
+脚本先在独立进程比较 B4/B8 合成矩阵，保留冻结的 B1 配置。新内核两轮均达到门槛后才进行完整模型与 V22b 对照；否则保留原实现并归档。测量时的形状配置保存在 measured_plan.json，复现实测版本需核对该配置和源码指纹，重新调优可能选出不同配置。
 
-`submission/`保持此前合入的入口，本轮未将候选替换为最终作品。根目录`solution.py`是V4实验副本，不代表已通过一致性验证的默认方案；该配置的结果见本轮记录。
+本次同步源码与全部可公开成果，没有替换 submission/ 或根目录 solution.py，也没有发送比赛作品。两者不代表当前推荐方案。最终作品仍需选定固定配置、从最终材料复现并完成报告。
 
-## 协作与交付
-
-WYBCOOPER负责DCU测试、测量、归档，并参与优化；loveviolet2、JIYIA718-ai主要负责优化。历史A/B/C为早期建议标记，当前以账号分工为准。合并归档不代表队友已独立复核或最终验收。
-
-[实验依据](records/README.md) · [实验规范](docs/EXPERIMENTS.md) · [个人记录](members/WYBCOOPER.md) · [提交检查](docs/RELEASE.md)
-
-保留既有北京时间22:00交付、23:00审查节点，按[逐日计划](docs/SCHEDULE.md)执行；实际延期照实记录。GitHub更新不代表比赛作品已发送。
+环境：DCU BW/gfx936，Python3.10.16，Torch2.4.1+das.opt2.dtk2504，HIP6.1.25065，Triton3.0.0+das.opt4.dtk2504。完整依赖及官方工具指纹见 runtime_versions.json；实际镜像名称仍需填写。设计、代码和本地检查有 Codex/Terra 协助；DCU 测试由 WYBCOOPER 执行。

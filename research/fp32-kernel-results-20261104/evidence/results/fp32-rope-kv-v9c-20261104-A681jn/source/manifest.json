@@ -1,0 +1,35 @@
+{
+  "candidate": "fp32_rope_kv_v9c",
+  "parent": "fp32_rope_kv_v9b",
+  "reason": "screenshot: undefined s2 in B constexpr metadata",
+  "changes": [
+    "Remove B kernel parameter; use grid axis 1 for batch",
+    "Make cache length S a runtime argument",
+    "Probe dynamic batch sizes 1,2,8 before full model"
+  ],
+  "DCU_tested": false,
+  "speed_claim": null,
+  "official_tools_modified": false,
+  "parent_sources": {
+    "audit_result.py": "858cc9ce85386555c996d1cbed3edb8982554198d760d1ea7dd8912ccadd9b3c",
+    "compile_check.py": "eb51608efe20fdf1ba1a64dd6adea589ff24e78d8ebf82218702b5fe6e630e3e",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "solution.py": "79f0381a5158e0779343fbb2adc7ad4d7c0f382d97a7b22ea60f4dc3d28bd533",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "964da427a6bd2abf1c9aaba9f1562dc7a2d03ec860425bd948d263a079b748e2",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+  },
+  "source_sha256": {
+    "audit_result.py": "4de7bbbb3db665fe7df21045d7c8e04a28d5ae504868b0a67e3f27de41fddfde",
+    "compile_check.py": "9af830efce8a625f0173105586802caa273378cc27e6d36f07fbf5a7cc6a1956",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "solution.py": "53695e49017dbd95beb0307f5e20a883bc61ec0f1c94db19fc8f3c96f81a8229",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "efc49236d907f4ccc20f3237dec690589c074b3d50f67922d028ce6d999fc7bb",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+  }
+}

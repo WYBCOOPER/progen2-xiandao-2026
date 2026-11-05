@@ -1,0 +1,63 @@
+{
+  "archive": "pr22-ef2b051-20261101-Olwchs.tar.gz",
+  "sha256": "befda6337d7ab514790647ee1354fbd612e8e7f6464754bf64f5eb8a78632110",
+  "members": [
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs",
+      "size": 0,
+      "type": "directory"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/source",
+      "size": 0,
+      "type": "directory"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/source/solution.py",
+      "size": 4423,
+      "type": "file"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/source/models",
+      "size": 0,
+      "type": "directory"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/source/models/__init__.py",
+      "size": 0,
+      "type": "file"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen",
+      "size": 0,
+      "type": "directory"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen/modeling_progen.py",
+      "size": 29095,
+      "type": "file"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen/__init__.py",
+      "size": 63,
+      "type": "file"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/source/models/progen/configuration_progen.py",
+      "size": 2724,
+      "type": "file"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/candidate_public.json",
+      "size": 1296,
+      "type": "file"
+    },
+    {
+      "path": "results/pr22-ef2b051-20261101-Olwchs/candidate.log",
+      "size": 3199,
+      "type": "file"
+    }
+  ],
+  "source": "5 files byte-identical to fixed candidate",
+  "json_log": "4/4 matched"
+}

@@ -1,0 +1,151 @@
+README.md: OK
+audit_result.py: OK
+compile_check.py: OK
+kernel_check.py: OK
+manifest.json: OK
+models/__init__.py: OK
+models/progen/__init__.py: OK
+models/progen/configuration_progen.py: OK
+models/progen/kernels.py: OK
+models/progen/modeling_progen.py: OK
+run_test.sh: OK
+solution.py: OK
+RESULT_DIRECTORY=results/fp32-decode-attn-v8b-20261104-Yo1SXs
+RUNTIME={"python": "3.10.16", "torch": "2.4.1", "hip": "6.1.25065", "triton": "3.0.0+das.opt4.dtk2504", "transformers": "4.46.3", "tokenizers": "0.20.3", "numpy": "1.24.3", "accelerate": "1.5.2", "device": "BW", "device_total_memory_bytes": 68702699520, "official_tools_sha256": {"public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f", "run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e", "baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6", "check_environment.py": "e56d8d119fb6e29ca743489d1673e6b0b95d79b89f5ff11f972e83c47239bd9c", "public_test_data/public_cases.json": "6c3f2f7a41a17ecd1231a37e056fc5f2471ce89fbbdd90750fc41d91bfb4e8c2"}}
+KERNEL_CHECK_DETAILS=[{"B": 1, "S": 1, "q_scale": 1.0, "max_abs_error": 0.0}, {"B": 1, "S": 1, "q_scale": 8.0, "max_abs_error": 0.0}, {"B": 1, "S": 2, "q_scale": 1.0, "max_abs_error": 5.960464477539062e-07}, {"B": 1, "S": 2, "q_scale": 8.0, "max_abs_error": 3.5762786865234375e-07}, {"B": 1, "S": 31, "q_scale": 1.0, "max_abs_error": 4.172325134277344e-07}, {"B": 1, "S": 31, "q_scale": 8.0, "max_abs_error": 3.844499588012695e-06}, {"B": 1, "S": 32, "q_scale": 1.0, "max_abs_error": 3.5762786865234375e-07}, {"B": 1, "S": 32, "q_scale": 8.0, "max_abs_error": 3.0994415283203125e-06}, {"B": 1, "S": 33, "q_scale": 1.0, "max_abs_error": 3.8743019104003906e-07}, {"B": 1, "S": 33, "q_scale": 8.0, "max_abs_error": 3.0994415283203125e-06}, {"B": 1, "S": 63, "q_scale": 1.0, "max_abs_error": 2.682209014892578e-07}, {"B": 1, "S": 63, "q_scale": 8.0, "max_abs_error": 4.947185516357422e-06}, {"B": 1, "S": 64, "q_scale": 1.0, "max_abs_error": 2.682209014892578e-07}, {"B": 1, "S": 64, "q_scale": 8.0, "max_abs_error": 5.066394805908203e-06}, {"B": 1, "S": 65, "q_scale": 1.0, "max_abs_error": 3.5762786865234375e-07}, {"B": 1, "S": 65, "q_scale": 8.0, "max_abs_error": 5.066394805908203e-06}, {"B": 1, "S": 127, "q_scale": 1.0, "max_abs_error": 2.384185791015625e-07}, {"B": 1, "S": 127, "q_scale": 8.0, "max_abs_error": 4.649162292480469e-06}, {"B": 1, "S": 128, "q_scale": 1.0, "max_abs_error": 2.980232238769531e-07}, {"B": 1, "S": 128, "q_scale": 8.0, "max_abs_error": 4.649162292480469e-06}, {"B": 1, "S": 129, "q_scale": 1.0, "max_abs_error": 2.384185791015625e-07}, {"B": 1, "S": 129, "q_scale": 8.0, "max_abs_error": 4.649162292480469e-06}, {"B": 1, "S": 287, "q_scale": 1.0, "max_abs_error": 2.086162567138672e-07}, {"B": 1, "S": 287, "q_scale": 8.0, "max_abs_error": 7.078051567077637e-06}, {"B": 1, "S": 511, "q_scale": 1.0, "max_abs_error": 1.4901161193847656e-07}, {"B": 1, "S": 511, "q_scale": 8.0, "max_abs_error": 6.452202796936035e-06}, {"B": 1, "S": 512, "q_scale": 1.0, "max_abs_error": 1.9371509552001953e-07}, {"B": 1, "S": 512, "q_scale": 8.0, "max_abs_error": 6.4373016357421875e-06}, {"B": 1, "S": 543, "q_scale": 1.0, "max_abs_error": 1.7881393432617188e-07}, {"B": 1, "S": 543, "q_scale": 8.0, "max_abs_error": 6.601214408874512e-06}, {"B": 1, "S": 576, "q_scale": 1.0, "max_abs_error": 1.7881393432617188e-07}, {"B": 1, "S": 576, "q_scale": 8.0, "max_abs_error": 5.945563316345215e-06}, {"B": 1, "S": 1023, "q_scale": 1.0, "max_abs_error": 8.288770914077759e-08}, {"B": 1, "S": 1023, "q_scale": 8.0, "max_abs_error": 2.5033950805664062e-06}, {"B": 1, "S": 1024, "q_scale": 1.0, "max_abs_error": 8.940696716308594e-08}, {"B": 1, "S": 1024, "q_scale": 8.0, "max_abs_error": 3.4570693969726562e-06}, {"B": 4, "S": 1, "q_scale": 1.0, "max_abs_error": 0.0}, {"B": 4, "S": 1, "q_scale": 8.0, "max_abs_error": 0.0}, {"B": 4, "S": 2, "q_scale": 1.0, "max_abs_error": 1.2516975402832031e-06}, {"B": 4, "S": 2, "q_scale": 8.0, "max_abs_error": 7.152557373046875e-07}, {"B": 4, "S": 31, "q_scale": 1.0, "max_abs_error": 5.364418029785156e-07}, {"B": 4, "S": 31, "q_scale": 8.0, "max_abs_error": 6.556510925292969e-06}, {"B": 4, "S": 32, "q_scale": 1.0, "max_abs_error": 5.364418029785156e-07}, {"B": 4, "S": 32, "q_scale": 8.0, "max_abs_error": 7.033348083496094e-06}, {"B": 4, "S": 33, "q_scale": 1.0, "max_abs_error": 5.364418029785156e-07}, {"B": 4, "S": 33, "q_scale": 8.0, "max_abs_error": 7.033348083496094e-06}, {"B": 4, "S": 63, "q_scale": 1.0, "max_abs_error": 4.172325134277344e-07}, {"B": 4, "S": 63, "q_scale": 8.0, "max_abs_error": 7.152557373046875e-06}, {"B": 4, "S": 64, "q_scale": 1.0, "max_abs_error": 4.721805453300476e-07}, {"B": 4, "S": 64, "q_scale": 8.0, "max_abs_error": 7.152557373046875e-06}, {"B": 4, "S": 65, "q_scale": 1.0, "max_abs_error": 4.223547875881195e-07}, {"B": 4, "S": 65, "q_scale": 8.0, "max_abs_error": 6.9141387939453125e-06}, {"B": 4, "S": 127, "q_scale": 1.0, "max_abs_error": 3.2782554626464844e-07}, {"B": 4, "S": 127, "q_scale": 8.0, "max_abs_error": 5.7220458984375e-06}, {"B": 4, "S": 128, "q_scale": 1.0, "max_abs_error": 2.682209014892578e-07}, {"B": 4, "S": 128, "q_scale": 8.0, "max_abs_error": 5.7220458984375e-06}, {"B": 4, "S": 129, "q_scale": 1.0, "max_abs_error": 3.5762786865234375e-07}, {"B": 4, "S": 129, "q_scale": 8.0, "max_abs_error": 5.543231964111328e-06}, {"B": 4, "S": 287, "q_scale": 1.0, "max_abs_error": 4.470348358154297e-07}, {"B": 4, "S": 287, "q_scale": 8.0, "max_abs_error": 7.569789886474609e-06}, {"B": 4, "S": 511, "q_scale": 1.0, "max_abs_error": 2.5331974029541016e-07}, {"B": 4, "S": 511, "q_scale": 8.0, "max_abs_error": 8.493661880493164e-06}, {"B": 4, "S": 512, "q_scale": 1.0, "max_abs_error": 2.682209014892578e-07}, {"B": 4, "S": 512, "q_scale": 8.0, "max_abs_error": 8.48621129989624e-06}, {"B": 4, "S": 543, "q_scale": 1.0, "max_abs_error": 2.682209014892578e-07}, {"B": 4, "S": 543, "q_scale": 8.0, "max_abs_error": 8.590519428253174e-06}, {"B": 4, "S": 576, "q_scale": 1.0, "max_abs_error": 3.129243850708008e-07}, {"B": 4, "S": 576, "q_scale": 8.0, "max_abs_error": 8.508563041687012e-06}, {"B": 4, "S": 1023, "q_scale": 1.0, "max_abs_error": 1.4901161193847656e-07}, {"B": 4, "S": 1023, "q_scale": 8.0, "max_abs_error": 1.0371208190917969e-05}, {"B": 4, "S": 1024, "q_scale": 1.0, "max_abs_error": 1.341104507446289e-07}, {"B": 4, "S": 1024, "q_scale": 8.0, "max_abs_error": 1.0371208190917969e-05}, {"B": 8, "S": 1, "q_scale": 1.0, "max_abs_error": 0.0}, {"B": 8, "S": 1, "q_scale": 8.0, "max_abs_error": 0.0}, {"B": 8, "S": 2, "q_scale": 1.0, "max_abs_error": 5.960464477539062e-07}, {"B": 8, "S": 2, "q_scale": 8.0, "max_abs_error": 2.825632691383362e-06}, {"B": 8, "S": 31, "q_scale": 1.0, "max_abs_error": 7.152557373046875e-07}, {"B": 8, "S": 31, "q_scale": 8.0, "max_abs_error": 5.0067901611328125e-06}, {"B": 8, "S": 32, "q_scale": 1.0, "max_abs_error": 6.556510925292969e-07}, {"B": 8, "S": 32, "q_scale": 8.0, "max_abs_error": 5.0067901611328125e-06}, {"B": 8, "S": 33, "q_scale": 1.0, "max_abs_error": 8.046627044677734e-07}, {"B": 8, "S": 33, "q_scale": 8.0, "max_abs_error": 5.0067901611328125e-06}, {"B": 8, "S": 63, "q_scale": 1.0, "max_abs_error": 4.76837158203125e-07}, {"B": 8, "S": 63, "q_scale": 8.0, "max_abs_error": 1.0304152965545654e-05}, {"B": 8, "S": 64, "q_scale": 1.0, "max_abs_error": 6.258487701416016e-07}, {"B": 8, "S": 64, "q_scale": 8.0, "max_abs_error": 1.0306015610694885e-05}, {"B": 8, "S": 65, "q_scale": 1.0, "max_abs_error": 4.246830940246582e-07}, {"B": 8, "S": 65, "q_scale": 8.0, "max_abs_error": 1.0248273611068726e-05}, {"B": 8, "S": 127, "q_scale": 1.0, "max_abs_error": 3.8743019104003906e-07}, {"B": 8, "S": 127, "q_scale": 8.0, "max_abs_error": 1.1086463928222656e-05}, {"B": 8, "S": 128, "q_scale": 1.0, "max_abs_error": 4.76837158203125e-07}, {"B": 8, "S": 128, "q_scale": 8.0, "max_abs_error": 1.1086463928222656e-05}, {"B": 8, "S": 129, "q_scale": 1.0, "max_abs_error": 4.172325134277344e-07}, {"B": 8, "S": 129, "q_scale": 8.0, "max_abs_error": 1.0967254638671875e-05}, {"B": 8, "S": 287, "q_scale": 1.0, "max_abs_error": 4.470348358154297e-07}, {"B": 8, "S": 287, "q_scale": 8.0, "max_abs_error": 1.0967254638671875e-05}, {"B": 8, "S": 511, "q_scale": 1.0, "max_abs_error": 3.2782554626464844e-07}, {"B": 8, "S": 511, "q_scale": 8.0, "max_abs_error": 8.821487426757812e-06}, {"B": 8, "S": 512, "q_scale": 1.0, "max_abs_error": 3.5762786865234375e-07}, {"B": 8, "S": 512, "q_scale": 8.0, "max_abs_error": 8.821487426757812e-06}, {"B": 8, "S": 543, "q_scale": 1.0, "max_abs_error": 3.2782554626464844e-07}, {"B": 8, "S": 543, "q_scale": 8.0, "max_abs_error": 8.940696716308594e-06}, {"B": 8, "S": 576, "q_scale": 1.0, "max_abs_error": 2.980232238769531e-07}, {"B": 8, "S": 576, "q_scale": 8.0, "max_abs_error": 8.821487426757812e-06}, {"B": 8, "S": 1023, "q_scale": 1.0, "max_abs_error": 1.5087425708770752e-07}, {"B": 8, "S": 1023, "q_scale": 8.0, "max_abs_error": 8.58306884765625e-06}, {"B": 8, "S": 1024, "q_scale": 1.0, "max_abs_error": 1.9371509552001953e-07}, {"B": 8, "S": 1024, "q_scale": 8.0, "max_abs_error": 8.58306884765625e-06}]
+KERNEL_CHECK=PASS
+COMPILED_CALL_PASS B=1 S=33
+Traceback (most recent call last):
+  File "/public/home/TEAM/progen2_contest/results/fp32-decode-attn-v8b-20261104-Yo1SXs/source/compile_check.py", line 26, in <module>
+    if __name__=="__main__":main()
+  File "/public/home/TEAM/progen2_contest/results/fp32-decode-attn-v8b-20261104-Yo1SXs/source/compile_check.py", line 20, in main
+    actual=compiled(q,kk,vv)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 433, in _fn
+    return fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 1116, in __call__
+    return self._torchdynamo_orig_callable(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 472, in __call__
+    return _compile(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_utils_internal.py", line 84, in wrapper_function
+    return StrobelightCompileTimeProfiler.profile_compile_time(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_strobelight/compile_time_profiler.py", line 129, in profile_compile_time
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 817, in _compile
+    guarded_code = compile_inner(code, one_graph, hooks, transform)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 636, in compile_inner
+    out_code = transform_code_object(code, transform)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/bytecode_transformation.py", line 1185, in transform_code_object
+    transformations(instructions, code_options)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 178, in _fn
+    return fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 582, in transform
+    tracer.run()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 2451, in run
+    super().run()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 893, in run
+    while self.step():
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 805, in step
+    self.dispatch_table[inst.opcode](self, inst)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 2642, in RETURN_VALUE
+    self._return(inst)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 2627, in _return
+    self.output.compile_subgraph(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1099, in compile_subgraph
+    self.compile_and_call_fx_graph(tx, list(reversed(stack_values)), root)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1319, in compile_and_call_fx_graph
+    compiled_fn = self.call_user_compiler(gm)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1410, in call_user_compiler
+    raise BackendCompilerFailed(self.compiler_fn, e).with_traceback(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/output_graph.py", line 1391, in call_user_compiler
+    compiled_fn = compiler_fn(gm, self.example_inputs())
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/repro/after_dynamo.py", line 129, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/repro/after_dynamo.py", line 129, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/__init__.py", line 1956, in __call__
+    return compile_fx(model_, inputs_, config_patches=self.config)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1261, in compile_fx
+    return compile_fx(
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1505, in compile_fx
+    return aot_autograd(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/backends/common.py", line 69, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 954, in aot_module_simplified
+    compiled_fn, _ = create_aot_dispatcher_function(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/aot_autograd.py", line 687, in create_aot_dispatcher_function
+    compiled_fn, fw_metadata = compiler_fn(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_functorch/_aot_autograd/jit_compile_runtime_wrappers.py", line 168, in aot_dispatch_base
+    compiled_fw = compiler(fw_module, updated_flat_args)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 1410, in fw_compiler_base
+    return inner_compile(
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/repro/after_aot.py", line 84, in debug_wrapper
+    inner_compiled_fn = compiler_fn(gm, example_inputs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/debug.py", line 304, in inner
+    return fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 527, in compile_fx_inner
+    compiled_graph = fx_codegen_and_compile(
+  File "/opt/conda/lib/python3.10/contextlib.py", line 79, in inner
+    return func(*args, **kwds)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/compile_fx.py", line 831, in fx_codegen_and_compile
+    compiled_fn = graph.compile_to_fn()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/graph.py", line 1751, in compile_to_fn
+    return self.compile_to_module().call
+  File "/opt/conda/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/graph.py", line 1701, in compile_to_module
+    mod = PyCodeCache.load_by_key_path(
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 3073, in load_by_key_path
+    mod = _reload_python_module(key, path)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/runtime/compile_tasks.py", line 45, in _reload_python_module
+    exec(code, mod.__dict__, mod.__dict__)
+  File "/tmp/torchinductor_root/eu/ceunzn4iyqkaqbftd2ilhotcidmx7hrizzg4y4tqgzhl3npx6qlf.py", line 31, in <module>
+    _decode_partials_0 = async_compile.triton('_decode_partials', '''
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/async_compile.py", line 173, in triton
+    kernel = TritonCodeCache.load(kernel_name, source_code)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 3123, in load
+    return _module_to_triton_kernel(PyCodeCache.load(source_code), kernel_name)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 3060, in load
+    return cls.load_by_key_path(key, path, linemap, attrs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/codecache.py", line 3073, in load_by_key_path
+    mod = _reload_python_module(key, path)
+  File "/opt/conda/lib/python3.10/site-packages/torch/_inductor/runtime/compile_tasks.py", line 45, in _reload_python_module
+    exec(code, mod.__dict__, mod.__dict__)
+  File "/tmp/torchinductor_root/ml/cmlyz3pbqiyfcq2yutcrfbyj5uygdmkdbiwor3daa2w4ipqd5fh2.py", line 14, in <module>
+    triton_meta={'signature': {'Q': '*fp32', 'K': '*fp32', 'V': '*fp32', 'PART': '*fp32', 'STATS': '*fp32', 'SEQ': 'i32'}, 'device': DeviceProperties(type='hip', index=0, cc='gfx936', major=None, regs_per_multiprocessor=None, max_threads_per_multi_processor=None, multi_processor_count=None), 'constants': {'H': 16, 'QB': 1536, 'QH': 96, 'QD': 1, 'KB': 16*s1, 'KH': s1, 'KS': 96, 'KD': 1, 'VB': 16*s1, 'VH': s1, 'VS': 96, 'VD': 1, 'BLOCK_S': 64, 'BLOCK_D': 128, 'PARTS': 16}, 'configs': [AttrsDescriptor(divisible_by_16=(0, 1, 2, 3, 4), equal_to_1=(), within_2gb=set(), non_negative=set())]},
+torch._dynamo.exc.BackendCompilerFailed: backend='inductor' raised:
+NameError: name 's1' is not defined
+
+Set TORCH_LOGS="+dynamo" and TORCHDYNAMO_VERBOSE=1 for more information
+
+
+You can suppress this exception and fall back to eager by setting:
+    import torch._dynamo
+    torch._dynamo.config.suppress_errors = True
+
+
+RESULT_DIRECTORY=results/fp32-decode-attn-v8b-20261104-Yo1SXs
+RESULT_ARCHIVE=results/fp32-decode-attn-v8b-20261104-Yo1SXs.tar.gz

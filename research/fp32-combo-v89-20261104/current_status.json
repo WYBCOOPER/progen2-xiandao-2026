@@ -1,0 +1,32 @@
+{
+  "candidate": "fp32_combo_v89",
+  "parents": [
+    "fp32_decode_attn_v8c",
+    "fp32_rope_kv_v9c"
+  ],
+  "status": "public correctness and recorded compile gates passed; single measurement",
+  "DCU_tested": true,
+  "official_tools_modified": false,
+  "kernel_bodies_unchanged_verified": true,
+  "package": "C:\\Users\\TEAM\\Desktop\\progen2_contest.zip\\deliverables\\fp32-combo-v89-20261104-upload.zip",
+  "sha256": "94c9ec7e6150c91691d0bc40c5b8f19f8472fe5ce4af50d7cabbd02db14ef65b",
+  "files": 16,
+  "bytes": 23653,
+  "run": "fp32-combo-v89-20261104-Wri0Ic",
+  "archive_sha256": "f9917845f5a76e42fe68d4067fc911fda8c71427890bc33e66a8b64e79b3014f",
+  "sum_time_s": 7.1799738181289285,
+  "public_tokens_exact": "4608/4608",
+  "formal_dynamo_events": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "formal_triton_cache_misses": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "speed_claim": "Single run is slower in total than available v9c run; no paired causal conclusion"
+}

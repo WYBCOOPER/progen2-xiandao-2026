@@ -1,0 +1,9 @@
+{
+  "python_syntax": "passed",
+  "audit_positive_and_negative": "passed",
+  "comparison_gain_no_gain_regression_incomplete_cases": "passed",
+  "bash_syntax": "passed",
+  "candidates_are_byte_identical_to_verified_v20_v22b": true,
+  "actual_DCU_comparison_run": false,
+  "limits": "Orchestration/summary checked locally with synthetic fixtures. Both exact candidate snapshots already passed DCU public tests independently; same-session ABBA comparison remains to run on DCU."
+}

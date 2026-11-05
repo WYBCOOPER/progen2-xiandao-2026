@@ -1,0 +1,26 @@
+{
+  "commit": "5b30ef255984c72d2d2c6e87485b0fb8958a7d03",
+  "local_change": "Added empty models/__init__.py for package resolution; upstream Python files unchanged.",
+  "files": [
+    {
+      "path": "candidates/v4_5b30ef2/models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "candidates/v4_5b30ef2/models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "path": "candidates/v4_5b30ef2/models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "path": "candidates/v4_5b30ef2/models/progen/modeling_progen.py",
+      "sha256": "f5be7c4526464acccbb30a9d3ccd086b3a70b9f23b53aa0da9c9273343a72e01"
+    },
+    {
+      "path": "candidates/v4_5b30ef2/solution.py",
+      "sha256": "0e364630ef301cb709925ef023a365e8e9d8d2a3ec261aecfe8569500630e1c6"
+    }
+  ]
+}

@@ -1,3 +1,9 @@
+# 当前推荐入口（2026-11-05）
+
+按四项同一轮合计选择，当前最低有效记录为 [V23](fp32_batched_linear_v23/README.md)：5.532917 秒。四项公开输出完全一致，正式编译/缓存未命中/图捕获计数为零；一轮对照，不代表稳定收益。
+
+[V22b](fp32_split_gemv_v22b/README.md) 保留作已确认的保底版本。完整历史候选与失败记录见 [research](../research/)，最新结论见[实验记录](../experiments/EXP-20261105-all-results.md)。下文为历史说明。
+
 # 已实测FP32候选
 
 - `fp32_step_gemm_v23/`：V2b＋V3组合版。

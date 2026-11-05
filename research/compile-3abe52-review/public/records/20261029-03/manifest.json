@@ -1,0 +1,67 @@
+{
+  "archive_sha256": "7db01549c61a24b5f8ede9d7df5f59b6cb5cc182ac053b347110ca9eb9700375",
+  "candidate_head": "3abe52d3f5c3746f44369c2eeb10e6c4c6190581",
+  "redaction": "Replace /public/home/<account>/ with /public/home/TEAM/ in shared logs and JSON.",
+  "files": [
+    {
+      "original": "source/solution.py",
+      "shared": "records/20261029-03/source/solution.py",
+      "original_sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e",
+      "shared_sha256": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e"
+    },
+    {
+      "original": "source/models/__init__.py",
+      "shared": "records/20261029-03/source/models/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "shared_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "source/models/progen/configuration_progen.py",
+      "shared": "records/20261029-03/source/models/progen/configuration_progen.py",
+      "original_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "shared_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e"
+    },
+    {
+      "original": "source/models/progen/modeling_progen.py",
+      "shared": "records/20261029-03/source/models/progen/modeling_progen.py",
+      "original_sha256": "7887f44ed116cdce67bdfff5be72086d5d68715d906eeeb65c3d01aa34115f9d",
+      "shared_sha256": "7887f44ed116cdce67bdfff5be72086d5d68715d906eeeb65c3d01aa34115f9d"
+    },
+    {
+      "original": "source/models/progen/__init__.py",
+      "shared": "records/20261029-03/source/models/progen/__init__.py",
+      "original_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "shared_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+    },
+    {
+      "original": "compile_smoke.log",
+      "shared": "records/20261029-03/compile_smoke.shared.log",
+      "original_sha256": "716800a5d256785cfb179a638ed9fec1e2817bf19cddee071f41a3b1d8801cba",
+      "shared_sha256": "716800a5d256785cfb179a638ed9fec1e2817bf19cddee071f41a3b1d8801cba"
+    },
+    {
+      "original": "candidate.log",
+      "shared": "records/20261029-03/candidate.shared.log",
+      "original_sha256": "ba46cd3cb1beb3e801a93f6d0980321e1d974848c1fe7852c36bb08ad0d7e93c",
+      "shared_sha256": "a4b355e4cf1be8919d0883a8bc0c52a7373351a7ede0935648d758da1f6444e6"
+    },
+    {
+      "original": "candidate_r2.log",
+      "shared": "records/20261029-03/candidate_r2.shared.log",
+      "original_sha256": "e9758d074e183552262fd6530638cec797897e3f11825eaacb0130c60c3a0d74",
+      "shared_sha256": "12fa1eb714014c0e63c84a9c5181bebbf0b4dab83f474ed4aaed1abdb97482c1"
+    },
+    {
+      "original": "candidate_public.json",
+      "shared": "records/20261029-03/candidate_public.shared.json",
+      "original_sha256": "fad72ac333e044f1037b257f52fa4dc928426141282d8ea211717fba81f13a2c",
+      "shared_sha256": "38859696ccd357446b47aef75b4efa8a4422753820a7aa8c08e63f93434bc291"
+    },
+    {
+      "original": "candidate_r2_public.json",
+      "shared": "records/20261029-03/candidate_r2_public.shared.json",
+      "original_sha256": "4b1e5defa3da61f821abb22839e4431160efc6e09e425ec7dab25e906aa8f8c1",
+      "shared_sha256": "ea7c285733b48980c32c6c068a04adabd4898ecebb7b5d8b57ff8d5c31ac0495"
+    }
+  ]
+}

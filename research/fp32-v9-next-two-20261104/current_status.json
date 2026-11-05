@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-04",
+  "parent": "fp32_rope_kv_v9c",
+  "candidates": [
+    "fp32_rope_op_v10",
+    "fp32_greedy_v11"
+  ],
+  "status": "both DCU correctness and recorded formal compile gates passed; no performance benefit demonstrated",
+  "DCU_tested": true,
+  "speed_claim": null,
+  "official_tools_modified": false,
+  "zip": "C:\\Users\\TEAM\\Desktop\\progen2_contest.zip\\deliverables\\fp32-v9-next-two-20261104-upload.zip",
+  "sha256": "d888a894a2609a3b5c2388dd267db21591f2ae73e6fad6a710f1be354ef06711",
+  "bytes": 45885,
+  "files": 32,
+  "local_checks": {
+    "scope": "Actual Triton bodies evaluated with CPU pointer substitutes; actual torch.library schema/fake/AOT-eager checked using those substitutes. No real Triton, Inductor codegen, HIP or full-model execution.",
+    "torch_version": "2.11.0+cu128",
+    "DCU_tested": false,
+    "candidates": {
+      "fp32_rope_op_v10": {
+        "original_model_unchanged": true,
+        "v9c_rope_kernel_AST_unchanged": true,
+        "python_syntax": "passed",
+        "mutation_schema": "progen_v10::rope_kv(Tensor qkv, Tensor(a1!) k_cache, Tensor(a2!) v_cache, Tensor sin, Tensor cos, SymInt cur_len) -> Tensor",
+        "exact_rope_cache_cases": 32,
+        "opcheck": {
+          "test_schema": "SUCCESS",
+          "test_faketensor": "SUCCESS"
+        },
+        "AOT_eager_mutation_consumer_cases": 12
+      },
+      "fp32_greedy_v11": {
+        "original_model_unchanged": true,
+        "v9c_rope_kernel_AST_unchanged": true,
+        "python_syntax": "passed",
+        "exact_greedy_edge_and_stride_cases": 112,
+        "actual_Solution_generation_step_stub_model_cases": 112,
+        "allowed_only_each_winner_cases": 20
+      }
+    },
+    "bash_syntax": "Git Bash -n passed for both child runners and the batch runner; model not executed locally",
+    "batch_failure_preservation": "Executed real batch runner with two stub child runners: first exit 7, second exit 0; both child archives and statuses retained, overall exit 1."
+  },
+  "next": "Retain v9c; v10 not promoted, v11 requires paired control before any performance claim.",
+  "result_report": "C:\\Users\\TEAM\\Desktop\\progen2_contest.zip\\deliverables\\fp32-v9-next-two-results-20261104\\测试结论.md",
+  "result_batch": "v9-next-two-20261104-sKkFQT.tar.gz",
+  "result_batch_sha256": "2462519764013eb144149ce8625072e333d188376bc04f3c474cf97a55b178f0",
+  "DCU_results": {
+    "fp32_rope_op_v10": {
+      "sum_time_s": 12.24562511104159,
+      "formal_dynamo_events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "formal_triton_cache_misses": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "public_tokens_exact": "4608/4608"
+    },
+    "fp32_greedy_v11": {
+      "sum_time_s": 7.095906568225473,
+      "formal_dynamo_events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "formal_triton_cache_misses": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "public_tokens_exact": "4608/4608"
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "DCU_tested": false,
+  "actual_Triton_tested": false,
+  "cpu_actual_kernel_body_cases": [
+    {
+      "B": 1,
+      "POS": 0,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 0.0,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "POS": 31,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.8743019104003906e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "POS": 32,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 7.748603820800781e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "POS": 63,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.2782554626464844e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "POS": 127,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 4.470348358154297e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "POS": 511,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.8743019104003906e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 1,
+      "POS": 1023,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 2.384185791015625e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 2,
+      "POS": 0,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 0.0,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 2,
+      "POS": 31,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 7.860362529754639e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 2,
+      "POS": 32,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.5762786865234375e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 2,
+      "POS": 63,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.0174851417541504e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 2,
+      "POS": 127,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.5762786865234375e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 2,
+      "POS": 511,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 7.152557373046875e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 2,
+      "POS": 1023,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 2.980232238769531e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "POS": 0,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 0.0,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "POS": 31,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 7.152557373046875e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "POS": 32,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 5.364418029785156e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "POS": 63,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.8743019104003906e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "POS": 127,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 5.960464477539062e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "POS": 511,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.5762786865234375e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 4,
+      "POS": 1023,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 4.470348358154297e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "POS": 0,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 0.0,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "POS": 31,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 7.152557373046875e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "POS": 32,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 8.344650268554688e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "POS": 63,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 4.76837158203125e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "POS": 127,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 5.364418029785156e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "POS": 511,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 6.556510925292969e-07,
+      "invalid_nan_kv_masked": true
+    },
+    {
+      "B": 8,
+      "POS": 1023,
+      "rope_cache_exact": true,
+      "attention_max_abs_error": 3.5762786865234375e-07,
+      "invalid_nan_kv_masked": true
+    }
+  ],
+  "local_CUDA_graph_runtime_cases": [
+    {
+      "B": 1,
+      "L": 32,
+      "G": 8,
+      "tokens_exact": true
+    },
+    {
+      "B": 1,
+      "L": 40,
+      "G": 6,
+      "tokens_exact": true
+    },
+    {
+      "B": 1,
+      "L": 32,
+      "G": 8,
+      "tokens_exact": true
+    },
+    {
+      "B": 2,
+      "L": 127,
+      "G": 5,
+      "tokens_exact": true
+    },
+    {
+      "B": 2,
+      "L": 511,
+      "G": 4,
+      "tokens_exact": true
+    },
+    {
+      "B": 1,
+      "L": 33,
+      "G": 1,
+      "tokens_exact": true
+    }
+  ],
+  "local_graph_scope": "Actual v13 Solution.generate and DecodeGraph, real NVIDIA CUDA Graph replay, one real parent ProGenBlock with random weights; Triton kernels replaced by Torch references. Not the 27-layer contest model or vendor HIP environment.",
+  "local_torch": "2.11.0+cu128",
+  "local_device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "actual_graph_captures": 2,
+  "python_syntax": "passed",
+  "bash_syntax": "passed",
+  "audit_gate_positive_and_negative": "passed"
+}

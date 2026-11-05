@@ -1,0 +1,322 @@
+{
+  "actual_Triton_tested": false,
+  "HIP_tested": false,
+  "full_model_tested": false,
+  "cpu_actual_kernel_emulation": {
+    "cases": 30,
+    "max_error": 3.3468087838883775e-06,
+    "max_direct_half_error": 0.0028838471991479153,
+    "fake_aot_eager": "passed",
+    "HIP_tested": false,
+    "full_model_tested": false,
+    "results": [
+      {
+        "B": 1,
+        "N": 17,
+        "K": 31,
+        "bias": false,
+        "error": 2.5158219382759306e-08,
+        "direct_half_error": 7.622041502509946e-05
+      },
+      {
+        "B": 1,
+        "N": 17,
+        "K": 31,
+        "bias": true,
+        "error": 9.075827511750845e-08,
+        "direct_half_error": 0.0001463956643967812
+      },
+      {
+        "B": 1,
+        "N": 64,
+        "K": 64,
+        "bias": false,
+        "error": 9.863676475596606e-08,
+        "direct_half_error": 0.000166769878951617
+      },
+      {
+        "B": 1,
+        "N": 64,
+        "K": 64,
+        "bias": true,
+        "error": 9.612958029592278e-08,
+        "direct_half_error": 0.0002594255578109994
+      },
+      {
+        "B": 1,
+        "N": 17,
+        "K": 96,
+        "bias": false,
+        "error": 5.111761205989218e-08,
+        "direct_half_error": 0.00022979108066079057
+      },
+      {
+        "B": 1,
+        "N": 17,
+        "K": 96,
+        "bias": true,
+        "error": 1.2723635656186616e-07,
+        "direct_half_error": 0.00014718857576667688
+      },
+      {
+        "B": 1,
+        "N": 64,
+        "K": 1536,
+        "bias": false,
+        "error": 5.245159826472445e-07,
+        "direct_half_error": 0.0014189344724608866
+      },
+      {
+        "B": 1,
+        "N": 64,
+        "K": 1536,
+        "bias": true,
+        "error": 5.981820105915858e-07,
+        "direct_half_error": 0.0011781441920168945
+      },
+      {
+        "B": 1,
+        "N": 64,
+        "K": 6144,
+        "bias": false,
+        "error": 2.9366645888373455e-06,
+        "direct_half_error": 0.002314425184651192
+      },
+      {
+        "B": 1,
+        "N": 64,
+        "K": 6144,
+        "bias": true,
+        "error": 1.3636038662667715e-06,
+        "direct_half_error": 0.0028838471991479153
+      },
+      {
+        "B": 4,
+        "N": 17,
+        "K": 31,
+        "bias": false,
+        "error": 6.668813223864589e-08,
+        "direct_half_error": 0.00013361696385838506
+      },
+      {
+        "B": 4,
+        "N": 17,
+        "K": 31,
+        "bias": true,
+        "error": 1.0547444162511965e-07,
+        "direct_half_error": 0.00018631612130348696
+      },
+      {
+        "B": 4,
+        "N": 64,
+        "K": 64,
+        "bias": false,
+        "error": 1.0676122930153298e-07,
+        "direct_half_error": 0.0002857675027390094
+      },
+      {
+        "B": 4,
+        "N": 64,
+        "K": 64,
+        "bias": true,
+        "error": 1.9772513493165889e-07,
+        "direct_half_error": 0.0002971995011264994
+      },
+      {
+        "B": 4,
+        "N": 17,
+        "K": 96,
+        "bias": false,
+        "error": 1.0001255212888083e-07,
+        "direct_half_error": 0.0004168653170398273
+      },
+      {
+        "B": 4,
+        "N": 17,
+        "K": 96,
+        "bias": true,
+        "error": 1.553581534530224e-07,
+        "direct_half_error": 0.000255169260347049
+      },
+      {
+        "B": 4,
+        "N": 64,
+        "K": 1536,
+        "bias": false,
+        "error": 1.0690588339024032e-06,
+        "direct_half_error": 0.0013867851873792247
+      },
+      {
+        "B": 4,
+        "N": 64,
+        "K": 1536,
+        "bias": true,
+        "error": 8.019063972852791e-07,
+        "direct_half_error": 0.001266763690230488
+      },
+      {
+        "B": 4,
+        "N": 64,
+        "K": 6144,
+        "bias": false,
+        "error": 2.7066185230850692e-06,
+        "direct_half_error": 0.0028694516136402726
+      },
+      {
+        "B": 4,
+        "N": 64,
+        "K": 6144,
+        "bias": true,
+        "error": 2.2072024394859113e-06,
+        "direct_half_error": 0.0024906974606464516
+      },
+      {
+        "B": 8,
+        "N": 17,
+        "K": 31,
+        "bias": false,
+        "error": 9.99977383675521e-08,
+        "direct_half_error": 0.0002515656165774094
+      },
+      {
+        "B": 8,
+        "N": 17,
+        "K": 31,
+        "bias": true,
+        "error": 1.6557032589403775e-07,
+        "direct_half_error": 0.0002563549758748396
+      },
+      {
+        "B": 8,
+        "N": 64,
+        "K": 64,
+        "bias": false,
+        "error": 1.3240499352473734e-07,
+        "direct_half_error": 0.0003422347486432553
+      },
+      {
+        "B": 8,
+        "N": 64,
+        "K": 64,
+        "bias": true,
+        "error": 1.1885298489833218e-07,
+        "direct_half_error": 0.00033485757281059847
+      },
+      {
+        "B": 8,
+        "N": 17,
+        "K": 96,
+        "bias": false,
+        "error": 1.29733528531073e-07,
+        "direct_half_error": 0.00035098143878731225
+      },
+      {
+        "B": 8,
+        "N": 17,
+        "K": 96,
+        "bias": true,
+        "error": 1.499362153323247e-07,
+        "direct_half_error": 0.00027394760629073645
+      },
+      {
+        "B": 8,
+        "N": 64,
+        "K": 1536,
+        "bias": false,
+        "error": 8.57275962523607e-07,
+        "direct_half_error": 0.0015930459191597635
+      },
+      {
+        "B": 8,
+        "N": 64,
+        "K": 1536,
+        "bias": true,
+        "error": 7.278776648078633e-07,
+        "direct_half_error": 0.0015476172211981165
+      },
+      {
+        "B": 8,
+        "N": 64,
+        "K": 6144,
+        "bias": false,
+        "error": 3.3468087838883775e-06,
+        "direct_half_error": 0.0027430594544082254
+      },
+      {
+        "B": 8,
+        "N": 64,
+        "K": 6144,
+        "bias": true,
+        "error": 2.937949589387756e-06,
+        "direct_half_error": 0.0024842722413938034
+      }
+    ]
+  },
+  "CUDA_graph_with_Torch_kernel_standins": {
+    "DCU_tested": false,
+    "actual_Triton_tested": false,
+    "cpu_actual_kernel_body_cases": [],
+    "local_CUDA_graph_runtime_cases": [
+      {
+        "B": 1,
+        "L": 32,
+        "G": 8,
+        "tokens_exact": true,
+        "dynamo_compile_events": 1
+      },
+      {
+        "B": 1,
+        "L": 40,
+        "G": 6,
+        "tokens_exact": true,
+        "dynamo_compile_events": 0
+      },
+      {
+        "B": 1,
+        "L": 32,
+        "G": 8,
+        "tokens_exact": true,
+        "dynamo_compile_events": 0
+      },
+      {
+        "B": 2,
+        "L": 127,
+        "G": 5,
+        "tokens_exact": true,
+        "dynamo_compile_events": 1
+      },
+      {
+        "B": 2,
+        "L": 511,
+        "G": 4,
+        "tokens_exact": true,
+        "dynamo_compile_events": 0
+      },
+      {
+        "B": 1,
+        "L": 33,
+        "G": 1,
+        "tokens_exact": true,
+        "dynamo_compile_events": 0
+      },
+      {
+        "B": 8,
+        "L": 32,
+        "G": 3,
+        "tokens_exact": true,
+        "dynamo_compile_events": 1
+      }
+    ],
+    "local_graph_scope": "Submitted v21 Solution/DecodeGraph/custom-op definitions, weight packer and one parent block with AOT-eager and real CUDA graphs. Both attention and GEMM Triton launches use CUDA Torch stand-ins; actual kernel body separately CPU-emulated. No actual HIP/Inductor/full-model test.",
+    "local_torch": "2.11.0+cu128",
+    "local_device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "actual_graph_captures": 3,
+    "python_syntax": "passed",
+    "local_compile_backend": "aot_eager",
+    "local_Inductor_tested": false
+  },
+  "audit_positive_and_negative": "passed",
+  "python_AST": "passed",
+  "bash_syntax": "passed",
+  "limitations": "CPU emulation cannot reproduce HIP MFMA accumulation or subnormal handling. Local graph lifecycle uses one model block and Torch kernel stand-ins; no full-model or actual Triton test."
+}

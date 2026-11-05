@@ -1,0 +1,31 @@
+{
+  "scope": "One paired screening run; repeat before claiming stable gains",
+  "both_public_exact": true,
+  "both_formal_compile_zero": true,
+  "loads": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "v22b_seconds": 1.021699070930481,
+      "v23_seconds": 1.0466106629464775,
+      "elapsed_reduction_percent": -2.4382514112799485
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "v22b_seconds": 1.4729849540162832,
+      "v23_seconds": 1.4927387880161405,
+      "elapsed_reduction_percent": -1.3410750697755558
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "v22b_seconds": 2.7364706420339644,
+      "v23_seconds": 2.557698338991031,
+      "elapsed_reduction_percent": 6.532951616468117
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "v22b_seconds": 0.4525843858718872,
+      "v23_seconds": 0.4358687261119485,
+      "elapsed_reduction_percent": 3.693379683821087
+    }
+  ]
+}

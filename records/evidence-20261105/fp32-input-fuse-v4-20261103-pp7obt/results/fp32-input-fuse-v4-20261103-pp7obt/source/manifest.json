@@ -1,0 +1,108 @@
+{
+  "candidate": "fp32_input_fuse_v4",
+  "parent_candidate": "fp32_step_gemm_v23",
+  "parent_source_sha256": {
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/modeling_progen.py": "77782294355a06a2ba1dcd9bb0801587a1b075943e0d2c96f371365c68bfb06d",
+    "solution.py": "129e8b80c8fc8f7c8ea83672f200931271d5f9ba3baa8d8910b56403d26d47f6"
+  },
+  "change": "Fuse each block shared-input qkv_proj and mlp.fc_in into one FP32 linear projection, then split; initialize before compile; retain fullgraph single-step generation and max-autotune-no-cudagraphs.",
+  "precision": "float32",
+  "official_test_tools_modified": false,
+  "weights_included": false,
+  "request_independent_initialization": true,
+  "generation_rules_changed": false,
+  "DCU_tested": false,
+  "performance_claim": null,
+  "local_validation": {
+    "checkpoint_sha256": "545f4d3e0072c0f422c90e221100d0ebe756989d0f09af3ede57736680adb9e2",
+    "real_checkpoint_scope": "Actual official checkpoint and 27-layer ProGen forward functions; AST-loaded with minimal loading/output compatibility shims, eager only; not official test runner, tokenizer library, Inductor or DCU. Shortened G only, not an official full workload result.",
+    "torch": "2.11.0+cu128",
+    "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "shortened_case_G": [
+      16,
+      8,
+      16,
+      2
+    ],
+    "matched_tokens": 152,
+    "candidate_tokens_equal_parent_and_public_reference_prefixes": true,
+    "candidate_interleaved_requests_passed": true,
+    "block_cases": [
+      {
+        "device": "cpu",
+        "mlp_bias": true,
+        "qkv_bias": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "mlp_bias": true,
+        "qkv_bias": false,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "mlp_bias": false,
+        "qkv_bias": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "mlp_bias": false,
+        "qkv_bias": false,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "fullgraph_capture_backend": "eager",
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "mlp_bias": true,
+        "qkv_bias": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "mlp_bias": true,
+        "qkv_bias": false,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "mlp_bias": false,
+        "qkv_bias": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "mlp_bias": false,
+        "qkv_bias": false,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "fullgraph_capture_backend": "eager",
+        "passed": true
+      }
+    ],
+    "inductor_or_DCU_validated": false,
+    "checkpoint_report_sha256": "d73bf418aabd0a19cae8c80f5d7974407c36a97fcacc3658440aa2d540f41297",
+    "block_report_sha256": "0acd8007386cb27202f48511d3b388d0bf7ddd4c2556e78d8cb3a3f9d2ccd756"
+  },
+  "files": {
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/modeling_progen.py": "2e86ae6d2e7d162614a0b47e8986cedbe40d5bdd74025e648f3acf1e71480a78",
+    "solution.py": "46c2f53d419abfa0007bf8af97323f2e7633a3cd2958e424d367ca8b94b4b6da"
+  },
+  "support_files": {
+    "README.md": "8768ec26467b4eab4ee2addc901f66b42de5563f2d4da90a1873e2a0434035a3",
+    "run_test.sh": "f70036cb6bae2bb5cf2eac6dbfbf8b13803aa232f34905da6a156f741bd629e5"
+  }
+}

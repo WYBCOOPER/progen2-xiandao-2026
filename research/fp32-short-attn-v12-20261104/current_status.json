@@ -1,0 +1,10 @@
+{
+  "candidate": "fp32_short_attn_v12",
+  "parent": "fp32_rope_kv_v9c",
+  "DCU_tested": false,
+  "speed_claim": null,
+  "package": "C:\\Users\\TEAM\\Desktop\\progen2_contest.zip\\deliverables\\fp32-short-attn-v12-20261104-upload.zip",
+  "sha256": "4cf1d40c80643edc0935fa90ccff4cd6f8b9077f39de17453ba81fb67db437ec",
+  "bytes": 24230,
+  "status": "ready for DCU testing"
+}

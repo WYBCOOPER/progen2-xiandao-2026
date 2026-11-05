@@ -1,0 +1,19 @@
+{
+  "EXECUTION.md": "327dd25016a8d52667ea145a8bff95eab4983ef364ad090fd35ea5e6230b9f70",
+  "README.md": "8df1c39afa5005cb72a315f89edf4da01de831ee43fc3e4111c81673dd30f91b",
+  "dev/local_test.py": "16c969b0c3faf514328e63ea2b680206dafcff011bd3aa35c57df08fcbffc447",
+  "reference/LICENSE.txt": "79e3de4165725ff4e9a429ed4d634dd44cace47fdc19048774c9d0aa24468adc",
+  "reference/public_test.py": "12f90ce289daa9617f1bb8ccdb0ac0fbd63f28d1fbb35a57115fb126d74f111f",
+  "reference/run_public_test.sh": "70f35c5fc890be9ec27a697337b4911248b3894d769331007f2c4980dcd5280e",
+  "reference/baseline/solution.py": "1f91b716ce60a1bc9fd0868f024b758fa479c14adcb40a96286d0911a92c10b6",
+  "reference/docs/BASELINE.md": "6e43eaf68fabbf563e60df0ccbc14b77f6642395a271a44a061d87a193962680",
+  "reference/docs/INTERFACE.md": "3fc7ebabd11345c09cd8fa55bae2e350a8a37cb600132463e820fab34a1d7b36",
+  "reference/docs/SUBMISSION.md": "50ec614a3419150bbaa235c0b4fe30d4920c2d6a5ac20505e6fc1c9bd0d5665b",
+  "reference/docs/赛题说明-文字摘录.txt": "9ccc6fe2c5992ee045d0ef4ca6cf9110fbd1754d3cd8a19f3805267db83f0d3a",
+  "reference/docs/赛题说明.docx": "00a48003f8909dfba08596478526844415168e9d6d23699e0179c3f4e4ffcc19",
+  "reference/records/20261028-01/baseline.shared.log": "059d94b9e94b2150ec151860ec2bfc507be888d62bef0c171fc253718fa726ea",
+  "reference/records/20261028-01/baseline_public.shared.json": "f3cc504541c1deeecc3a7715422a8bd6be08d4474882e69d1975acdd4d5ded71",
+  "reference/records/20261028-02/fp16_trial.shared.log": "4ce82aad496edbeeac2a83d4c4ec54cd9fbe0416a127dbf74c3b29166efeb659",
+  "reference/records/20261028-02/submission_public.shared.json": "5adf78bd8f94372f3072c0b65962880fe1a7e497972c82c3bec7ade10a96e8b8",
+  "reference/progen2/models/progen/modeling_progen.py": "34fc2e84dae2d8558c0acc3bcbb0bcc7a7420cce885de6ddb780e3e57ecb5e10"
+}

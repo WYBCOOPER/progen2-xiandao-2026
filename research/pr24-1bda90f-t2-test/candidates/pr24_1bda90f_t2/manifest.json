@@ -1,0 +1,56 @@
+{
+  "upstream_pr": 24,
+  "upstream_commit": "1bda90f824b34bfe4a522bef14f6d446661839ad",
+  "purpose": "T2 precision diagnosis: disable compile only relative to T1",
+  "patches": [
+    {
+      "path": "solution.py",
+      "change": "COMPILE_MODEL = True -> False only"
+    },
+    {
+      "path": "models/__init__.py",
+      "change": "Keep the same empty import-isolation marker as T1"
+    }
+  ],
+  "configuration": {
+    "WEIGHT_DTYPE": "fp16",
+    "HALF_WEIGHT_SCOPE": "all",
+    "ALLOW_FP16_REDUCED_PRECISION": false,
+    "COMPILE_MODEL": false
+  },
+  "source_comparison_with_t1": [
+    {
+      "path": "solution.py",
+      "t1_sha256": "ae0443b788bdfa88821ba69bfe75c91d4cc4d637aeb86221afaa6134b0819db3",
+      "t2_sha256": "53d6638fd59377d366ba0be9c50db41a8ae1bf3538386a37f967165b883e6877",
+      "unchanged_from_t1": false
+    },
+    {
+      "path": "models/__init__.py",
+      "t1_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "t2_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged_from_t1": true
+    },
+    {
+      "path": "models/progen/__init__.py",
+      "t1_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "t2_sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "unchanged_from_t1": true
+    },
+    {
+      "path": "models/progen/configuration_progen.py",
+      "t1_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "t2_sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "unchanged_from_t1": true
+    },
+    {
+      "path": "models/progen/modeling_progen.py",
+      "t1_sha256": "f5be7c4526464acccbb30a9d3ccd086b3a70b9f23b53aa0da9c9273343a72e01",
+      "t2_sha256": "f5be7c4526464acccbb30a9d3ccd086b3a70b9f23b53aa0da9c9273343a72e01",
+      "unchanged_from_t1": true
+    }
+  ],
+  "dcu_tested": false,
+  "official_test_tools_modified": false,
+  "weights_included": false
+}

@@ -1,0 +1,34 @@
+{
+  "candidate": "fp32_compiled_graph_v14",
+  "parent": "fp32_graph_v13",
+  "DCU_tested": false,
+  "speed_claim": null,
+  "official_tools_modified": false,
+  "changes": [
+    "Compile fixed-shape full decode before explicit HIP graph capture; preserve max-autotune and fusion"
+  ],
+  "source_sha256": {
+    "audit_result.py": "3c109fd0cc7ca72ea1078f670d1cb7dd3b2f3ad65ac4f267408406eedd59159c",
+    "compile_check.py": "7efcdc41c06dc3da95aebacf8d2b527406235c77572fb33af4d6758aec7ac063",
+    "graph_runtime.py": "7c5262b983dc63b54cc8945ca335364da03890e5db10723a2b990a021201a411",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "b3bac5fb24c5c48eff98dd8ed789cbc78adcb914b827384aa224405c4c495263",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "44165c4f3892ece44c757bfb0562901b33a593db233e7c33c6fc96eae73810da"
+  },
+  "parent_source_sha256": {
+    "audit_result.py": "92d99ab8b4ee7c20627a68adb3cdbfc9aa437dd09133681918bd412c4c197a32",
+    "compile_check.py": "c49aa43a766f685cac8232ae71ec5d62e2d99248bad9823b8ec8975a8e657988",
+    "graph_runtime.py": "8532d62c83b0519b40a520051f80704fd975b36ad8f134d19a1202d52f8cc033",
+    "kernel_check.py": "0999e9e81d953486ff832e998be4e448e92c21b4f72c8f122b732c46befa21c0",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/kernels.py": "b3bac5fb24c5c48eff98dd8ed789cbc78adcb914b827384aa224405c4c495263",
+    "models/progen/modeling_progen.py": "e87240c063ac6d7266db73dafd9d808993cc8b2f210f77d0ffd60f64913ee7f2",
+    "solution.py": "bdb0cc3c6f0206848d24b5025b71e9a784d18c37a64410246dd0bb3cc91bd6b3"
+  }
+}

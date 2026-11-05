@@ -1,0 +1,129 @@
+{
+  "candidate": "fp32_input_fuse_v4",
+  "run": "fp32-input-fuse-v4-20261103-pp7obt",
+  "archive_sha256": "e1fa489fd01726e32673b16f4a6d46bf826121de9ca629ae3aa9774dab2d989d",
+  "all_9_source_files_match_delivered_package": true,
+  "source_checks": [
+    {
+      "path": "README.md",
+      "sha256": "8768ec26467b4eab4ee2addc901f66b42de5563f2d4da90a1873e2a0434035a3",
+      "matches_run_manifest": true
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "0ccb18280d12d6149db8b635c3e9da43ee1b0cb041d7ad84defcf35a4f30dbe6",
+      "matches_run_manifest": true
+    },
+    {
+      "path": "models/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_run_manifest": true
+    },
+    {
+      "path": "models/progen/__init__.py",
+      "sha256": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251",
+      "matches_run_manifest": true
+    },
+    {
+      "path": "models/progen/configuration_progen.py",
+      "sha256": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+      "matches_run_manifest": true
+    },
+    {
+      "path": "models/progen/modeling_progen.py",
+      "sha256": "2e86ae6d2e7d162614a0b47e8986cedbe40d5bdd74025e648f3acf1e71480a78",
+      "matches_run_manifest": true
+    },
+    {
+      "path": "run_test.sh",
+      "sha256": "f70036cb6bae2bb5cf2eac6dbfbf8b13803aa232f34905da6a156f741bd629e5",
+      "matches_run_manifest": true
+    },
+    {
+      "path": "solution.py",
+      "sha256": "46c2f53d419abfa0007bf8af97323f2e7633a3cd2958e424d367ca8b94b4b6da",
+      "matches_run_manifest": true
+    }
+  ],
+  "all_public_references_exact": true,
+  "matched_tokens": 4608,
+  "formal_compile_events": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "warmup_compile_events": [
+    3,
+    3,
+    0,
+    0
+  ],
+  "fusion_block_count": 27,
+  "runtime": {
+    "python": "3.10.16",
+    "torch": "2.4.1",
+    "hip": "6.1.25065",
+    "triton": "3.0.0+das.opt4.dtk2504",
+    "transformers": "4.46.3",
+    "tokenizers": "0.20.3",
+    "numpy": "1.24.3",
+    "accelerate": "1.5.2",
+    "device": "BW",
+    "device_total_memory_bytes": 68702699520
+  },
+  "parent_run": "fp32-step-gemm-v23-20261103-mP5cp4",
+  "comparison_type": "historical single run; same reported software/device model; physical device and intervening system load not verified",
+  "loads": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "parent_time_s": 1.7063617690000683,
+      "candidate_time_s": 1.7563191899098456,
+      "elapsed_change_pct": 2.9277156706958074,
+      "parent_over_candidate_speedup": 0.9715556140382765,
+      "same": 256,
+      "total": 256,
+      "formal_compile_events": 0
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "parent_time_s": 1.8220857509877533,
+      "candidate_time_s": 1.8743410489987582,
+      "elapsed_change_pct": 2.8678835769764044,
+      "parent_over_candidate_speedup": 0.9721207098148339,
+      "same": 2048,
+      "total": 2048,
+      "formal_compile_events": 0
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "parent_time_s": 3.605089824879542,
+      "candidate_time_s": 3.676673216978088,
+      "elapsed_change_pct": 1.9856202085321906,
+      "parent_over_candidate_speedup": 0.9805303904170789,
+      "same": 2048,
+      "total": 2048,
+      "formal_compile_events": 0
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "parent_time_s": 0.546864558942616,
+      "candidate_time_s": 0.5344096610788256,
+      "elapsed_change_pct": -2.2775105206803703,
+      "parent_over_candidate_speedup": 1.0233058995203181,
+      "same": 256,
+      "total": 256,
+      "formal_compile_events": 0
+    }
+  ],
+  "sum_parent_time_s": 7.68040190380998,
+  "sum_candidate_time_s": 7.841743116965517,
+  "sum_elapsed_change_pct": 2.100687114765476,
+  "status": "correctness_and_compile_checks_passed; overall_speed_gain_not_demonstrated; keep_parent",
+  "limitations": [
+    "one run per version",
+    "no contemporaneous paired control",
+    "sum is descriptive and is not an official competition score",
+    "Dynamo compile-event monitor is not a separate low-level GPU compiler trace"
+  ]
+}

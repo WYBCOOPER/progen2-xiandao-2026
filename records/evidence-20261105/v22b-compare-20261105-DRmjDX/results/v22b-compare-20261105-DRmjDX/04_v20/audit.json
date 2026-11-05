@@ -1,0 +1,51 @@
+{
+  "label": "v20",
+  "accuracy_exact": true,
+  "formal_compile_miss_capture_zero": true,
+  "replays_valid": true,
+  "identity": true,
+  "plan_verified": true,
+  "counters": {
+    "COMPILE_EVENTS": [
+      2,
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "TRITON_CACHE_MISSES": [
+      2,
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "GRAPH_CAPTURES": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "GRAPH_REPLAYS": [
+      255,
+      255,
+      255,
+      255,
+      511,
+      511,
+      63,
+      63
+    ]
+  },
+  "passed": true
+}

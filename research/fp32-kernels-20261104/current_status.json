@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-04",
+  "selected_parent": "fp32_step_gemm_v23",
+  "baseline_reference_sum_s": 7.777090281946585,
+  "baseline_reference_run": "fp32-step-gemm-v23-20261103-DnDLwm",
+  "v6_repeat": {
+    "previous_result": "harness failed before model loading: importlib local-name shadowing",
+    "fix": "metadata imported under its own name; regression invokes actual main import path",
+    "package": "fp32-v6-repeat-20261104-fixed1-upload.zip",
+    "status": "reviewed; no demonstrated gain; retain v23",
+    "run": "v6-repeat-20261104-Z2mul6",
+    "archive_sha256": "08f716aac164533194793d4785b8aa5cef75d00e96b33b243711eb84c58a3789",
+    "sum_of_load_medians_s": {
+      "v23": 7.522459459956735,
+      "v6": 7.5690035577863455
+    },
+    "v6_elapsed_change_pct": 0.6187351102039385,
+    "formal_calls_recorded_exact_and_dynamo_zero": 24
+  },
+  "directions": [
+    {
+      "number": 1,
+      "candidate": "fp32_decode_attn_v8c",
+      "change": "FP32 custom Triton single-query split-sequence attention and stable softmax merge",
+      "status": "DCU public correctness and recorded formal compile gates passed; paired performance not established",
+      "DCU_result": {
+        "run": "fp32-decode-attn-v8c-20261104-6kdCzH",
+        "sum_time_s": 7.314633026951924,
+        "exact_tokens": "4608/4608",
+        "formal_dynamo_events": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "formal_triton_cache_misses": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "speed_claim": null,
+      "repair_package": "fp32-decode-attn-v8c-20261104-upload.zip",
+      "repair_status": "v8c verified on DCU"
+    },
+    {
+      "number": 2,
+      "candidate": "fp32_rope_kv_v9c",
+      "change": "FP32 custom Triton single-query Q/K rotary embedding fused with in-place KV cache writes",
+      "status": "v9c passed public correctness and recorded formal compile gates; paired speed gain not established",
+      "DCU_result": {
+        "run": "fp32-rope-kv-v9c-20261104-A681jn",
+        "sum_time_s": 7.042885824106634,
+        "exact_tokens": "4608/4608",
+        "formal_dynamo_events": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "formal_triton_cache_misses": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "speed_claim": null,
+      "repair_package": "fp32-kernels-20261104-fixed1-upload.zip",
+      "repair_status": "fixed1 prepared and locally checked; DCU fullgraph/accuracy/performance retest pending"
+    }
+  ],
+  "official_tools_modified": false,
+  "local_bash_syntax": "three candidate/batch scripts and fixed-repeat runner passed Git Bash -n",
+  "acceptance_gates": [
+    "DCU random tensor kernel checks",
+    "all 4608 public tokens match reference",
+    "four formal calls show zero Dynamo compile events and zero Triton JIT cache misses",
+    "compare valid measurements against same-environment v23 control before claiming improvement"
+  ],
+  "remaining_roadmap_classes_not_guaranteed_gains": [
+    "shape-specific GEMV/GEMM kernels",
+    "profile-guided fusion of remaining small operations",
+    "HIP graph replay"
+  ],
+  "both_directions_public_checks_passed": true,
+  "combination": {
+    "candidate": "fp32_combo_v89",
+    "run": "fp32-combo-v89-20261104-Wri0Ic",
+    "public_checks_passed": true,
+    "sum_time_s": 7.1799738181289285,
+    "formal_dynamo_events": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "formal_triton_cache_misses": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "provisional_shortest_record": "fp32_rope_kv_v9c",
+    "paired_performance_not_established": true
+  }
+}

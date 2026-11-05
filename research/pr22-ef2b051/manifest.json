@@ -1,0 +1,11 @@
+{
+  "commit": "ef2b05104b96457e3922faee257d88eedeb27e82",
+  "added": "empty models/__init__.py for package resolution",
+  "files": {
+    "solution.py": "6cd84f93be4e71f2c8856bb4d94d5ce3a3a62c008838ef335ae44e4ba512417e",
+    "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models/progen/configuration_progen.py": "a366655a755ebbb11861bcba58a7b3f719c0ec43d7c9a729a44869d17942bd7e",
+    "models/progen/modeling_progen.py": "b143793bea126296755471166d615633eeed992a7dae1ecebbba6e66e74e131f",
+    "models/progen/__init__.py": "a791b73a71f9cfbd8f9821b726ae13aa0ccb3de9818f6bfecc0403d4532d9251"
+  }
+}

@@ -1,0 +1,193 @@
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+from typing import Sequence
+
+
+AMINO_ACIDS = "ACDEFGHIKLMNPQRSTVWY"
+
+
+def _greedy_local_index(restricted):
+    import torch
+    best_score = restricted[..., 0]
+    best_index = torch.zeros_like(best_score, dtype=torch.long)
+    for j in range(1, restricted.shape[-1]):
+        score = restricted[..., j]
+        replace = (score > best_score) | (torch.isnan(score) & ~torch.isnan(best_score))
+        best_score = torch.where(replace, score, best_score)
+        best_index = torch.where(replace, j, best_index)
+    return best_index
+
+
+class Solution:
+    team_name = "starter_fp32_baseline"
+
+    def __init__(self, model_dir: str, tokenizer_path: str, device: str = "cuda:0"):
+        import torch
+        from tokenizers import Tokenizer
+
+        torch.set_float32_matmul_precision("highest")
+        torch.backends.cuda.matmul.allow_tf32 = False
+        self.torch = torch
+        self.device = torch.device(device)
+        self.tokenizer_path = Path(tokenizer_path).resolve()
+        self.model_dir = Path(model_dir).resolve()
+
+        if self.device.type == "cuda" and not torch.cuda.is_available():
+            raise RuntimeError("DCU/HIP is not visible through torch.cuda")
+
+        import os
+        _submission_dir = os.path.dirname(os.path.abspath(__file__))
+        if _submission_dir not in sys.path:
+            sys.path.insert(0, _submission_dir)
+
+        asset_root = self.tokenizer_path.parent
+        if str(asset_root) not in sys.path:
+            sys.path.append(str(asset_root))
+
+        from models.progen.modeling_progen import ProGenForCausalLM
+
+        self.tokenizer = Tokenizer.from_file(str(self.tokenizer_path))
+        token_ids = [self.tokenizer.token_to_id(letter) for letter in AMINO_ACIDS]
+        if any(token_id is None for token_id in token_ids):
+            raise RuntimeError("Tokenizer is missing a canonical amino-acid token")
+        self.allowed_ids = torch.tensor(
+            [int(token_id) for token_id in token_ids],
+            dtype=torch.long,
+            device=self.device,
+        )
+
+        self.model = ProGenForCausalLM.from_pretrained(
+            str(self.model_dir),
+            torch_dtype=torch.float32,
+            low_cpu_mem_usage=True,
+            local_files_only=True,
+        )
+        self.model.eval().to(self.device)
+        import json, hashlib
+        plan_path=os.environ.get('SPLIT_GEMV_PLAN')
+        if not plan_path:raise RuntimeError('Run the supplied script to prepare the input-independent shape plan')
+        raw=Path(plan_path).read_bytes()
+        from plan_utils import validate_plan
+        self.model._v22_plan=validate_plan(json.loads(raw))
+        print('SPLIT_GEMV_PLAN_SHA256='+hashlib.sha256(raw).hexdigest(),flush=True)
+
+
+        self._decode_graphs = {}
+        self._graph_captures = 0
+        self._graph_replays = 0
+        self._install_compile_monitor()
+        self._install_triton_monitor()
+        self.compiled_step = torch.compile(self._generation_step, mode="max-autotune-no-cudagraphs", fullgraph=True)
+        print("FP32_CANDIDATE=fp32_split_gemv_v22", flush=True)
+
+    def _install_compile_monitor(self):
+        from torch._dynamo import on_compile_start
+
+        events = [0]
+        self._compile_events = events
+
+        def record_compile(*args, **kwargs):
+            events[0] += 1
+
+        on_compile_start(record_compile)
+
+    def _install_triton_monitor(self):
+        # Triton 3.0.0 cache-miss hook is distinct from Dynamo graph compilation.
+        from triton.runtime.jit import JITFunction
+        if not hasattr(JITFunction, "cache_hook"):
+            raise RuntimeError("Triton cache hook unavailable; cannot audit custom-kernel cache misses")
+        events = [0]
+        self._triton_events = events
+        previous = JITFunction.cache_hook
+
+        def record_cache_miss(*args, **kwargs):
+            events[0] += 1
+            if previous is not None:
+                return previous(*args, **kwargs)
+            return False
+
+        JITFunction.cache_hook = staticmethod(record_cache_miss)
+
+    def _generation_step(self, input_ids, past_key_values):
+        outputs = self.model(
+            input_ids=input_ids,
+            past_key_values=past_key_values,
+            use_cache=True,
+            output_attentions=False,
+            output_hidden_states=False,
+            return_dict=True,
+        )
+        logits = outputs.logits[:, -1, :]
+        restricted = logits.index_select(-1, self.allowed_ids)
+        local_index = _greedy_local_index(restricted)
+        next_token = self.allowed_ids.index_select(0, local_index).unsqueeze(-1)
+        return next_token, outputs.past_key_values
+
+    def reset(self) -> None:
+        pass
+
+    @staticmethod
+    def _check_prefixes(prefixes: Sequence[str]) -> list[str]:
+        if not isinstance(prefixes, (list, tuple)) or not prefixes:
+            raise ValueError("prefixes must be a non-empty list of strings")
+        values = [str(prefix) for prefix in prefixes]
+        if any(not value for value in values):
+            raise ValueError("prefixes cannot contain an empty string")
+        return values
+
+    @property
+    def metadata(self) -> dict:
+        return {
+            "team_name": self.team_name,
+            "precision": "fp32",
+            "description": "Upstream attention with dynamic KV cache",
+        }
+
+    def generate(self, prefixes: list[str], max_new_tokens: int) -> list[str]:
+        compile_before=self._compile_events[0]
+        triton_before=self._triton_events[0]
+        capture_before=self._graph_captures
+        replay_before=self._graph_replays
+        torch=self.torch
+        prefixes=self._check_prefixes(prefixes)
+        g=int(max_new_tokens)
+        if g<=0:raise ValueError("max_new_tokens must be positive")
+        encoded=[self.tokenizer.encode(p).ids for p in prefixes]
+        lengths={len(row) for row in encoded}
+        if len(lengths)!=1:raise ValueError("all prefixes must have equal token length")
+        length=len(encoded[0]);batch=len(encoded)
+        capacity=int(self.model.config.n_positions)
+        if capacity!=1024 or self.model.config.n_embd!=1536:
+            raise RuntimeError("This graph candidate requires the contest 1536-dim / 1024-position model")
+        if length<1 or length+g-1>capacity:
+            raise ValueError("Requested decode exceeds model capacity")
+        ids=torch.tensor(encoded,dtype=torch.long,device=self.device)
+        with torch.inference_mode():
+            if g>1 and batch not in self._decode_graphs:
+                # First shape preparation belongs to the official unmeasured warmup.
+                # The formal-call audit rejects any graph creation during timing.
+                from graph_runtime import DecodeGraph
+                graph=DecodeGraph(self.model,self.allowed_ids,batch,capacity,_greedy_local_index)
+                graph.prepare()
+                self._decode_graphs[batch]=graph
+                self._graph_captures+=1
+            first,past=self.compiled_step(ids,None)
+            if g==1:
+                generated=first
+            else:
+                graph=self._decode_graphs[batch]
+                graph.begin(first,past,length)
+                del past
+                for _ in range(g-1):
+                    graph.replay()
+                    self._graph_replays+=1
+                generated=torch.cat((first,graph.output[:,:g-1]),dim=1)
+            rows=generated.cpu().tolist()
+        result=["".join(self.tokenizer.id_to_token(int(t)) for t in row) for row in rows]
+        print(f"COMPILE_EVENTS_DURING_GENERATE={self._compile_events[0]-compile_before}",flush=True)
+        print(f"TRITON_CACHE_MISSES_DURING_GENERATE={self._triton_events[0]-triton_before}",flush=True)
+        print(f"GRAPH_CAPTURES_DURING_GENERATE={self._graph_captures-capture_before}",flush=True)
+        print(f"GRAPH_REPLAYS_DURING_GENERATE={self._graph_replays-replay_before}",flush=True)
+        return result

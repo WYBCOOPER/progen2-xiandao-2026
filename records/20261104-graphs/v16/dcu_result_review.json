@@ -1,0 +1,166 @@
+{
+  "candidate": "fp32_compact_graph_v16",
+  "source_matches_upload": true,
+  "scores": [
+    {
+      "load_id": "load1_b1_l32_g256",
+      "batch_size": 1,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 1.1989475667942315,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load2_b8_l32_g256",
+      "batch_size": 8,
+      "prefix_tokens": 32,
+      "new_tokens": 256,
+      "time_s": 1.8471676651388407,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load3_b4_l32_g512",
+      "batch_size": 4,
+      "prefix_tokens": 32,
+      "new_tokens": 512,
+      "time_s": 3.226897398941219,
+      "same": 2048,
+      "total": 2048,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    },
+    {
+      "load_id": "load4_b4_l512_g64",
+      "batch_size": 4,
+      "prefix_tokens": 512,
+      "new_tokens": 64,
+      "time_s": 0.5144417090341449,
+      "same": 256,
+      "total": 256,
+      "consistency_rate": 1.0,
+      "exact_match": true
+    }
+  ],
+  "sum_s": 6.787454339908436,
+  "comparisons": {
+    "v15": {
+      "times_s": [
+        1.1985619449988008,
+        1.8348650138359517,
+        3.2111085278447717,
+        0.5041376471053809
+      ],
+      "sum_s": 6.748673133784905,
+      "v16_elapsed_change_pct": 0.5746493474307668,
+      "per_load_change_pct": [
+        0.032173705918148165,
+        0.67049353549824,
+        0.49169534319801755,
+        2.0438985241286955
+      ]
+    },
+    "v14": {
+      "times_s": [
+        1.2149186311289668,
+        1.8888950690161437,
+        3.3292895341292024,
+        0.5244960461277515
+      ],
+      "sum_s": 6.957599280402064,
+      "v16_elapsed_change_pct": -2.445454727076435,
+      "per_load_change_pct": [
+        -1.3145789294460086,
+        -2.209090624554244,
+        -3.0754950609834797,
+        -1.9169519327811413
+      ]
+    },
+    "v9c": {
+      "times_s": [
+        1.5338259630370885,
+        1.6781445150263608,
+        3.311458772048354,
+        0.5194565739948303
+      ],
+      "sum_s": 7.042885824106634,
+      "v16_elapsed_change_pct": -3.6268014359099543,
+      "per_load_change_pct": [
+        -21.832880933882038,
+        10.072025895208725,
+        -2.553598849573735,
+        -0.9654060053796321
+      ]
+    }
+  },
+  "audit": {
+    "graph_kv_capacities": [
+      384,
+      384,
+      384,
+      384,
+      640,
+      640,
+      640,
+      640
+    ],
+    "capacity_check_passed": true,
+    "graph_captures": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "graph_replays": [
+      255,
+      255,
+      255,
+      255,
+      511,
+      511,
+      63,
+      63
+    ],
+    "formal_graph_capture_zero": true,
+    "compiled_kernel_check_passed": true,
+    "candidate": "fp32_compact_graph_v16",
+    "all_public_references_exact": true,
+    "dynamo_events": [
+      2,
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "triton_cache_misses": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "formal_dynamo_zero": true,
+    "formal_triton_cache_misses_zero": true,
+    "identity": true,
+    "kernel_check_passed": true,
+    "measurement_scope": "Four official workload calls after official warmup; no edits to official tester",
+    "compile_audit_scope": "Dynamo on_compile_start and Triton 3.0 JIT cache-miss hook; not a hardware trace of every native compiler call",
+    "experiment_checks_passed": true
+  },
+  "limitation": "Separate historical runs; not a repeated paired control."
+}

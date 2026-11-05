@@ -1,0 +1,85 @@
+{
+  "graph_captures": [
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "graph_replays": [
+    255,
+    255,
+    255,
+    255,
+    511,
+    511,
+    63,
+    63
+  ],
+  "formal_graph_capture_zero": true,
+  "compiled_kernel_check_passed": true,
+  "candidate": "fp32_batched_linear_v23",
+  "all_public_references_exact": true,
+  "dynamo_events": [
+    2,
+    0,
+    2,
+    0,
+    1,
+    0,
+    1,
+    0
+  ],
+  "triton_cache_misses": [
+    6,
+    0,
+    2,
+    0,
+    3,
+    0,
+    0,
+    0
+  ],
+  "formal_dynamo_zero": true,
+  "formal_triton_cache_misses_zero": true,
+  "identity": true,
+  "kernel_check_passed": true,
+  "measurement_scope": "Four official workload calls after official warmup; no edits to official tester",
+  "compile_audit_scope": "Dynamo on_compile_start and Triton 3.0 JIT cache-miss hook; not a hardware trace of every native compiler call",
+  "split_gemv_plan_verified": true,
+  "shape_plan": {
+    "1,4608,1536,0": null,
+    "1,1536,1536,0": {
+      "bn": 4,
+      "bk": 512
+    },
+    "1,6144,1536,1": null,
+    "1,1536,6144,1": {
+      "bn": 4,
+      "bk": 256
+    },
+    "4,4608,1536,0": null,
+    "4,1536,1536,0": null,
+    "4,6144,1536,1": null,
+    "4,1536,6144,1": {
+      "kind": "direct",
+      "bn": 8,
+      "bk": 256,
+      "bm": 4
+    },
+    "8,4608,1536,0": null,
+    "8,1536,1536,0": null,
+    "8,6144,1536,1": null,
+    "8,1536,6144,1": {
+      "kind": "direct",
+      "bn": 4,
+      "bk": 256,
+      "bm": 8
+    }
+  },
+  "batched_graph_check_passed": true,
+  "experiment_checks_passed": true
+}

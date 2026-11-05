@@ -1,0 +1,169 @@
+{
+  "scope": "Actual kernel body evaluated with CPU tensor/Pointer substitutes; inline assembly emulated as FP32 mul. No Triton, Inductor or DCU execution.",
+  "index_and_cache_cases": [
+    {
+      "B": 1,
+      "POS": 0,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 1,
+      "POS": 1,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 1,
+      "POS": 31,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 1,
+      "POS": 32,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 1,
+      "POS": 63,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 1,
+      "POS": 64,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 1,
+      "POS": 511,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 1,
+      "POS": 1023,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 2,
+      "POS": 0,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 2,
+      "POS": 1,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 2,
+      "POS": 31,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 2,
+      "POS": 32,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 2,
+      "POS": 63,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 2,
+      "POS": 64,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 2,
+      "POS": 511,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 2,
+      "POS": 1023,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 4,
+      "POS": 0,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 4,
+      "POS": 1,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 4,
+      "POS": 31,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 4,
+      "POS": 32,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 4,
+      "POS": 63,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 4,
+      "POS": 64,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 4,
+      "POS": 511,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 4,
+      "POS": 1023,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 8,
+      "POS": 0,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 8,
+      "POS": 1,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 8,
+      "POS": 31,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 8,
+      "POS": 32,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 8,
+      "POS": 63,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 8,
+      "POS": 64,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 8,
+      "POS": 511,
+      "exact_cpu_reference": true
+    },
+    {
+      "B": 8,
+      "POS": 1023,
+      "exact_cpu_reference": true
+    }
+  ],
+  "constexpr_regression": "B was constexpr in v9b; v9c only has literal BLOCK=256 constexpr",
+  "python_syntax": "passed",
+  "bash_syntax": "Git Bash -n passed; runner not executed locally",
+  "actual_DCU_tested": false
+}

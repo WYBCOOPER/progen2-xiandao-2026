@@ -1,0 +1,3 @@
+candidate	exit_status
+fp32_rope_op_v10	0
+fp32_greedy_v11	0
